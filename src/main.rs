@@ -1,4 +1,5 @@
 mod logging;
+mod cli;
 
 use std::{path::{Path, PathBuf}};
 use anyhow::{self};
