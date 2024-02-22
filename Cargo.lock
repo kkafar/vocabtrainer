@@ -866,6 +866,7 @@ dependencies = [
  "clap",
  "log",
  "log4rs",
+ "rand",
  "rusqlite",
  "serde",
  "thiserror",
