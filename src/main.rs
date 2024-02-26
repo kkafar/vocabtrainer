@@ -164,6 +164,7 @@ fn handle_train_cmd(db: &mut DatabaseProxy) -> anyhow::Result<()> {
             }
             UserInput::Rollback => {
                 if last_record.is_some() {
+                    done_count -= 1;
                     let last_record = last_record.unwrap();
                     if !set.contains(&last_record) {
                         set.insert(last_record.clone());
