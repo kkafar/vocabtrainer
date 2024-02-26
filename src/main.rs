@@ -4,7 +4,8 @@ mod cli;
 use std::{collections::HashSet, io::Write, path::{Path, PathBuf}};
 use anyhow::{self};
 use clap::Parser;
-use rand::{distributions::Uniform, Rng, seq::IteratorRandom};
+use log4rs::append::rolling_file::policy::compound::roll;
+use rand::seq::IteratorRandom;
 use rusqlite::{Connection, Row};
 use log::info;
 
@@ -13,6 +14,14 @@ use log::info;
 pub struct DictionaryRecord {
     pub word: String,
     pub translation: String,
+}
+
+#[derive(Eq, PartialEq)]
+pub enum UserInput {
+    Yes,
+    No,
+    Rollback,
+    Unknown,
 }
 
 impl<'a> TryFrom<&Row<'a>> for DictionaryRecord {
@@ -82,42 +91,92 @@ fn handle_load_cmd(opts: &cli::LoadArgs, db: &mut DatabaseProxy) {
         });
 }
 
+fn read_user_input(mut buffer: &mut String) -> anyhow::Result<usize> {
+    buffer.clear();
+    let read_size = std::io::stdin().read_line(&mut buffer)?;
+    Ok(read_size)
+}
+
+fn print_prompt() {
+    print!("> ");
+    let _ = std::io::stdout().flush();
+}
+
+fn get_user_input(buffer: &mut String) -> anyhow::Result<UserInput> {
+    print_prompt();
+    let _read_size = read_user_input(buffer)?;
+
+    let user_input = if buffer.starts_with("y") {
+        UserInput::Yes
+    } else if buffer.starts_with("n") {
+        UserInput::No
+    } else if buffer.starts_with("r") {
+        UserInput::Rollback
+    } else {
+        UserInput::Unknown
+    };
+
+    Ok(user_input)
+}
+
 fn handle_train_cmd(db: &mut DatabaseProxy) -> anyhow::Result<()> {
     let dict = db.read_all_records()?;
-    let all = dict.len();
-    let mut done = 0usize;
+    let dict_swap: Vec<DictionaryRecord> = dict.clone()
+        .into_iter()
+        .filter(|record| !record.translation.is_empty())
+        .map(|record| DictionaryRecord { word: record.translation, translation: record.word })
+        .collect();
 
-    let mut set: HashSet<DictionaryRecord> = HashSet::from_iter(dict.into_iter());
+    let total_count = dict.len() + dict_swap.len();
+    let mut done_count = 0usize;
 
+    println!("Total count: {total_count}");
+
+    let mut set: HashSet<DictionaryRecord> = HashSet::from_iter(dict.into_iter().chain(dict_swap));
     let mut rng = rand::thread_rng();
+    let mut buffer = String::new();
+    let mut last_record: Option<DictionaryRecord> = None;
+    let mut rollback_buffer: Option<DictionaryRecord> = None;
 
-    let mut user_input = String::new();
-
-
-    while !set.is_empty() {
-        let record = set.iter().choose(&mut rng).unwrap().clone();
+    while !set.is_empty() || !rollback_buffer.is_none() {
+        let record = if rollback_buffer.is_some() {
+            rollback_buffer.take().unwrap()
+        } else {
+            set.iter().choose(&mut rng).unwrap().clone()
+        };
 
         println!("> {} [y]es/[n]o", record.word);
-        print!("> ");
-        let _ = std::io::stdout().flush();
 
-        user_input.clear();
-        let _ = std::io::stdin().read_line(&mut user_input)?;
+        let mut user_input = get_user_input(&mut buffer)?;
 
-        while !user_input.starts_with("y") && !user_input.starts_with("n") {
-            user_input.clear();
-            print!("> ");
-            let _ = std::io::stdout().flush();
-            let _ = std::io::stdin().read_line(&mut user_input)?;
+        while user_input == UserInput::Unknown {
+            user_input = get_user_input(&mut buffer)?;
         }
 
-        if user_input.starts_with("y") {
-            done += 1;
-            println!("> {} - {}  -  OK {}/{}", record.word, record.translation, done, all);
-            set.remove(&record);
-        } else if user_input.starts_with("n") {
-            println!("> {} - {}  -  REPEAT {}/{}", record.word, record.translation, done, all);
-        }
+        match user_input {
+            UserInput::Yes => {
+                done_count += 1;
+                println!("> {} - {}  -  OK {}/{}", record.word, record.translation, done_count, total_count);
+                set.remove(&record);
+            }
+            UserInput::No => {
+                println!("> {} - {}  -  REPEAT {}/{}", record.word, record.translation, done_count, total_count);
+            }
+            UserInput::Rollback => {
+                if last_record.is_some() {
+                    let last_record = last_record.unwrap();
+                    if !set.contains(&last_record) {
+                        set.insert(last_record.clone());
+                    }
+                    rollback_buffer = Some(last_record);
+                } else {
+                    rollback_buffer = Some(record.clone());
+                }
+            }
+            _ => panic!("Illegal value of UserInput, this should never happen")
+        };
+
+        last_record = Some(record);
     }
     Ok(())
 }
@@ -141,11 +200,16 @@ async fn main() -> anyhow::Result<()> {
             handle_load_cmd(&opts, &mut db);
         }
         cli::Command::Train => {
-            let _ = handle_train_cmd(&mut db);
+            match handle_train_cmd(&mut db) {
+                Ok(()) => {
+
+                }
+                Err(err) => {
+                    println!("Error: {err}");
+                }
+            }
         }
     };
-
-
 
     anyhow::Ok(())
 }
