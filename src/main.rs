@@ -49,6 +49,7 @@ impl History {
     }
 
     pub fn add(&mut self, record: HistoryRecord) {
+        assert!(record.user_input != UserInput::Rollback, "History record must not contain Rollback user input");
         self.records.push(record);
     }
 
