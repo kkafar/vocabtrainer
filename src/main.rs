@@ -4,7 +4,6 @@ mod cli;
 use std::{collections::HashSet, io::Write, path::{Path, PathBuf}};
 use anyhow::{self};
 use clap::Parser;
-use log4rs::append::rolling_file::policy::compound::roll;
 use rand::seq::IteratorRandom;
 use rusqlite::{Connection, Row};
 use log::info;
@@ -16,12 +15,50 @@ pub struct DictionaryRecord {
     pub translation: String,
 }
 
-#[derive(Eq, PartialEq)]
+#[derive(Eq, PartialEq, Clone, Copy)]
 pub enum UserInput {
     Yes,
     No,
     Rollback,
     Unknown,
+}
+
+pub struct HistoryRecord {
+    pub dict_record: DictionaryRecord,
+    pub user_input: UserInput
+}
+
+impl HistoryRecord {
+    pub fn new(dict_record: DictionaryRecord, user_input: UserInput) -> Self {
+        Self {
+            dict_record,
+            user_input,
+        }
+    }
+}
+
+pub struct History {
+    pub records: Vec<HistoryRecord>,
+}
+
+impl History {
+    pub fn new() -> Self {
+        Self {
+            records: Vec::new(),
+        }
+    }
+
+    pub fn add(&mut self, record: HistoryRecord) {
+        self.records.push(record);
+    }
+
+    pub fn pop(&mut self) -> Option<HistoryRecord> {
+        self.records.pop()
+    }
+
+    pub fn is_empty(&self) -> bool {
+        self.records.is_empty()
+    }
 }
 
 impl<'a> TryFrom<&Row<'a>> for DictionaryRecord {
@@ -135,8 +172,9 @@ fn handle_train_cmd(db: &mut DatabaseProxy) -> anyhow::Result<()> {
     let mut set: HashSet<DictionaryRecord> = HashSet::from_iter(dict.into_iter().chain(dict_swap));
     let mut rng = rand::thread_rng();
     let mut buffer = String::new();
-    let mut last_record: Option<DictionaryRecord> = None;
     let mut rollback_buffer: Option<DictionaryRecord> = None;
+
+    let mut history = History::new();
 
     while !set.is_empty() || !rollback_buffer.is_none() {
         let record = if rollback_buffer.is_some() {
@@ -156,28 +194,36 @@ fn handle_train_cmd(db: &mut DatabaseProxy) -> anyhow::Result<()> {
         match user_input {
             UserInput::Yes => {
                 done_count += 1;
-                println!("> {} - {}  -  OK {}/{}", record.word, record.translation, done_count, total_count);
                 set.remove(&record);
+                history.add(HistoryRecord::new(record.clone(), user_input));
+                println!("> {} - {}  -  OK {}/{}", record.word, record.translation, done_count, total_count);
             }
             UserInput::No => {
+                history.add(HistoryRecord::new(record.clone(), user_input));
                 println!("> {} - {}  -  REPEAT {}/{}", record.word, record.translation, done_count, total_count);
             }
             UserInput::Rollback => {
-                if last_record.is_some() {
-                    done_count -= 1;
-                    let last_record = last_record.unwrap();
-                    if !set.contains(&last_record) {
-                        set.insert(last_record.clone());
-                    }
-                    rollback_buffer = Some(last_record);
+                if !history.is_empty() {
+                    let history_record = history.pop().unwrap();
+                    match history_record.user_input {
+                        UserInput::Yes => {
+                            let last_dict_record = history_record.dict_record;
+                            set.insert(last_dict_record.clone());
+                            rollback_buffer = Some(last_dict_record);
+                            done_count -= 1;
+                        }
+                        UserInput::No => {
+                            let last_dict_record = history_record.dict_record;
+                            rollback_buffer = Some(last_dict_record);
+                        }
+                        _ => panic!("History record should never contain Rollback action"),
+                    };
                 } else {
-                    rollback_buffer = Some(record.clone());
+                    rollback_buffer = Some(record);
                 }
             }
             _ => panic!("Illegal value of UserInput, this should never happen")
         };
-
-        last_record = Some(record);
     }
     Ok(())
 }
