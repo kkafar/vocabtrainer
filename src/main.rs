@@ -5,7 +5,7 @@ use std::{collections::HashSet, io::Write, path::{Path, PathBuf}};
 use anyhow::{self};
 use clap::Parser;
 use rand::seq::IteratorRandom;
-use rusqlite::{Connection, Row};
+use rusqlite::{params, Connection, Row};
 use log::info;
 
 
@@ -13,6 +13,7 @@ use log::info;
 pub struct DictionaryRecord {
     pub word: String,
     pub translation: String,
+    pub lesson_id: usize,
 }
 
 #[derive(Eq, PartialEq, Clone, Copy)]
@@ -68,7 +69,8 @@ impl<'a> TryFrom<&Row<'a>> for DictionaryRecord {
     fn try_from(value: &Row<'a>) -> Result<Self, Self::Error> {
         let word = value.get::<usize, String>(0)?;
         let translation = value.get::<usize, String>(1)?;
-        Ok(DictionaryRecord { word, translation })
+        let lesson_id = value.get::<usize, usize>(2)?;
+        Ok(DictionaryRecord { word, translation, lesson_id })
     }
 }
 
@@ -94,19 +96,19 @@ impl DatabaseProxy {
     }
 
     pub fn insert_record(self: &mut Self, record: &DictionaryRecord) -> anyhow::Result<()> {
-        let mut stmt = self.conn.prepare("INSERT INTO vocab (word, translation) VALUES (?1, ?2);").unwrap();
-        stmt.execute([&record.word, &record.translation])?;
+        let mut stmt = self.conn.prepare("INSERT INTO vocab (word, translation, lesson_id) VALUES (?1, ?2, ?3);").unwrap();
+        stmt.execute(params![&record.word, &record.translation, &record.lesson_id])?;
         Ok(())
     }
 
     pub fn read_all_records(&mut self) -> anyhow::Result<Vec<DictionaryRecord>> {
-        let mut stmt = self.conn.prepare("SELECT word, translation FROM vocab").unwrap();
+        let mut stmt = self.conn.prepare("SELECT word, translation, lesson_id FROM vocab").unwrap();
         let res: Vec<DictionaryRecord> = stmt.query_map([], |row| DictionaryRecord::try_from(row))?.filter_map(Result::ok).collect();
         Ok(res)
     }
 }
 
-fn load_from_file(path: impl Into<PathBuf>) -> anyhow::Result<Box<dyn Iterator<Item = DictionaryRecord>>> {
+fn load_from_file(path: impl Into<PathBuf>, lesson_id: usize) -> anyhow::Result<Box<dyn Iterator<Item = DictionaryRecord>>> {
     let content: Vec<DictionaryRecord> = std::fs::read_to_string(path.into()).unwrap()
         .lines()
         .map(|line| {
@@ -116,13 +118,13 @@ fn load_from_file(path: impl Into<PathBuf>) -> anyhow::Result<Box<dyn Iterator<I
                 (line.to_owned(), "".to_owned())
             }
         })
-        .map(|(word, translation)| DictionaryRecord { word, translation })
+        .map(|(word, translation)| DictionaryRecord { word, translation, lesson_id })
         .collect();
     Ok(Box::new(content.into_iter()))
 }
 
 fn handle_load_cmd(opts: &cli::LoadArgs, db: &mut DatabaseProxy) {
-    load_from_file(&opts.file)
+    load_from_file(&opts.file, opts.lesson_id)
         .unwrap()
         .for_each(|record| {
             let _  = db.insert_record(&record);
@@ -162,7 +164,7 @@ fn handle_train_cmd(db: &mut DatabaseProxy) -> anyhow::Result<()> {
     let dict_swap: Vec<DictionaryRecord> = dict.clone()
         .into_iter()
         .filter(|record| !record.translation.is_empty())
-        .map(|record| DictionaryRecord { word: record.translation, translation: record.word })
+        .map(|record| DictionaryRecord { word: record.translation, translation: record.word, lesson_id: record.lesson_id })
         .collect();
 
     let total_count = dict.len() + dict_swap.len();

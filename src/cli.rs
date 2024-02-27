@@ -20,6 +20,9 @@ pub enum Command {
 #[command(flatten_help = true)]
 pub struct LoadArgs {
     /// Path to file with vocabulary to update database with
-    pub file: PathBuf
+    pub file: PathBuf,
+
+    /// Lesson id (in the future there will be possibility to specify description)
+    pub lesson_id: usize,
 }
 
