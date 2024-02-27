@@ -88,7 +88,7 @@ impl DatabaseProxy {
     }
 
     pub fn ensure_db_exists(self: &mut Self) -> anyhow::Result<()> {
-        let mut stmt = self.conn.prepare("CREATE TABLE IF NOT EXISTS vocab (word TEXT NOT NULL UNIQUE, translation TEXT, PRIMARY KEY (word))").unwrap();
+        let mut stmt = self.conn.prepare("CREATE TABLE IF NOT EXISTS vocab (word TEXT NOT NULL UNIQUE, translation TEXT, lesson_id INTEGER NOT NULL, PRIMARY KEY (word))").unwrap();
         stmt.execute([])?;
         Ok(())
     }
