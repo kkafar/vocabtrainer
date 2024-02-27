@@ -159,7 +159,7 @@ fn get_user_input(buffer: &mut String) -> anyhow::Result<UserInput> {
     Ok(user_input)
 }
 
-fn handle_train_cmd(db: &mut DatabaseProxy) -> anyhow::Result<()> {
+fn handle_train_cmd(opts: &cli::TrainArgs, db: &mut DatabaseProxy) -> anyhow::Result<()> {
     let dict = db.read_all_records()?;
     let dict_swap: Vec<DictionaryRecord> = dict.clone()
         .into_iter()
@@ -167,12 +167,24 @@ fn handle_train_cmd(db: &mut DatabaseProxy) -> anyhow::Result<()> {
         .map(|record| DictionaryRecord { word: record.translation, translation: record.word, lesson_id: record.lesson_id })
         .collect();
 
-    let total_count = dict.len() + dict_swap.len();
+
+    let chained_iter: Vec<DictionaryRecord> = if let Some(lesson_id) = opts.lesson_id {
+        dict.into_iter()
+            .chain(dict_swap)
+            .filter(|record| record.lesson_id == lesson_id)
+            .collect()
+    } else {
+        dict.into_iter()
+            .chain(dict_swap)
+            .collect()
+    };
+
+    let total_count = chained_iter.len();
     let mut done_count = 0usize;
 
     println!("Total count: {total_count}");
 
-    let mut set: HashSet<DictionaryRecord> = HashSet::from_iter(dict.into_iter().chain(dict_swap));
+    let mut set: HashSet<DictionaryRecord> = HashSet::from_iter(chained_iter);
     let mut rng = rand::thread_rng();
     let mut buffer = String::new();
     let mut rollback_buffer: Option<DictionaryRecord> = None;
@@ -249,8 +261,8 @@ async fn main() -> anyhow::Result<()> {
         cli::Command::Load(opts) => {
             handle_load_cmd(&opts, &mut db);
         }
-        cli::Command::Train => {
-            match handle_train_cmd(&mut db) {
+        cli::Command::Train(opts) => {
+            match handle_train_cmd(&opts, &mut db) {
                 Ok(()) => {
 
                 }

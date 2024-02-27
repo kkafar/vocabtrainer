@@ -12,7 +12,7 @@ pub struct Cli {
 #[derive(Debug, Subcommand)]
 pub enum Command {
     Load(LoadArgs),
-    Train,
+    Train(TrainArgs),
 }
 
 #[derive(Debug, Args)]
@@ -24,5 +24,13 @@ pub struct LoadArgs {
 
     /// Lesson id (in the future there will be possibility to specify description)
     pub lesson_id: usize,
+}
+
+#[derive(Debug, Args)]
+#[command(args_conflicts_with_subcommands = true)]
+#[command(flatten_help = true)]
+pub struct TrainArgs {
+    /// Id of lesson to train
+    pub lesson_id: Option<usize>,
 }
 
