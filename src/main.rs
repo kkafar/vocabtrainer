@@ -106,6 +106,12 @@ impl DatabaseProxy {
         let res: Vec<DictionaryRecord> = stmt.query_map([], |row| DictionaryRecord::try_from(row))?.filter_map(Result::ok).collect();
         Ok(res)
     }
+
+    pub fn read_records_for_lesson(&mut self, lesson_id: usize) -> anyhow::Result<Vec<DictionaryRecord>> {
+        let mut stmt = self.conn.prepare("SELECT word, translation, lesson_id FROM vocab WHERE lesson_id = ?1").unwrap();
+        let res: Vec<DictionaryRecord> = stmt.query_map([lesson_id], |row| DictionaryRecord::try_from(row))?.filter_map(Result::ok).collect();
+        Ok(res)
+    }
 }
 
 fn load_from_file(path: impl Into<PathBuf>, lesson_id: usize) -> anyhow::Result<Box<dyn Iterator<Item = DictionaryRecord>>> {
@@ -243,6 +249,18 @@ fn handle_train_cmd(opts: &cli::TrainArgs, db: &mut DatabaseProxy) -> anyhow::Re
     Ok(())
 }
 
+fn handle_list_cmd(opts: &cli::ListArgs, db: &mut DatabaseProxy) -> anyhow::Result<()> {
+    let records: Vec<DictionaryRecord> = if let Some(lesson_id) = opts.lesson_id {
+        db.read_records_for_lesson(lesson_id)?
+    } else {
+        db.read_all_records()?
+    };
+
+    for (i, record) in records.into_iter().enumerate() {
+        println!("{i}: {} - {}", record.word, record.translation);
+    }
+    Ok(())
+}
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
@@ -270,6 +288,9 @@ async fn main() -> anyhow::Result<()> {
                     println!("Error: {err}");
                 }
             }
+        }
+        cli::Command::List(opts) => {
+            let _ = handle_list_cmd(&opts, &mut db);
         }
     };
 
