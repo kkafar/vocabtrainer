@@ -17,7 +17,7 @@ async fn main() -> anyhow::Result<()> {
     let args = cli::Cli::parse();
 
     let mut app = Application::new(args);
-    app.run();
+    app.run()?;
 
     anyhow::Ok(())
 }

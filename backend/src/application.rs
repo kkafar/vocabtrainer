@@ -35,7 +35,7 @@ impl Application {
         self.state.context.borrow_mut()
     }
 
-    pub fn run(&mut self) -> () {
+    pub fn run(&mut self) -> anyhow::Result<()> {
         match self.state.args.command.clone() {
             cli::Command::Load(opts) => {
                 handle_load_cmd(&opts, self.context_mut().db_mut());
@@ -54,5 +54,7 @@ impl Application {
                 let _ = handle_list_cmd(&opts, self.context_mut().db_mut());
             }
         };
+
+        anyhow::Ok(())
     }
 }
