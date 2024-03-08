@@ -1,7 +1,7 @@
 use clap::{Args, Parser, Subcommand};
 use std::path::PathBuf;
 
-#[derive(Parser)]
+#[derive(Parser, Clone)]
 #[command(author, version, about, long_about)]
 pub struct Cli {
     /// Command to execute
@@ -9,14 +9,20 @@ pub struct Cli {
     pub command: Command,
 }
 
-#[derive(Debug, Subcommand)]
+impl Cli {
+    pub fn command(&self) -> &Command {
+        &self.command
+    }
+}
+
+#[derive(Debug, Subcommand, Clone)]
 pub enum Command {
     Load(LoadArgs),
     Train(TrainArgs),
     List(ListArgs),
 }
 
-#[derive(Debug, Args)]
+#[derive(Debug, Args, Clone)]
 #[command(args_conflicts_with_subcommands = true)]
 #[command(flatten_help = true)]
 pub struct LoadArgs {
@@ -27,7 +33,7 @@ pub struct LoadArgs {
     pub lesson_id: usize,
 }
 
-#[derive(Debug, Args)]
+#[derive(Debug, Args, Clone)]
 #[command(args_conflicts_with_subcommands = true)]
 #[command(flatten_help = true)]
 pub struct TrainArgs {
@@ -35,7 +41,7 @@ pub struct TrainArgs {
     pub lesson_id: Option<usize>,
 }
 
-#[derive(Debug, Args)]
+#[derive(Debug, Args, Clone)]
 #[command(args_conflicts_with_subcommands = true)]
 #[command(flatten_help = true)]
 pub struct ListArgs {

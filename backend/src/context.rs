@@ -1,4 +1,4 @@
-use crate::DatabaseProxy;
+use crate::database::DatabaseProxy;
 
 pub struct Context {
     db_proxy: DatabaseProxy,
