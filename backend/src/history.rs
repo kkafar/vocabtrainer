@@ -1,8 +1,8 @@
-use crate::{dictionary::DictionaryRecord, command::UserInput};
+use crate::{command::UserInput, dictionary::DictionaryRecord};
 
 pub struct HistoryRecord {
     pub dict_record: DictionaryRecord,
-    pub user_input: UserInput
+    pub user_input: UserInput,
 }
 
 impl HistoryRecord {
@@ -26,7 +26,10 @@ impl History {
     }
 
     pub fn add(&mut self, record: HistoryRecord) {
-        assert!(record.user_input != UserInput::Rollback, "History record must not contain Rollback user input");
+        assert!(
+            record.user_input != UserInput::Rollback,
+            "History record must not contain Rollback user input"
+        );
         self.records.push(record);
     }
 
@@ -38,4 +41,3 @@ impl History {
         self.records.is_empty()
     }
 }
-

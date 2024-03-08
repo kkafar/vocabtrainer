@@ -48,4 +48,3 @@ pub struct ListArgs {
     /// Id of lesson to train
     pub lesson_id: Option<usize>,
 }
-

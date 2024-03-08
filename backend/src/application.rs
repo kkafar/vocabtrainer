@@ -1,6 +1,11 @@
-use std::cell::{RefCell, RefMut, Ref};
+use std::cell::{Ref, RefCell, RefMut};
 
-use crate::{context::Context, cli::{Cli, self}, command::{handle_load_cmd, handle_train_cmd, handle_list_cmd}, database::DatabaseProxy};
+use crate::{
+    cli::{self, Cli},
+    command::{handle_list_cmd, handle_load_cmd, handle_train_cmd},
+    context::Context,
+    database::DatabaseProxy,
+};
 
 struct Inner {
     context: RefCell<Context>,
@@ -42,9 +47,7 @@ impl Application {
             }
             cli::Command::Train(ref opts) => {
                 match handle_train_cmd(&opts, self.context_mut().db_mut()) {
-                    Ok(()) => {
-
-                    }
+                    Ok(()) => {}
                     Err(err) => {
                         println!("Error: {err}");
                     }

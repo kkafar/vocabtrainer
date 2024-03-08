@@ -1,10 +1,14 @@
-use std::{path::PathBuf, io::Write, collections::HashSet};
+use std::{collections::HashSet, io::Write, path::PathBuf};
 
 use log::info;
 use rand::seq::IteratorRandom;
 
-use crate::{dictionary::DictionaryRecord, cli, database::DatabaseProxy, history::{History, HistoryRecord}};
-
+use crate::{
+    cli,
+    database::DatabaseProxy,
+    dictionary::DictionaryRecord,
+    history::{History, HistoryRecord},
+};
 
 #[derive(Eq, PartialEq, Clone, Copy)]
 pub enum UserInput {
@@ -14,8 +18,12 @@ pub enum UserInput {
     Unknown,
 }
 
-fn load_from_file(path: impl Into<PathBuf>, lesson_id: usize) -> anyhow::Result<Box<dyn Iterator<Item = DictionaryRecord>>> {
-    let content: Vec<DictionaryRecord> = std::fs::read_to_string(path.into()).unwrap()
+fn load_from_file(
+    path: impl Into<PathBuf>,
+    lesson_id: usize,
+) -> anyhow::Result<Box<dyn Iterator<Item = DictionaryRecord>>> {
+    let content: Vec<DictionaryRecord> = std::fs::read_to_string(path.into())
+        .unwrap()
         .lines()
         .map(|line| {
             if let Some(split) = line.split_once(" - ") {
@@ -24,7 +32,11 @@ fn load_from_file(path: impl Into<PathBuf>, lesson_id: usize) -> anyhow::Result<
                 (line.to_owned(), "".to_owned())
             }
         })
-        .map(|(word, translation)| DictionaryRecord { word, translation, lesson_id })
+        .map(|(word, translation)| DictionaryRecord {
+            word,
+            translation,
+            lesson_id,
+        })
         .collect();
     Ok(Box::new(content.into_iter()))
 }
@@ -62,18 +74,22 @@ pub fn handle_load_cmd(opts: &cli::LoadArgs, db: &mut DatabaseProxy) {
     load_from_file(&opts.file, opts.lesson_id)
         .unwrap()
         .for_each(|record| {
-            let _  = db.insert_record(&record);
+            let _ = db.insert_record(&record);
         });
 }
 
 pub fn handle_train_cmd(opts: &cli::TrainArgs, db: &mut DatabaseProxy) -> anyhow::Result<()> {
     let dict = db.read_all_records()?;
-    let dict_swap: Vec<DictionaryRecord> = dict.clone()
+    let dict_swap: Vec<DictionaryRecord> = dict
+        .clone()
         .into_iter()
         .filter(|record| !record.translation.is_empty())
-        .map(|record| DictionaryRecord { word: record.translation, translation: record.word, lesson_id: record.lesson_id })
+        .map(|record| DictionaryRecord {
+            word: record.translation,
+            translation: record.word,
+            lesson_id: record.lesson_id,
+        })
         .collect();
-
 
     let chained_iter: Vec<DictionaryRecord> = if let Some(lesson_id) = opts.lesson_id {
         dict.into_iter()
@@ -81,9 +97,7 @@ pub fn handle_train_cmd(opts: &cli::TrainArgs, db: &mut DatabaseProxy) -> anyhow
             .filter(|record| record.lesson_id == lesson_id)
             .collect()
     } else {
-        dict.into_iter()
-            .chain(dict_swap)
-            .collect()
+        dict.into_iter().chain(dict_swap).collect()
     };
 
     let total_count = chained_iter.len();
@@ -118,11 +132,17 @@ pub fn handle_train_cmd(opts: &cli::TrainArgs, db: &mut DatabaseProxy) -> anyhow
                 done_count += 1;
                 set.remove(&record);
                 history.add(HistoryRecord::new(record.clone(), user_input));
-                println!("> {} - {}  -  OK {}/{}", record.word, record.translation, done_count, total_count);
+                println!(
+                    "> {} - {}  -  OK {}/{}",
+                    record.word, record.translation, done_count, total_count
+                );
             }
             UserInput::No => {
                 history.add(HistoryRecord::new(record.clone(), user_input));
-                println!("> {} - {}  -  REPEAT {}/{}", record.word, record.translation, done_count, total_count);
+                println!(
+                    "> {} - {}  -  REPEAT {}/{}",
+                    record.word, record.translation, done_count, total_count
+                );
             }
             UserInput::Rollback => {
                 if !history.is_empty() {
@@ -144,7 +164,7 @@ pub fn handle_train_cmd(opts: &cli::TrainArgs, db: &mut DatabaseProxy) -> anyhow
                     rollback_buffer = Some(record);
                 }
             }
-            _ => panic!("Illegal value of UserInput, this should never happen")
+            _ => panic!("Illegal value of UserInput, this should never happen"),
         };
     }
     Ok(())

@@ -1,15 +1,14 @@
 use application::Application;
 use clap::Parser;
 
-mod logging;
-mod cli;
 mod application;
-mod context;
+mod cli;
 mod command;
+mod context;
 mod database;
-mod history;
 mod dictionary;
-
+mod history;
+mod logging;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {

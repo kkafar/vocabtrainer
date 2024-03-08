@@ -2,7 +2,6 @@ use crate::database::DatabaseProxy;
 
 pub struct Context {
     db_proxy: DatabaseProxy,
-
 }
 
 impl Context {
