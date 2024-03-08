@@ -9,12 +9,6 @@ pub struct Cli {
     pub command: Command,
 }
 
-impl Cli {
-    pub fn command(&self) -> &Command {
-        &self.command
-    }
-}
-
 #[derive(Debug, Subcommand, Clone)]
 pub enum Command {
     Load(LoadArgs),
