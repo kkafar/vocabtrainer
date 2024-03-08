@@ -1,8 +1,11 @@
 mod logging;
 mod cli;
+mod application;
+mod context;
 
 use std::{collections::HashSet, io::Write, path::{Path, PathBuf}};
 use anyhow::{self};
+use application::Application;
 use clap::Parser;
 use rand::seq::IteratorRandom;
 use rusqlite::{params, Connection, Row};
@@ -270,22 +273,22 @@ fn handle_list_cmd(opts: &cli::ListArgs, db: &mut DatabaseProxy) -> anyhow::Resu
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
     let _ = logging::init();
-    info!("Hello world from vocabtrainer application");
-
     let args = cli::Cli::parse();
 
-    let cwd = std::env::current_dir().expect("Failed to read current directory from env");
-    let db_path = cwd.join("testdb.db3");
+    let mut app = Application::new(&args);
 
-    let mut db = DatabaseProxy::new(db_path).unwrap();
-    let _ = db.ensure_db_exists();
+    // let cwd = std::env::current_dir().expect("Failed to read current directory from env");
+    // let db_path = cwd.join("testdb.db3");
+    //
+    // let mut db = DatabaseProxy::new(db_path).unwrap();
+    // let _ = db.ensure_db_exists();
 
     match args.command {
         cli::Command::Load(opts) => {
-            handle_load_cmd(&opts, &mut db);
+            handle_load_cmd(&opts, app.context_mut().db_mut());
         }
         cli::Command::Train(opts) => {
-            match handle_train_cmd(&opts, &mut db) {
+            match handle_train_cmd(&opts, app.context_mut().db_mut()) {
                 Ok(()) => {
 
                 }
@@ -295,7 +298,7 @@ async fn main() -> anyhow::Result<()> {
             }
         }
         cli::Command::List(opts) => {
-            let _ = handle_list_cmd(&opts, &mut db);
+            let _ = handle_list_cmd(&opts, app.context_mut().db_mut());
         }
     };
 
