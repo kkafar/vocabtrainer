@@ -1,5 +1,6 @@
 use anyhow::{Context, Result};
-use log::LevelFilter; use log4rs::{
+use log::LevelFilter;
+use log4rs::{
     self,
     append::console::ConsoleAppender,
     config::{self, Appender, Logger},
@@ -35,4 +36,3 @@ pub fn init() -> Result<log4rs::Handle> {
 
     log4rs::init_config(config).with_context(|| "Failed to initialize logger with provided config")
 }
-
