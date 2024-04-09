@@ -1,9 +1,10 @@
-use std::path::Path;
+use itertools::{self, Itertools};
+use std::{path::Path, usize};
 
 use log::trace;
 use rusqlite::{params, Connection};
 
-use crate::dictionary::DictionaryRecord;
+use crate::dictionary::{DictionaryRecord, LessonId};
 
 pub struct DatabaseProxy {
     pub conn: Connection,
@@ -66,6 +67,20 @@ impl DatabaseProxy {
             .query_map([lesson_id], |row| DictionaryRecord::try_from(row))?
             .filter_map(Result::ok)
             .collect();
+        Ok(res)
+    }
+
+    pub fn list_lessons(&mut self) -> anyhow::Result<Vec<usize>> {
+        trace!("Reading available lessons");
+        let mut stmt = self.conn.prepare("SELECT lesson_id FROM vocab")?;
+
+        let res: Vec<usize> = stmt
+            .query_map([], |row| LessonId::try_from(row))?
+            .filter_map(Result::ok)
+            .map(|id| id.0)
+            .unique()
+            .collect_vec();
+
         Ok(res)
     }
 }

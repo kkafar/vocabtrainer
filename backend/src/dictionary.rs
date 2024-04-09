@@ -1,5 +1,7 @@
 use rusqlite::Row;
 
+pub struct LessonId(pub usize);
+
 #[derive(Debug, Eq, PartialEq, Hash, Clone)]
 pub struct DictionaryRecord {
     pub word: String,
@@ -19,5 +21,15 @@ impl<'a> TryFrom<&Row<'a>> for DictionaryRecord {
             translation,
             lesson_id,
         })
+    }
+}
+
+
+impl<'a> TryFrom<&Row<'a>> for LessonId {
+    type Error = rusqlite::Error;
+
+    fn try_from(value: &Row<'a>) -> Result<Self, Self::Error> {
+        let lesson_id = value.get::<usize, usize>(0)?;
+        Ok(LessonId(lesson_id))
     }
 }

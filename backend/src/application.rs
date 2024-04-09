@@ -2,7 +2,7 @@ use std::cell::{Ref, RefCell, RefMut};
 
 use crate::{
     cli::{self, Cli},
-    command::{handle_list_cmd, handle_load_cmd, handle_train_cmd},
+    command::{handle_list_cmd, handle_list_lessons_cmd, handle_load_cmd, handle_train_cmd},
     context::Context,
     database::DatabaseProxy,
 };
@@ -55,6 +55,9 @@ impl Application {
             }
             cli::Command::List(ref opts) => {
                 let _ = handle_list_cmd(&opts, self.context_mut().db_mut());
+            }
+            cli::Command::ListLessons => {
+                let _ = handle_list_lessons_cmd(self.context_mut().db_mut());
             }
         };
 

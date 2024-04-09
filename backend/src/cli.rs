@@ -14,6 +14,7 @@ pub enum Command {
     Load(LoadArgs),
     Train(TrainArgs),
     List(ListArgs),
+    ListLessons,
 }
 
 #[derive(Debug, Args, Clone)]
