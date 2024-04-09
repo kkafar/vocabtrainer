@@ -182,3 +182,14 @@ pub fn handle_list_cmd(opts: &cli::ListArgs, db: &mut DatabaseProxy) -> anyhow::
     }
     Ok(())
 }
+
+pub fn handle_list_lessons_cmd(db: &mut DatabaseProxy) -> anyhow::Result<()> {
+    let lessons = db.list_lessons()?;
+    println!("Available lessons:");
+    for lesson in lessons {
+        println!("{}", lesson);
+    }
+
+
+    Ok(())
+}
