@@ -1,5 +1,4 @@
 import argparse
-from collections.abc import Mapping
 import json
 from pathlib import Path
 from dataclasses import dataclass, field, asdict
@@ -31,7 +30,7 @@ class VocabEntity:
 @dataclass
 class LessonMetadata:
     lesson_date: Optional[datetime]
-    data_submission_date: datetime
+    submission_date: datetime
     description: Optional[str]
 
 
