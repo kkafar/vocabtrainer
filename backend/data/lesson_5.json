@@ -1,0 +1,169 @@
+{
+  "entities": [
+    {
+      "text": "nutzen",
+      "plural_suffix": null,
+      "translation": "używać"
+    },
+    {
+      "text": "besprechen",
+      "plural_suffix": null,
+      "translation": "omawiać"
+    },
+    {
+      "text": "demselben",
+      "plural_suffix": null,
+      "translation": "temu samemu"
+    },
+    {
+      "text": "derselbe",
+      "plural_suffix": null,
+      "translation": "ten sam"
+    },
+    {
+      "text": "halten",
+      "plural_suffix": null,
+      "translation": "trzymać"
+    },
+    {
+      "text": "Niemand ist da",
+      "plural_suffix": null,
+      "translation": "nikogo nie ma"
+    },
+    {
+      "text": "ohne Grund",
+      "plural_suffix": null,
+      "translation": "bez powodu"
+    },
+    {
+      "text": "der Grund, Gründe",
+      "plural_suffix": null,
+      "translation": "powód"
+    },
+    {
+      "text": "Zeit verbringen",
+      "plural_suffix": null,
+      "translation": "spędzać czas"
+    },
+    {
+      "text": "das Eis (tylko liczba pojedyncza)",
+      "plural_suffix": null,
+      "translation": "lód"
+    },
+    {
+      "text": "klettern",
+      "plural_suffix": null,
+      "translation": "wspinać się"
+    },
+    {
+      "text": "bewundern",
+      "plural_suffix": null,
+      "translation": "podziwiać"
+    },
+    {
+      "text": "sich sonnen",
+      "plural_suffix": null,
+      "translation": "opalać się"
+    },
+    {
+      "text": "frische Luft einatmen",
+      "plural_suffix": null,
+      "translation": "oddychać świeżym powietrzem"
+    },
+    {
+      "text": "klug",
+      "plural_suffix": null,
+      "translation": "mądry"
+    },
+    {
+      "text": "gesellig",
+      "plural_suffix": null,
+      "translation": "towarzyski"
+    },
+    {
+      "text": "so lala",
+      "plural_suffix": null,
+      "translation": "tak sobie"
+    },
+    {
+      "text": "die Wohnung, -en",
+      "plural_suffix": null,
+      "translation": "mieszkanie"
+    },
+    {
+      "text": "umziehen",
+      "plural_suffix": null,
+      "translation": "przeprowadzić się"
+    },
+    {
+      "text": "zuerst",
+      "plural_suffix": null,
+      "translation": "najpierw"
+    },
+    {
+      "text": "Ich habe nichts mehr zu sagen",
+      "plural_suffix": null,
+      "translation": "nie mam nic wiecej do powiedzenia"
+    },
+    {
+      "text": "der Geschmack",
+      "plural_suffix": null,
+      "translation": "smak"
+    },
+    {
+      "text": "Ich mag den Kaffeegeschmack nicht",
+      "plural_suffix": null,
+      "translation": "nie lubie smaku kawy"
+    },
+    {
+      "text": "gelegentlich",
+      "plural_suffix": null,
+      "translation": "okazjonalnie"
+    },
+    {
+      "text": "der Schnee",
+      "plural_suffix": null,
+      "translation": "śnieg"
+    },
+    {
+      "text": "unangenehm",
+      "plural_suffix": null,
+      "translation": "nieprzyjemny"
+    },
+    {
+      "text": "nicht zu warm, nicht zu kalt",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "ideal",
+      "plural_suffix": null,
+      "translation": "idealny"
+    },
+    {
+      "text": "wichtig",
+      "plural_suffix": null,
+      "translation": "ważny"
+    },
+    {
+      "text": "vor allem",
+      "plural_suffix": null,
+      "translation": "głównie, przede wszystkim"
+    },
+    {
+      "text": "zum Nachdenken zwingen",
+      "plural_suffix": null,
+      "translation": "zmuszac do przemyslen"
+    },
+    {
+      "text": "zwingen",
+      "plural_suffix": null,
+      "translation": "zmuszac"
+    }
+  ],
+  "metadata": {
+    "lesson_date": null,
+    "data_submission_date": "2024-11-17T15:41:15.958702",
+    "description": null
+  }
+}

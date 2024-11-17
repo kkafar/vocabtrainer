@@ -1,0 +1,349 @@
+{
+  "entities": [
+    {
+      "text": "der Reis",
+      "plural_suffix": null,
+      "translation": "ryż"
+    },
+    {
+      "text": "die Krankschreibung",
+      "plural_suffix": null,
+      "translation": "zwolnienie lekarskie"
+    },
+    {
+      "text": "zum Leben zurückkommen",
+      "plural_suffix": null,
+      "translation": "wrócić do życia"
+    },
+    {
+      "text": "auf dem Laufenden sein",
+      "plural_suffix": null,
+      "translation": "być na bieżąco"
+    },
+    {
+      "text": "nach dem Unterricht",
+      "plural_suffix": null,
+      "translation": "po lekcji"
+    },
+    {
+      "text": "ein weich / hart gekochtes Ei",
+      "plural_suffix": null,
+      "translation": "jajko na twardo / miękko"
+    },
+    {
+      "text": "das Fitnessstudio",
+      "plural_suffix": null,
+      "translation": "siłownia"
+    },
+    {
+      "text": "entschieden",
+      "plural_suffix": null,
+      "translation": "zdecydowany"
+    },
+    {
+      "text": "Urlaub machen",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "Wen",
+      "plural_suffix": null,
+      "translation": "kiedy"
+    },
+    {
+      "text": "der Pilz, -e",
+      "plural_suffix": null,
+      "translation": "grzyb"
+    },
+    {
+      "text": "Pilze sammeln",
+      "plural_suffix": null,
+      "translation": "zbierać grzyby"
+    },
+    {
+      "text": "der Pilzsammler",
+      "plural_suffix": null,
+      "translation": "grzybiarz"
+    },
+    {
+      "text": "trocken",
+      "plural_suffix": null,
+      "translation": "suszyć"
+    },
+    {
+      "text": "das Weihnachten",
+      "plural_suffix": null,
+      "translation": "Boże Narodzenie"
+    },
+    {
+      "text": "der Heiligabend",
+      "plural_suffix": null,
+      "translation": "Wigilia"
+    },
+    {
+      "text": "das Eingemachte",
+      "plural_suffix": null,
+      "translation": "przetwory"
+    },
+    {
+      "text": "die Ernte, -n",
+      "plural_suffix": null,
+      "translation": "zbiór"
+    },
+    {
+      "text": "abhängen von +Dat.",
+      "plural_suffix": null,
+      "translation": "zależeć od czegoś/kogoś"
+    },
+    {
+      "text": "das Wetter",
+      "plural_suffix": null,
+      "translation": "pogoda"
+    },
+    {
+      "text": "erwachsen",
+      "plural_suffix": null,
+      "translation": "dorosły"
+    },
+    {
+      "text": "finden",
+      "plural_suffix": null,
+      "translation": "znajdować"
+    },
+    {
+      "text": "langweilig",
+      "plural_suffix": null,
+      "translation": "nudny"
+    },
+    {
+      "text": "nervig",
+      "plural_suffix": null,
+      "translation": "irytujący, denerwujący"
+    },
+    {
+      "text": "werden",
+      "plural_suffix": null,
+      "translation": "stać się"
+    },
+    {
+      "text": "Ich bin dessen nicht sicher.",
+      "plural_suffix": null,
+      "translation": "Nie jestem tego pewien."
+    },
+    {
+      "text": "besonders",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "etwas / nichts Besonderes",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "Wen",
+      "plural_suffix": null,
+      "translation": "kogo"
+    },
+    {
+      "text": "das Abendkleid, -er",
+      "plural_suffix": null,
+      "translation": "suknia wieczorowa"
+    },
+    {
+      "text": "das Lied, -er",
+      "plural_suffix": null,
+      "translation": "piosenka"
+    },
+    {
+      "text": "das Schiff, -e",
+      "plural_suffix": null,
+      "translation": "statek, okręt"
+    },
+    {
+      "text": "der Fluss, Flüsse",
+      "plural_suffix": null,
+      "translation": "rzeka"
+    },
+    {
+      "text": "der Hafen, Häfen",
+      "plural_suffix": null,
+      "translation": "port, przystań"
+    },
+    {
+      "text": "die Brücke, -n",
+      "plural_suffix": null,
+      "translation": "most"
+    },
+    {
+      "text": "farbig",
+      "plural_suffix": null,
+      "translation": "kolorowy"
+    },
+    {
+      "text": "bestimmt",
+      "plural_suffix": null,
+      "translation": "określony, uzgodniony, na pewno, z pewnością"
+    },
+    {
+      "text": "die Bahn",
+      "plural_suffix": null,
+      "translation": "kolej"
+    },
+    {
+      "text": "das Bett",
+      "plural_suffix": null,
+      "translation": "łóżko"
+    },
+    {
+      "text": "der Stuhl",
+      "plural_suffix": null,
+      "translation": "krzesło"
+    },
+    {
+      "text": "der Sessel",
+      "plural_suffix": null,
+      "translation": "fotel"
+    },
+    {
+      "text": "das Ostern",
+      "plural_suffix": null,
+      "translation": "Wielkanoc"
+    },
+    {
+      "text": "bereuen",
+      "plural_suffix": null,
+      "translation": "żałować"
+    },
+    {
+      "text": "normalerweise",
+      "plural_suffix": null,
+      "translation": "normalnie"
+    },
+    {
+      "text": "in Rente sein",
+      "plural_suffix": null,
+      "translation": "być na emeryturze"
+    },
+    {
+      "text": "Ich kann es kaum erwarten.",
+      "plural_suffix": null,
+      "translation": "Nie mogę się doczekać."
+    },
+    {
+      "text": "wahrscheinlich",
+      "plural_suffix": null,
+      "translation": "prawdopodobnie"
+    },
+    {
+      "text": "bei Vorbereitungen helfen",
+      "plural_suffix": null,
+      "translation": "pomagać w przygotowaniach"
+    },
+    {
+      "text": "die Zeitung",
+      "plural_suffix": null,
+      "translation": "gazeta"
+    },
+    {
+      "text": "je nachdem",
+      "plural_suffix": null,
+      "translation": "zależy"
+    },
+    {
+      "text": "auf +Akk. ankommen",
+      "plural_suffix": null,
+      "translation": "zależeć od kogoś/czegoś"
+    },
+    {
+      "text": "spät",
+      "plural_suffix": null,
+      "translation": "późno"
+    },
+    {
+      "text": "jeder",
+      "plural_suffix": null,
+      "translation": "każdy"
+    },
+    {
+      "text": "die Pflaume, -n",
+      "plural_suffix": null,
+      "translation": "śliwka"
+    },
+    {
+      "text": "letztens",
+      "plural_suffix": null,
+      "translation": "ostatnio"
+    },
+    {
+      "text": "die Kräuter",
+      "plural_suffix": null,
+      "translation": "zioła"
+    },
+    {
+      "text": "das Getränk, -e",
+      "plural_suffix": null,
+      "translation": "napój"
+    },
+    {
+      "text": "ein bisschen",
+      "plural_suffix": null,
+      "translation": "trochę"
+    },
+    {
+      "text": "der Quark",
+      "plural_suffix": null,
+      "translation": "twaróg"
+    },
+    {
+      "text": "das Spiegelei, -er",
+      "plural_suffix": null,
+      "translation": "jajko sadzone"
+    },
+    {
+      "text": "ein weich / hart gekochtes Ei",
+      "plural_suffix": null,
+      "translation": "jajko na miękko / twardo"
+    },
+    {
+      "text": "das Rührei",
+      "plural_suffix": null,
+      "translation": "jajecznica"
+    },
+    {
+      "text": "die Brust, Brüste",
+      "plural_suffix": null,
+      "translation": "pierś"
+    },
+    {
+      "text": "gebraten",
+      "plural_suffix": null,
+      "translation": "smażony"
+    },
+    {
+      "text": "ein paar",
+      "plural_suffix": null,
+      "translation": "kilka"
+    },
+    {
+      "text": "der Preis, -e",
+      "plural_suffix": null,
+      "translation": "cena"
+    },
+    {
+      "text": "der Verkäufer",
+      "plural_suffix": null,
+      "translation": "sprzedawca"
+    },
+    {
+      "text": "",
+      "plural_suffix": null,
+      "translation": null
+    }
+  ],
+  "metadata": {
+    "lesson_date": null,
+    "data_submission_date": "2024-11-17T15:41:15.959021",
+    "description": null
+  }
+}

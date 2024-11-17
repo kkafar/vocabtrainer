@@ -1,0 +1,464 @@
+{
+  "entities": [
+    {
+      "text": "die Familie",
+      "plural_suffix": null,
+      "translation": "rodzina"
+    },
+    {
+      "text": "das Sentiment",
+      "plural_suffix": null,
+      "translation": "sentyment"
+    },
+    {
+      "text": "alle zwei Monate",
+      "plural_suffix": null,
+      "translation": "~ co dwa miesiące"
+    },
+    {
+      "text": "ins Ausland",
+      "plural_suffix": null,
+      "translation": "za granicę"
+    },
+    {
+      "text": "die Gelegenheit, -en",
+      "plural_suffix": null,
+      "translation": "okazja"
+    },
+    {
+      "text": "wunderbar",
+      "plural_suffix": null,
+      "translation": "cudownie, cudowny"
+    },
+    {
+      "text": "dort",
+      "plural_suffix": null,
+      "translation": "tam (popatrzeć na przykład zdania)"
+    },
+    {
+      "text": "der Ort, -e",
+      "plural_suffix": null,
+      "translation": "miejsce"
+    },
+    {
+      "text": "das Gedächtnis, -se",
+      "plural_suffix": null,
+      "translation": "pamięć"
+    },
+    {
+      "text": "letztes Jahr",
+      "plural_suffix": null,
+      "translation": "w ostatnim roku"
+    },
+    {
+      "text": "versuchen",
+      "plural_suffix": null,
+      "translation": "próbować"
+    },
+    {
+      "text": "ich war …",
+      "plural_suffix": null,
+      "translation": "byłem …"
+    },
+    {
+      "text": "stark",
+      "plural_suffix": null,
+      "translation": "silny"
+    },
+    {
+      "text": "geschlossen",
+      "plural_suffix": null,
+      "translation": "zamknięty"
+    },
+    {
+      "text": "der Wind",
+      "plural_suffix": null,
+      "translation": "wiatr"
+    },
+    {
+      "text": "der Turm",
+      "plural_suffix": null,
+      "translation": "wieża"
+    },
+    {
+      "text": "der Fernsehturm",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "vielleicht",
+      "plural_suffix": null,
+      "translation": "może"
+    },
+    {
+      "text": "übersetzen",
+      "plural_suffix": null,
+      "translation": "przetłumaczyć"
+    },
+    {
+      "text": "am Anfang",
+      "plural_suffix": null,
+      "translation": "na początku"
+    },
+    {
+      "text": "breit",
+      "plural_suffix": null,
+      "translation": "szeroki"
+    },
+    {
+      "text": "sicher",
+      "plural_suffix": null,
+      "translation": "pewny"
+    },
+    {
+      "text": "der Grund, Gründe",
+      "plural_suffix": null,
+      "translation": "powód"
+    },
+    {
+      "text": "nennen",
+      "plural_suffix": null,
+      "translation": "wymieniać, podawać, nazywać"
+    },
+    {
+      "text": "der Hörtext, -e",
+      "plural_suffix": null,
+      "translation": "nagranie, słuchanka"
+    },
+    {
+      "text": "es ist sehr nett",
+      "plural_suffix": null,
+      "translation": "to bardzo miłe"
+    },
+    {
+      "text": "nichts",
+      "plural_suffix": null,
+      "translation": "nic"
+    },
+    {
+      "text": "niemand",
+      "plural_suffix": null,
+      "translation": "nikt, żaden, ani jeden"
+    },
+    {
+      "text": "sondern",
+      "plural_suffix": null,
+      "translation": "lecz"
+    },
+    {
+      "text": "der Nachbar",
+      "plural_suffix": null,
+      "translation": "sąsiad"
+    },
+    {
+      "text": "moderne Malerei",
+      "plural_suffix": null,
+      "translation": "współczesne malarstwo"
+    },
+    {
+      "text": "davon",
+      "plural_suffix": null,
+      "translation": "z tego (davon verstehe ich…), o tym"
+    },
+    {
+      "text": "der Durst",
+      "plural_suffix": null,
+      "translation": "pragnienie"
+    },
+    {
+      "text": "der Mensch",
+      "plural_suffix": null,
+      "translation": "człowiek"
+    },
+    {
+      "text": "der Laptop",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "das Dach",
+      "plural_suffix": null,
+      "translation": "dach xD"
+    },
+    {
+      "text": "die Angst",
+      "plural_suffix": null,
+      "translation": "strach"
+    },
+    {
+      "text": "tut mir leid",
+      "plural_suffix": null,
+      "translation": "przykro mi"
+    },
+    {
+      "text": "der Kuli",
+      "plural_suffix": null,
+      "translation": "długopis"
+    },
+    {
+      "text": "das Englisch",
+      "plural_suffix": null,
+      "translation": "język angielski"
+    },
+    {
+      "text": "der Comic, -s",
+      "plural_suffix": null,
+      "translation": "komiks"
+    },
+    {
+      "text": "das Büro, -s",
+      "plural_suffix": null,
+      "translation": "biuro"
+    },
+    {
+      "text": "zeichnen",
+      "plural_suffix": null,
+      "translation": "rysować"
+    },
+    {
+      "text": "das Zeichnen",
+      "plural_suffix": null,
+      "translation": "rysunek, rysowanie"
+    },
+    {
+      "text": "das Haustier, -e",
+      "plural_suffix": null,
+      "translation": "zwierzę domowe"
+    },
+    {
+      "text": "der Nachbar, -n",
+      "plural_suffix": null,
+      "translation": "sąsiad"
+    },
+    {
+      "text": "die Kundin, -nen",
+      "plural_suffix": null,
+      "translation": "klientka"
+    },
+    {
+      "text": "der Kunde, -en",
+      "plural_suffix": null,
+      "translation": "klient"
+    },
+    {
+      "text": "die Lampe",
+      "plural_suffix": null,
+      "translation": "lampa"
+    },
+    {
+      "text": "der Alkohol, -e",
+      "plural_suffix": null,
+      "translation": "alkohol"
+    },
+    {
+      "text": "ganz",
+      "plural_suffix": null,
+      "translation": "całkowicie, zupełnie"
+    },
+    {
+      "text": "gar",
+      "plural_suffix": null,
+      "translation": "wcale, zupełnie"
+    },
+    {
+      "text": "überhaupt",
+      "plural_suffix": null,
+      "translation": "zupełnie, właściwie, w ogóle"
+    },
+    {
+      "text": "gerade",
+      "plural_suffix": null,
+      "translation": "właśnie"
+    },
+    {
+      "text": "kennen",
+      "plural_suffix": null,
+      "translation": "znać"
+    },
+    {
+      "text": "sich kennen",
+      "plural_suffix": null,
+      "translation": "znać się"
+    },
+    {
+      "text": "hungrig",
+      "plural_suffix": null,
+      "translation": "głodny"
+    },
+    {
+      "text": "glücklich",
+      "plural_suffix": null,
+      "translation": "szczęśliwy"
+    },
+    {
+      "text": "spannend",
+      "plural_suffix": null,
+      "translation": "ciekawy, zajmujący, wciągający"
+    },
+    {
+      "text": "interessant",
+      "plural_suffix": null,
+      "translation": "interesujący, ciekawy"
+    },
+    {
+      "text": "nicht mehr",
+      "plural_suffix": null,
+      "translation": "już nie, więcej nie"
+    },
+    {
+      "text": "niemals",
+      "plural_suffix": null,
+      "translation": "nigdy"
+    },
+    {
+      "text": "nirgends",
+      "plural_suffix": null,
+      "translation": "nigdzie"
+    },
+    {
+      "text": "Auf keinen Fall",
+      "plural_suffix": null,
+      "translation": "w żadnym razie"
+    },
+    {
+      "text": "der Fall",
+      "plural_suffix": null,
+      "translation": "upadek, przypadek, przypadek gramatyczny"
+    },
+    {
+      "text": "das Studium",
+      "plural_suffix": null,
+      "translation": "studia"
+    },
+    {
+      "text": "der Sprachschatz",
+      "plural_suffix": null,
+      "translation": "słownictwo, zasób słownictwa"
+    },
+    {
+      "text": "die Allergie",
+      "plural_suffix": null,
+      "translation": "alergia"
+    },
+    {
+      "text": "der  Blick",
+      "plural_suffix": null,
+      "translation": "widok"
+    },
+    {
+      "text": "registrieren",
+      "plural_suffix": null,
+      "translation": "rejestrować"
+    },
+    {
+      "text": "der Fehler",
+      "plural_suffix": null,
+      "translation": "błąd"
+    },
+    {
+      "text": "nachdenken, bedenken",
+      "plural_suffix": null,
+      "translation": "zastanawiać się, rozmyślać"
+    },
+    {
+      "text": "erklären",
+      "plural_suffix": null,
+      "translation": "wytłumaczyć, tłumaczyć (zagadnienie)"
+    },
+    {
+      "text": "reiten",
+      "plural_suffix": null,
+      "translation": "dosiadać"
+    },
+    {
+      "text": "der Zaum",
+      "plural_suffix": null,
+      "translation": "uzda (końska)"
+    },
+    {
+      "text": "umfassen, einfangen",
+      "plural_suffix": null,
+      "translation": "chwycić"
+    },
+    {
+      "text": "bewegen",
+      "plural_suffix": null,
+      "translation": "ruszyć, poruszyć"
+    },
+    {
+      "text": "losgehen",
+      "plural_suffix": null,
+      "translation": "ruszyć, startować, zaczynać"
+    },
+    {
+      "text": "ruhig",
+      "plural_suffix": null,
+      "translation": "spokojny, stonowany"
+    },
+    {
+      "text": "der Gang",
+      "plural_suffix": null,
+      "translation": "chód, krok"
+    },
+    {
+      "text": "wachsen",
+      "plural_suffix": null,
+      "translation": "rosnąć"
+    },
+    {
+      "text": "die Blume",
+      "plural_suffix": null,
+      "translation": "kwiat"
+    },
+    {
+      "text": "begießen",
+      "plural_suffix": null,
+      "translation": "podlewać"
+    },
+    {
+      "text": "gießen",
+      "plural_suffix": null,
+      "translation": "podlać"
+    },
+    {
+      "text": "die Verletzung",
+      "plural_suffix": null,
+      "translation": "uraz, kontuzja, rana"
+    },
+    {
+      "text": "die Wunde, -n",
+      "plural_suffix": null,
+      "translation": "rana"
+    },
+    {
+      "text": "der Bruch",
+      "plural_suffix": null,
+      "translation": "złamanie"
+    },
+    {
+      "text": "brechen",
+      "plural_suffix": null,
+      "translation": "złamać"
+    },
+    {
+      "text": "die Tastatur",
+      "plural_suffix": null,
+      "translation": "klawiatura"
+    },
+    {
+      "text": "beleuchten",
+      "plural_suffix": null,
+      "translation": "podświetlać, oświetlać"
+    },
+    {
+      "text": "beleuchtet",
+      "plural_suffix": null,
+      "translation": "podświetlony"
+    }
+  ],
+  "metadata": {
+    "lesson_date": null,
+    "data_submission_date": "2024-11-17T15:41:15.958515",
+    "description": null
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "entities": [
+    {
+      "text": "definitiv",
+      "plural_suffix": null,
+      "translation": "zdecydowanie, definitywnie"
+    },
+    {
+      "text": "Spaß haben",
+      "plural_suffix": null,
+      "translation": "have fun"
+    },
+    {
+      "text": "das Brettspiel, -e",
+      "plural_suffix": null,
+      "translation": "planszówka"
+    },
+    {
+      "text": "Bücher lesen",
+      "plural_suffix": null,
+      "translation": "czytać książki"
+    },
+    {
+      "text": "empfehlen",
+      "plural_suffix": null,
+      "translation": "polecać"
+    },
+    {
+      "text": "die Süßigkeiten",
+      "plural_suffix": null,
+      "translation": "słodycze"
+    },
+    {
+      "text": "kochen",
+      "plural_suffix": null,
+      "translation": "gotować"
+    },
+    {
+      "text": "die Speise, -n",
+      "plural_suffix": null,
+      "translation": "potrawa"
+    },
+    {
+      "text": "brauchen",
+      "plural_suffix": null,
+      "translation": "potrzebować"
+    },
+    {
+      "text": "jetzt",
+      "plural_suffix": null,
+      "translation": "teraz"
+    },
+    {
+      "text": "die Eltern",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "alt, älter, am ältesten",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "der Monat, -e",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "ferne Flüge",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "es gibt wenige Aktivitäten",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "der Bus",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "jeden Tag",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "circa",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "wählen",
+      "plural_suffix": null,
+      "translation": "wybrać"
+    },
+    {
+      "text": "beenden",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "tanzen",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "du tanzt",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "das Glas",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "der Stift, -e",
+      "plural_suffix": null,
+      "translation": null
+    },
+    {
+      "text": "faulenzen",
+      "plural_suffix": null,
+      "translation": "próżnować, leniuchować"
+    },
+    {
+      "text": "mischen",
+      "plural_suffix": null,
+      "translation": "mieszać"
+    },
+    {
+      "text": "besichtigen",
+      "plural_suffix": null,
+      "translation": "zwiedzać"
+    },
+    {
+      "text": "wissen",
+      "plural_suffix": null,
+      "translation": "wiedzieć"
+    },
+    {
+      "text": "die Wahl",
+      "plural_suffix": null,
+      "translation": "wybór"
+    },
+    {
+      "text": "zu viert",
+      "plural_suffix": null,
+      "translation": "w czwórkę"
+    },
+    {
+      "text": "teuer",
+      "plural_suffix": null,
+      "translation": "drogi, drogo"
+    },
+    {
+      "text": "die Fluggesellschaft, -en",
+      "plural_suffix": null,
+      "translation": "linia lotnicza"
+    },
+    {
+      "text": "wechseln",
+      "plural_suffix": null,
+      "translation": "zmieniać"
+    },
+    {
+      "text": "verschieben",
+      "plural_suffix": null,
+      "translation": "przesunąć"
+    },
+    {
+      "text": "bestellen",
+      "plural_suffix": null,
+      "translation": "zamawiać"
+    },
+    {
+      "text": "meistens",
+      "plural_suffix": null,
+      "translation": "zazwyczaj"
+    },
+    {
+      "text": "morgen",
+      "plural_suffix": null,
+      "translation": "jutro"
+    },
+    {
+      "text": "bekommen",
+      "plural_suffix": null,
+      "translation": "otrzymywać, dostawać"
+    },
+    {
+      "text": "schicken",
+      "plural_suffix": null,
+      "translation": "wysłać, posyłać"
+    },
+    {
+      "text": "die Frau",
+      "plural_suffix": null,
+      "translation": "Pani, kobieta"
+    },
+    {
+      "text": "der Mann",
+      "plural_suffix": null,
+      "translation": "mężczyzna"
+    },
+    {
+      "text": "gefallen",
+      "plural_suffix": null,
+      "translation": "podobać się"
+    },
+    {
+      "text": "tragen",
+      "plural_suffix": null,
+      "translation": "nosić"
+    },
+    {
+      "text": "waschen",
+      "plural_suffix": null,
+      "translation": "myć, prać"
+    },
+    {
+      "text": "geben",
+      "plural_suffix": null,
+      "translation": "dawać"
+    },
+    {
+      "text": "helfen",
+      "plural_suffix": null,
+      "translation": "pomagać"
+    },
+    {
+      "text": "nehmen",
+      "plural_suffix": null,
+      "translation": "brać"
+    },
+    {
+      "text": "leise",
+      "plural_suffix": null,
+      "translation": "cichy, cicho"
+    },
+    {
+      "text": "sicher",
+      "plural_suffix": null,
+      "translation": "pewny, bezpieczny, pewnie"
+    },
+    {
+      "text": "vergessen",
+      "plural_suffix": null,
+      "translation": "zapominać"
+    },
+    {
+      "text": "schlecht",
+      "plural_suffix": null,
+      "translation": "zły, niedobry, marny"
+    },
+    {
+      "text": "deshalb",
+      "plural_suffix": null,
+      "translation": "dlatego"
+    },
+    {
+      "text": "die Brille",
+      "plural_suffix": null,
+      "translation": "okulary"
+    }
+  ],
+  "metadata": {
+    "lesson_date": null,
+    "data_submission_date": "2024-11-17T15:41:15.958072",
+    "description": null
+  }
+}

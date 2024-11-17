@@ -9,7 +9,7 @@ die Speise, -n - potrawa
 brauchen - potrzebować
 jetzt - teraz
 die Eltern
-alt - älter - am ältesten
+alt, älter, am ältesten
 der Monat, -e
 ferne Flüge
 es gibt wenige Aktivitäten
