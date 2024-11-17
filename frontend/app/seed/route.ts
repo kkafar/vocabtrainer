@@ -1,6 +1,6 @@
-import Database from 'better-sqlite3';
 import { type Database as DatabaseType } from 'better-sqlite3';
 import { lessonOne } from '../data/initdata';
+import createDatabaseConnection from '../data/database';
 
 async function seedLessons(db: DatabaseType) {
   const createTableStmt = db.prepare(`
@@ -16,7 +16,7 @@ async function seedLessons(db: DatabaseType) {
 
   const { lesson_date } = lessonOne.metadata;
   let { submission_date = "", description = "" } = lessonOne.metadata;
-  
+
   if (submission_date == null) {
     submission_date = "";
   }
@@ -67,14 +67,9 @@ async function seedVocabEntities(db: DatabaseType) {
 }
 
 export async function GET() {
-  const dbPath = process.env.SQLITE_DB_PATH;
-
-  if (!dbPath) {
-    return Response.json({ error: "Invalid environment setup" }, { status: 500 });
-  }
 
   try {
-    const db = new Database(dbPath);
+    const db = createDatabaseConnection();
     await seedLessons(db);
     await seedVocabEntities(db);
   } catch (error) {

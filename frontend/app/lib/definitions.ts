@@ -15,3 +15,5 @@ export interface LessonData {
   metadata: LessonMetadata;
 }
 
+
+export type EmptyObject = Record<never, unknown>;
