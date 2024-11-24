@@ -1,6 +1,6 @@
 .cardContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex: 1;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,6 @@
 .cardPositioner {
   display: flex;
   position: relative;
-  flex: 1;
   height: 50vh;
   flex-direction: column;
   align-items: center;
@@ -19,7 +18,7 @@
   position: relative;
   display: flex;
   flex: 1;
-  width: 50vw;
+  width: var(--card-width);
 }
 
 .innerCard {
@@ -95,3 +94,48 @@
   display: none;
 }
 
+.buttonWrapperLayout {
+  display: flex;
+  width: var(--card-width);
+  flex-direction: row;
+  font-weight: 500;
+}
+
+.buttonWrapperLayoutInner {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: end;
+  padding-top: var(--padding-xlarge);
+}
+
+.buttonCommon {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.buttonInner {
+  display: flex;
+  align-items: center;
+  column-gap: var(--padding-large);
+  border-radius: var(--radius-xlarge);
+  padding: var(--padding-small) var(--padding-medium);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.buttonInner:hover {
+  filter: brightness(96%);
+}
+
+.buttonReturn {
+  background-color: var(--primary);
+}
+
+.buttonProgress {
+  background-color: var(--success);
+}
+
+.buttonRepeat {
+  background-color: var(--failure);
+}
