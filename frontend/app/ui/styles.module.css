@@ -8,17 +8,90 @@
 
 .cardPositioner {
   display: flex;
-  height: 50%;
-  width: 100%;
+  position: relative;
+  flex: 1;
+  height: 50vh;
+  flex-direction: column;
+  align-items: center;
 }
 
 .outerCard {
+  position: relative;
   display: flex;
   flex: 1;
-  background-color: var(--mainlight);
-  box-shadow: 2px 2px 3px gray;
-  margin-left: 5%;
-  margin-right: 5%;
-  padding: 1rem;
+  width: 50vw;
+}
+
+.innerCard {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: var(--primary);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: var(--radius-xlarge);
+  padding: var(--padding-xlarge);
+  font-family: var(--font-inter);
+
+}
+
+.obstructorOuter {
+  /* Just for card developement */
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  width: inherit;
+  border-radius: var(--radius-xlarge);
+  background-color: var(--on-primary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.obstructorOuter:hover {
+  filter: brightness(96%);
+}
+
+.textWrapper {
+  display: flex;  
+  flex: 1;
+  padding: var(--padding-xlarge);
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.translationWrapper {
+  display: flex;
+  flex: 1;
+  padding: var(--padding-xlarge);
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.displayNone {
+  display: none;
+}
+
+.cardToolbarLayout {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  padding-right: var(--padding-xlarge);
+  padding-top: var(--padding-xlarge);
+}
+
+.cardToolbar {
+  display: flex; 
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.flexContainer {
+  display: none;
 }
 
