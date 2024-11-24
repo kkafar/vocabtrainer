@@ -1,0 +1,24 @@
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardPositioner {
+  display: flex;
+  height: 50%;
+  width: 100%;
+}
+
+.outerCard {
+  display: flex;
+  flex: 1;
+  background-color: var(--mainlight);
+  box-shadow: 2px 2px 3px gray;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 1rem;
+}
+
