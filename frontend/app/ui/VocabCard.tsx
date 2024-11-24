@@ -3,14 +3,14 @@
 import { VocabEntity } from "@/app/lib/definitions";
 import styles from "@/app/ui/styles.module.css";
 import clsx from "clsx";
-import { MouseEvent, MouseEventHandler, useState } from "react";
+import { MouseEventHandler, useEffect, useState } from "react";
 import { isStringBlank } from "../lib/text-util";
 import CardToolbar from "./CardToolbar";
 import eyeIcon from "@/app/assets/eye-icon.svg"
 import Image from "next/image";
 
 export type VocabCardProps = {
-  entity: VocabEntity
+  entity: VocabEntity;
 }
 
 type TranslationObstructorProps = {
@@ -33,6 +33,10 @@ export default function VocabCard({ entity }: VocabCardProps) {
   const handleObstructorClicked = () => {
     setHideTranslation(val => !val);
   };
+
+  useEffect(() => {
+    setHideTranslation(true);
+  }, [entity])
 
   return (
     <div className={styles.outerCard}>
