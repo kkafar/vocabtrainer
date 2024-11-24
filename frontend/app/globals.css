@@ -45,12 +45,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #FCFBF9;
-    --text-on-background: #000000;
-    --primary: #F1EFE0;
-    --on-primary: #D7D4C2;
-    --success: #A3E99D;
-    --failure: #E9C59D;
+    --background: #333125;
+    --text-on-background: #BCB794;
+    --primary: #403C1C;
+    --on-primary: #6D6840;
+    --success: #375234;
+    --failure: #786C5E;
   }
 }
 
