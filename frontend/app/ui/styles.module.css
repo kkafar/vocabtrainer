@@ -9,7 +9,7 @@
 .cardPositioner {
   display: flex;
   position: relative;
-  height: 50vh;
+  height: var(--card-height);
   flex-direction: column;
   align-items: center;
 }
@@ -103,10 +103,17 @@
 
 .buttonWrapperLayoutInner {
   display: flex;
-  flex: 1;
   flex-direction: row;
   justify-content: end;
   padding-top: var(--padding-xlarge);
+  gap: var(--margin-xlarge);
+}
+
+.buttonWrapperLayoutCenter {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
 }
 
 .buttonCommon {

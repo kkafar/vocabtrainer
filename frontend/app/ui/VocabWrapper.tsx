@@ -8,7 +8,7 @@ import { MouseEventHandler, useState } from "react";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import thumbsUpIcon from "@/app/assets/thumbs-up-icon.svg";
-// import thumbsDownIcon from "@/app/assets/thumbs-down-icon.svg";
+import rewindIcon from "@/app/assets/rewind-icon.svg";
 import rotateIcon from "@/app/assets/rotate-ccw-icon.svg";
 import clsx from "clsx";
 import { capitalize } from "@/app/lib/text-util";
@@ -29,7 +29,7 @@ type ButtonConfig = {
 const BUTTON_CONFIG_BY_TYPE: Record<ButtonType, ButtonConfig> = {
   return: {
     text: 'Return',
-    icon: rotateIcon,
+    icon: rewindIcon,
     iconAlt: 'Return to previous item',
   },
   progress: {
@@ -120,10 +120,12 @@ export default function VocabWrapper() {
         <VocabCard entity={wordlistQuery.data[currentVocabItem]} />
       </div>
       <div className={styles.buttonWrapperLayout}>
-        <div className={styles.buttonWrapperLayoutInner}>
-          <Button type="return" onClick={handleReturnClicked} />
-          <Button type="progress" onClick={handleProgressClicked} />
-          <Button type="repeat" onClick={handleRepeatClicked} />
+        <div className={styles.buttonWrapperLayoutCenter}>
+          <div className={styles.buttonWrapperLayoutInner}>
+            <Button type="return" onClick={handleReturnClicked} />
+            <Button type="progress" onClick={handleProgressClicked} />
+            <Button type="repeat" onClick={handleRepeatClicked} />
+          </div>
         </div>
       </div>
     </div>
