@@ -34,7 +34,8 @@
   --margin-xlarge: 28px;
 
   /* Ugly global vars */
-  --card-width: 55vw;
+  --card-width: 40vw;
+  --card-height: 35vh;
 
   /* Global options */
   box-sizing: border-box;
