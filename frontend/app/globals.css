@@ -11,6 +11,7 @@
   --on-primary: #D7D4C2;
   --success: #A3E99D;
   --failure: #E9C59D;
+  --icon-stroke: #1E1E1E;
 
   /* Radius */
   --radius-xsmall: 4px;
@@ -51,6 +52,7 @@
     --on-primary: #6D6840;
     --success: #375234;
     --failure: #786C5E;
+    --icon-stroke: var(--text-on-background);
   }
 }
 

@@ -4,12 +4,11 @@ import VocabCard from "./VocabCard";
 import { useQuery } from "@tanstack/react-query";
 import { fetchWordListQuery } from "@/app/query";
 import styles from './styles.module.css';
-import { MouseEventHandler, useState } from "react";
-import Image from "next/image";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import thumbsUpIcon from "@/app/assets/thumbs-up-icon.svg";
-import rewindIcon from "@/app/assets/rewind-icon.svg";
-import rotateIcon from "@/app/assets/rotate-ccw-icon.svg";
+import { FC, MouseEventHandler, SVGProps, useState } from "react";
+// import ThumbsUpIcon from "@/app/assets/thumbs-up-icon.svg";
+import ThumbsUpIcon from '../assets/thumbs-up-icon.svg';
+import RewindIcon from "@/app/assets/rewind-icon.svg";
+import RotateIcon from "@/app/assets/rotate-ccw-icon.svg";
 import clsx from "clsx";
 import { capitalize } from "@/app/lib/text-util";
 
@@ -22,24 +21,24 @@ type ButtonProps = {
 
 type ButtonConfig = {
   text: string;
-  icon: StaticImport,
+  Icon: FC<SVGProps<SVGElement>>,
   iconAlt: string;
 }
 
 const BUTTON_CONFIG_BY_TYPE: Record<ButtonType, ButtonConfig> = {
   return: {
     text: 'Return',
-    icon: rewindIcon,
+    Icon: RewindIcon,
     iconAlt: 'Return to previous item',
   },
   progress: {
     text: 'Got it!',
-    icon: thumbsUpIcon,
+    Icon: ThumbsUpIcon,
     iconAlt: 'Progress',
   },
   repeat: {
     text: 'Repeat',
-    icon: rotateIcon,
+    Icon: RotateIcon,
     iconAlt: 'Put the item back to queue',
   },
 };
@@ -53,7 +52,7 @@ function Button({ type, onClick }: ButtonProps): React.JSX.Element {
           {buttonConfig.text}
         </div>
         <div>
-          <Image src={buttonConfig.icon} alt={buttonConfig.iconAlt} />
+          <buttonConfig.Icon />
         </div>
       </div>
     </div>
