@@ -6,8 +6,7 @@ import clsx from "clsx";
 import { MouseEventHandler, useEffect, useState } from "react";
 import { isStringBlank } from "../lib/text-util";
 import CardToolbar from "./CardToolbar";
-import eyeIcon from "@/app/assets/eye-icon.svg"
-import Image from "next/image";
+import EyeIcon from "@/app/assets/eye-icon.svg"
 
 export type VocabCardProps = {
   entity: VocabEntity;
@@ -22,7 +21,7 @@ function TranslationObstructor(props: TranslationObstructorProps): React.JSX.Ele
   const { hidden = false, onClick } = props;
   return (
     <div className={clsx(styles.obstructorOuter, hidden && styles.displayNone)} onClick={onClick}>
-      <Image src={eyeIcon} alt="Show translation" />
+      <EyeIcon />
     </div>
   );
 }

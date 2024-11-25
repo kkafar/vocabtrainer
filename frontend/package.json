@@ -17,6 +17,7 @@
     "react-dom": "19.0.0-rc-66855b96-20241106"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@tanstack/eslint-plugin-query": "^5.60.1",
     "@types/better-sqlite3": "^7.6.11",
     "@types/node": "^20",
