@@ -51,7 +51,7 @@ def build_cli():
     return parser
 
 
-def validate_args(args: Args) -> ArgsValidationResult:
+def validate_args(args: Optional[argparse.Namespace]) -> ArgsValidationResult:
     if args is None:
         return ArgsValidationResult(False, ["Received None arguments"], args)
 
