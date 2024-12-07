@@ -1,0 +1,6 @@
+.inputList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: var(--padding-xlarge);
+}

@@ -1,0 +1,20 @@
+.fullScreenContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+
+.centerYContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-self: center; /* assumes parent has flex-direction row */
+  justify-content: center;
+}
+
+.centerXContainer {
+  display: flex;
+}
+
+

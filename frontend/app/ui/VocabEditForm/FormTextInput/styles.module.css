@@ -1,0 +1,19 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border);
+}
+
+.labelText {
+  font-size: var(--font-size-large);
+  font-weight: 700;
+}
+
+.textInput {
+  margin-top: var(--margin-small);
+  width: calc(var(--font-size-medium) * 40);
+  font-size: var(--font-size-medium);
+  padding: var(--padding-small) var(--padding-large);
+  border-radius: var(--radius-xlarge);
+  /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25); */
+}
