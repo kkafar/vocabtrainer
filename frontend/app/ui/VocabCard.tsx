@@ -39,7 +39,7 @@ export default function VocabCard({ entity }: VocabCardProps) {
 
   return (
     <div className={styles.outerCard}>
-      <CardToolbar />
+      <CardToolbar id={entity.id} />
       <div className={styles.innerCard}>
         <div className={styles.textWrapper}>
           <div>

@@ -4,6 +4,7 @@ import VocabCard from "./VocabCard";
 import { useQuery } from "@tanstack/react-query";
 import { fetchWordListQuery } from "@/app/query";
 import styles from './styles.module.css';
+import globalStyles from '@/app/styles.module.css';
 import { FC, MouseEventHandler, SVGProps, useState } from "react";
 // import ThumbsUpIcon from "@/app/assets/thumbs-up-icon.svg";
 import ThumbsUpIcon from '../assets/thumbs-up-icon.svg';
@@ -114,8 +115,8 @@ export default function VocabWrapper() {
   }
 
   return (
-    <div className={styles.cardContainer}>
-      <div className={styles.cardPositioner}>
+    <div className={globalStyles.cardContainer}>
+      <div className={globalStyles.cardPositioner}>
         <VocabCard entity={wordlistQuery.data[currentVocabItem]} />
       </div>
       <div className={styles.buttonWrapperLayout}>

@@ -1,4 +1,5 @@
 export interface VocabEntity {
+  id: number;
   text: string;
   plural_suffix?: string;
   translation?: string;
