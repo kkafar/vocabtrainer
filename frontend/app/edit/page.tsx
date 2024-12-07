@@ -1,10 +1,7 @@
 'use client';
 
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import EditPageContent from "./content";
 import { useSearchParams } from "next/navigation";
-
-const queryClient = new QueryClient;
 
 export default function EditPage() {
   const params = useSearchParams();
@@ -18,8 +15,6 @@ export default function EditPage() {
   const numberItemId = parseInt(itemId, 10);
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <EditPageContent itemId={numberItemId} />
-    </QueryClientProvider>
+    <EditPageContent itemId={numberItemId} />
   );
 }
