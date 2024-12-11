@@ -15,7 +15,7 @@ export interface VocabEditFormProps {
 export default function VocabEditForm({ formId, entity }: VocabEditFormProps): React.JSX.Element {
   const initialState: State = { message: null, errors: {} };
   const callbackWithItemId = updateVocabItem.bind(null, entity.id);
-  const [state, formAction] = useActionState(callbackWithItemId, initialState);
+  const [, formAction] = useActionState(callbackWithItemId, initialState);
 
   return (
     <div>

@@ -1,12 +1,18 @@
 'use client';
 
 import EditPageContent from "./content";
-import { useSearchParams } from "next/navigation";
+import { useParams } from "next/navigation";
+
+type RouteParams = {
+  id: string;
+}
 
 export default function EditPage() {
-  const params = useSearchParams();
+  const params = useParams<RouteParams>();
 
-  const itemId = params.get("itemId");
+  console.log(JSON.stringify(params));
+
+  const itemId = params.id;
 
   if (!itemId) {
     throw new Error(`Missing search param "itemId". Received: ${JSON.stringify(itemId)}`);

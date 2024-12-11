@@ -13,10 +13,7 @@ export default function CardToolbar({ id }: CardToolbarProps): React.JSX.Element
     <div className={styles.cardToolbarLayout}>
       <div className={styles.cardToolbar}>
         <Link href={{
-          pathname: '/edit',
-          query: {
-            itemId: id,
-          }
+          pathname: `/edit/${id}`,
         }}>
           <EditIcon />
         </Link>

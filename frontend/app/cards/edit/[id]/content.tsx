@@ -3,13 +3,14 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchWordListQuery } from "@/app/query";
 import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
-import FlexibleCard from "../ui/FlexibleCard";
-import VocabEditForm from "../ui/VocabEditForm";
-import ButtonPanel from "../ui/ButtonPanel";
-import RoundedButton from "../ui/buttons/RoundedButton";
+import FlexibleCard from "@/app/ui/FlexibleCard";
+import VocabEditForm from "@/app/ui/VocabEditForm";
+import ButtonPanel from "@/app/ui/ButtonPanel";
+import RoundedButton from "@/app/ui/buttons/RoundedButton";
 import styles from './styles.module.css';
 import RewindIcon from "@/app/assets/rewind-icon.svg";
-import SubmitButton from "../ui/buttons/SubmitButton";
+import SubmitButton from "@/app/ui/buttons/SubmitButton";
+import { useRouter } from "next/navigation";
 
 export type EditPageContentProps = {
   itemId: number;
@@ -17,6 +18,7 @@ export type EditPageContentProps = {
 
 export default function EditPageContent({ itemId }: EditPageContentProps) {
   const wordListQuery = useQuery({ queryKey: ['wordlist'], queryFn: fetchWordListQuery });
+  const router = useRouter();
 
   if (wordListQuery.isPending) {
     return (
@@ -48,7 +50,7 @@ export default function EditPageContent({ itemId }: EditPageContentProps) {
         </FlexibleCard>
         <div className={styles.panelSpacer}>
           <ButtonPanel>
-            <RoundedButton>
+            <RoundedButton onClick={() => router.back()}>
               Cancel <RewindIcon />
             </RoundedButton>
             <SubmitButton form="editForm" />
