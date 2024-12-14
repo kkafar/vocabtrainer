@@ -62,11 +62,15 @@ function Button({ type, onClick }: ButtonProps): React.JSX.Element {
 
 export default function VocabWrapper() {
   const wordlistQuery = useQuery({ queryKey: ['wordlist'], queryFn: fetchWordListQuery });
-  const [currentVocabItem, setCurrentVocabItem] = useState<number>(0);
+
+  const currentItemId = parseInt(window.sessionStorage.getItem('lastItemId') ?? '0', 1);
+  const [currentVocabItemIndex, setCurrentVocabItemIndex] = useState<number>(currentItemId);
+
+  console.log('currentVocabItemIndex', currentVocabItemIndex);
 
   const handleReturnClicked = () => {
     console.log('Return clicked');
-    setCurrentVocabItem(last => {
+    setCurrentVocabItemIndex(last => {
       if (!wordlistQuery.isSuccess) {
         return last;
       }
@@ -81,7 +85,7 @@ export default function VocabWrapper() {
 
   const handleProgressClicked = () => {
     console.log('Progress clicked');
-    setCurrentVocabItem(last => {
+    setCurrentVocabItemIndex(last => {
       if (!wordlistQuery.isSuccess) {
         return last;
       }
@@ -117,7 +121,7 @@ export default function VocabWrapper() {
   return (
     <div className={globalStyles.cardContainer}>
       <div className={globalStyles.cardPositioner}>
-        <VocabCard entity={wordlistQuery.data[currentVocabItem]} />
+        <VocabCard entity={wordlistQuery.data[currentVocabItemIndex]} />
       </div>
       <div className={styles.buttonWrapperLayout}>
         <div className={styles.buttonWrapperLayoutCenter}>

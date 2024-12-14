@@ -79,6 +79,6 @@ export async function updateVocabItem(itemId: number, state: State, formData: Fo
     return errorValue;
   } finally {
     revalidatePath("/cards/edit");
-    redirect(`/cards/learn/`);
+    redirect(`/cards`);
   }
 }
