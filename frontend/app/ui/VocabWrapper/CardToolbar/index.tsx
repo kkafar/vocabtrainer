@@ -1,7 +1,7 @@
 'use client';
 
-import styles from './styles.module.css';
-import EditButton from './buttons/EditButton';
+import styles from '../styles.module.css';
+import EditButton from '@/app/ui/buttons/EditButton';
 
 export type CardToolbarProps = {
   id: number;

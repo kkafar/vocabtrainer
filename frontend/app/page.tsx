@@ -1,6 +1,6 @@
 'use client';
 import styles from "@/app/styles.module.css";
-import VocabWrapper from "./ui/VocabWrapper";
+import VocabWrapper from "@/app/ui/VocabWrapper";
 
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";

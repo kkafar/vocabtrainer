@@ -7,7 +7,7 @@ import styles from './styles.module.css';
 import globalStyles from '@/app/styles.module.css';
 import { FC, MouseEventHandler, SVGProps, useState } from "react";
 // import ThumbsUpIcon from "@/app/assets/thumbs-up-icon.svg";
-import ThumbsUpIcon from '../assets/thumbs-up-icon.svg';
+import ThumbsUpIcon from '@/app/assets/thumbs-up-icon.svg';
 import RewindIcon from "@/app/assets/rewind-icon.svg";
 import RotateIcon from "@/app/assets/rotate-ccw-icon.svg";
 import clsx from "clsx";
@@ -63,7 +63,7 @@ function Button({ type, onClick }: ButtonProps): React.JSX.Element {
 export default function VocabWrapper() {
   const wordlistQuery = useQuery({ queryKey: ['wordlist'], queryFn: fetchWordListQuery });
 
-  const currentItemId = parseInt(window.sessionStorage.getItem('lastItemId') ?? '0', 1);
+  const currentItemId = parseInt(window.sessionStorage.getItem('lastItemId') ?? '0', 10);
   const [currentVocabItemIndex, setCurrentVocabItemIndex] = useState<number>(currentItemId);
 
   console.log('currentVocabItemIndex', currentVocabItemIndex);
