@@ -52,13 +52,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* --background: #333125; */
-    /* --text-on-background: #BCB794; */
-    /* --primary: #403C1C; */
-    /* --on-primary: #6D6840; */
-    /* --success: #375234; */
-    /* --failure: #786C5E; */
-    /* --icon-stroke: var(--text-on-background); */
+    --background: #333125;
+    --text-on-background: #BCB794;
+    --primary: #403C1C;
+    --on-primary: #6D6840;
+    --success: #375234;
+    --failure: #786C5E;
+    --icon-stroke: var(--text-on-background);
   }
 }
 

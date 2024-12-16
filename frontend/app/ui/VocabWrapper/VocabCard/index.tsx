@@ -1,11 +1,11 @@
 'use client';
 
 import { VocabEntity } from "@/app/lib/definitions";
-import styles from "@/app/ui/styles.module.css";
+import styles from "@/app/ui/VocabWrapper/styles.module.css";
 import clsx from "clsx";
 import { MouseEventHandler, useEffect, useState } from "react";
-import { isStringBlank } from "../lib/text-util";
-import CardToolbar from "./CardToolbar";
+import { isStringBlank } from "@/app/lib/text-util";
+import CardToolbar from "@/app/ui/VocabWrapper/CardToolbar";
 import EyeIcon from "@/app/assets/eye-icon.svg"
 
 export type VocabCardProps = {
