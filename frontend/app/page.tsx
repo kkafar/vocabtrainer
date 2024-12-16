@@ -1,6 +1,5 @@
 'use client';
 import styles from "@/app/styles.module.css";
-import VocabWrapper from "@/app/ui/VocabWrapper";
 
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -11,7 +10,7 @@ export default function Home() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className={styles.topLevelContainer}>
-        <VocabWrapper />
+        Home page
       </div>
     </QueryClientProvider>
   );

@@ -1,0 +1,22 @@
+.columnFlexContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.panelSpacer {
+  display: flex;
+  flex: 1;
+  margin-top: var(--margin-xlarge);
+}
+
+.returnButtonColor {
+  background-color: var(--on-primary);
+}
+
+.repeatButtonColor {
+  background-color: var(--failure);
+}
+
+.gotItButtonColor {
+  background-color: var(--success);
+}
