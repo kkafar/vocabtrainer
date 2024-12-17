@@ -2,12 +2,9 @@
 
 import globalStyles from "@/app/styles.module.css";
 import styles from './styles.module.css';
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import CenterYXContainer from "../ui/layout/CenterYXContainer";
-import VocabItemCard from "../ui/card/VocabItemCard";
+import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
+import VocabItemCard from "@/app/ui/card/VocabItemCard";
 import { Suspense } from "react";
-
-const queryClient = new QueryClient();
 
 function LoadingCard() {
   return (
@@ -19,7 +16,6 @@ function LoadingCard() {
 
 export default function CardPage() {
   return (
-    <QueryClientProvider client={queryClient}>
       <CenterYXContainer>
         <div className={styles.columnFlexContainer}>
           <div className={globalStyles.cardContainer}>
@@ -29,6 +25,5 @@ export default function CardPage() {
           </div>
         </div>
       </CenterYXContainer>
-    </QueryClientProvider>
   );
 }

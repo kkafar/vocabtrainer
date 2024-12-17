@@ -17,7 +17,7 @@ export default function EditButton({ itemId, onClick, ...rest }: EditButtonProps
   const onClickWrapper = React.useCallback((event: React.MouseEvent<HTMLDivElement>) => {
     onClick?.(event);
     router.push(`/cards/edit/${itemId}`);
-  }, [onClick, itemId, router])
+  }, [onClick, itemId, router]);
 
   // I can't use Link, because I want to save the state before navigating
 

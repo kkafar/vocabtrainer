@@ -3,17 +3,19 @@
 import React from "react";
 import { VocabEntity } from "@/app/lib/definitions";
 
+type ItemId = VocabEntity['id'];
+
 export interface CardSelectorState {
   vocabItems: Array<VocabEntity>;
-  completed: Set<VocabEntity['id']>;
-  currentItemId: VocabEntity['id'];
+  completed: Set<ItemId>;
+  currentItem: VocabEntity;
 }
 
 export interface CardSelector {
   readonly state: CardSelectorState;
 
-  readonly canGoForward: () => boolean;
-  readonly canGoBackward: () => boolean;
+  readonly canGoForward: (action?: MarkingAction) => boolean;
+  readonly canGoBackward: (action?: MarkingAction) => boolean;
   readonly markAndGoForward: () => void;
   readonly goForward: () => void;
   readonly goBackward: () => void;
@@ -22,13 +24,13 @@ export interface CardSelector {
   readonly currentItem: () => VocabEntity;
 }
 
-type MarkingAction = 'none' | 'mark' | 'unmark';
+export type MarkingAction = 'none' | 'mark' | 'unmark';
 
-function findItemWithId(items: CardSelectorState['vocabItems'], id: CardSelectorState['currentItemId']) {
+function findItemWithId(items: CardSelectorState['vocabItems'], id: ItemId) {
   return items.find(entity => entity.id === id);
 }
 
-function requireInitialState(vocabItems: CardSelectorState['vocabItems'], itemIdHint?: CardSelectorState['currentItemId']): CardSelectorState {
+function requireInitialState(vocabItems: CardSelectorState['vocabItems'], itemIdHint?: ItemId): CardSelectorState {
   if (!vocabItems) {
     throw new Error("Non null array of vocab items is requried");
   }
@@ -37,19 +39,19 @@ function requireInitialState(vocabItems: CardSelectorState['vocabItems'], itemId
     throw new Error("Non empty array of vocab items is required");
   }
 
-  let currentItemId = vocabItems[0].id;
+  let currentItem = vocabItems[0];
 
   if (itemIdHint !== undefined) {
     const hintedItem = findItemWithId(vocabItems, itemIdHint);
     if (hintedItem !== undefined) {
-      currentItemId = hintedItem.id;
+      currentItem = hintedItem;
     }
   }
 
   return {
     vocabItems,
     completed: new Set(),
-    currentItemId,
+    currentItem,
   }
 }
 
@@ -62,47 +64,77 @@ function isGoingBackwardPossible(state: CardSelectorState) {
   // return state.completed.size > 0 && state.vocabItems.length > 0;
 }
 
+function isItemCompleted(state: CardSelectorState, item: VocabEntity): boolean {
+  return state.completed.has(item.id);
+}
+
+function isCurrentItemCompleted(state: CardSelectorState): boolean {
+  return isItemCompleted(state, state.currentItem);
+}
+
+function markCurrentItem(state: CardSelectorState, markingAction: MarkingAction): CardSelectorState {
+  if (state.currentItem == null) {
+    throw new Error("Illegal state! current item must not be nullish");
+  }
+
+  if (markingAction === 'mark' && !isCurrentItemCompleted(state)) {
+    const newCompleted = new Set(state.completed);
+    newCompleted.add(state.currentItem.id);
+    return {
+      vocabItems: state.vocabItems,
+      completed: newCompleted,
+      currentItem: state.currentItem,
+    }
+  } else if (markingAction === 'unmark' && isCurrentItemCompleted(state)) {
+    const newCompleted = new Set(state.completed);
+    newCompleted.delete(state.currentItem.id);
+    return {
+      vocabItems: state.vocabItems,
+      completed: newCompleted,
+      currentItem: state.currentItem,
+    }
+  }
+  return state;
+}
+
 function goForwardImpl(state: CardSelectorState, markingAction: MarkingAction): CardSelectorState | undefined {
+  state = markCurrentItem(state, markingAction);
+
   if (!isGoingForwardPossible(state)) {
     // There are no more items to learn. Session is completed! We communicate it by indicating
     // that there is no state to progress to.
     return undefined;
   }
 
-  let completedItemsIds = state.completed;
-  if (markingAction === 'mark') {
-    completedItemsIds = new Set(state.completed);
-    completedItemsIds.add(state.currentItemId);
-  } else if (markingAction === 'unmark') {
-    completedItemsIds = new Set(state.completed);
-    completedItemsIds.delete(state.currentItemId);
-  }
-
-  const currentItemIndex = state.vocabItems.findIndex((entity) => entity.id === state.currentItemId);
+  const currentItemIndex = state.vocabItems.findIndex((entity) => entity.id === state.currentItem.id);
 
   if (currentItemIndex == -1) {
     // Something went terribly wrong. The item should be in the table. Dunno what happens
     // in case we add possibility to remove an item - but that is not the case yet.
-    throw new Error(`Failed to find item with id: ${state.currentItemId}`);
+    throw new Error(`Failed to find item with id: ${state.currentItem.id}`);
   }
 
   // Having found the item, we look for the first next item that has not been completed yet.
-  let nextItem = state.vocabItems.find((entity, index) => index > currentItemIndex && !(entity.id in completedItemsIds));
+  let nextItem = state.vocabItems.find((entity, index) => index > currentItemIndex && !isItemCompleted(state, entity));
 
   if (nextItem === undefined) {
     // Look in the beginning of the buffer (ring buffer)
-    nextItem = state.vocabItems.find((entity, index) => index < currentItemIndex && !(entity.id in completedItemsIds));
+    nextItem = state.vocabItems.find((entity, index) => index < currentItemIndex && !isItemCompleted(state, entity));
   }
 
   if (nextItem === undefined) {
-    // Something went wrong. We handled the case where there is no next item earlier.
-    throw new Error(`Failed to find next item for state: ${JSON.stringify(state)}`);
+    if (isCurrentItemCompleted(state)) {
+      // Something went wrong. We handled the case where there is no next item earlier.
+      throw new Error(`Failed to find next item for state: ${JSON.stringify(state)}`);
+    }
+    // We return the state with marked item.
+    return state;
   }
 
   return {
     vocabItems: state.vocabItems, // NOTE: We're not changing the reference here!
-    completed: completedItemsIds,
-    currentItemId: nextItem.id,
+    completed: state.completed,
+    currentItem: nextItem,
   }
 }
 
@@ -113,7 +145,6 @@ function goForwardBasedOnState(state: CardSelectorState, markingAction: MarkingA
 function goBackwardImpl(state: CardSelectorState): CardSelectorState | undefined {
   if (!isGoingBackwardPossible(state)) {
     // In case there is no state to progress to we signalize it with undefined.
-    console.log("Going backward is not possible");
     return undefined;
   }
 
@@ -123,12 +154,12 @@ function goBackwardImpl(state: CardSelectorState): CardSelectorState | undefined
   //
   // For now let's just return previous index, but this has to be changed.
 
-  const currentItemIndex = state.vocabItems.findIndex((entity) => entity.id === state.currentItemId);
+  const currentItemIndex = state.vocabItems.findIndex((entity) => entity.id === state.currentItem.id);
 
   if (currentItemIndex == -1) {
     // Something either went bad or a possibility to remove items was added and we need to take it into account here.
     // For now we throw error since the items can not be removed.
-    throw new Error(`Failed to find item with id: ${state.currentItemId}. Items: ${JSON.stringify(state.vocabItems)}`);
+    throw new Error(`Failed to find item with id: ${state.currentItem.id}. Items: ${JSON.stringify(state.vocabItems)}`);
   }
 
   // Ring buffer lookup
@@ -143,7 +174,7 @@ function goBackwardImpl(state: CardSelectorState): CardSelectorState | undefined
   return {
     vocabItems: state.vocabItems,
     completed: state.completed,
-    currentItemId: prevItem.id,
+    currentItem: prevItem,
   };
 }
 
@@ -151,26 +182,15 @@ function goBackwardBasedOnState(state: CardSelectorState): CardSelectorState {
   return goBackwardImpl(state) ?? state;
 }
 
-function unmarkCardBasedOnState(state: CardSelectorState): CardSelectorState {
-  return state;
-}
-
 function currentItemBasedOnState(state: CardSelectorState): VocabEntity {
-  const currentItem = findItemWithId(state.vocabItems, state.currentItemId);
-  if (!currentItem) {
+  if (!state.currentItem) {
     throw new Error("Invalid state! There must be a valid current item.");
   }
-  return currentItem;
+  return state.currentItem;
 }
 
 export default function useItemSelector(vocabItems: CardSelectorState['vocabItems'], itemIdHint?: number): CardSelector {
   const [state, setState] = React.useState<CardSelectorState>(() => requireInitialState(vocabItems, itemIdHint));
-
-  // if (state.vocabItems === vocabItems) {
-  //   // Will it ever be true? I don't think we'll get the same reference here.
-  // } else {
-  //
-  // }
 
   const markAndGoForwarCallback = React.useCallback(() => {
     setState(prevState => goForwardBasedOnState(prevState, 'mark'));
@@ -189,7 +209,7 @@ export default function useItemSelector(vocabItems: CardSelectorState['vocabItem
   }, [setState])
 
   const unmarkCallback = React.useCallback(() => {
-    setState(prevState => unmarkCardBasedOnState(prevState));
+    setState(prevState => markCurrentItem(prevState, 'unmark'));
   }, [setState])
 
   const currentItemCallback = React.useCallback(() => {
