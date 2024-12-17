@@ -42,14 +42,10 @@ export default function VocabCard({ entity }: VocabCardProps) {
       <CardToolbar id={entity.id} />
       <div className={styles.innerCard}>
         <div className={styles.textWrapper}>
-          <div>
-            {entity.text}
-          </div>
+          {entity.text}
         </div>
         <div className={styles.translationWrapper}>
-          <div>
-            {!isStringBlank(entity.translation) ? entity.translation : "Unknown translation"}
-          </div>
+          {!isStringBlank(entity.translation) ? entity.translation : "Unknown translation"}
         </div>
       </div>
       <TranslationObstructor hidden={!hideTranslation} onClick={handleObstructorClicked} />
