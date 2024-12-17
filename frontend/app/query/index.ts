@@ -3,7 +3,7 @@ import { VocabEntity } from "@/app/lib/definitions";
 export async function fetchWordListQuery(): Promise<VocabEntity[]> {
   const endpoint = "http://localhost:3000/api/routes/wordlist";
   try {
-    const response = await fetch(endpoint);
+    const response = await fetch(endpoint, { cache: 'force-cache' });
 
     if (!response.ok) {
       throw new Error("Failed to fetch wordlist from server");

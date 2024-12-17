@@ -1,5 +1,3 @@
-'use client';
-
 import globalStyles from "@/app/styles.module.css";
 import styles from './styles.module.css';
 import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
@@ -13,16 +11,16 @@ function LoadingCard() {
   );
 }
 
-export default function CardPage() {
+export default async function CardPage() {
   return (
-      <CenterYXContainer>
-        <div className={styles.columnFlexContainer}>
-          <div className={globalStyles.cardContainer}>
-            <Suspense fallback={<LoadingCard />}>
-              <VocabItemCard />
-            </Suspense>
-          </div>
+    <CenterYXContainer>
+      <div className={styles.columnFlexContainer}>
+        <div className={globalStyles.cardContainer}>
+          <Suspense fallback={<LoadingCard />}>
+            <VocabItemCard />
+          </Suspense>
         </div>
-      </CenterYXContainer>
+      </div>
+    </CenterYXContainer>
   );
 }
