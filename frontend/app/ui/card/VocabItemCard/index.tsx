@@ -47,8 +47,6 @@ export default function VocabItemCard() {
   const savedLastItemId = maybeSavedLastItemId ? parseInt(maybeSavedLastItemId, 10) : undefined;
   const itemSelector = useItemSelector(wordlistQuery.data, savedLastItemId);
 
-
-  console.log('Showing card for item with id: ', itemSelector.state.currentItemId);
   return (
     <div>
       <div className={globalStyles.cardPositioner}>
