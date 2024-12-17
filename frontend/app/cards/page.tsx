@@ -5,12 +5,11 @@ import styles from './styles.module.css';
 import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
 import VocabItemCard from "@/app/ui/card/VocabItemCard";
 import { Suspense } from "react";
+import { OrbitProgress } from "react-loading-indicators";
 
 function LoadingCard() {
   return (
-    <div>
-      Card is loading!
-    </div>
+    <OrbitProgress color="var(--primary)" size="large" text="Fetching data from server..." textColor="var(--on-primary)" />
   );
 }
 
