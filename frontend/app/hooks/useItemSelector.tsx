@@ -37,10 +37,6 @@ function requireInitialState(vocabItems: CardSelectorState['vocabItems'], itemId
     throw new Error("Non empty array of vocab items is required");
   }
 
-  if (itemIdHint !== undefined && (itemIdHint < 0 || itemIdHint >= vocabItems.length)) {
-    throw new Error(`Invalid hint provided: ${itemIdHint} while there are ${vocabItems.length} items.`);
-  }
-
   let currentItemId = vocabItems[0].id;
 
   if (itemIdHint !== undefined) {
