@@ -10,7 +10,14 @@ export async function fetchWordListQuery(): Promise<VocabEntity[]> {
     }
 
     const payload = await response.json();
-    return payload.payload;
+    // return payload.payload;
+    return await new Promise((resolve) => {
+      resolve(new Promise((resolveInner) => {
+        setTimeout(() => {
+          resolveInner(payload.payload);
+        }, 2000);
+      }))
+    })
   } catch (error) {
     throw new Error(`Failed to fetch wordlist from server with error: ${error}`)
   }

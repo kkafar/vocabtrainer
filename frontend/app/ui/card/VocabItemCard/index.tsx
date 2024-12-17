@@ -38,6 +38,8 @@ function GotItButton(props: ButtonProps) {
 }
 
 export default function VocabItemCard() {
+  'use client';
+
   const wordlistQuery = useSuspenseQuery({ queryKey: ['wordlist'], queryFn: fetchWordListQuery });
 
   // This will error, because the components is prerendered on the server. Need to detect whether I'm on client or not
