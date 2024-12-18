@@ -59,6 +59,12 @@
   --font-size-3xlarge: 96px;
   --font-size-4xlarge: 128px;
 
+  --font-weight-xthin: 300;
+  --font-weight-thin: 400;
+  --font-weight-medium: 500;
+  --font-weight-thick: 600;
+  --font-weight-xthick: 800;
+
   /* Other styles */
   --brightness-hover: 96%;
 
