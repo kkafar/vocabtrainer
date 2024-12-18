@@ -1,17 +1,15 @@
-'use client';
-import styles from "@/app/styles.module.css";
+import CenterYXContainer from "./ui/layout/CenterYXContainer";
+import FullScreenContainer from "./ui/layout/FullScreenContainer";
+import MainTitle from '@/app/ui/MainTitle';
 
-
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-const queryClient = new QueryClient();
-
-export default function Home() {
+export default async function Home() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <div className={styles.topLevelContainer}>
-        Home page
-      </div>
-    </QueryClientProvider>
+    <FullScreenContainer>
+      <CenterYXContainer>
+        <MainTitle>
+          VocabTrainer
+        </MainTitle>
+      </CenterYXContainer>
+    </FullScreenContainer>
   );
 }
