@@ -2,348 +2,410 @@
   "entities": [
     {
       "text": "der Reis",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952714+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952714+01:00",
       "translation": "ryż"
     },
     {
       "text": "die Krankschreibung",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952723+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952723+01:00",
       "translation": "zwolnienie lekarskie"
     },
     {
       "text": "zum Leben zurückkommen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952731+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952731+01:00",
       "translation": "wrócić do życia"
     },
     {
       "text": "auf dem Laufenden sein",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952738+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952738+01:00",
       "translation": "być na bieżąco"
     },
     {
       "text": "nach dem Unterricht",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952745+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952745+01:00",
       "translation": "po lekcji"
     },
     {
       "text": "ein weich / hart gekochtes Ei",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952752+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952752+01:00",
       "translation": "jajko na twardo / miękko"
     },
     {
       "text": "das Fitnessstudio",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952759+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952759+01:00",
       "translation": "siłownia"
     },
     {
       "text": "entschieden",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952768+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952768+01:00",
       "translation": "zdecydowany"
     },
     {
       "text": "Urlaub machen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952775+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952775+01:00",
       "translation": null
     },
     {
       "text": "Wen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952782+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952782+01:00",
       "translation": "kiedy"
     },
     {
       "text": "der Pilz, -e",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952788+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952788+01:00",
       "translation": "grzyb"
     },
     {
       "text": "Pilze sammeln",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952797+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952797+01:00",
       "translation": "zbierać grzyby"
     },
     {
       "text": "der Pilzsammler",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952805+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952805+01:00",
       "translation": "grzybiarz"
     },
     {
       "text": "trocken",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952812+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952812+01:00",
       "translation": "suszyć"
     },
     {
       "text": "das Weihnachten",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952819+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952819+01:00",
       "translation": "Boże Narodzenie"
     },
     {
       "text": "der Heiligabend",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952826+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952826+01:00",
       "translation": "Wigilia"
     },
     {
       "text": "das Eingemachte",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952832+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952832+01:00",
       "translation": "przetwory"
     },
     {
       "text": "die Ernte, -n",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952859+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952859+01:00",
       "translation": "zbiór"
     },
     {
       "text": "abhängen von +Dat.",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952867+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952867+01:00",
       "translation": "zależeć od czegoś/kogoś"
     },
     {
       "text": "das Wetter",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952873+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952873+01:00",
       "translation": "pogoda"
     },
     {
       "text": "erwachsen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952880+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952880+01:00",
       "translation": "dorosły"
     },
     {
       "text": "finden",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952887+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952887+01:00",
       "translation": "znajdować"
     },
     {
       "text": "langweilig",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952894+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952894+01:00",
       "translation": "nudny"
     },
     {
       "text": "nervig",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952901+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952901+01:00",
       "translation": "irytujący, denerwujący"
     },
     {
       "text": "werden",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952908+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952908+01:00",
       "translation": "stać się"
     },
     {
       "text": "Ich bin dessen nicht sicher.",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952915+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952915+01:00",
       "translation": "Nie jestem tego pewien."
     },
     {
       "text": "besonders",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952921+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952921+01:00",
       "translation": null
     },
     {
       "text": "etwas / nichts Besonderes",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952930+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952930+01:00",
       "translation": null
     },
     {
       "text": "Wen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952936+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952936+01:00",
       "translation": "kogo"
     },
     {
       "text": "das Abendkleid, -er",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952943+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952943+01:00",
       "translation": "suknia wieczorowa"
     },
     {
       "text": "das Lied, -er",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952950+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952950+01:00",
       "translation": "piosenka"
     },
     {
       "text": "das Schiff, -e",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952959+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952959+01:00",
       "translation": "statek, okręt"
     },
     {
       "text": "der Fluss, Flüsse",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952966+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952966+01:00",
       "translation": "rzeka"
     },
     {
       "text": "der Hafen, Häfen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952974+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952974+01:00",
       "translation": "port, przystań"
     },
     {
       "text": "die Brücke, -n",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952982+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952982+01:00",
       "translation": "most"
     },
     {
       "text": "farbig",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952988+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952988+01:00",
       "translation": "kolorowy"
     },
     {
       "text": "bestimmt",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952996+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952996+01:00",
       "translation": "określony, uzgodniony, na pewno, z pewnością"
     },
     {
       "text": "die Bahn",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953002+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953002+01:00",
       "translation": "kolej"
     },
     {
       "text": "das Bett",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953009+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953009+01:00",
       "translation": "łóżko"
     },
     {
       "text": "der Stuhl",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953017+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953017+01:00",
       "translation": "krzesło"
     },
     {
       "text": "der Sessel",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953023+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953023+01:00",
       "translation": "fotel"
     },
     {
       "text": "das Ostern",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953029+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953029+01:00",
       "translation": "Wielkanoc"
     },
     {
       "text": "bereuen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953036+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953036+01:00",
       "translation": "żałować"
     },
     {
       "text": "normalerweise",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953046+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953046+01:00",
       "translation": "normalnie"
     },
     {
       "text": "in Rente sein",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953053+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953053+01:00",
       "translation": "być na emeryturze"
     },
     {
       "text": "Ich kann es kaum erwarten.",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953061+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953061+01:00",
       "translation": "Nie mogę się doczekać."
     },
     {
       "text": "wahrscheinlich",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953067+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953067+01:00",
       "translation": "prawdopodobnie"
     },
     {
       "text": "bei Vorbereitungen helfen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953075+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953075+01:00",
       "translation": "pomagać w przygotowaniach"
     },
     {
       "text": "die Zeitung",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953082+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953082+01:00",
       "translation": "gazeta"
     },
     {
       "text": "je nachdem",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953088+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953088+01:00",
       "translation": "zależy"
     },
     {
       "text": "auf +Akk. ankommen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953096+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953096+01:00",
       "translation": "zależeć od kogoś/czegoś"
     },
     {
       "text": "spät",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953104+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953104+01:00",
       "translation": "późno"
     },
     {
       "text": "jeder",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953111+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953111+01:00",
       "translation": "każdy"
     },
     {
       "text": "die Pflaume, -n",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953118+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953118+01:00",
       "translation": "śliwka"
     },
     {
       "text": "letztens",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953124+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953124+01:00",
       "translation": "ostatnio"
     },
     {
       "text": "die Kräuter",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953131+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953131+01:00",
       "translation": "zioła"
     },
     {
       "text": "das Getränk, -e",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953139+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953139+01:00",
       "translation": "napój"
     },
     {
       "text": "ein bisschen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953146+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953146+01:00",
       "translation": "trochę"
     },
     {
       "text": "der Quark",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953153+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953153+01:00",
       "translation": "twaróg"
     },
     {
       "text": "das Spiegelei, -er",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953162+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953162+01:00",
       "translation": "jajko sadzone"
     },
     {
       "text": "ein weich / hart gekochtes Ei",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953170+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953170+01:00",
       "translation": "jajko na miękko / twardo"
     },
     {
       "text": "das Rührei",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953177+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953177+01:00",
       "translation": "jajecznica"
     },
     {
       "text": "die Brust, Brüste",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953184+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953184+01:00",
       "translation": "pierś"
     },
     {
       "text": "gebraten",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953191+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953191+01:00",
       "translation": "smażony"
     },
     {
       "text": "ein paar",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953198+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953198+01:00",
       "translation": "kilka"
     },
     {
       "text": "der Preis, -e",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953204+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953204+01:00",
       "translation": "cena"
     },
     {
       "text": "der Verkäufer",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.953213+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.953213+01:00",
       "translation": "sprzedawca"
-    },
-    {
-      "text": "",
-      "plural_suffix": null,
-      "translation": null
     }
   ],
-  "metadata": {
-    "lesson_date": null,
-    "data_submission_date": "2024-11-17T15:41:15.959021",
-    "description": null
+  "group": {
+    "name": "lesson_6",
+    "description": null,
+    "created_date": "2024-12-18T18:28:04.953223+01:00"
   }
 }

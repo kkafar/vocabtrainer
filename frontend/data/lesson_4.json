@@ -2,463 +2,554 @@
   "entities": [
     {
       "text": "die Familie",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951754+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951754+01:00",
       "translation": "rodzina"
     },
     {
       "text": "das Sentiment",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951764+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951764+01:00",
       "translation": "sentyment"
     },
     {
       "text": "alle zwei Monate",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951772+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951772+01:00",
       "translation": "~ co dwa miesiące"
     },
     {
       "text": "ins Ausland",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951779+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951779+01:00",
       "translation": "za granicę"
     },
     {
       "text": "die Gelegenheit, -en",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951786+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951786+01:00",
       "translation": "okazja"
     },
     {
       "text": "wunderbar",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951792+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951792+01:00",
       "translation": "cudownie, cudowny"
     },
     {
       "text": "dort",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951800+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951800+01:00",
       "translation": "tam (popatrzeć na przykład zdania)"
     },
     {
       "text": "der Ort, -e",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951807+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951807+01:00",
       "translation": "miejsce"
     },
     {
       "text": "das Gedächtnis, -se",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951814+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951814+01:00",
       "translation": "pamięć"
     },
     {
       "text": "letztes Jahr",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951823+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951823+01:00",
       "translation": "w ostatnim roku"
     },
     {
       "text": "versuchen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951830+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951830+01:00",
       "translation": "próbować"
     },
     {
       "text": "ich war …",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951839+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951839+01:00",
       "translation": "byłem …"
     },
     {
       "text": "stark",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951846+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951846+01:00",
       "translation": "silny"
     },
     {
       "text": "geschlossen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951853+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951853+01:00",
       "translation": "zamknięty"
     },
     {
       "text": "der Wind",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951859+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951859+01:00",
       "translation": "wiatr"
     },
     {
       "text": "der Turm",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951866+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951866+01:00",
       "translation": "wieża"
     },
     {
       "text": "der Fernsehturm",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951872+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951872+01:00",
       "translation": null
     },
     {
       "text": "vielleicht",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951880+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951880+01:00",
       "translation": "może"
     },
     {
       "text": "übersetzen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951887+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951887+01:00",
       "translation": "przetłumaczyć"
     },
     {
       "text": "am Anfang",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951894+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951894+01:00",
       "translation": "na początku"
     },
     {
       "text": "breit",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951900+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951900+01:00",
       "translation": "szeroki"
     },
     {
       "text": "sicher",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951907+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951907+01:00",
       "translation": "pewny"
     },
     {
       "text": "der Grund, Gründe",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951914+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951914+01:00",
       "translation": "powód"
     },
     {
       "text": "nennen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951921+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951921+01:00",
       "translation": "wymieniać, podawać, nazywać"
     },
     {
       "text": "der Hörtext, -e",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951929+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951929+01:00",
       "translation": "nagranie, słuchanka"
     },
     {
       "text": "es ist sehr nett",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951937+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951937+01:00",
       "translation": "to bardzo miłe"
     },
     {
       "text": "nichts",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951945+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951945+01:00",
       "translation": "nic"
     },
     {
       "text": "niemand",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951953+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951953+01:00",
       "translation": "nikt, żaden, ani jeden"
     },
     {
       "text": "sondern",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951961+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951961+01:00",
       "translation": "lecz"
     },
     {
       "text": "der Nachbar",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951968+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951968+01:00",
       "translation": "sąsiad"
     },
     {
       "text": "moderne Malerei",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951975+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951975+01:00",
       "translation": "współczesne malarstwo"
     },
     {
       "text": "davon",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951983+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951983+01:00",
       "translation": "z tego (davon verstehe ich…), o tym"
     },
     {
       "text": "der Durst",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951990+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951990+01:00",
       "translation": "pragnienie"
     },
     {
       "text": "der Mensch",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.951996+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951996+01:00",
       "translation": "człowiek"
     },
     {
       "text": "der Laptop",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952003+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952003+01:00",
       "translation": null
     },
     {
       "text": "das Dach",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952009+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952009+01:00",
       "translation": "dach xD"
     },
     {
       "text": "die Angst",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952016+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952016+01:00",
       "translation": "strach"
     },
     {
       "text": "tut mir leid",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952022+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952022+01:00",
       "translation": "przykro mi"
     },
     {
       "text": "der Kuli",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952029+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952029+01:00",
       "translation": "długopis"
     },
     {
       "text": "das Englisch",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952036+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952036+01:00",
       "translation": "język angielski"
     },
     {
       "text": "der Comic, -s",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952042+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952042+01:00",
       "translation": "komiks"
     },
     {
       "text": "das Büro, -s",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952052+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952052+01:00",
       "translation": "biuro"
     },
     {
       "text": "zeichnen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952060+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952060+01:00",
       "translation": "rysować"
     },
     {
       "text": "das Zeichnen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952067+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952067+01:00",
       "translation": "rysunek, rysowanie"
     },
     {
       "text": "das Haustier, -e",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952074+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952074+01:00",
       "translation": "zwierzę domowe"
     },
     {
       "text": "der Nachbar, -n",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952081+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952081+01:00",
       "translation": "sąsiad"
     },
     {
       "text": "die Kundin, -nen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952087+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952087+01:00",
       "translation": "klientka"
     },
     {
       "text": "der Kunde, -en",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952093+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952093+01:00",
       "translation": "klient"
     },
     {
       "text": "die Lampe",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952100+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952100+01:00",
       "translation": "lampa"
     },
     {
       "text": "der Alkohol, -e",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952106+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952106+01:00",
       "translation": "alkohol"
     },
     {
       "text": "ganz",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952113+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952113+01:00",
       "translation": "całkowicie, zupełnie"
     },
     {
       "text": "gar",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952120+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952120+01:00",
       "translation": "wcale, zupełnie"
     },
     {
       "text": "überhaupt",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952128+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952128+01:00",
       "translation": "zupełnie, właściwie, w ogóle"
     },
     {
       "text": "gerade",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952135+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952135+01:00",
       "translation": "właśnie"
     },
     {
       "text": "kennen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952142+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952142+01:00",
       "translation": "znać"
     },
     {
       "text": "sich kennen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952149+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952149+01:00",
       "translation": "znać się"
     },
     {
       "text": "hungrig",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952155+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952155+01:00",
       "translation": "głodny"
     },
     {
       "text": "glücklich",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952165+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952165+01:00",
       "translation": "szczęśliwy"
     },
     {
       "text": "spannend",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952172+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952172+01:00",
       "translation": "ciekawy, zajmujący, wciągający"
     },
     {
       "text": "interessant",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952179+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952179+01:00",
       "translation": "interesujący, ciekawy"
     },
     {
       "text": "nicht mehr",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952186+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952186+01:00",
       "translation": "już nie, więcej nie"
     },
     {
       "text": "niemals",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952193+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952193+01:00",
       "translation": "nigdy"
     },
     {
       "text": "nirgends",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952199+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952199+01:00",
       "translation": "nigdzie"
     },
     {
       "text": "Auf keinen Fall",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952206+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952206+01:00",
       "translation": "w żadnym razie"
     },
     {
       "text": "der Fall",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952213+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952213+01:00",
       "translation": "upadek, przypadek, przypadek gramatyczny"
     },
     {
       "text": "das Studium",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952219+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952219+01:00",
       "translation": "studia"
     },
     {
       "text": "der Sprachschatz",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952226+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952226+01:00",
       "translation": "słownictwo, zasób słownictwa"
     },
     {
       "text": "die Allergie",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952233+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952233+01:00",
       "translation": "alergia"
     },
     {
       "text": "der  Blick",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952239+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952239+01:00",
       "translation": "widok"
     },
     {
       "text": "registrieren",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952246+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952246+01:00",
       "translation": "rejestrować"
     },
     {
       "text": "der Fehler",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952253+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952253+01:00",
       "translation": "błąd"
     },
     {
       "text": "nachdenken, bedenken",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952260+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952260+01:00",
       "translation": "zastanawiać się, rozmyślać"
     },
     {
       "text": "erklären",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952267+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952267+01:00",
       "translation": "wytłumaczyć, tłumaczyć (zagadnienie)"
     },
     {
       "text": "reiten",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952276+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952276+01:00",
       "translation": "dosiadać"
     },
     {
       "text": "der Zaum",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952283+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952283+01:00",
       "translation": "uzda (końska)"
     },
     {
       "text": "umfassen, einfangen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952290+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952290+01:00",
       "translation": "chwycić"
     },
     {
       "text": "bewegen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952297+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952297+01:00",
       "translation": "ruszyć, poruszyć"
     },
     {
       "text": "losgehen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952304+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952304+01:00",
       "translation": "ruszyć, startować, zaczynać"
     },
     {
       "text": "ruhig",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952311+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952311+01:00",
       "translation": "spokojny, stonowany"
     },
     {
       "text": "der Gang",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952318+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952318+01:00",
       "translation": "chód, krok"
     },
     {
       "text": "wachsen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952325+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952325+01:00",
       "translation": "rosnąć"
     },
     {
       "text": "die Blume",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952331+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952331+01:00",
       "translation": "kwiat"
     },
     {
       "text": "begießen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952338+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952338+01:00",
       "translation": "podlewać"
     },
     {
       "text": "gießen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952345+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952345+01:00",
       "translation": "podlać"
     },
     {
       "text": "die Verletzung",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952352+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952352+01:00",
       "translation": "uraz, kontuzja, rana"
     },
     {
       "text": "die Wunde, -n",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952360+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952360+01:00",
       "translation": "rana"
     },
     {
       "text": "der Bruch",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952367+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952367+01:00",
       "translation": "złamanie"
     },
     {
       "text": "brechen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952374+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952374+01:00",
       "translation": "złamać"
     },
     {
       "text": "die Tastatur",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952384+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952384+01:00",
       "translation": "klawiatura"
     },
     {
       "text": "beleuchten",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952391+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952391+01:00",
       "translation": "podświetlać, oświetlać"
     },
     {
       "text": "beleuchtet",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952398+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952398+01:00",
       "translation": "podświetlony"
     }
   ],
-  "metadata": {
-    "lesson_date": null,
-    "data_submission_date": "2024-11-17T15:41:15.958515",
-    "description": null
+  "group": {
+    "name": "lesson_4",
+    "description": null,
+    "created_date": "2024-12-18T18:28:04.952401+01:00"
   }
 }

@@ -109,7 +109,7 @@ attributes:
 
 #### Relacja przynależności słownictwa do grupy
 
-name: <naming-is-hard>
+name: vocabulary_grouping
 attributes:
     * item_id: not-null, integer, primary-key, foreign-key vocabulary (id) // vocabulary item id, but it should be more general - I would need to handle grammar etc.
     * group_id: not-null, integer, primary-key, foreign-key group (id)
@@ -166,3 +166,4 @@ attributes:
 
 The game state should only be saved on explicit user request (to persistent data base).
 The game state might be saved to local browser storage on more frequent basis.
+

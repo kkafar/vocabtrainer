@@ -2,168 +2,200 @@
   "entities": [
     {
       "text": "nutzen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952444+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952444+01:00",
       "translation": "używać"
     },
     {
       "text": "besprechen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952454+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952454+01:00",
       "translation": "omawiać"
     },
     {
       "text": "demselben",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952461+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952461+01:00",
       "translation": "temu samemu"
     },
     {
       "text": "derselbe",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952467+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952467+01:00",
       "translation": "ten sam"
     },
     {
       "text": "halten",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952474+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952474+01:00",
       "translation": "trzymać"
     },
     {
       "text": "Niemand ist da",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952480+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952480+01:00",
       "translation": "nikogo nie ma"
     },
     {
       "text": "ohne Grund",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952487+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952487+01:00",
       "translation": "bez powodu"
     },
     {
       "text": "der Grund, Gründe",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952494+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952494+01:00",
       "translation": "powód"
     },
     {
       "text": "Zeit verbringen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952501+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952501+01:00",
       "translation": "spędzać czas"
     },
     {
       "text": "das Eis (tylko liczba pojedyncza)",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952509+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952509+01:00",
       "translation": "lód"
     },
     {
       "text": "klettern",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952516+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952516+01:00",
       "translation": "wspinać się"
     },
     {
       "text": "bewundern",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952523+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952523+01:00",
       "translation": "podziwiać"
     },
     {
       "text": "sich sonnen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952530+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952530+01:00",
       "translation": "opalać się"
     },
     {
       "text": "frische Luft einatmen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952541+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952541+01:00",
       "translation": "oddychać świeżym powietrzem"
     },
     {
       "text": "klug",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952548+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952548+01:00",
       "translation": "mądry"
     },
     {
       "text": "gesellig",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952555+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952555+01:00",
       "translation": "towarzyski"
     },
     {
       "text": "so lala",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952561+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952561+01:00",
       "translation": "tak sobie"
     },
     {
       "text": "die Wohnung, -en",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952567+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952567+01:00",
       "translation": "mieszkanie"
     },
     {
       "text": "umziehen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952574+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952574+01:00",
       "translation": "przeprowadzić się"
     },
     {
       "text": "zuerst",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952581+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952581+01:00",
       "translation": "najpierw"
     },
     {
       "text": "Ich habe nichts mehr zu sagen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952588+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952588+01:00",
       "translation": "nie mam nic wiecej do powiedzenia"
     },
     {
       "text": "der Geschmack",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952594+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952594+01:00",
       "translation": "smak"
     },
     {
       "text": "Ich mag den Kaffeegeschmack nicht",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952601+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952601+01:00",
       "translation": "nie lubie smaku kawy"
     },
     {
       "text": "gelegentlich",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952607+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952607+01:00",
       "translation": "okazjonalnie"
     },
     {
       "text": "der Schnee",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952614+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952614+01:00",
       "translation": "śnieg"
     },
     {
       "text": "unangenehm",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952620+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952620+01:00",
       "translation": "nieprzyjemny"
     },
     {
       "text": "nicht zu warm, nicht zu kalt",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952626+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952626+01:00",
       "translation": null
     },
     {
       "text": "ideal",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952633+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952633+01:00",
       "translation": "idealny"
     },
     {
       "text": "wichtig",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952642+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952642+01:00",
       "translation": "ważny"
     },
     {
       "text": "vor allem",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952649+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952649+01:00",
       "translation": "głównie, przede wszystkim"
     },
     {
       "text": "zum Nachdenken zwingen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952656+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952656+01:00",
       "translation": "zmuszac do przemyslen"
     },
     {
       "text": "zwingen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T18:28:04.952663+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.952663+01:00",
       "translation": "zmuszac"
     }
   ],
-  "metadata": {
-    "lesson_date": null,
-    "data_submission_date": "2024-11-17T15:41:15.958702",
-    "description": null
+  "group": {
+    "name": "lesson_5",
+    "description": null,
+    "created_date": "2024-12-18T18:28:04.952666+01:00"
   }
 }

@@ -1,9 +1,10 @@
 import argparse
+from collections.abc import Mapping
 import json
 from pathlib import Path
 from dataclasses import dataclass, field, asdict
 from typing import Optional, Any
-from datetime import date, datetime
+from datetime import date, datetime, timezone, tzinfo
 
 
 @dataclass
@@ -19,25 +20,61 @@ class ArgsValidationResult[T]:
 
 
 @dataclass
-class VocabEntity:
+class VocabItem:
     # Word / expression / ...
     text: str
-    # In case of nouns
-    plural_suffix: Optional[str] = field(default=None)
+    created_date: datetime
+    last_updated_date: datetime
     translation: Optional[str] = field(default=None)
 
 
+type GroupName = str
+
 @dataclass
-class LessonMetadata:
-    lesson_date: Optional[datetime]
-    submission_date: datetime
+class Group:
+    name: GroupName
     description: Optional[str]
+    created_date: datetime
 
 
 @dataclass
 class VocabFileModel:
-    entities: list[VocabEntity] = field(default_factory=list)
-    metadata: LessonMetadata = field(default_factory=lambda: LessonMetadata(None, datetime.now(), None))
+    entities: list[VocabItem] = field(default_factory=list)
+    group: Optional[Group] = None
+
+
+def normalize_key(key: str) -> str:
+    parts = key.split('_')
+
+    if len(parts) == 0:
+        raise ValueError("Received empty split result!")
+
+    if len(parts) == 1:
+        return key
+
+    output_parts = [parts[0]]
+    for part in parts[1:]:
+        if len(part) == 0:
+            raise ValueError("Received empty part")
+
+        camel_cased_part = part[0].upper() + part[1:]
+        output_parts.append(camel_cased_part)
+
+    return ''.join(output_parts)
+
+
+def normalize_value(value: Any) -> Any:
+    if isinstance(value, dict):
+        return normalize_to_camel_case(value)
+    if isinstance(value, list):
+        return [normalize_value(nested_value) for nested_value in value]
+    return value
+
+
+def normalize_to_camel_case(mapping: Mapping[str, Any]) -> Mapping[str, Any]:
+    return {
+        normalize_key(key): normalize_value(value) for key, value in mapping.items()
+    }
 
 
 def build_cli():
@@ -68,26 +105,38 @@ def validate_args(args: Optional[argparse.Namespace]) -> ArgsValidationResult:
     return ArgsValidationResult(True, None, args)
 
 
-def parse_line(raw_entity: str) -> Optional[VocabEntity]:
+def parse_line(raw_entity: str) -> Optional[VocabItem]:
     partitioned = raw_entity.split(' - ')
     partitioned = list(map(str.strip, partitioned))
     print(partitioned)
 
+    creation_date = datetime.now().astimezone()
     if len(partitioned) == 2:
-        return VocabEntity(text=partitioned[0], translation=partitioned[1])
+        stripped_text = partitioned[0].strip()
+        stripped_translation = partitioned[1].strip()
+        if len(stripped_text) == 0 and len(stripped_translation) == 0:
+            return None
+        else:
+            return VocabItem(text=stripped_text, translation=stripped_translation, created_date=creation_date, last_updated_date=creation_date)
     elif len(partitioned) == 1:
-        return VocabEntity(text=partitioned[0])
+        stripped_text = partitioned[0].strip()
+        if len(stripped_text) == 0:
+            return None
+        else:
+            return VocabItem(text=stripped_text, created_date=creation_date, last_updated_date=creation_date)
     else:
         raise ValueError(f"Unexpected format of raw line: {raw_entity}")
 
 
-def build_file_model(contents: list[str]) -> VocabFileModel:
+def build_file_model(contents: list[str], group_name: str) -> VocabFileModel:
     collector = []
     for line in contents:
         entity = parse_line(line)
-        collector.append(entity)
+        if entity:
+            collector.append(entity)
 
-    return VocabFileModel(collector)
+    group = Group(group_name, None, datetime.now().astimezone())
+    return VocabFileModel(collector, group=group)
 
 
 def process_file(file: Path) -> VocabFileModel:
@@ -97,7 +146,9 @@ def process_file(file: Path) -> VocabFileModel:
     if contents is None:
         raise RuntimeError(f"Failed to read contents of file {file}")
 
-    model = build_file_model(contents)
+
+    group_name = file.stem
+    model = build_file_model(contents, group_name)
     return model
 
 
@@ -109,18 +160,18 @@ def datetime_serializer(maybe_datetime: Any):
 
 
 def process_filelist(files: list[Path]) -> list[VocabFileModel]:
-    lessons = list(map(process_file, files))
-    for lesson in lessons:
-        print(lesson)
+    item_group = list(map(process_file, files))
+    for vocab_item in item_group:
+        print(vocab_item)
 
-    for (lesson_path, lesson_model) in zip(files, lessons):
-        converted_path = lesson_path.with_suffix('.json')
+    for (item_group_path, item_group_model) in zip(files, item_group):
+        converted_path = item_group_path.with_suffix('.json')
         with open(converted_path, 'w+', encoding='utf-8') as writer:
             # We need to pass `default` to ensure dates are converted properly.
             # Without `ensure_ascii=False` polish / german characters won't be converted correctly.
-            json.dump(asdict(lesson_model), writer, indent=2, default=datetime_serializer, ensure_ascii=False)
+            json.dump(asdict(item_group_model), writer, indent=2, default=datetime_serializer, ensure_ascii=False)
 
-    return lessons
+    return item_group
 
 
 def main():
@@ -130,10 +181,7 @@ def main():
         print(parseResult.errors)
         exit(1)
 
-    lessons = process_filelist(parseResult.args.files)
-
-
-
+    _ = process_filelist(parseResult.args.files)
 
 if __name__ == '__main__':
     main()
