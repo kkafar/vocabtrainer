@@ -1,5 +1,8 @@
 import argparse
+from collections.abc import Mapping
 import json
+from math import isinf
+from os import link
 from pathlib import Path
 from dataclasses import dataclass, field, asdict
 from typing import Optional, Any
@@ -40,6 +43,40 @@ class Group:
 class VocabFileModel:
     entities: list[VocabItem] = field(default_factory=list)
     group: Optional[Group] = None
+
+
+def normalize_key(key: str) -> str:
+    parts = key.split('_')
+
+    if len(parts) == 0:
+        raise ValueError("Received empty split result!")
+
+    if len(parts) == 1:
+        return key
+
+    output_parts = [parts[0]]
+    for part in parts[1:]:
+        if len(part) == 0:
+            raise ValueError("Received empty part")
+
+        camel_cased_part = part[0].upper() + part[1:]
+        output_parts.append(camel_cased_part)
+
+    return ''.join(output_parts)
+
+
+def normalize_value(value: Any) -> Any:
+    if isinstance(value, dict):
+        return normalize_to_camel_case(value)
+    if isinstance(value, list):
+        return [normalize_value(nested_value) for nested_value in value]
+    return value
+
+
+def normalize_to_camel_case(mapping: Mapping[str, Any]) -> Mapping[str, Any]:
+    return {
+        normalize_key(key): normalize_value(value) for key, value in mapping.items()
+    }
 
 
 def build_cli():
@@ -125,18 +162,18 @@ def datetime_serializer(maybe_datetime: Any):
 
 
 def process_filelist(files: list[Path]) -> list[VocabFileModel]:
-    lessons = list(map(process_file, files))
-    for lesson in lessons:
-        print(lesson)
+    item_group = list(map(process_file, files))
+    for vocab_item in item_group:
+        print(vocab_item)
 
-    for (lesson_path, lesson_model) in zip(files, lessons):
-        converted_path = lesson_path.with_suffix('.json')
+    for (item_group_path, item_group_model) in zip(files, item_group):
+        converted_path = item_group_path.with_suffix('.json')
         with open(converted_path, 'w+', encoding='utf-8') as writer:
             # We need to pass `default` to ensure dates are converted properly.
             # Without `ensure_ascii=False` polish / german characters won't be converted correctly.
-            json.dump(asdict(lesson_model), writer, indent=2, default=datetime_serializer, ensure_ascii=False)
+            json.dump(normalize_to_camel_case(asdict(item_group_model)), writer, indent=2, default=datetime_serializer, ensure_ascii=False)
 
-    return lessons
+    return item_group
 
 
 def main():
@@ -146,10 +183,7 @@ def main():
         print(parseResult.errors)
         exit(1)
 
-    lessons = process_filelist(parseResult.args.files)
-
-
-
+    _ = process_filelist(parseResult.args.files)
 
 if __name__ == '__main__':
     main()

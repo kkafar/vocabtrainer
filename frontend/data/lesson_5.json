@@ -2,200 +2,200 @@
   "entities": [
     {
       "text": "nutzen",
-      "created_date": "2024-12-18T16:22:53.799218",
-      "last_updated_date": "2024-12-18T16:22:53.799218",
+      "createdDate": "2024-12-18T16:46:27.385310",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385310",
       "translation": "używać"
     },
     {
       "text": "besprechen",
-      "created_date": "2024-12-18T16:22:53.799224",
-      "last_updated_date": "2024-12-18T16:22:53.799224",
+      "createdDate": "2024-12-18T16:46:27.385316",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385316",
       "translation": "omawiać"
     },
     {
       "text": "demselben",
-      "created_date": "2024-12-18T16:22:53.799229",
-      "last_updated_date": "2024-12-18T16:22:53.799229",
+      "createdDate": "2024-12-18T16:46:27.385320",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385320",
       "translation": "temu samemu"
     },
     {
       "text": "derselbe",
-      "created_date": "2024-12-18T16:22:53.799233",
-      "last_updated_date": "2024-12-18T16:22:53.799233",
+      "createdDate": "2024-12-18T16:46:27.385324",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385324",
       "translation": "ten sam"
     },
     {
       "text": "halten",
-      "created_date": "2024-12-18T16:22:53.799238",
-      "last_updated_date": "2024-12-18T16:22:53.799238",
+      "createdDate": "2024-12-18T16:46:27.385329",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385329",
       "translation": "trzymać"
     },
     {
       "text": "Niemand ist da",
-      "created_date": "2024-12-18T16:22:53.799242",
-      "last_updated_date": "2024-12-18T16:22:53.799242",
+      "createdDate": "2024-12-18T16:46:27.385333",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385333",
       "translation": "nikogo nie ma"
     },
     {
       "text": "ohne Grund",
-      "created_date": "2024-12-18T16:22:53.799246",
-      "last_updated_date": "2024-12-18T16:22:53.799246",
+      "createdDate": "2024-12-18T16:46:27.385337",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385337",
       "translation": "bez powodu"
     },
     {
       "text": "der Grund, Gründe",
-      "created_date": "2024-12-18T16:22:53.799251",
-      "last_updated_date": "2024-12-18T16:22:53.799251",
+      "createdDate": "2024-12-18T16:46:27.385342",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385342",
       "translation": "powód"
     },
     {
       "text": "Zeit verbringen",
-      "created_date": "2024-12-18T16:22:53.799256",
-      "last_updated_date": "2024-12-18T16:22:53.799256",
+      "createdDate": "2024-12-18T16:46:27.385346",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385346",
       "translation": "spędzać czas"
     },
     {
       "text": "das Eis (tylko liczba pojedyncza)",
-      "created_date": "2024-12-18T16:22:53.799261",
-      "last_updated_date": "2024-12-18T16:22:53.799261",
+      "createdDate": "2024-12-18T16:46:27.385351",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385351",
       "translation": "lód"
     },
     {
       "text": "klettern",
-      "created_date": "2024-12-18T16:22:53.799266",
-      "last_updated_date": "2024-12-18T16:22:53.799266",
+      "createdDate": "2024-12-18T16:46:27.385356",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385356",
       "translation": "wspinać się"
     },
     {
       "text": "bewundern",
-      "created_date": "2024-12-18T16:22:53.799270",
-      "last_updated_date": "2024-12-18T16:22:53.799270",
+      "createdDate": "2024-12-18T16:46:27.385360",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385360",
       "translation": "podziwiać"
     },
     {
       "text": "sich sonnen",
-      "created_date": "2024-12-18T16:22:53.799275",
-      "last_updated_date": "2024-12-18T16:22:53.799275",
+      "createdDate": "2024-12-18T16:46:27.385365",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385365",
       "translation": "opalać się"
     },
     {
       "text": "frische Luft einatmen",
-      "created_date": "2024-12-18T16:22:53.799280",
-      "last_updated_date": "2024-12-18T16:22:53.799280",
+      "createdDate": "2024-12-18T16:46:27.385369",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385369",
       "translation": "oddychać świeżym powietrzem"
     },
     {
       "text": "klug",
-      "created_date": "2024-12-18T16:22:53.799284",
-      "last_updated_date": "2024-12-18T16:22:53.799284",
+      "createdDate": "2024-12-18T16:46:27.385374",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385374",
       "translation": "mądry"
     },
     {
       "text": "gesellig",
-      "created_date": "2024-12-18T16:22:53.799289",
-      "last_updated_date": "2024-12-18T16:22:53.799289",
+      "createdDate": "2024-12-18T16:46:27.385378",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385378",
       "translation": "towarzyski"
     },
     {
       "text": "so lala",
-      "created_date": "2024-12-18T16:22:53.799293",
-      "last_updated_date": "2024-12-18T16:22:53.799293",
+      "createdDate": "2024-12-18T16:46:27.385382",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385382",
       "translation": "tak sobie"
     },
     {
       "text": "die Wohnung, -en",
-      "created_date": "2024-12-18T16:22:53.799297",
-      "last_updated_date": "2024-12-18T16:22:53.799297",
+      "createdDate": "2024-12-18T16:46:27.385386",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385386",
       "translation": "mieszkanie"
     },
     {
       "text": "umziehen",
-      "created_date": "2024-12-18T16:22:53.799302",
-      "last_updated_date": "2024-12-18T16:22:53.799302",
+      "createdDate": "2024-12-18T16:46:27.385390",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385390",
       "translation": "przeprowadzić się"
     },
     {
       "text": "zuerst",
-      "created_date": "2024-12-18T16:22:53.799306",
-      "last_updated_date": "2024-12-18T16:22:53.799306",
+      "createdDate": "2024-12-18T16:46:27.385394",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385394",
       "translation": "najpierw"
     },
     {
       "text": "Ich habe nichts mehr zu sagen",
-      "created_date": "2024-12-18T16:22:53.799310",
-      "last_updated_date": "2024-12-18T16:22:53.799310",
+      "createdDate": "2024-12-18T16:46:27.385398",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385398",
       "translation": "nie mam nic wiecej do powiedzenia"
     },
     {
       "text": "der Geschmack",
-      "created_date": "2024-12-18T16:22:53.799314",
-      "last_updated_date": "2024-12-18T16:22:53.799314",
+      "createdDate": "2024-12-18T16:46:27.385402",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385402",
       "translation": "smak"
     },
     {
       "text": "Ich mag den Kaffeegeschmack nicht",
-      "created_date": "2024-12-18T16:22:53.799319",
-      "last_updated_date": "2024-12-18T16:22:53.799319",
+      "createdDate": "2024-12-18T16:46:27.385435",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385435",
       "translation": "nie lubie smaku kawy"
     },
     {
       "text": "gelegentlich",
-      "created_date": "2024-12-18T16:22:53.799323",
-      "last_updated_date": "2024-12-18T16:22:53.799323",
+      "createdDate": "2024-12-18T16:46:27.385439",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385439",
       "translation": "okazjonalnie"
     },
     {
       "text": "der Schnee",
-      "created_date": "2024-12-18T16:22:53.799327",
-      "last_updated_date": "2024-12-18T16:22:53.799327",
+      "createdDate": "2024-12-18T16:46:27.385444",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385444",
       "translation": "śnieg"
     },
     {
       "text": "unangenehm",
-      "created_date": "2024-12-18T16:22:53.799331",
-      "last_updated_date": "2024-12-18T16:22:53.799331",
+      "createdDate": "2024-12-18T16:46:27.385448",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385448",
       "translation": "nieprzyjemny"
     },
     {
       "text": "nicht zu warm, nicht zu kalt",
-      "created_date": "2024-12-18T16:22:53.799338",
-      "last_updated_date": "2024-12-18T16:22:53.799338",
+      "createdDate": "2024-12-18T16:46:27.385452",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385452",
       "translation": null
     },
     {
       "text": "ideal",
-      "created_date": "2024-12-18T16:22:53.799342",
-      "last_updated_date": "2024-12-18T16:22:53.799342",
+      "createdDate": "2024-12-18T16:46:27.385470",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385470",
       "translation": "idealny"
     },
     {
       "text": "wichtig",
-      "created_date": "2024-12-18T16:22:53.799346",
-      "last_updated_date": "2024-12-18T16:22:53.799346",
+      "createdDate": "2024-12-18T16:46:27.385475",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385475",
       "translation": "ważny"
     },
     {
       "text": "vor allem",
-      "created_date": "2024-12-18T16:22:53.799351",
-      "last_updated_date": "2024-12-18T16:22:53.799351",
+      "createdDate": "2024-12-18T16:46:27.385496",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385496",
       "translation": "głównie, przede wszystkim"
     },
     {
       "text": "zum Nachdenken zwingen",
-      "created_date": "2024-12-18T16:22:53.799355",
-      "last_updated_date": "2024-12-18T16:22:53.799355",
+      "createdDate": "2024-12-18T16:46:27.385500",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385500",
       "translation": "zmuszac do przemyslen"
     },
     {
       "text": "zwingen",
-      "created_date": "2024-12-18T16:22:53.799359",
-      "last_updated_date": "2024-12-18T16:22:53.799359",
+      "createdDate": "2024-12-18T16:46:27.385504",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385504",
       "translation": "zmuszac"
     }
   ],
   "group": {
     "name": "lesson_5",
     "description": null,
-    "created_date": "2024-12-18T16:22:53.799361"
+    "createdDate": "2024-12-18T16:46:27.385505"
   }
 }

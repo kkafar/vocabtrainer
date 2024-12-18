@@ -2,446 +2,446 @@
   "entities": [
     {
       "text": "Wie heißt du?",
-      "created_date": "2024-12-18T16:22:53.797397",
-      "last_updated_date": "2024-12-18T16:22:53.797397",
+      "createdDate": "2024-12-18T16:46:27.383409",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383409",
       "translation": null
     },
     {
       "text": "Wie alt bist du?",
-      "created_date": "2024-12-18T16:22:53.797454",
-      "last_updated_date": "2024-12-18T16:22:53.797454",
+      "createdDate": "2024-12-18T16:46:27.383440",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383440",
       "translation": null
     },
     {
       "text": "Was bist du von Beruf?",
-      "created_date": "2024-12-18T16:22:53.797481",
-      "last_updated_date": "2024-12-18T16:22:53.797481",
+      "createdDate": "2024-12-18T16:46:27.383464",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383464",
       "translation": null
     },
     {
       "text": "Ich bin Programmierer.",
-      "created_date": "2024-12-18T16:22:53.797504",
-      "last_updated_date": "2024-12-18T16:22:53.797504",
+      "createdDate": "2024-12-18T16:46:27.383471",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383471",
       "translation": null
     },
     {
       "text": "Wo wohnst du?",
-      "created_date": "2024-12-18T16:22:53.797509",
-      "last_updated_date": "2024-12-18T16:22:53.797509",
+      "createdDate": "2024-12-18T16:46:27.383476",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383476",
       "translation": null
     },
     {
       "text": "Woher kommst du?",
-      "created_date": "2024-12-18T16:22:53.797512",
-      "last_updated_date": "2024-12-18T16:22:53.797512",
+      "createdDate": "2024-12-18T16:46:27.383480",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383480",
       "translation": null
     },
     {
       "text": "das Dorf, Dörfer",
-      "created_date": "2024-12-18T16:22:53.797555",
-      "last_updated_date": "2024-12-18T16:22:53.797555",
+      "createdDate": "2024-12-18T16:46:27.383510",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383510",
       "translation": "wieś, miasteczko"
     },
     {
       "text": "weit",
-      "created_date": "2024-12-18T16:22:53.797562",
-      "last_updated_date": "2024-12-18T16:22:53.797562",
+      "createdDate": "2024-12-18T16:46:27.383529",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383529",
       "translation": "daleko"
     },
     {
       "text": "2,5",
-      "created_date": "2024-12-18T16:22:53.797579",
-      "last_updated_date": "2024-12-18T16:22:53.797579",
+      "createdDate": "2024-12-18T16:46:27.383534",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383534",
       "translation": "zweieinhalb"
     },
     {
       "text": "alles klar, ich verstehe",
-      "created_date": "2024-12-18T16:22:53.797583",
-      "last_updated_date": "2024-12-18T16:22:53.797583",
+      "createdDate": "2024-12-18T16:46:27.383537",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383537",
       "translation": null
     },
     {
       "text": "ab und zu",
-      "created_date": "2024-12-18T16:22:53.797586",
-      "last_updated_date": "2024-12-18T16:22:53.797586",
+      "createdDate": "2024-12-18T16:46:27.383541",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383541",
       "translation": null
     },
     {
       "text": "mögen",
-      "created_date": "2024-12-18T16:22:53.797591",
-      "last_updated_date": "2024-12-18T16:22:53.797591",
+      "createdDate": "2024-12-18T16:46:27.383546",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383546",
       "translation": "lubić (coś/kogoś)"
     },
     {
       "text": "ich mag",
-      "created_date": "2024-12-18T16:22:53.797622",
-      "last_updated_date": "2024-12-18T16:22:53.797622",
+      "createdDate": "2024-12-18T16:46:27.383577",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383577",
       "translation": null
     },
     {
       "text": "du magst",
-      "created_date": "2024-12-18T16:22:53.797626",
-      "last_updated_date": "2024-12-18T16:22:53.797626",
+      "createdDate": "2024-12-18T16:46:27.383581",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383581",
       "translation": null
     },
     {
       "text": "er/sie/es mag",
-      "created_date": "2024-12-18T16:22:53.797629",
-      "last_updated_date": "2024-12-18T16:22:53.797629",
+      "createdDate": "2024-12-18T16:46:27.383603",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383603",
       "translation": null
     },
     {
       "text": "wir mögen",
-      "created_date": "2024-12-18T16:22:53.797634",
-      "last_updated_date": "2024-12-18T16:22:53.797634",
+      "createdDate": "2024-12-18T16:46:27.383608",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383608",
       "translation": null
     },
     {
       "text": "ihr mögt",
-      "created_date": "2024-12-18T16:22:53.797638",
-      "last_updated_date": "2024-12-18T16:22:53.797638",
+      "createdDate": "2024-12-18T16:46:27.383629",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383629",
       "translation": null
     },
     {
       "text": "sie/Sie mögen",
-      "created_date": "2024-12-18T16:22:53.797642",
-      "last_updated_date": "2024-12-18T16:22:53.797642",
+      "createdDate": "2024-12-18T16:46:27.383633",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383633",
       "translation": null
     },
     {
       "text": "im Vergleich zu +Dat.",
-      "created_date": "2024-12-18T16:22:53.797660",
-      "last_updated_date": "2024-12-18T16:22:53.797660",
+      "createdDate": "2024-12-18T16:46:27.383657",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383657",
       "translation": "w porównaniu do"
     },
     {
       "text": "mehrmals",
-      "created_date": "2024-12-18T16:22:53.797664",
-      "last_updated_date": "2024-12-18T16:22:53.797664",
+      "createdDate": "2024-12-18T16:46:27.383661",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383661",
       "translation": "wiele razy"
     },
     {
       "text": "öffentliche Verkehrsmittel",
-      "created_date": "2024-12-18T16:22:53.797688",
-      "last_updated_date": "2024-12-18T16:22:53.797688",
+      "createdDate": "2024-12-18T16:46:27.383666",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383666",
       "translation": "publiczny transport"
     },
     {
       "text": "o(u)ffentliche machen",
-      "created_date": "2024-12-18T16:22:53.797693",
-      "last_updated_date": "2024-12-18T16:22:53.797693",
+      "createdDate": "2024-12-18T16:46:27.383672",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383672",
       "translation": "odtajniać"
     },
     {
       "text": "o(u)ffentliche Hand",
-      "created_date": "2024-12-18T16:22:53.797697",
-      "last_updated_date": "2024-12-18T16:22:53.797697",
+      "createdDate": "2024-12-18T16:46:27.383692",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383692",
       "translation": "sektor publiczny"
     },
     {
       "text": "nah",
-      "created_date": "2024-12-18T16:22:53.797701",
-      "last_updated_date": "2024-12-18T16:22:53.797701",
+      "createdDate": "2024-12-18T16:46:27.383696",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383696",
       "translation": "blisko"
     },
     {
       "text": "auch",
-      "created_date": "2024-12-18T16:22:53.797706",
-      "last_updated_date": "2024-12-18T16:22:53.797706",
+      "createdDate": "2024-12-18T16:46:27.383719",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383719",
       "translation": "także"
     },
     {
       "text": "fast",
-      "created_date": "2024-12-18T16:22:53.797711",
-      "last_updated_date": "2024-12-18T16:22:53.797711",
+      "createdDate": "2024-12-18T16:46:27.383724",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383724",
       "translation": "prawie"
     },
     {
       "text": "die Oberschule, -n",
-      "created_date": "2024-12-18T16:22:53.797715",
-      "last_updated_date": "2024-12-18T16:22:53.797715",
+      "createdDate": "2024-12-18T16:46:27.383744",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383744",
       "translation": "liceum"
     },
     {
       "text": "also",
-      "created_date": "2024-12-18T16:22:53.797719",
-      "last_updated_date": "2024-12-18T16:22:53.797719",
+      "createdDate": "2024-12-18T16:46:27.383751",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383751",
       "translation": "więc"
     },
     {
       "text": "einfach",
-      "created_date": "2024-12-18T16:22:53.797724",
-      "last_updated_date": "2024-12-18T16:22:53.797724",
+      "createdDate": "2024-12-18T16:46:27.383775",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383775",
       "translation": "łatwo"
     },
     {
       "text": "Wo",
-      "created_date": "2024-12-18T16:22:53.797730",
-      "last_updated_date": "2024-12-18T16:22:53.797730",
+      "createdDate": "2024-12-18T16:46:27.383781",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383781",
       "translation": "gdzie"
     },
     {
       "text": "die Party, -s",
-      "created_date": "2024-12-18T16:22:53.797734",
-      "last_updated_date": "2024-12-18T16:22:53.797734",
+      "createdDate": "2024-12-18T16:46:27.383785",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383785",
       "translation": null
     },
     {
       "text": "paddeln",
-      "created_date": "2024-12-18T16:22:53.797739",
-      "last_updated_date": "2024-12-18T16:22:53.797739",
+      "createdDate": "2024-12-18T16:46:27.383806",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383806",
       "translation": "kajakować"
     },
     {
       "text": "oft",
-      "created_date": "2024-12-18T16:22:53.797744",
-      "last_updated_date": "2024-12-18T16:22:53.797744",
+      "createdDate": "2024-12-18T16:46:27.383810",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383810",
       "translation": "często"
     },
     {
       "text": "ins Kino gehen",
-      "created_date": "2024-12-18T16:22:53.797748",
-      "last_updated_date": "2024-12-18T16:22:53.797748",
+      "createdDate": "2024-12-18T16:46:27.383814",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383814",
       "translation": null
     },
     {
       "text": "aber",
-      "created_date": "2024-12-18T16:22:53.797752",
-      "last_updated_date": "2024-12-18T16:22:53.797752",
+      "createdDate": "2024-12-18T16:46:27.383818",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383818",
       "translation": "ale"
     },
     {
       "text": "nur",
-      "created_date": "2024-12-18T16:22:53.797757",
-      "last_updated_date": "2024-12-18T16:22:53.797757",
+      "createdDate": "2024-12-18T16:46:27.383822",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383822",
       "translation": "tylko"
     },
     {
       "text": "der Film, die Filme",
-      "created_date": "2024-12-18T16:22:53.797761",
-      "last_updated_date": "2024-12-18T16:22:53.797761",
+      "createdDate": "2024-12-18T16:46:27.383825",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383825",
       "translation": null
     },
     {
       "text": "der Filmer",
-      "created_date": "2024-12-18T16:22:53.797765",
-      "last_updated_date": "2024-12-18T16:22:53.797765",
+      "createdDate": "2024-12-18T16:46:27.383829",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383829",
       "translation": "filmowiec"
     },
     {
       "text": "verfilmen",
-      "created_date": "2024-12-18T16:22:53.797770",
-      "last_updated_date": "2024-12-18T16:22:53.797770",
+      "createdDate": "2024-12-18T16:46:27.383834",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383834",
       "translation": "ekranizować"
     },
     {
       "text": "einen Film drehen",
-      "created_date": "2024-12-18T16:22:53.797775",
-      "last_updated_date": "2024-12-18T16:22:53.797775",
+      "createdDate": "2024-12-18T16:46:27.383839",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383839",
       "translation": "kręcić film"
     },
     {
       "text": "Filme sehen",
-      "created_date": "2024-12-18T16:22:53.797780",
-      "last_updated_date": "2024-12-18T16:22:53.797780",
+      "createdDate": "2024-12-18T16:46:27.383843",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383843",
       "translation": "oglądać filmy"
     },
     {
       "text": "die Lese, die Lesen",
-      "created_date": "2024-12-18T16:22:53.797784",
-      "last_updated_date": "2024-12-18T16:22:53.797784",
+      "createdDate": "2024-12-18T16:46:27.383861",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383861",
       "translation": "winobranie"
     },
     {
       "text": "der Leser, die Leserschaft",
-      "created_date": "2024-12-18T16:22:53.797788",
-      "last_updated_date": "2024-12-18T16:22:53.797788",
+      "createdDate": "2024-12-18T16:46:27.383866",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383866",
       "translation": "czytelnik, czytelnicy"
     },
     {
       "text": "die Freundin",
-      "created_date": "2024-12-18T16:22:53.797792",
-      "last_updated_date": "2024-12-18T16:22:53.797792",
+      "createdDate": "2024-12-18T16:46:27.383870",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383870",
       "translation": "dziewczyna"
     },
     {
       "text": "letztens",
-      "created_date": "2024-12-18T16:22:53.797796",
-      "last_updated_date": "2024-12-18T16:22:53.797796",
+      "createdDate": "2024-12-18T16:46:27.383873",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383873",
       "translation": "ostatnio"
     },
     {
       "text": "die Komödie, -n",
-      "created_date": "2024-12-18T16:22:53.797801",
-      "last_updated_date": "2024-12-18T16:22:53.797801",
+      "createdDate": "2024-12-18T16:46:27.383878",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383878",
       "translation": "komedia"
     },
     {
       "text": "wir haben Spaß",
-      "created_date": "2024-12-18T16:22:53.797805",
-      "last_updated_date": "2024-12-18T16:22:53.797805",
+      "createdDate": "2024-12-18T16:46:27.383882",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383882",
       "translation": null
     },
     {
       "text": "wir hatten Spaß",
-      "created_date": "2024-12-18T16:22:53.797809",
-      "last_updated_date": "2024-12-18T16:22:53.797809",
+      "createdDate": "2024-12-18T16:46:27.383905",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383905",
       "translation": null
     },
     {
       "text": "besonders",
-      "created_date": "2024-12-18T16:22:53.797813",
-      "last_updated_date": "2024-12-18T16:22:53.797813",
+      "createdDate": "2024-12-18T16:46:27.383909",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383909",
       "translation": "szczególnie"
     },
     {
       "text": "Lieblings- (jak coś jest ulubione)",
-      "created_date": "2024-12-18T16:22:53.797818",
-      "last_updated_date": "2024-12-18T16:22:53.797818",
+      "createdDate": "2024-12-18T16:46:27.383914",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383914",
       "translation": null
     },
     {
       "text": "populär",
-      "created_date": "2024-12-18T16:22:53.797823",
-      "last_updated_date": "2024-12-18T16:22:53.797823",
+      "createdDate": "2024-12-18T16:46:27.383918",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383918",
       "translation": "popularny"
     },
     {
       "text": "Kochst du gern?",
-      "created_date": "2024-12-18T16:22:53.797828",
-      "last_updated_date": "2024-12-18T16:22:53.797828",
+      "createdDate": "2024-12-18T16:46:27.383925",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383925",
       "translation": "Lubisz gotować?"
     },
     {
       "text": "am Wochenende",
-      "created_date": "2024-12-18T16:22:53.797831",
-      "last_updated_date": "2024-12-18T16:22:53.797831",
+      "createdDate": "2024-12-18T16:46:27.383932",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383932",
       "translation": "w weekend"
     },
     {
       "text": "unter der Woche",
-      "created_date": "2024-12-18T16:22:53.797835",
-      "last_updated_date": "2024-12-18T16:22:53.797835",
+      "createdDate": "2024-12-18T16:46:27.383935",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383935",
       "translation": "w tygodniu"
     },
     {
       "text": "denn",
-      "created_date": "2024-12-18T16:22:53.797840",
-      "last_updated_date": "2024-12-18T16:22:53.797840",
+      "createdDate": "2024-12-18T16:46:27.383940",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383940",
       "translation": "ponieważ"
     },
     {
       "text": "Ich koche gern",
-      "created_date": "2024-12-18T16:22:53.797847",
-      "last_updated_date": "2024-12-18T16:22:53.797847",
+      "createdDate": "2024-12-18T16:46:27.383944",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383944",
       "translation": null
     },
     {
       "text": "verschiedene",
-      "created_date": "2024-12-18T16:22:53.797851",
-      "last_updated_date": "2024-12-18T16:22:53.797851",
+      "createdDate": "2024-12-18T16:46:27.383948",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383948",
       "translation": "różne"
     },
     {
       "text": "die Nudeln",
-      "created_date": "2024-12-18T16:22:53.797855",
-      "last_updated_date": "2024-12-18T16:22:53.797855",
+      "createdDate": "2024-12-18T16:46:27.383952",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383952",
       "translation": "makaron"
     },
     {
       "text": "das Fleisch",
-      "created_date": "2024-12-18T16:22:53.797860",
-      "last_updated_date": "2024-12-18T16:22:53.797860",
+      "createdDate": "2024-12-18T16:46:27.383956",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383956",
       "translation": "mięso"
     },
     {
       "text": "das Obst",
-      "created_date": "2024-12-18T16:22:53.797864",
-      "last_updated_date": "2024-12-18T16:22:53.797864",
+      "createdDate": "2024-12-18T16:46:27.383960",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383960",
       "translation": "owoce"
     },
     {
       "text": "gleich",
-      "created_date": "2024-12-18T16:22:53.797868",
-      "last_updated_date": "2024-12-18T16:22:53.797868",
+      "createdDate": "2024-12-18T16:46:27.383964",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383964",
       "translation": "tak samo, podobnie"
     },
     {
       "text": "manchmal",
-      "created_date": "2024-12-18T16:22:53.797872",
-      "last_updated_date": "2024-12-18T16:22:53.797872",
+      "createdDate": "2024-12-18T16:46:27.383968",
+      "lastUpdatedDate": "2024-12-18T16:46:27.383968",
       "translation": "czasami"
     },
     {
       "text": "die Zeit",
-      "created_date": "2024-12-18T16:22:53.797925",
-      "last_updated_date": "2024-12-18T16:22:53.797925",
+      "createdDate": "2024-12-18T16:46:27.384023",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384023",
       "translation": "czas"
     },
     {
       "text": "Wie ich gesagt habe",
-      "created_date": "2024-12-18T16:22:53.797930",
-      "last_updated_date": "2024-12-18T16:22:53.797930",
+      "createdDate": "2024-12-18T16:46:27.384027",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384027",
       "translation": null
     },
     {
       "text": "ich denke",
-      "created_date": "2024-12-18T16:22:53.797934",
-      "last_updated_date": "2024-12-18T16:22:53.797934",
+      "createdDate": "2024-12-18T16:46:27.384031",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384031",
       "translation": null
     },
     {
       "text": "ich vermute",
-      "created_date": "2024-12-18T16:22:53.797939",
-      "last_updated_date": "2024-12-18T16:22:53.797939",
+      "createdDate": "2024-12-18T16:46:27.384036",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384036",
       "translation": "przypuszczam, podejrzewam"
     },
     {
       "text": "schlussfolgern",
-      "created_date": "2024-12-18T16:22:53.797946",
-      "last_updated_date": "2024-12-18T16:22:53.797946",
+      "createdDate": "2024-12-18T16:46:27.384041",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384041",
       "translation": "wnioskować, konkludować"
     },
     {
       "text": "mahr als",
-      "created_date": "2024-12-18T16:22:53.797951",
-      "last_updated_date": "2024-12-18T16:22:53.797951",
+      "createdDate": "2024-12-18T16:46:27.384046",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384046",
       "translation": "więcej niż"
     },
     {
       "text": "die Fahrt, -en",
-      "created_date": "2024-12-18T16:22:53.797956",
-      "last_updated_date": "2024-12-18T16:22:53.797956",
+      "createdDate": "2024-12-18T16:46:27.384050",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384050",
       "translation": "podróż, przejazd"
     },
     {
       "text": "dauern",
-      "created_date": "2024-12-18T16:22:53.797961",
-      "last_updated_date": "2024-12-18T16:22:53.797961",
+      "createdDate": "2024-12-18T16:46:27.384055",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384055",
       "translation": "trwać"
     },
     {
       "text": "es gibt",
-      "created_date": "2024-12-18T16:22:53.797965",
-      "last_updated_date": "2024-12-18T16:22:53.797965",
+      "createdDate": "2024-12-18T16:46:27.384059",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384059",
       "translation": "there is/are"
     },
     {
       "text": "Wie geht es dir?",
-      "created_date": "2024-12-18T16:22:53.797969",
-      "last_updated_date": "2024-12-18T16:22:53.797969",
+      "createdDate": "2024-12-18T16:46:27.384063",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384063",
       "translation": "Co u Ciebie?"
     },
     {
       "text": "warten auf",
-      "created_date": "2024-12-18T16:22:53.797974",
-      "last_updated_date": "2024-12-18T16:22:53.797974",
+      "createdDate": "2024-12-18T16:46:27.384068",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384068",
       "translation": "czekać na coś/kogoś"
     }
   ],
   "group": {
     "name": "lesson_1",
     "description": null,
-    "created_date": "2024-12-18T16:22:53.797980"
+    "createdDate": "2024-12-18T16:46:27.384073"
   }
 }

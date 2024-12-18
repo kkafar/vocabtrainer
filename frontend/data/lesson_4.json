@@ -2,554 +2,554 @@
   "entities": [
     {
       "text": "die Familie",
-      "created_date": "2024-12-18T16:22:53.798762",
-      "last_updated_date": "2024-12-18T16:22:53.798762",
+      "createdDate": "2024-12-18T16:46:27.384840",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384840",
       "translation": "rodzina"
     },
     {
       "text": "das Sentiment",
-      "created_date": "2024-12-18T16:22:53.798768",
-      "last_updated_date": "2024-12-18T16:22:53.798768",
+      "createdDate": "2024-12-18T16:46:27.384845",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384845",
       "translation": "sentyment"
     },
     {
       "text": "alle zwei Monate",
-      "created_date": "2024-12-18T16:22:53.798773",
-      "last_updated_date": "2024-12-18T16:22:53.798773",
+      "createdDate": "2024-12-18T16:46:27.384851",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384851",
       "translation": "~ co dwa miesiące"
     },
     {
       "text": "ins Ausland",
-      "created_date": "2024-12-18T16:22:53.798778",
-      "last_updated_date": "2024-12-18T16:22:53.798778",
+      "createdDate": "2024-12-18T16:46:27.384856",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384856",
       "translation": "za granicę"
     },
     {
       "text": "die Gelegenheit, -en",
-      "created_date": "2024-12-18T16:22:53.798782",
-      "last_updated_date": "2024-12-18T16:22:53.798782",
+      "createdDate": "2024-12-18T16:46:27.384860",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384860",
       "translation": "okazja"
     },
     {
       "text": "wunderbar",
-      "created_date": "2024-12-18T16:22:53.798786",
-      "last_updated_date": "2024-12-18T16:22:53.798786",
+      "createdDate": "2024-12-18T16:46:27.384864",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384864",
       "translation": "cudownie, cudowny"
     },
     {
       "text": "dort",
-      "created_date": "2024-12-18T16:22:53.798791",
-      "last_updated_date": "2024-12-18T16:22:53.798791",
+      "createdDate": "2024-12-18T16:46:27.384869",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384869",
       "translation": "tam (popatrzeć na przykład zdania)"
     },
     {
       "text": "der Ort, -e",
-      "created_date": "2024-12-18T16:22:53.798795",
-      "last_updated_date": "2024-12-18T16:22:53.798795",
+      "createdDate": "2024-12-18T16:46:27.384873",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384873",
       "translation": "miejsce"
     },
     {
       "text": "das Gedächtnis, -se",
-      "created_date": "2024-12-18T16:22:53.798800",
-      "last_updated_date": "2024-12-18T16:22:53.798800",
+      "createdDate": "2024-12-18T16:46:27.384878",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384878",
       "translation": "pamięć"
     },
     {
       "text": "letztes Jahr",
-      "created_date": "2024-12-18T16:22:53.798804",
-      "last_updated_date": "2024-12-18T16:22:53.798804",
+      "createdDate": "2024-12-18T16:46:27.384882",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384882",
       "translation": "w ostatnim roku"
     },
     {
       "text": "versuchen",
-      "created_date": "2024-12-18T16:22:53.798809",
-      "last_updated_date": "2024-12-18T16:22:53.798809",
+      "createdDate": "2024-12-18T16:46:27.384887",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384887",
       "translation": "próbować"
     },
     {
       "text": "ich war …",
-      "created_date": "2024-12-18T16:22:53.798814",
-      "last_updated_date": "2024-12-18T16:22:53.798814",
+      "createdDate": "2024-12-18T16:46:27.384891",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384891",
       "translation": "byłem …"
     },
     {
       "text": "stark",
-      "created_date": "2024-12-18T16:22:53.798818",
-      "last_updated_date": "2024-12-18T16:22:53.798818",
+      "createdDate": "2024-12-18T16:46:27.384895",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384895",
       "translation": "silny"
     },
     {
       "text": "geschlossen",
-      "created_date": "2024-12-18T16:22:53.798823",
-      "last_updated_date": "2024-12-18T16:22:53.798823",
+      "createdDate": "2024-12-18T16:46:27.384899",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384899",
       "translation": "zamknięty"
     },
     {
       "text": "der Wind",
-      "created_date": "2024-12-18T16:22:53.798827",
-      "last_updated_date": "2024-12-18T16:22:53.798827",
+      "createdDate": "2024-12-18T16:46:27.384903",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384903",
       "translation": "wiatr"
     },
     {
       "text": "der Turm",
-      "created_date": "2024-12-18T16:22:53.798833",
-      "last_updated_date": "2024-12-18T16:22:53.798833",
+      "createdDate": "2024-12-18T16:46:27.384909",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384909",
       "translation": "wieża"
     },
     {
       "text": "der Fernsehturm",
-      "created_date": "2024-12-18T16:22:53.798838",
-      "last_updated_date": "2024-12-18T16:22:53.798838",
+      "createdDate": "2024-12-18T16:46:27.384913",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384913",
       "translation": null
     },
     {
       "text": "vielleicht",
-      "created_date": "2024-12-18T16:22:53.798843",
-      "last_updated_date": "2024-12-18T16:22:53.798843",
+      "createdDate": "2024-12-18T16:46:27.384931",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384931",
       "translation": "może"
     },
     {
       "text": "übersetzen",
-      "created_date": "2024-12-18T16:22:53.798848",
-      "last_updated_date": "2024-12-18T16:22:53.798848",
+      "createdDate": "2024-12-18T16:46:27.384937",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384937",
       "translation": "przetłumaczyć"
     },
     {
       "text": "am Anfang",
-      "created_date": "2024-12-18T16:22:53.798856",
-      "last_updated_date": "2024-12-18T16:22:53.798856",
+      "createdDate": "2024-12-18T16:46:27.384941",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384941",
       "translation": "na początku"
     },
     {
       "text": "breit",
-      "created_date": "2024-12-18T16:22:53.798860",
-      "last_updated_date": "2024-12-18T16:22:53.798860",
+      "createdDate": "2024-12-18T16:46:27.384945",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384945",
       "translation": "szeroki"
     },
     {
       "text": "sicher",
-      "created_date": "2024-12-18T16:22:53.798864",
-      "last_updated_date": "2024-12-18T16:22:53.798864",
+      "createdDate": "2024-12-18T16:46:27.384967",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384967",
       "translation": "pewny"
     },
     {
       "text": "der Grund, Gründe",
-      "created_date": "2024-12-18T16:22:53.798869",
-      "last_updated_date": "2024-12-18T16:22:53.798869",
+      "createdDate": "2024-12-18T16:46:27.384972",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384972",
       "translation": "powód"
     },
     {
       "text": "nennen",
-      "created_date": "2024-12-18T16:22:53.798873",
-      "last_updated_date": "2024-12-18T16:22:53.798873",
+      "createdDate": "2024-12-18T16:46:27.384977",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384977",
       "translation": "wymieniać, podawać, nazywać"
     },
     {
       "text": "der Hörtext, -e",
-      "created_date": "2024-12-18T16:22:53.798878",
-      "last_updated_date": "2024-12-18T16:22:53.798878",
+      "createdDate": "2024-12-18T16:46:27.384982",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384982",
       "translation": "nagranie, słuchanka"
     },
     {
       "text": "es ist sehr nett",
-      "created_date": "2024-12-18T16:22:53.798883",
-      "last_updated_date": "2024-12-18T16:22:53.798883",
+      "createdDate": "2024-12-18T16:46:27.384986",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384986",
       "translation": "to bardzo miłe"
     },
     {
       "text": "nichts",
-      "created_date": "2024-12-18T16:22:53.798887",
-      "last_updated_date": "2024-12-18T16:22:53.798887",
+      "createdDate": "2024-12-18T16:46:27.384990",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384990",
       "translation": "nic"
     },
     {
       "text": "niemand",
-      "created_date": "2024-12-18T16:22:53.798892",
-      "last_updated_date": "2024-12-18T16:22:53.798892",
+      "createdDate": "2024-12-18T16:46:27.384994",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384994",
       "translation": "nikt, żaden, ani jeden"
     },
     {
       "text": "sondern",
-      "created_date": "2024-12-18T16:22:53.798896",
-      "last_updated_date": "2024-12-18T16:22:53.798896",
+      "createdDate": "2024-12-18T16:46:27.384998",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384998",
       "translation": "lecz"
     },
     {
       "text": "der Nachbar",
-      "created_date": "2024-12-18T16:22:53.798900",
-      "last_updated_date": "2024-12-18T16:22:53.798900",
+      "createdDate": "2024-12-18T16:46:27.385002",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385002",
       "translation": "sąsiad"
     },
     {
       "text": "moderne Malerei",
-      "created_date": "2024-12-18T16:22:53.798905",
-      "last_updated_date": "2024-12-18T16:22:53.798905",
+      "createdDate": "2024-12-18T16:46:27.385007",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385007",
       "translation": "współczesne malarstwo"
     },
     {
       "text": "davon",
-      "created_date": "2024-12-18T16:22:53.798910",
-      "last_updated_date": "2024-12-18T16:22:53.798910",
+      "createdDate": "2024-12-18T16:46:27.385011",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385011",
       "translation": "z tego (davon verstehe ich…), o tym"
     },
     {
       "text": "der Durst",
-      "created_date": "2024-12-18T16:22:53.798913",
-      "last_updated_date": "2024-12-18T16:22:53.798913",
+      "createdDate": "2024-12-18T16:46:27.385015",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385015",
       "translation": "pragnienie"
     },
     {
       "text": "der Mensch",
-      "created_date": "2024-12-18T16:22:53.798918",
-      "last_updated_date": "2024-12-18T16:22:53.798918",
+      "createdDate": "2024-12-18T16:46:27.385020",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385020",
       "translation": "człowiek"
     },
     {
       "text": "der Laptop",
-      "created_date": "2024-12-18T16:22:53.798922",
-      "last_updated_date": "2024-12-18T16:22:53.798922",
+      "createdDate": "2024-12-18T16:46:27.385024",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385024",
       "translation": null
     },
     {
       "text": "das Dach",
-      "created_date": "2024-12-18T16:22:53.798926",
-      "last_updated_date": "2024-12-18T16:22:53.798926",
+      "createdDate": "2024-12-18T16:46:27.385028",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385028",
       "translation": "dach xD"
     },
     {
       "text": "die Angst",
-      "created_date": "2024-12-18T16:22:53.798930",
-      "last_updated_date": "2024-12-18T16:22:53.798930",
+      "createdDate": "2024-12-18T16:46:27.385031",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385031",
       "translation": "strach"
     },
     {
       "text": "tut mir leid",
-      "created_date": "2024-12-18T16:22:53.798934",
-      "last_updated_date": "2024-12-18T16:22:53.798934",
+      "createdDate": "2024-12-18T16:46:27.385035",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385035",
       "translation": "przykro mi"
     },
     {
       "text": "der Kuli",
-      "created_date": "2024-12-18T16:22:53.798938",
-      "last_updated_date": "2024-12-18T16:22:53.798938",
+      "createdDate": "2024-12-18T16:46:27.385039",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385039",
       "translation": "długopis"
     },
     {
       "text": "das Englisch",
-      "created_date": "2024-12-18T16:22:53.798943",
-      "last_updated_date": "2024-12-18T16:22:53.798943",
+      "createdDate": "2024-12-18T16:46:27.385047",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385047",
       "translation": "język angielski"
     },
     {
       "text": "der Comic, -s",
-      "created_date": "2024-12-18T16:22:53.798947",
-      "last_updated_date": "2024-12-18T16:22:53.798947",
+      "createdDate": "2024-12-18T16:46:27.385051",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385051",
       "translation": "komiks"
     },
     {
       "text": "das Büro, -s",
-      "created_date": "2024-12-18T16:22:53.798952",
-      "last_updated_date": "2024-12-18T16:22:53.798952",
+      "createdDate": "2024-12-18T16:46:27.385056",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385056",
       "translation": "biuro"
     },
     {
       "text": "zeichnen",
-      "created_date": "2024-12-18T16:22:53.798958",
-      "last_updated_date": "2024-12-18T16:22:53.798958",
+      "createdDate": "2024-12-18T16:46:27.385060",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385060",
       "translation": "rysować"
     },
     {
       "text": "das Zeichnen",
-      "created_date": "2024-12-18T16:22:53.798962",
-      "last_updated_date": "2024-12-18T16:22:53.798962",
+      "createdDate": "2024-12-18T16:46:27.385064",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385064",
       "translation": "rysunek, rysowanie"
     },
     {
       "text": "das Haustier, -e",
-      "created_date": "2024-12-18T16:22:53.798967",
-      "last_updated_date": "2024-12-18T16:22:53.798967",
+      "createdDate": "2024-12-18T16:46:27.385069",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385069",
       "translation": "zwierzę domowe"
     },
     {
       "text": "der Nachbar, -n",
-      "created_date": "2024-12-18T16:22:53.798971",
-      "last_updated_date": "2024-12-18T16:22:53.798971",
+      "createdDate": "2024-12-18T16:46:27.385073",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385073",
       "translation": "sąsiad"
     },
     {
       "text": "die Kundin, -nen",
-      "created_date": "2024-12-18T16:22:53.798975",
-      "last_updated_date": "2024-12-18T16:22:53.798975",
+      "createdDate": "2024-12-18T16:46:27.385077",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385077",
       "translation": "klientka"
     },
     {
       "text": "der Kunde, -en",
-      "created_date": "2024-12-18T16:22:53.798979",
-      "last_updated_date": "2024-12-18T16:22:53.798979",
+      "createdDate": "2024-12-18T16:46:27.385081",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385081",
       "translation": "klient"
     },
     {
       "text": "die Lampe",
-      "created_date": "2024-12-18T16:22:53.798983",
-      "last_updated_date": "2024-12-18T16:22:53.798983",
+      "createdDate": "2024-12-18T16:46:27.385084",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385084",
       "translation": "lampa"
     },
     {
       "text": "der Alkohol, -e",
-      "created_date": "2024-12-18T16:22:53.798987",
-      "last_updated_date": "2024-12-18T16:22:53.798987",
+      "createdDate": "2024-12-18T16:46:27.385088",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385088",
       "translation": "alkohol"
     },
     {
       "text": "ganz",
-      "created_date": "2024-12-18T16:22:53.798992",
-      "last_updated_date": "2024-12-18T16:22:53.798992",
+      "createdDate": "2024-12-18T16:46:27.385093",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385093",
       "translation": "całkowicie, zupełnie"
     },
     {
       "text": "gar",
-      "created_date": "2024-12-18T16:22:53.798996",
-      "last_updated_date": "2024-12-18T16:22:53.798996",
+      "createdDate": "2024-12-18T16:46:27.385097",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385097",
       "translation": "wcale, zupełnie"
     },
     {
       "text": "überhaupt",
-      "created_date": "2024-12-18T16:22:53.799001",
-      "last_updated_date": "2024-12-18T16:22:53.799001",
+      "createdDate": "2024-12-18T16:46:27.385102",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385102",
       "translation": "zupełnie, właściwie, w ogóle"
     },
     {
       "text": "gerade",
-      "created_date": "2024-12-18T16:22:53.799006",
-      "last_updated_date": "2024-12-18T16:22:53.799006",
+      "createdDate": "2024-12-18T16:46:27.385107",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385107",
       "translation": "właśnie"
     },
     {
       "text": "kennen",
-      "created_date": "2024-12-18T16:22:53.799010",
-      "last_updated_date": "2024-12-18T16:22:53.799010",
+      "createdDate": "2024-12-18T16:46:27.385111",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385111",
       "translation": "znać"
     },
     {
       "text": "sich kennen",
-      "created_date": "2024-12-18T16:22:53.799015",
-      "last_updated_date": "2024-12-18T16:22:53.799015",
+      "createdDate": "2024-12-18T16:46:27.385115",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385115",
       "translation": "znać się"
     },
     {
       "text": "hungrig",
-      "created_date": "2024-12-18T16:22:53.799019",
-      "last_updated_date": "2024-12-18T16:22:53.799019",
+      "createdDate": "2024-12-18T16:46:27.385120",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385120",
       "translation": "głodny"
     },
     {
       "text": "glücklich",
-      "created_date": "2024-12-18T16:22:53.799024",
-      "last_updated_date": "2024-12-18T16:22:53.799024",
+      "createdDate": "2024-12-18T16:46:27.385124",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385124",
       "translation": "szczęśliwy"
     },
     {
       "text": "spannend",
-      "created_date": "2024-12-18T16:22:53.799029",
-      "last_updated_date": "2024-12-18T16:22:53.799029",
+      "createdDate": "2024-12-18T16:46:27.385129",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385129",
       "translation": "ciekawy, zajmujący, wciągający"
     },
     {
       "text": "interessant",
-      "created_date": "2024-12-18T16:22:53.799033",
-      "last_updated_date": "2024-12-18T16:22:53.799033",
+      "createdDate": "2024-12-18T16:46:27.385133",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385133",
       "translation": "interesujący, ciekawy"
     },
     {
       "text": "nicht mehr",
-      "created_date": "2024-12-18T16:22:53.799038",
-      "last_updated_date": "2024-12-18T16:22:53.799038",
+      "createdDate": "2024-12-18T16:46:27.385137",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385137",
       "translation": "już nie, więcej nie"
     },
     {
       "text": "niemals",
-      "created_date": "2024-12-18T16:22:53.799042",
-      "last_updated_date": "2024-12-18T16:22:53.799042",
+      "createdDate": "2024-12-18T16:46:27.385141",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385141",
       "translation": "nigdy"
     },
     {
       "text": "nirgends",
-      "created_date": "2024-12-18T16:22:53.799046",
-      "last_updated_date": "2024-12-18T16:22:53.799046",
+      "createdDate": "2024-12-18T16:46:27.385145",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385145",
       "translation": "nigdzie"
     },
     {
       "text": "Auf keinen Fall",
-      "created_date": "2024-12-18T16:22:53.799050",
-      "last_updated_date": "2024-12-18T16:22:53.799050",
+      "createdDate": "2024-12-18T16:46:27.385151",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385151",
       "translation": "w żadnym razie"
     },
     {
       "text": "der Fall",
-      "created_date": "2024-12-18T16:22:53.799055",
-      "last_updated_date": "2024-12-18T16:22:53.799055",
+      "createdDate": "2024-12-18T16:46:27.385156",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385156",
       "translation": "upadek, przypadek, przypadek gramatyczny"
     },
     {
       "text": "das Studium",
-      "created_date": "2024-12-18T16:22:53.799059",
-      "last_updated_date": "2024-12-18T16:22:53.799059",
+      "createdDate": "2024-12-18T16:46:27.385160",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385160",
       "translation": "studia"
     },
     {
       "text": "der Sprachschatz",
-      "created_date": "2024-12-18T16:22:53.799065",
-      "last_updated_date": "2024-12-18T16:22:53.799065",
+      "createdDate": "2024-12-18T16:46:27.385166",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385166",
       "translation": "słownictwo, zasób słownictwa"
     },
     {
       "text": "die Allergie",
-      "created_date": "2024-12-18T16:22:53.799069",
-      "last_updated_date": "2024-12-18T16:22:53.799069",
+      "createdDate": "2024-12-18T16:46:27.385170",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385170",
       "translation": "alergia"
     },
     {
       "text": "der  Blick",
-      "created_date": "2024-12-18T16:22:53.799073",
-      "last_updated_date": "2024-12-18T16:22:53.799073",
+      "createdDate": "2024-12-18T16:46:27.385173",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385173",
       "translation": "widok"
     },
     {
       "text": "registrieren",
-      "created_date": "2024-12-18T16:22:53.799078",
-      "last_updated_date": "2024-12-18T16:22:53.799078",
+      "createdDate": "2024-12-18T16:46:27.385178",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385178",
       "translation": "rejestrować"
     },
     {
       "text": "der Fehler",
-      "created_date": "2024-12-18T16:22:53.799082",
-      "last_updated_date": "2024-12-18T16:22:53.799082",
+      "createdDate": "2024-12-18T16:46:27.385182",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385182",
       "translation": "błąd"
     },
     {
       "text": "nachdenken, bedenken",
-      "created_date": "2024-12-18T16:22:53.799087",
-      "last_updated_date": "2024-12-18T16:22:53.799087",
+      "createdDate": "2024-12-18T16:46:27.385187",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385187",
       "translation": "zastanawiać się, rozmyślać"
     },
     {
       "text": "erklären",
-      "created_date": "2024-12-18T16:22:53.799092",
-      "last_updated_date": "2024-12-18T16:22:53.799092",
+      "createdDate": "2024-12-18T16:46:27.385192",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385192",
       "translation": "wytłumaczyć, tłumaczyć (zagadnienie)"
     },
     {
       "text": "reiten",
-      "created_date": "2024-12-18T16:22:53.799096",
-      "last_updated_date": "2024-12-18T16:22:53.799096",
+      "createdDate": "2024-12-18T16:46:27.385196",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385196",
       "translation": "dosiadać"
     },
     {
       "text": "der Zaum",
-      "created_date": "2024-12-18T16:22:53.799101",
-      "last_updated_date": "2024-12-18T16:22:53.799101",
+      "createdDate": "2024-12-18T16:46:27.385200",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385200",
       "translation": "uzda (końska)"
     },
     {
       "text": "umfassen, einfangen",
-      "created_date": "2024-12-18T16:22:53.799106",
-      "last_updated_date": "2024-12-18T16:22:53.799106",
+      "createdDate": "2024-12-18T16:46:27.385205",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385205",
       "translation": "chwycić"
     },
     {
       "text": "bewegen",
-      "created_date": "2024-12-18T16:22:53.799112",
-      "last_updated_date": "2024-12-18T16:22:53.799112",
+      "createdDate": "2024-12-18T16:46:27.385209",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385209",
       "translation": "ruszyć, poruszyć"
     },
     {
       "text": "losgehen",
-      "created_date": "2024-12-18T16:22:53.799117",
-      "last_updated_date": "2024-12-18T16:22:53.799117",
+      "createdDate": "2024-12-18T16:46:27.385214",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385214",
       "translation": "ruszyć, startować, zaczynać"
     },
     {
       "text": "ruhig",
-      "created_date": "2024-12-18T16:22:53.799122",
-      "last_updated_date": "2024-12-18T16:22:53.799122",
+      "createdDate": "2024-12-18T16:46:27.385218",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385218",
       "translation": "spokojny, stonowany"
     },
     {
       "text": "der Gang",
-      "created_date": "2024-12-18T16:22:53.799126",
-      "last_updated_date": "2024-12-18T16:22:53.799126",
+      "createdDate": "2024-12-18T16:46:27.385223",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385223",
       "translation": "chód, krok"
     },
     {
       "text": "wachsen",
-      "created_date": "2024-12-18T16:22:53.799131",
-      "last_updated_date": "2024-12-18T16:22:53.799131",
+      "createdDate": "2024-12-18T16:46:27.385227",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385227",
       "translation": "rosnąć"
     },
     {
       "text": "die Blume",
-      "created_date": "2024-12-18T16:22:53.799135",
-      "last_updated_date": "2024-12-18T16:22:53.799135",
+      "createdDate": "2024-12-18T16:46:27.385231",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385231",
       "translation": "kwiat"
     },
     {
       "text": "begießen",
-      "created_date": "2024-12-18T16:22:53.799139",
-      "last_updated_date": "2024-12-18T16:22:53.799139",
+      "createdDate": "2024-12-18T16:46:27.385235",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385235",
       "translation": "podlewać"
     },
     {
       "text": "gießen",
-      "created_date": "2024-12-18T16:22:53.799144",
-      "last_updated_date": "2024-12-18T16:22:53.799144",
+      "createdDate": "2024-12-18T16:46:27.385239",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385239",
       "translation": "podlać"
     },
     {
       "text": "die Verletzung",
-      "created_date": "2024-12-18T16:22:53.799148",
-      "last_updated_date": "2024-12-18T16:22:53.799148",
+      "createdDate": "2024-12-18T16:46:27.385244",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385244",
       "translation": "uraz, kontuzja, rana"
     },
     {
       "text": "die Wunde, -n",
-      "created_date": "2024-12-18T16:22:53.799152",
-      "last_updated_date": "2024-12-18T16:22:53.799152",
+      "createdDate": "2024-12-18T16:46:27.385247",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385247",
       "translation": "rana"
     },
     {
       "text": "der Bruch",
-      "created_date": "2024-12-18T16:22:53.799156",
-      "last_updated_date": "2024-12-18T16:22:53.799156",
+      "createdDate": "2024-12-18T16:46:27.385252",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385252",
       "translation": "złamanie"
     },
     {
       "text": "brechen",
-      "created_date": "2024-12-18T16:22:53.799161",
-      "last_updated_date": "2024-12-18T16:22:53.799161",
+      "createdDate": "2024-12-18T16:46:27.385256",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385256",
       "translation": "złamać"
     },
     {
       "text": "die Tastatur",
-      "created_date": "2024-12-18T16:22:53.799165",
-      "last_updated_date": "2024-12-18T16:22:53.799165",
+      "createdDate": "2024-12-18T16:46:27.385260",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385260",
       "translation": "klawiatura"
     },
     {
       "text": "beleuchten",
-      "created_date": "2024-12-18T16:22:53.799169",
-      "last_updated_date": "2024-12-18T16:22:53.799169",
+      "createdDate": "2024-12-18T16:46:27.385266",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385266",
       "translation": "podświetlać, oświetlać"
     },
     {
       "text": "beleuchtet",
-      "created_date": "2024-12-18T16:22:53.799174",
-      "last_updated_date": "2024-12-18T16:22:53.799174",
+      "createdDate": "2024-12-18T16:46:27.385270",
+      "lastUpdatedDate": "2024-12-18T16:46:27.385270",
       "translation": "podświetlony"
     }
   ],
   "group": {
     "name": "lesson_4",
     "description": null,
-    "created_date": "2024-12-18T16:22:53.799175"
+    "createdDate": "2024-12-18T16:46:27.385271"
   }
 }

@@ -2,524 +2,524 @@
   "entities": [
     {
       "text": "der Unterricht",
-      "created_date": "2024-12-18T16:22:53.798039",
-      "last_updated_date": "2024-12-18T16:22:53.798039",
+      "createdDate": "2024-12-18T16:46:27.384130",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384130",
       "translation": "zajęcia"
     },
     {
       "text": "einkaufen",
-      "created_date": "2024-12-18T16:22:53.798045",
-      "last_updated_date": "2024-12-18T16:22:53.798045",
+      "createdDate": "2024-12-18T16:46:27.384136",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384136",
       "translation": "robić zakupy"
     },
     {
       "text": "ich gehe einkaufen",
-      "created_date": "2024-12-18T16:22:53.798053",
-      "last_updated_date": "2024-12-18T16:22:53.798053",
+      "createdDate": "2024-12-18T16:46:27.384141",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384141",
       "translation": "idę na zakupy"
     },
     {
       "text": "die Frage, -n",
-      "created_date": "2024-12-18T16:22:53.798058",
-      "last_updated_date": "2024-12-18T16:22:53.798058",
+      "createdDate": "2024-12-18T16:46:27.384146",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384146",
       "translation": "pytanie"
     },
     {
       "text": "draußen",
-      "created_date": "2024-12-18T16:22:53.798063",
-      "last_updated_date": "2024-12-18T16:22:53.798063",
+      "createdDate": "2024-12-18T16:46:27.384153",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384153",
       "translation": "na zewnątrz"
     },
     {
       "text": "vor 2 Wochen",
-      "created_date": "2024-12-18T16:22:53.798067",
-      "last_updated_date": "2024-12-18T16:22:53.798067",
+      "createdDate": "2024-12-18T16:46:27.384158",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384158",
       "translation": "2 tygodnie temu"
     },
     {
       "text": "in 2 Wochen",
-      "created_date": "2024-12-18T16:22:53.798071",
-      "last_updated_date": "2024-12-18T16:22:53.798071",
+      "createdDate": "2024-12-18T16:46:27.384162",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384162",
       "translation": "za 2 tygodnie"
     },
     {
       "text": "Was für Filme magst du?",
-      "created_date": "2024-12-18T16:22:53.798077",
-      "last_updated_date": "2024-12-18T16:22:53.798077",
+      "createdDate": "2024-12-18T16:46:27.384167",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384167",
       "translation": "Jakiego rodzaju filmu lubisz?"
     },
     {
       "text": "der Schauspieler",
-      "created_date": "2024-12-18T16:22:53.798083",
-      "last_updated_date": "2024-12-18T16:22:53.798083",
+      "createdDate": "2024-12-18T16:46:27.384172",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384172",
       "translation": "aktor"
     },
     {
       "text": "benutzen",
-      "created_date": "2024-12-18T16:22:53.798088",
-      "last_updated_date": "2024-12-18T16:22:53.798088",
+      "createdDate": "2024-12-18T16:46:27.384178",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384178",
       "translation": "używać"
     },
     {
       "text": "meistens",
-      "created_date": "2024-12-18T16:22:53.798092",
-      "last_updated_date": "2024-12-18T16:22:53.798092",
+      "createdDate": "2024-12-18T16:46:27.384182",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384182",
       "translation": "zwykle"
     },
     {
       "text": "ein paar",
-      "created_date": "2024-12-18T16:22:53.798096",
-      "last_updated_date": "2024-12-18T16:22:53.798096",
+      "createdDate": "2024-12-18T16:46:27.384186",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384186",
       "translation": "kilka"
     },
     {
       "text": "am letzten Montag",
-      "created_date": "2024-12-18T16:22:53.798101",
-      "last_updated_date": "2024-12-18T16:22:53.798101",
+      "createdDate": "2024-12-18T16:46:27.384191",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384191",
       "translation": "w ostatni poniedziałek"
     },
     {
       "text": "dieses Jahr",
-      "created_date": "2024-12-18T16:22:53.798105",
-      "last_updated_date": "2024-12-18T16:22:53.798105",
+      "createdDate": "2024-12-18T16:46:27.384195",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384195",
       "translation": null
     },
     {
       "text": "schwierig",
-      "created_date": "2024-12-18T16:22:53.798109",
-      "last_updated_date": "2024-12-18T16:22:53.798109",
+      "createdDate": "2024-12-18T16:46:27.384199",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384199",
       "translation": "trudny"
     },
     {
       "text": "(un)möglich",
-      "created_date": "2024-12-18T16:22:53.798114",
-      "last_updated_date": "2024-12-18T16:22:53.798114",
+      "createdDate": "2024-12-18T16:46:27.384204",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384204",
       "translation": "(nie)możliwe"
     },
     {
       "text": "die Sekunde, -n",
-      "created_date": "2024-12-18T16:22:53.798118",
-      "last_updated_date": "2024-12-18T16:22:53.798118",
+      "createdDate": "2024-12-18T16:46:27.384208",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384208",
       "translation": null
     },
     {
       "text": "Angst haben",
-      "created_date": "2024-12-18T16:22:53.798122",
-      "last_updated_date": "2024-12-18T16:22:53.798122",
+      "createdDate": "2024-12-18T16:46:27.384212",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384212",
       "translation": "bać się"
     },
     {
       "text": "verlieren",
-      "created_date": "2024-12-18T16:22:53.798127",
-      "last_updated_date": "2024-12-18T16:22:53.798127",
+      "createdDate": "2024-12-18T16:46:27.384217",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384217",
       "translation": "zgubić"
     },
     {
       "text": "auf jeden Fall",
-      "created_date": "2024-12-18T16:22:53.798132",
-      "last_updated_date": "2024-12-18T16:22:53.798132",
+      "createdDate": "2024-12-18T16:46:27.384221",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384221",
       "translation": "w każdy razie"
     },
     {
       "text": "die Gewohnheit, -en",
-      "created_date": "2024-12-18T16:22:53.798136",
-      "last_updated_date": "2024-12-18T16:22:53.798136",
+      "createdDate": "2024-12-18T16:46:27.384225",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384225",
       "translation": "nawyk"
     },
     {
       "text": "Inliner fahren",
-      "created_date": "2024-12-18T16:22:53.798141",
-      "last_updated_date": "2024-12-18T16:22:53.798141",
+      "createdDate": "2024-12-18T16:46:27.384230",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384230",
       "translation": "jeździć na rolkach"
     },
     {
       "text": "ob",
-      "created_date": "2024-12-18T16:22:53.798146",
-      "last_updated_date": "2024-12-18T16:22:53.798146",
+      "createdDate": "2024-12-18T16:46:27.384235",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384235",
       "translation": "czy // Można zacząć od tego pytanie? Ob …, czy po prostu tylko inwersja?"
     },
     {
       "text": "oder",
-      "created_date": "2024-12-18T16:22:53.798150",
-      "last_updated_date": "2024-12-18T16:22:53.798150",
+      "createdDate": "2024-12-18T16:46:27.384239",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384239",
       "translation": "albo"
     },
     {
       "text": "zwischendrin",
-      "created_date": "2024-12-18T16:22:53.798155",
-      "last_updated_date": "2024-12-18T16:22:53.798155",
+      "createdDate": "2024-12-18T16:46:27.384244",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384244",
       "translation": "w między czasie"
     },
     {
       "text": "Ich kann mich nicht genau erinnern.",
-      "created_date": "2024-12-18T16:22:53.798160",
-      "last_updated_date": "2024-12-18T16:22:53.798160",
+      "createdDate": "2024-12-18T16:46:27.384249",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384249",
       "translation": "Nie pamiętam dokładnie."
     },
     {
       "text": "einen Termin vereinbaren",
-      "created_date": "2024-12-18T16:22:53.798165",
-      "last_updated_date": "2024-12-18T16:22:53.798165",
+      "createdDate": "2024-12-18T16:46:27.384253",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384253",
       "translation": "umówić termin"
     },
     {
       "text": "Ich habe nicht genau gehört.",
-      "created_date": "2024-12-18T16:22:53.798170",
-      "last_updated_date": "2024-12-18T16:22:53.798170",
+      "createdDate": "2024-12-18T16:46:27.384258",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384258",
       "translation": "Nie usłyszałem dokładnie."
     },
     {
       "text": "nennen",
-      "created_date": "2024-12-18T16:22:53.798175",
-      "last_updated_date": "2024-12-18T16:22:53.798175",
+      "createdDate": "2024-12-18T16:46:27.384263",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384263",
       "translation": "nazywać, wymieniać, podawać"
     },
     {
       "text": "Bis dann!",
-      "created_date": "2024-12-18T16:22:53.798179",
-      "last_updated_date": "2024-12-18T16:22:53.798179",
+      "createdDate": "2024-12-18T16:46:27.384267",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384267",
       "translation": "na razie!"
     },
     {
       "text": "Arbeiten Sie zu dritt",
-      "created_date": "2024-12-18T16:22:53.798184",
-      "last_updated_date": "2024-12-18T16:22:53.798184",
+      "createdDate": "2024-12-18T16:46:27.384274",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384274",
       "translation": "pracujcie w trójkach"
     },
     {
       "text": "das Personalpronomen",
-      "created_date": "2024-12-18T16:22:53.798188",
-      "last_updated_date": "2024-12-18T16:22:53.798188",
+      "createdDate": "2024-12-18T16:46:27.384278",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384278",
       "translation": "zaimek osobowy"
     },
     {
       "text": "die Form, Formen",
-      "created_date": "2024-12-18T16:22:53.798193",
-      "last_updated_date": "2024-12-18T16:22:53.798193",
+      "createdDate": "2024-12-18T16:46:27.384283",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384283",
       "translation": "forma (np. czasownika, ale chyba też “fizyczna”), kształt"
     },
     {
       "text": "andere",
-      "created_date": "2024-12-18T16:22:53.798200",
-      "last_updated_date": "2024-12-18T16:22:53.798200",
+      "createdDate": "2024-12-18T16:46:27.384287",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384287",
       "translation": "inny, inna, inne"
     },
     {
       "text": "ander",
-      "created_date": "2024-12-18T16:22:53.798204",
-      "last_updated_date": "2024-12-18T16:22:53.798204",
+      "createdDate": "2024-12-18T16:46:27.384291",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384291",
       "translation": "inny, drugi"
     },
     {
       "text": "Ergänzen",
-      "created_date": "2024-12-18T16:22:53.798210",
-      "last_updated_date": "2024-12-18T16:22:53.798210",
+      "createdDate": "2024-12-18T16:46:27.384296",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384296",
       "translation": "uzupełniać"
     },
     {
       "text": "die Endung, Endungen",
-      "created_date": "2024-12-18T16:22:53.798215",
-      "last_updated_date": "2024-12-18T16:22:53.798215",
+      "createdDate": "2024-12-18T16:46:27.384300",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384300",
       "translation": "końcówka"
     },
     {
       "text": "der Beruf",
-      "created_date": "2024-12-18T16:22:53.798219",
-      "last_updated_date": "2024-12-18T16:22:53.798219",
+      "createdDate": "2024-12-18T16:46:27.384304",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384304",
       "translation": null
     },
     {
       "text": "passen",
-      "created_date": "2024-12-18T16:22:53.798224",
-      "last_updated_date": "2024-12-18T16:22:53.798224",
+      "createdDate": "2024-12-18T16:46:27.384309",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384309",
       "translation": "pasować, dobrze, leżeć"
     },
     {
       "text": "passen zu",
-      "created_date": "2024-12-18T16:22:53.798228",
-      "last_updated_date": "2024-12-18T16:22:53.798228",
+      "createdDate": "2024-12-18T16:46:27.384313",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384313",
       "translation": "pasować do"
     },
     {
       "text": "das Geld, Gelder (?)",
-      "created_date": "2024-12-18T16:22:53.798233",
-      "last_updated_date": "2024-12-18T16:22:53.798233",
+      "createdDate": "2024-12-18T16:46:27.384318",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384318",
       "translation": "pieniądze"
     },
     {
       "text": "die Straße",
-      "created_date": "2024-12-18T16:22:53.798238",
-      "last_updated_date": "2024-12-18T16:22:53.798238",
+      "createdDate": "2024-12-18T16:46:27.384322",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384322",
       "translation": "droga, ulica"
     },
     {
       "text": "das Glas",
-      "created_date": "2024-12-18T16:22:53.798243",
-      "last_updated_date": "2024-12-18T16:22:53.798243",
+      "createdDate": "2024-12-18T16:46:27.384327",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384327",
       "translation": "szklanka, słoik, kieliszek,"
     },
     {
       "text": "das Stift, Stifte",
-      "created_date": "2024-12-18T16:22:53.798247",
-      "last_updated_date": "2024-12-18T16:22:53.798247",
+      "createdDate": "2024-12-18T16:46:27.384332",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384332",
       "translation": "ołówek, pisak,"
     },
     {
       "text": "der Computer",
-      "created_date": "2024-12-18T16:22:53.798251",
-      "last_updated_date": "2024-12-18T16:22:53.798251",
+      "createdDate": "2024-12-18T16:46:27.384335",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384335",
       "translation": null
     },
     {
       "text": "das Medikament",
-      "created_date": "2024-12-18T16:22:53.798256",
-      "last_updated_date": "2024-12-18T16:22:53.798256",
+      "createdDate": "2024-12-18T16:46:27.384340",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384340",
       "translation": "lekarstwo, medykament"
     },
     {
       "text": "die Rechnung",
-      "created_date": "2024-12-18T16:22:53.798260",
-      "last_updated_date": "2024-12-18T16:22:53.798260",
+      "createdDate": "2024-12-18T16:46:27.384343",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384343",
       "translation": "rachunek"
     },
     {
       "text": "der Schlüssel, Schlüssel",
-      "created_date": "2024-12-18T16:22:53.798264",
-      "last_updated_date": "2024-12-18T16:22:53.798264",
+      "createdDate": "2024-12-18T16:46:27.384348",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384348",
       "translation": "klucz"
     },
     {
       "text": "die Spritze",
-      "created_date": "2024-12-18T16:22:53.798268",
-      "last_updated_date": "2024-12-18T16:22:53.798268",
+      "createdDate": "2024-12-18T16:46:27.384352",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384352",
       "translation": "strzykawka"
     },
     {
       "text": "die Tablette, -n",
-      "created_date": "2024-12-18T16:22:53.798272",
-      "last_updated_date": "2024-12-18T16:22:53.798272",
+      "createdDate": "2024-12-18T16:46:27.384358",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384358",
       "translation": "tabletka"
     },
     {
       "text": "ordnen",
-      "created_date": "2024-12-18T16:22:53.798277",
-      "last_updated_date": "2024-12-18T16:22:53.798277",
+      "createdDate": "2024-12-18T16:46:27.384362",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384362",
       "translation": "porządkować, przyporządkować"
     },
     {
       "text": "die Ärztin",
-      "created_date": "2024-12-18T16:22:53.798282",
-      "last_updated_date": "2024-12-18T16:22:53.798282",
+      "createdDate": "2024-12-18T16:46:27.384367",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384367",
       "translation": "lekarka"
     },
     {
       "text": "die Arzt",
-      "created_date": "2024-12-18T16:22:53.798286",
-      "last_updated_date": "2024-12-18T16:22:53.798286",
+      "createdDate": "2024-12-18T16:46:27.384371",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384371",
       "translation": "lekarz"
     },
     {
       "text": "der Kellner",
-      "created_date": "2024-12-18T16:22:53.798290",
-      "last_updated_date": "2024-12-18T16:22:53.798290",
+      "createdDate": "2024-12-18T16:46:27.384375",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384375",
       "translation": null
     },
     {
       "text": "die Studentin, -tinnen",
-      "created_date": "2024-12-18T16:22:53.798294",
-      "last_updated_date": "2024-12-18T16:22:53.798294",
+      "createdDate": "2024-12-18T16:46:27.384379",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384379",
       "translation": "studentka"
     },
     {
       "text": "der Artikel",
-      "created_date": "2024-12-18T16:22:53.798299",
-      "last_updated_date": "2024-12-18T16:22:53.798299",
+      "createdDate": "2024-12-18T16:46:27.384384",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384384",
       "translation": "artykuł (gazeta), artykuł (w sklepie), produkt, rodzajnik"
     },
     {
       "text": "die Möglichket",
-      "created_date": "2024-12-18T16:22:53.798303",
-      "last_updated_date": "2024-12-18T16:22:53.798303",
+      "createdDate": "2024-12-18T16:46:27.384390",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384390",
       "translation": "możliwość"
     },
     {
       "text": "mehrere",
-      "created_date": "2024-12-18T16:22:53.798307",
-      "last_updated_date": "2024-12-18T16:22:53.798307",
+      "createdDate": "2024-12-18T16:46:27.384394",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384394",
       "translation": "kilka, wiele"
     },
     {
       "text": "die Nomen, Nomina",
-      "created_date": "2024-12-18T16:22:53.798313",
-      "last_updated_date": "2024-12-18T16:22:53.798313",
+      "createdDate": "2024-12-18T16:46:27.384398",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384398",
       "translation": "rzeczownik"
     },
     {
       "text": "die Tabelle",
-      "created_date": "2024-12-18T16:22:53.798319",
-      "last_updated_date": "2024-12-18T16:22:53.798319",
+      "createdDate": "2024-12-18T16:46:27.384402",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384402",
       "translation": null
     },
     {
       "text": "der Vergleich, -e",
-      "created_date": "2024-12-18T16:22:53.798324",
-      "last_updated_date": "2024-12-18T16:22:53.798324",
+      "createdDate": "2024-12-18T16:46:27.384406",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384406",
       "translation": "porównanie"
     },
     {
       "text": "von Montag bis Freitag",
-      "created_date": "2024-12-18T16:22:53.798328",
-      "last_updated_date": "2024-12-18T16:22:53.798328",
+      "createdDate": "2024-12-18T16:46:27.384410",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384410",
       "translation": null
     },
     {
       "text": "der Nachmittag",
-      "created_date": "2024-12-18T16:22:53.798332",
-      "last_updated_date": "2024-12-18T16:22:53.798332",
+      "createdDate": "2024-12-18T16:46:27.384414",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384414",
       "translation": null
     },
     {
       "text": "frei haben",
-      "created_date": "2024-12-18T16:22:53.798337",
-      "last_updated_date": "2024-12-18T16:22:53.798337",
+      "createdDate": "2024-12-18T16:46:27.384418",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384418",
       "translation": "mieć wolne"
     },
     {
       "text": "das Netzwerk, Netzwerke",
-      "created_date": "2024-12-18T16:22:53.798342",
-      "last_updated_date": "2024-12-18T16:22:53.798342",
+      "createdDate": "2024-12-18T16:46:27.384423",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384423",
       "translation": "sieć (komputerowa też)"
     },
     {
       "text": "die Leute",
-      "created_date": "2024-12-18T16:22:53.798346",
-      "last_updated_date": "2024-12-18T16:22:53.798346",
+      "createdDate": "2024-12-18T16:46:27.384427",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384427",
       "translation": "ludzie"
     },
     {
       "text": "verbinden",
-      "created_date": "2024-12-18T16:22:53.798351",
-      "last_updated_date": "2024-12-18T16:22:53.798351",
+      "createdDate": "2024-12-18T16:46:27.384432",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384432",
       "translation": "łączyć, połączyć, chyba też opatrywać"
     },
     {
       "text": "richtig",
-      "created_date": "2024-12-18T16:22:53.798356",
-      "last_updated_date": "2024-12-18T16:22:53.798356",
+      "createdDate": "2024-12-18T16:46:27.384436",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384436",
       "translation": "prawdziwy, prawidłowy, poprawny, naprawdę"
     },
     {
       "text": "kreuzen",
-      "created_date": "2024-12-18T16:22:53.798361",
-      "last_updated_date": "2024-12-18T16:22:53.798361",
+      "createdDate": "2024-12-18T16:46:27.384441",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384441",
       "translation": "krzyżować, stawiać krzyżyk"
     },
     {
       "text": "das Kreuz, -e",
-      "created_date": "2024-12-18T16:22:53.798366",
-      "last_updated_date": "2024-12-18T16:22:53.798366",
+      "createdDate": "2024-12-18T16:46:27.384446",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384446",
       "translation": "krzyż"
     },
     {
       "text": "Wer",
-      "created_date": "2024-12-18T16:22:53.798370",
-      "last_updated_date": "2024-12-18T16:22:53.798370",
+      "createdDate": "2024-12-18T16:46:27.384450",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384450",
       "translation": "kto"
     },
     {
       "text": "wirklich",
-      "created_date": "2024-12-18T16:22:53.798375",
-      "last_updated_date": "2024-12-18T16:22:53.798375",
+      "createdDate": "2024-12-18T16:46:27.384454",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384454",
       "translation": "naprawdę, rzeczywiście, prawdziwy, rzeczywisty"
     },
     {
       "text": "der Satz, Sätze",
-      "created_date": "2024-12-18T16:22:53.798379",
-      "last_updated_date": "2024-12-18T16:22:53.798379",
+      "createdDate": "2024-12-18T16:46:27.384459",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384459",
       "translation": "zdanie, stopa"
     },
     {
       "text": "das Zimmer",
-      "created_date": "2024-12-18T16:22:53.798383",
-      "last_updated_date": "2024-12-18T16:22:53.798383",
+      "createdDate": "2024-12-18T16:46:27.384462",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384462",
       "translation": null
     },
     {
       "text": "die Zahl, -en",
-      "created_date": "2024-12-18T16:22:53.798387",
-      "last_updated_date": "2024-12-18T16:22:53.798387",
+      "createdDate": "2024-12-18T16:46:27.384466",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384466",
       "translation": "liczba"
     },
     {
       "text": "zahlen",
-      "created_date": "2024-12-18T16:22:53.798391",
-      "last_updated_date": "2024-12-18T16:22:53.798391",
+      "createdDate": "2024-12-18T16:46:27.384471",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384471",
       "translation": "płacić"
     },
     {
       "text": "zählen",
-      "created_date": "2024-12-18T16:22:53.798396",
-      "last_updated_date": "2024-12-18T16:22:53.798396",
+      "createdDate": "2024-12-18T16:46:27.384475",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384475",
       "translation": "liczyć, obejmować (grupa), liczyć się"
     },
     {
       "text": "der Würfel, -n,",
-      "created_date": "2024-12-18T16:22:53.798401",
-      "last_updated_date": "2024-12-18T16:22:53.798401",
+      "createdDate": "2024-12-18T16:46:27.384481",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384481",
       "translation": "kostka, sześcian"
     },
     {
       "text": "die Aufgabe",
-      "created_date": "2024-12-18T16:22:53.798406",
-      "last_updated_date": "2024-12-18T16:22:53.798406",
+      "createdDate": "2024-12-18T16:46:27.384485",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384485",
       "translation": "zadanie, funkcja"
     },
     {
       "text": "etwas aufgeben",
-      "created_date": "2024-12-18T16:22:53.798410",
-      "last_updated_date": "2024-12-18T16:22:53.798410",
+      "createdDate": "2024-12-18T16:46:27.384490",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384490",
       "translation": "zrezygnować z czegoś"
     },
     {
       "text": "bedeuten",
-      "created_date": "2024-12-18T16:22:53.798415",
-      "last_updated_date": "2024-12-18T16:22:53.798415",
+      "createdDate": "2024-12-18T16:46:27.384494",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384494",
       "translation": "znaczyć"
     },
     {
       "text": "die Bedeutung",
-      "created_date": "2024-12-18T16:22:53.798419",
-      "last_updated_date": "2024-12-18T16:22:53.798419",
+      "createdDate": "2024-12-18T16:46:27.384500",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384500",
       "translation": "znaczenie"
     },
     {
       "text": "kopieren",
-      "created_date": "2024-12-18T16:22:53.798423",
-      "last_updated_date": "2024-12-18T16:22:53.798423",
+      "createdDate": "2024-12-18T16:46:27.384504",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384504",
       "translation": "kopiować"
     },
     {
       "text": "das Wörterbuch",
-      "created_date": "2024-12-18T16:22:53.798428",
-      "last_updated_date": "2024-12-18T16:22:53.798428",
+      "createdDate": "2024-12-18T16:46:27.384509",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384509",
       "translation": "słownik"
     },
     {
       "text": "das Lexikon",
-      "created_date": "2024-12-18T16:22:53.798433",
-      "last_updated_date": "2024-12-18T16:22:53.798433",
+      "createdDate": "2024-12-18T16:46:27.384513",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384513",
       "translation": "—//—"
     },
     {
       "text": "das Brettspiel",
-      "created_date": "2024-12-18T16:22:53.798439",
-      "last_updated_date": "2024-12-18T16:22:53.798439",
+      "createdDate": "2024-12-18T16:46:27.384517",
+      "lastUpdatedDate": "2024-12-18T16:46:27.384517",
       "translation": "gra planszowa"
     }
   ],
   "group": {
     "name": "lesson_2",
     "description": null,
-    "created_date": "2024-12-18T16:22:53.798440"
+    "createdDate": "2024-12-18T16:46:27.384519"
   }
 }
