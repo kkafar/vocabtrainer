@@ -124,5 +124,45 @@ name: vocabulary_stats
 attributes:
     * item_id: not-null, integer, primary-key, foreign-key vocabulary (id)
     * reversed: not-null, boolean, primary-key // german -> polish (0) or polish -> german (1) (THIS IS BAD FOR SCALING FOR MORE LANGUAGES - MAYBE LANGUAGE PAIR)
-    * hit_count: 
+    * hit_count: not-null, integer // number of times the item was marked as "learned"
+    * miss_count: not-null, integer // number of times the item was marked as "not-yet-learned"
 
+#### Game session representation
+
+For now the session tracks current in game (card game) progress, so that the player can resume after restarting the browser
+
+name: game_session
+attributes:
+    * id: not-null, integer, primary-key (uuid or autoincrement)
+    * start_date: not-null, date // should decide on date locale
+    * expiration_date: nullable, date
+    * description: nullable, text // user defined game session description
+
+#### Session info
+
+To resume the game I need all the data that defines a game.
+
+The game is defined by:
+    * vocabulary list, 
+    * "learned" vocablary, 
+    * current item.
+
+I can either store all the considered vocabulary ids for given session - I think it is acceptable.
+Or if we limit the game model to work only for vocabulary groups - we could store only the group - but this approach would collide with the idea
+of losely selecting the vocabulary for given game. 
+
+name: game_session_items
+attributes:
+    * session_id: not-null, integer, primary-key, foreign-key game_session (id)
+    * item_id: not-null, integer, primary-key, foreign-key vocabulary (id)
+    * learned: not-null, boolean, 
+    * ordering: not-null, integer // used for sorting when restoring the session, I think this just could be an index
+
+name: game_session_current_item
+attributes:
+    * session_id: not-null, integer, primary-key, foreign-key game_session (id)
+    * item_id: not-null, integer, primary-key, foreign-key vocabulary (id) // id of current item in session
+
+
+The game state should only be saved on explicit user request (to persistent data base).
+The game state might be saved to local browser storage on more frequent basis.
