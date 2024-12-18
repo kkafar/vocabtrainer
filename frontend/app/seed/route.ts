@@ -1,41 +1,111 @@
 import { type Database as DatabaseType } from 'better-sqlite3';
-import { lessonOne } from '../data/initdata';
+import { lessonOne, testItemGroup } from '../data/initdata';
 import createDatabaseConnection from '../data/database';
 import featureFlags from '@/app/featureflags';
+import { z } from 'zod';
 
-async function seedVocabulary(db: DatabaseType) {
+const TableGroupSchema = z.object({
+  id: z.number().int().min(0),
+  name: z.string().min(1),
+  description: z.string().optional().nullable(),
+  created_date: z.string().datetime({ offset: true }),
+});
+
+const VocabularyItemSeedSchema = z.object({
+  text: z.string().min(1),
+  translation: z.string().optional().nullable(),
+  created_date: z.string().datetime({ offset: true }),
+  last_updated_date: z.string().datetime({ offset: true }),
+});
+
+const VocabularyGroupSeedSchema = TableGroupSchema.omit({ id: true });
+
+const VocabularySeedSchema = z.object({
+  entities: z.array(VocabularyItemSeedSchema),
+  group: VocabularyGroupSeedSchema,
+});
+
+type VocabularyItemSeed = z.infer<typeof VocabularyItemSeedSchema>;
+type TableGroupAttrs = z.infer<typeof TableGroupSchema>;
+type VocabularyGroupSeed = z.infer<typeof VocabularyGroupSeedSchema>;
+type VocabularySeed = z.infer<typeof VocabularySeedSchema>;
+
+async function seedVocabulary(db: DatabaseType, data: VocabularySeed) {
   const createTableStmt = db.prepare(`
     CREATE TABLE IF NOT EXISTS vocabulary (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       text TEXT NOT NULL CHECK (length(text) > 0),
       translation TEXT,
-      created_date: TEXT NOT NULL,
-      last_updated_date: TEXT NOT NULL
+      created_date TEXT NOT NULL,
+      last_updated_date TEXT NOT NULL
     );
   `);
 
+  console.log(`Creating "vocabulary" table...`);
   const result = createTableStmt.run();
-  // TODO: Handle errors here
+  console.log(`Creating "vocabulary" table completed with result ${JSON.stringify(result)}`);
 
-  // TODO: Populate with vocabulary
+  type BindParams = {
+    text: VocabularyItemSeed['text'],
+    translation: VocabularyItemSeed['translation'],
+    createdDate: VocabularyItemSeed['created_date'],
+    lastUpdatedDate: VocabularyItemSeed['last_updated_date'],
+  };
+
+  const insertStmt = db.prepare<BindParams>(`
+    INSERT INTO vocabulary (text, translation, created_date, last_updated_date) VALUES ($text, $translation, $createdDate, $lastUpdatedDate);
+  `);
+
+  db.transaction((entities: VocabularySeed['entities']) => {
+    entities.forEach(entity => {
+      insertStmt.run({
+        text: entity.text,
+        translation: entity.translation,
+        createdDate: entity.created_date,
+        lastUpdatedDate: entity.last_updated_date,
+      });
+    });
+  })(data.entities);
 }
 
-async function seedGroup(db: DatabaseType) {
+async function seedGroup(db: DatabaseType, groupData: VocabularyGroupSeed[]) {
   const createTableStmt = db.prepare(`
-    CREATE TABLE IF NOT EXISTS group (
+    CREATE TABLE IF NOT EXISTS groups (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       name TEXT NOT NULL UNIQUE CHECK (length(name) > 0),
       description TEXT,
-      created_date: TEXT NOT NULL
+      created_date TEXT NOT NULL
     );
   `);
 
-  createTableStmt.run();
-  // TODO: Handle errors here
-  // TODO: Populate group based on lessons
+  console.log(`Creating "groups" table...`);
+  const result = createTableStmt.run();
+  console.log(`Creating "groups" table completed with result ${JSON.stringify(result)}`);
+
+  type BindParams = {
+    name: VocabularyGroupSeed['name'];
+    description: VocabularyGroupSeed['description'];
+    createdDate: VocabularyGroupSeed['created_date'];
+  };
+
+  const insertStmt = db.prepare<BindParams>(`
+    INSERT INTO groups (name, description, created_date) VALUES ($name, $description, $createdDate);
+  `);
+
+  const transaction = db.transaction((groupData: VocabularyGroupSeed[]) => {
+    groupData.forEach(group => {
+      insertStmt.run({
+        name: group.name,
+        description: group.description,
+        createdDate: group.created_date,
+      });
+    });
+  });
+
+  transaction(groupData);
 }
 
-async function seedVocabularyGrouping(db: DatabaseType) {
+async function seedVocabularyGrouping(db: DatabaseType, data: VocabularySeed) {
   const createTableStmt = db.prepare(`
     CREATE TABLE IF NOT EXISTS vocabulary_grouping (
       item_id INTEGER,
@@ -44,15 +114,32 @@ async function seedVocabularyGrouping(db: DatabaseType) {
       FOREIGN KEY (item_id) REFERENCES vocabulary (id)
         ON UPDATE CASCADE
         ON DELETE CASCADE,
-      FOREIGN KEY (group_id) REFERENCES group (id)
+      FOREIGN KEY (group_id) REFERENCES groups (id)
         ON UPDATE CASCADE
         ON DELETE CASCADE
     );
   `);
 
   createTableStmt.run();
-  // TODO: Handle errors here
-  // TODO: Populate groupings based on lessons
+
+  // // First we need to have the group id
+  const groupQuery = db.prepare(`SELECT id FROM groups WHERE name = ?`);
+  const groupQueryResult = groupQuery.get([data.group.name]) as Pick<TableGroupAttrs, 'id'> | undefined;
+
+  if (groupQueryResult === undefined) {
+    throw Error(`Seems that no group with name ${data.group.name} is currently in database`);
+  }
+
+  const groupId = groupQueryResult.id;
+
+  console.debug('Retrieved group id of ', groupId);
+
+  const insertStmt = db.prepare(`
+    INSERT INTO vocabulary_grouping SELECT DISTINCT id, $groupId FROM vocabulary;
+  `);
+
+  insertStmt.run({ groupId: groupId });
+  // TODO: handle errors
 }
 
 async function seedVocabularyStats(db: DatabaseType) {
@@ -128,77 +215,17 @@ async function seedGameSessionCurrentItem(db: DatabaseType) {
   // TODO: Handle errors here
 }
 
-async function seedLessons(db: DatabaseType) {
-  const createTableStmt = db.prepare(`
-    CREATE TABLE IF NOT EXISTS lesson (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      lesson_date TEXT,
-      submission_date TEXT NOT NULL,
-      description TEXT NOT NULL
-    );`
-  );
-
-  createTableStmt.run();
-
-  const { lesson_date } = lessonOne.metadata;
-  let { submission_date = "", description = "" } = lessonOne.metadata;
-
-  if (submission_date == null) {
-    submission_date = "";
-  }
-
-  if (description == null) {
-    description = "";
-  }
-
-  const insertStmt = db.prepare(`
-    INSERT INTO lesson (lesson_date, submission_date, description) VALUES (?, ?, ?);`
-  );
-
-  insertStmt.run(lesson_date, submission_date, description);
-}
-
-async function seedVocabEntities(db: DatabaseType) {
-  const createTableStmt = db.prepare(`
-    CREATE TABLE IF NOT EXISTS vocabulary (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      lesson_id INTEGER NOT NULL,
-      text TEXT NOT NULL,
-      translation TEXT NOT NULL,
-      FOREIGN KEY (lesson_id)
-        REFERENCES lesson (id)
-          ON UPDATE CASCADE
-          ON DELETE CASCADE
-    );
-  `);
-
-  createTableStmt.run();
-
-  const entities = lessonOne.entities.map((entity) => {
-    return {
-      text: entity.text,
-      translation: entity.translation != null ? entity.translation : "",
-    }
-  });
-
-  const insertStmt = db.prepare(`
-    INSERT INTO vocabulary (lesson_id, text, translation) VALUES (?, ?, ?);
-  `);
-
-  db.transaction((entities: Array<{ text: string; translation: string; }>) => {
-    entities.forEach(entity => {
-      insertStmt.run(1, entity.text, entity.translation);
-    });
-  })(entities);
-}
-
 export async function GET() {
   if (featureFlags.usesNewDatabaseSchema) {
     try {
+      // Parse data
+      const parsedVocabularySeedDataLessonOne = VocabularySeedSchema.parse(lessonOne);
+      const parsedVocabularySeedDataTestData = VocabularySeedSchema.parse(testItemGroup);
+
       const db = createDatabaseConnection();
-      await seedVocabulary(db);
-      await seedGroup(db);
-      await seedVocabularyGrouping(db);
+      await seedVocabulary(db, parsedVocabularySeedDataLessonOne);
+      await seedGroup(db, [parsedVocabularySeedDataLessonOne.group, parsedVocabularySeedDataTestData.group]);
+      await seedVocabularyGrouping(db, parsedVocabularySeedDataLessonOne);
       await seedVocabularyStats(db);
       await seedGameSession(db);
       await seedGameSessionItems(db);
@@ -208,15 +235,6 @@ export async function GET() {
     }
     return Response.json({ message: "Success" })
   } else {
-    try {
-      const db = createDatabaseConnection();
-      await seedLessons(db);
-      await seedVocabEntities(db);
-    } catch (error) {
-      return Response.json({ error }, { status: 500 });
-    }
     return Response.json({ message: "Success" })
   }
-
-
 }

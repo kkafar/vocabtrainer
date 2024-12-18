@@ -1,12 +1,10 @@
 import argparse
 from collections.abc import Mapping
 import json
-from math import isinf
-from os import link
 from pathlib import Path
 from dataclasses import dataclass, field, asdict
 from typing import Optional, Any
-from datetime import date, datetime
+from datetime import date, datetime, timezone, tzinfo
 
 
 @dataclass
@@ -112,7 +110,7 @@ def parse_line(raw_entity: str) -> Optional[VocabItem]:
     partitioned = list(map(str.strip, partitioned))
     print(partitioned)
 
-    creation_date = datetime.now()
+    creation_date = datetime.now().astimezone()
     if len(partitioned) == 2:
         stripped_text = partitioned[0].strip()
         stripped_translation = partitioned[1].strip()
@@ -137,7 +135,7 @@ def build_file_model(contents: list[str], group_name: str) -> VocabFileModel:
         if entity:
             collector.append(entity)
 
-    group = Group(group_name, None, datetime.now())
+    group = Group(group_name, None, datetime.now().astimezone())
     return VocabFileModel(collector, group=group)
 
 
@@ -171,7 +169,7 @@ def process_filelist(files: list[Path]) -> list[VocabFileModel]:
         with open(converted_path, 'w+', encoding='utf-8') as writer:
             # We need to pass `default` to ensure dates are converted properly.
             # Without `ensure_ascii=False` polish / german characters won't be converted correctly.
-            json.dump(normalize_to_camel_case(asdict(item_group_model)), writer, indent=2, default=datetime_serializer, ensure_ascii=False)
+            json.dump(asdict(item_group_model), writer, indent=2, default=datetime_serializer, ensure_ascii=False)
 
     return item_group
 

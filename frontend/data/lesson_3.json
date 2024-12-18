@@ -2,326 +2,326 @@
   "entities": [
     {
       "text": "definitiv",
-      "createdDate": "2024-12-18T16:46:27.384562",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384562",
+      "created_date": "2024-12-18T18:28:04.951336+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951336+01:00",
       "translation": "zdecydowanie, definitywnie"
     },
     {
       "text": "Spaß haben",
-      "createdDate": "2024-12-18T16:46:27.384568",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384568",
+      "created_date": "2024-12-18T18:28:04.951346+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951346+01:00",
       "translation": "have fun"
     },
     {
       "text": "das Brettspiel, -e",
-      "createdDate": "2024-12-18T16:46:27.384573",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384573",
+      "created_date": "2024-12-18T18:28:04.951357+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951357+01:00",
       "translation": "planszówka"
     },
     {
       "text": "Bücher lesen",
-      "createdDate": "2024-12-18T16:46:27.384577",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384577",
+      "created_date": "2024-12-18T18:28:04.951365+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951365+01:00",
       "translation": "czytać książki"
     },
     {
       "text": "empfehlen",
-      "createdDate": "2024-12-18T16:46:27.384582",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384582",
+      "created_date": "2024-12-18T18:28:04.951372+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951372+01:00",
       "translation": "polecać"
     },
     {
       "text": "die Süßigkeiten",
-      "createdDate": "2024-12-18T16:46:27.384587",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384587",
+      "created_date": "2024-12-18T18:28:04.951379+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951379+01:00",
       "translation": "słodycze"
     },
     {
       "text": "kochen",
-      "createdDate": "2024-12-18T16:46:27.384592",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384592",
+      "created_date": "2024-12-18T18:28:04.951386+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951386+01:00",
       "translation": "gotować"
     },
     {
       "text": "die Speise, -n",
-      "createdDate": "2024-12-18T16:46:27.384596",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384596",
+      "created_date": "2024-12-18T18:28:04.951393+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951393+01:00",
       "translation": "potrawa"
     },
     {
       "text": "brauchen",
-      "createdDate": "2024-12-18T16:46:27.384600",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384600",
+      "created_date": "2024-12-18T18:28:04.951399+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951399+01:00",
       "translation": "potrzebować"
     },
     {
       "text": "jetzt",
-      "createdDate": "2024-12-18T16:46:27.384604",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384604",
+      "created_date": "2024-12-18T18:28:04.951406+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951406+01:00",
       "translation": "teraz"
     },
     {
       "text": "die Eltern",
-      "createdDate": "2024-12-18T16:46:27.384608",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384608",
+      "created_date": "2024-12-18T18:28:04.951412+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951412+01:00",
       "translation": null
     },
     {
       "text": "alt, älter, am ältesten",
-      "createdDate": "2024-12-18T16:46:27.384612",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384612",
+      "created_date": "2024-12-18T18:28:04.951419+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951419+01:00",
       "translation": null
     },
     {
       "text": "der Monat, -e",
-      "createdDate": "2024-12-18T16:46:27.384616",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384616",
+      "created_date": "2024-12-18T18:28:04.951425+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951425+01:00",
       "translation": null
     },
     {
       "text": "ferne Flüge",
-      "createdDate": "2024-12-18T16:46:27.384620",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384620",
+      "created_date": "2024-12-18T18:28:04.951431+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951431+01:00",
       "translation": null
     },
     {
       "text": "es gibt wenige Aktivitäten",
-      "createdDate": "2024-12-18T16:46:27.384625",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384625",
+      "created_date": "2024-12-18T18:28:04.951438+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951438+01:00",
       "translation": null
     },
     {
       "text": "der Bus",
-      "createdDate": "2024-12-18T16:46:27.384629",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384629",
+      "created_date": "2024-12-18T18:28:04.951444+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951444+01:00",
       "translation": null
     },
     {
       "text": "jeden Tag",
-      "createdDate": "2024-12-18T16:46:27.384632",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384632",
+      "created_date": "2024-12-18T18:28:04.951450+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951450+01:00",
       "translation": null
     },
     {
       "text": "circa",
-      "createdDate": "2024-12-18T16:46:27.384636",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384636",
+      "created_date": "2024-12-18T18:28:04.951456+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951456+01:00",
       "translation": null
     },
     {
       "text": "wählen",
-      "createdDate": "2024-12-18T16:46:27.384640",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384640",
+      "created_date": "2024-12-18T18:28:04.951465+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951465+01:00",
       "translation": "wybrać"
     },
     {
       "text": "beenden",
-      "createdDate": "2024-12-18T16:46:27.384644",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384644",
+      "created_date": "2024-12-18T18:28:04.951471+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951471+01:00",
       "translation": null
     },
     {
       "text": "tanzen",
-      "createdDate": "2024-12-18T16:46:27.384650",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384650",
+      "created_date": "2024-12-18T18:28:04.951477+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951477+01:00",
       "translation": null
     },
     {
       "text": "du tanzt",
-      "createdDate": "2024-12-18T16:46:27.384654",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384654",
+      "created_date": "2024-12-18T18:28:04.951483+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951483+01:00",
       "translation": null
     },
     {
       "text": "das Glas",
-      "createdDate": "2024-12-18T16:46:27.384658",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384658",
+      "created_date": "2024-12-18T18:28:04.951489+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951489+01:00",
       "translation": null
     },
     {
       "text": "der Stift, -e",
-      "createdDate": "2024-12-18T16:46:27.384661",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384661",
+      "created_date": "2024-12-18T18:28:04.951494+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951494+01:00",
       "translation": null
     },
     {
       "text": "faulenzen",
-      "createdDate": "2024-12-18T16:46:27.384666",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384666",
+      "created_date": "2024-12-18T18:28:04.951501+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951501+01:00",
       "translation": "próżnować, leniuchować"
     },
     {
       "text": "mischen",
-      "createdDate": "2024-12-18T16:46:27.384670",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384670",
+      "created_date": "2024-12-18T18:28:04.951508+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951508+01:00",
       "translation": "mieszać"
     },
     {
       "text": "besichtigen",
-      "createdDate": "2024-12-18T16:46:27.384675",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384675",
+      "created_date": "2024-12-18T18:28:04.951515+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951515+01:00",
       "translation": "zwiedzać"
     },
     {
       "text": "wissen",
-      "createdDate": "2024-12-18T16:46:27.384679",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384679",
+      "created_date": "2024-12-18T18:28:04.951522+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951522+01:00",
       "translation": "wiedzieć"
     },
     {
       "text": "die Wahl",
-      "createdDate": "2024-12-18T16:46:27.384684",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384684",
+      "created_date": "2024-12-18T18:28:04.951529+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951529+01:00",
       "translation": "wybór"
     },
     {
       "text": "zu viert",
-      "createdDate": "2024-12-18T16:46:27.384688",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384688",
+      "created_date": "2024-12-18T18:28:04.951536+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951536+01:00",
       "translation": "w czwórkę"
     },
     {
       "text": "teuer",
-      "createdDate": "2024-12-18T16:46:27.384692",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384692",
+      "created_date": "2024-12-18T18:28:04.951542+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951542+01:00",
       "translation": "drogi, drogo"
     },
     {
       "text": "die Fluggesellschaft, -en",
-      "createdDate": "2024-12-18T16:46:27.384696",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384696",
+      "created_date": "2024-12-18T18:28:04.951549+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951549+01:00",
       "translation": "linia lotnicza"
     },
     {
       "text": "wechseln",
-      "createdDate": "2024-12-18T16:46:27.384700",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384700",
+      "created_date": "2024-12-18T18:28:04.951555+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951555+01:00",
       "translation": "zmieniać"
     },
     {
       "text": "verschieben",
-      "createdDate": "2024-12-18T16:46:27.384705",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384705",
+      "created_date": "2024-12-18T18:28:04.951562+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951562+01:00",
       "translation": "przesunąć"
     },
     {
       "text": "bestellen",
-      "createdDate": "2024-12-18T16:46:27.384709",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384709",
+      "created_date": "2024-12-18T18:28:04.951571+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951571+01:00",
       "translation": "zamawiać"
     },
     {
       "text": "meistens",
-      "createdDate": "2024-12-18T16:46:27.384713",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384713",
+      "created_date": "2024-12-18T18:28:04.951578+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951578+01:00",
       "translation": "zazwyczaj"
     },
     {
       "text": "morgen",
-      "createdDate": "2024-12-18T16:46:27.384717",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384717",
+      "created_date": "2024-12-18T18:28:04.951587+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951587+01:00",
       "translation": "jutro"
     },
     {
       "text": "bekommen",
-      "createdDate": "2024-12-18T16:46:27.384721",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384721",
+      "created_date": "2024-12-18T18:28:04.951594+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951594+01:00",
       "translation": "otrzymywać, dostawać"
     },
     {
       "text": "schicken",
-      "createdDate": "2024-12-18T16:46:27.384725",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384725",
+      "created_date": "2024-12-18T18:28:04.951601+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951601+01:00",
       "translation": "wysłać, posyłać"
     },
     {
       "text": "die Frau",
-      "createdDate": "2024-12-18T16:46:27.384730",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384730",
+      "created_date": "2024-12-18T18:28:04.951608+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951608+01:00",
       "translation": "Pani, kobieta"
     },
     {
       "text": "der Mann",
-      "createdDate": "2024-12-18T16:46:27.384734",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384734",
+      "created_date": "2024-12-18T18:28:04.951615+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951615+01:00",
       "translation": "mężczyzna"
     },
     {
       "text": "gefallen",
-      "createdDate": "2024-12-18T16:46:27.384738",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384738",
+      "created_date": "2024-12-18T18:28:04.951621+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951621+01:00",
       "translation": "podobać się"
     },
     {
       "text": "tragen",
-      "createdDate": "2024-12-18T16:46:27.384742",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384742",
+      "created_date": "2024-12-18T18:28:04.951628+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951628+01:00",
       "translation": "nosić"
     },
     {
       "text": "waschen",
-      "createdDate": "2024-12-18T16:46:27.384747",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384747",
+      "created_date": "2024-12-18T18:28:04.951635+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951635+01:00",
       "translation": "myć, prać"
     },
     {
       "text": "geben",
-      "createdDate": "2024-12-18T16:46:27.384751",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384751",
+      "created_date": "2024-12-18T18:28:04.951642+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951642+01:00",
       "translation": "dawać"
     },
     {
       "text": "helfen",
-      "createdDate": "2024-12-18T16:46:27.384757",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384757",
+      "created_date": "2024-12-18T18:28:04.951649+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951649+01:00",
       "translation": "pomagać"
     },
     {
       "text": "nehmen",
-      "createdDate": "2024-12-18T16:46:27.384762",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384762",
+      "created_date": "2024-12-18T18:28:04.951655+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951655+01:00",
       "translation": "brać"
     },
     {
       "text": "leise",
-      "createdDate": "2024-12-18T16:46:27.384767",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384767",
+      "created_date": "2024-12-18T18:28:04.951662+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951662+01:00",
       "translation": "cichy, cicho"
     },
     {
       "text": "sicher",
-      "createdDate": "2024-12-18T16:46:27.384771",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384771",
+      "created_date": "2024-12-18T18:28:04.951668+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951668+01:00",
       "translation": "pewny, bezpieczny, pewnie"
     },
     {
       "text": "vergessen",
-      "createdDate": "2024-12-18T16:46:27.384776",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384776",
+      "created_date": "2024-12-18T18:28:04.951677+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951677+01:00",
       "translation": "zapominać"
     },
     {
       "text": "schlecht",
-      "createdDate": "2024-12-18T16:46:27.384780",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384780",
+      "created_date": "2024-12-18T18:28:04.951684+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951684+01:00",
       "translation": "zły, niedobry, marny"
     },
     {
       "text": "deshalb",
-      "createdDate": "2024-12-18T16:46:27.384784",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384784",
+      "created_date": "2024-12-18T18:28:04.951691+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951691+01:00",
       "translation": "dlatego"
     },
     {
       "text": "die Brille",
-      "createdDate": "2024-12-18T16:46:27.384788",
-      "lastUpdatedDate": "2024-12-18T16:46:27.384788",
+      "created_date": "2024-12-18T18:28:04.951697+01:00",
+      "last_updated_date": "2024-12-18T18:28:04.951697+01:00",
       "translation": "okulary"
     }
   ],
   "group": {
     "name": "lesson_3",
     "description": null,
-    "createdDate": "2024-12-18T16:46:27.384789"
+    "created_date": "2024-12-18T18:28:04.951700+01:00"
   }
 }
