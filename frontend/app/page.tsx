@@ -1,14 +1,40 @@
-import CenterYXContainer from "./ui/layout/CenterYXContainer";
-import FullScreenContainer from "./ui/layout/FullScreenContainer";
+import ButtonPanel from "@/app/ui/ButtonPanel";
+import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
+import FullScreenContainer from "@/app/ui/layout/FullScreenContainer";
 import MainTitle from '@/app/ui/MainTitle';
+import FlexContainer from "./ui/layout/FlexContainer";
+import RoundedButton, { ButtonProps } from "./ui/buttons/RoundedButton";
+import styles from './styles.module.css';
+import { redirect } from "next/navigation";
+
+function MenuButton({ children, ...rest }: ButtonProps) {
+  return (
+    <RoundedButton className={styles.menuItemButton} {...rest} >
+      {children}
+    </RoundedButton>
+  )
+}
 
 export default async function Home() {
   return (
     <FullScreenContainer>
       <CenterYXContainer>
-        <MainTitle>
-          VocabTrainer
-        </MainTitle>
+        <FlexContainer flexDirection="column">
+          <MainTitle>
+            VocabTrainer
+          </MainTitle>
+          <ButtonPanel direction="vertical">
+            <MenuButton onClick={async () => {
+              'use server';
+              redirect('/cards');
+            }}>
+              Card game
+            </MenuButton>
+            <MenuButton>
+              Vocabulary
+            </MenuButton>
+          </ButtonPanel>
+        </FlexContainer>
       </CenterYXContainer>
     </FullScreenContainer>
   );

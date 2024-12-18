@@ -3,7 +3,7 @@
 import { VocabEntity } from "@/app/lib/definitions";
 import styles from "@/app/ui/VocabWrapper/styles.module.css";
 import clsx from "clsx";
-import { MouseEventHandler, useEffect, useState } from "react";
+import { MouseEventHandler, useLayoutEffect, useState } from "react";
 import { isStringBlank } from "@/app/lib/text-util";
 import CardToolbar from "@/app/ui/VocabWrapper/CardToolbar";
 import EyeIcon from "@/app/assets/eye-icon.svg"
@@ -33,7 +33,7 @@ export default function VocabCard({ entity }: VocabCardProps) {
     setHideTranslation(val => !val);
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setHideTranslation(true);
   }, [entity])
 

@@ -21,3 +21,9 @@
   flex-direction: column;
   align-items: center;
 }
+
+.menuItemButton {
+  font-size: var(--font-size-large);
+  background-color: var(--color-primary);
+}
+

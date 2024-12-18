@@ -3,9 +3,13 @@
 import { ChildrenProp } from "../types";
 import styles from './styles.module.css';
 
-export default function ButtonPanel({ children }: ChildrenProp) {
+export type ButtonPanelProps = ChildrenProp & {
+  direction?: 'horizontal' | 'vertical';
+}
+
+export default function ButtonPanel({ children, direction = 'horizontal' }: ButtonPanelProps) {
   return (
-    <div className={styles.container}>
+    <div className={direction === 'horizontal' ? styles.container : styles.verticalContainer}>
       {children}
     </div>
   );

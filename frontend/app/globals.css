@@ -68,13 +68,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg-primary: #333125;
-    --color-text-on-bg: #BCB794;
-    --color-primary: #403C1C;
-    --color-on-primary: #6D6840;
-    --color-success: #375234;
-    --color-failure: #786C5E;
-    --color-icon-stroke: var(--color-text-on-bg);
+    /* --color-bg-primary: #333125; */
+    /* --color-text-on-bg: #BCB794; */
+    /* --color-primary: #403C1C; */
+    /* --color-on-primary: #6D6840; */
+    /* --color-success: #375234; */
+    /* --color-failure: #786C5E; */
+    /* --color-icon-stroke: var(--color-text-on-bg); */
 
     /* Legacy naming, migrate! */
     --background: var(--color-bg-primary);
