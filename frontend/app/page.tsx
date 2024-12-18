@@ -6,11 +6,15 @@ import FlexContainer from "./ui/layout/FlexContainer";
 import RoundedButton, { ButtonProps } from "./ui/buttons/RoundedButton";
 import styles from './styles.module.css';
 import { redirect } from "next/navigation";
+import BookOpenIcon from '@/app/assets/book-open-icon.svg';
+import PlayCircleIcon from '@/app/assets/play-circle-icon.svg';
 
 function MenuButton({ children, ...rest }: ButtonProps) {
   return (
     <RoundedButton className={styles.menuItemButton} {...rest} >
-      {children}
+      <div className={styles.menuItemButtonInnerContainer}>
+        {children}
+      </div>
     </RoundedButton>
   )
 }
@@ -23,17 +27,19 @@ export default async function Home() {
           <MainTitle>
             VocabTrainer
           </MainTitle>
-          <ButtonPanel direction="vertical">
-            <MenuButton onClick={async () => {
-              'use server';
-              redirect('/cards');
-            }}>
-              Card game
-            </MenuButton>
-            <MenuButton>
-              Vocabulary
-            </MenuButton>
-          </ButtonPanel>
+          <div className={styles.separator}>
+            <ButtonPanel direction="vertical">
+              <MenuButton onClick={async () => {
+                'use server';
+                redirect('/cards');
+              }}>
+                Card game <BookOpenIcon />
+              </MenuButton>
+              <MenuButton>
+                Vocabulary <PlayCircleIcon />
+              </MenuButton>
+            </ButtonPanel>
+          </div>
         </FlexContainer>
       </CenterYXContainer>
     </FullScreenContainer>

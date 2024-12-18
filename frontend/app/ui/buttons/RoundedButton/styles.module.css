@@ -9,6 +9,7 @@
 
 .buttonInner {
   display: flex;
+  flex: 1;
   align-items: center;
   column-gap: var(--padding-large);
   padding: var(--padding-small) var(--padding-medium);
