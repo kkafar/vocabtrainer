@@ -166,3 +166,4 @@ attributes:
 
 The game state should only be saved on explicit user request (to persistent data base).
 The game state might be saved to local browser storage on more frequent basis.
+

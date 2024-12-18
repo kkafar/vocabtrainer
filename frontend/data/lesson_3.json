@@ -2,273 +2,326 @@
   "entities": [
     {
       "text": "definitiv",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798485",
+      "last_updated_date": "2024-12-18T16:22:53.798485",
       "translation": "zdecydowanie, definitywnie"
     },
     {
       "text": "Spaß haben",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798491",
+      "last_updated_date": "2024-12-18T16:22:53.798491",
       "translation": "have fun"
     },
     {
       "text": "das Brettspiel, -e",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798496",
+      "last_updated_date": "2024-12-18T16:22:53.798496",
       "translation": "planszówka"
     },
     {
       "text": "Bücher lesen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798501",
+      "last_updated_date": "2024-12-18T16:22:53.798501",
       "translation": "czytać książki"
     },
     {
       "text": "empfehlen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798506",
+      "last_updated_date": "2024-12-18T16:22:53.798506",
       "translation": "polecać"
     },
     {
       "text": "die Süßigkeiten",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798511",
+      "last_updated_date": "2024-12-18T16:22:53.798511",
       "translation": "słodycze"
     },
     {
       "text": "kochen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798515",
+      "last_updated_date": "2024-12-18T16:22:53.798515",
       "translation": "gotować"
     },
     {
       "text": "die Speise, -n",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798519",
+      "last_updated_date": "2024-12-18T16:22:53.798519",
       "translation": "potrawa"
     },
     {
       "text": "brauchen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798524",
+      "last_updated_date": "2024-12-18T16:22:53.798524",
       "translation": "potrzebować"
     },
     {
       "text": "jetzt",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798528",
+      "last_updated_date": "2024-12-18T16:22:53.798528",
       "translation": "teraz"
     },
     {
       "text": "die Eltern",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798531",
+      "last_updated_date": "2024-12-18T16:22:53.798531",
       "translation": null
     },
     {
       "text": "alt, älter, am ältesten",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798536",
+      "last_updated_date": "2024-12-18T16:22:53.798536",
       "translation": null
     },
     {
       "text": "der Monat, -e",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798539",
+      "last_updated_date": "2024-12-18T16:22:53.798539",
       "translation": null
     },
     {
       "text": "ferne Flüge",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798544",
+      "last_updated_date": "2024-12-18T16:22:53.798544",
       "translation": null
     },
     {
       "text": "es gibt wenige Aktivitäten",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798548",
+      "last_updated_date": "2024-12-18T16:22:53.798548",
       "translation": null
     },
     {
       "text": "der Bus",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798552",
+      "last_updated_date": "2024-12-18T16:22:53.798552",
       "translation": null
     },
     {
       "text": "jeden Tag",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798555",
+      "last_updated_date": "2024-12-18T16:22:53.798555",
       "translation": null
     },
     {
       "text": "circa",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798559",
+      "last_updated_date": "2024-12-18T16:22:53.798559",
       "translation": null
     },
     {
       "text": "wählen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798563",
+      "last_updated_date": "2024-12-18T16:22:53.798563",
       "translation": "wybrać"
     },
     {
       "text": "beenden",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798567",
+      "last_updated_date": "2024-12-18T16:22:53.798567",
       "translation": null
     },
     {
       "text": "tanzen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798571",
+      "last_updated_date": "2024-12-18T16:22:53.798571",
       "translation": null
     },
     {
       "text": "du tanzt",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798574",
+      "last_updated_date": "2024-12-18T16:22:53.798574",
       "translation": null
     },
     {
       "text": "das Glas",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798580",
+      "last_updated_date": "2024-12-18T16:22:53.798580",
       "translation": null
     },
     {
       "text": "der Stift, -e",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798584",
+      "last_updated_date": "2024-12-18T16:22:53.798584",
       "translation": null
     },
     {
       "text": "faulenzen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798589",
+      "last_updated_date": "2024-12-18T16:22:53.798589",
       "translation": "próżnować, leniuchować"
     },
     {
       "text": "mischen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798593",
+      "last_updated_date": "2024-12-18T16:22:53.798593",
       "translation": "mieszać"
     },
     {
       "text": "besichtigen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798598",
+      "last_updated_date": "2024-12-18T16:22:53.798598",
       "translation": "zwiedzać"
     },
     {
       "text": "wissen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798602",
+      "last_updated_date": "2024-12-18T16:22:53.798602",
       "translation": "wiedzieć"
     },
     {
       "text": "die Wahl",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798607",
+      "last_updated_date": "2024-12-18T16:22:53.798607",
       "translation": "wybór"
     },
     {
       "text": "zu viert",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798611",
+      "last_updated_date": "2024-12-18T16:22:53.798611",
       "translation": "w czwórkę"
     },
     {
       "text": "teuer",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798615",
+      "last_updated_date": "2024-12-18T16:22:53.798615",
       "translation": "drogi, drogo"
     },
     {
       "text": "die Fluggesellschaft, -en",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798619",
+      "last_updated_date": "2024-12-18T16:22:53.798619",
       "translation": "linia lotnicza"
     },
     {
       "text": "wechseln",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798624",
+      "last_updated_date": "2024-12-18T16:22:53.798624",
       "translation": "zmieniać"
     },
     {
       "text": "verschieben",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798628",
+      "last_updated_date": "2024-12-18T16:22:53.798628",
       "translation": "przesunąć"
     },
     {
       "text": "bestellen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798632",
+      "last_updated_date": "2024-12-18T16:22:53.798632",
       "translation": "zamawiać"
     },
     {
       "text": "meistens",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798636",
+      "last_updated_date": "2024-12-18T16:22:53.798636",
       "translation": "zazwyczaj"
     },
     {
       "text": "morgen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798640",
+      "last_updated_date": "2024-12-18T16:22:53.798640",
       "translation": "jutro"
     },
     {
       "text": "bekommen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798645",
+      "last_updated_date": "2024-12-18T16:22:53.798645",
       "translation": "otrzymywać, dostawać"
     },
     {
       "text": "schicken",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798649",
+      "last_updated_date": "2024-12-18T16:22:53.798649",
       "translation": "wysłać, posyłać"
     },
     {
       "text": "die Frau",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798653",
+      "last_updated_date": "2024-12-18T16:22:53.798653",
       "translation": "Pani, kobieta"
     },
     {
       "text": "der Mann",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798657",
+      "last_updated_date": "2024-12-18T16:22:53.798657",
       "translation": "mężczyzna"
     },
     {
       "text": "gefallen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798662",
+      "last_updated_date": "2024-12-18T16:22:53.798662",
       "translation": "podobać się"
     },
     {
       "text": "tragen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798666",
+      "last_updated_date": "2024-12-18T16:22:53.798666",
       "translation": "nosić"
     },
     {
       "text": "waschen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798671",
+      "last_updated_date": "2024-12-18T16:22:53.798671",
       "translation": "myć, prać"
     },
     {
       "text": "geben",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798675",
+      "last_updated_date": "2024-12-18T16:22:53.798675",
       "translation": "dawać"
     },
     {
       "text": "helfen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798679",
+      "last_updated_date": "2024-12-18T16:22:53.798679",
       "translation": "pomagać"
     },
     {
       "text": "nehmen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798684",
+      "last_updated_date": "2024-12-18T16:22:53.798684",
       "translation": "brać"
     },
     {
       "text": "leise",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798690",
+      "last_updated_date": "2024-12-18T16:22:53.798690",
       "translation": "cichy, cicho"
     },
     {
       "text": "sicher",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798694",
+      "last_updated_date": "2024-12-18T16:22:53.798694",
       "translation": "pewny, bezpieczny, pewnie"
     },
     {
       "text": "vergessen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798698",
+      "last_updated_date": "2024-12-18T16:22:53.798698",
       "translation": "zapominać"
     },
     {
       "text": "schlecht",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798703",
+      "last_updated_date": "2024-12-18T16:22:53.798703",
       "translation": "zły, niedobry, marny"
     },
     {
       "text": "deshalb",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798707",
+      "last_updated_date": "2024-12-18T16:22:53.798707",
       "translation": "dlatego"
     },
     {
       "text": "die Brille",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798711",
+      "last_updated_date": "2024-12-18T16:22:53.798711",
       "translation": "okulary"
     }
   ],
-  "metadata": {
-    "lesson_date": null,
-    "data_submission_date": "2024-11-17T15:41:15.958072",
-    "description": null
+  "group": {
+    "name": "lesson_3",
+    "description": null,
+    "created_date": "2024-12-18T16:22:53.798712"
   }
 }

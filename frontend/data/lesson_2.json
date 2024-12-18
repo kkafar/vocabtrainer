@@ -2,438 +2,524 @@
   "entities": [
     {
       "text": "der Unterricht",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798039",
+      "last_updated_date": "2024-12-18T16:22:53.798039",
       "translation": "zajęcia"
     },
     {
       "text": "einkaufen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798045",
+      "last_updated_date": "2024-12-18T16:22:53.798045",
       "translation": "robić zakupy"
     },
     {
       "text": "ich gehe einkaufen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798053",
+      "last_updated_date": "2024-12-18T16:22:53.798053",
       "translation": "idę na zakupy"
     },
     {
       "text": "die Frage, -n",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798058",
+      "last_updated_date": "2024-12-18T16:22:53.798058",
       "translation": "pytanie"
     },
     {
       "text": "draußen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798063",
+      "last_updated_date": "2024-12-18T16:22:53.798063",
       "translation": "na zewnątrz"
     },
     {
       "text": "vor 2 Wochen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798067",
+      "last_updated_date": "2024-12-18T16:22:53.798067",
       "translation": "2 tygodnie temu"
     },
     {
       "text": "in 2 Wochen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798071",
+      "last_updated_date": "2024-12-18T16:22:53.798071",
       "translation": "za 2 tygodnie"
     },
     {
       "text": "Was für Filme magst du?",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798077",
+      "last_updated_date": "2024-12-18T16:22:53.798077",
       "translation": "Jakiego rodzaju filmu lubisz?"
     },
     {
       "text": "der Schauspieler",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798083",
+      "last_updated_date": "2024-12-18T16:22:53.798083",
       "translation": "aktor"
     },
     {
       "text": "benutzen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798088",
+      "last_updated_date": "2024-12-18T16:22:53.798088",
       "translation": "używać"
     },
     {
       "text": "meistens",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798092",
+      "last_updated_date": "2024-12-18T16:22:53.798092",
       "translation": "zwykle"
     },
     {
       "text": "ein paar",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798096",
+      "last_updated_date": "2024-12-18T16:22:53.798096",
       "translation": "kilka"
     },
     {
       "text": "am letzten Montag",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798101",
+      "last_updated_date": "2024-12-18T16:22:53.798101",
       "translation": "w ostatni poniedziałek"
     },
     {
       "text": "dieses Jahr",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798105",
+      "last_updated_date": "2024-12-18T16:22:53.798105",
       "translation": null
     },
     {
       "text": "schwierig",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798109",
+      "last_updated_date": "2024-12-18T16:22:53.798109",
       "translation": "trudny"
     },
     {
       "text": "(un)möglich",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798114",
+      "last_updated_date": "2024-12-18T16:22:53.798114",
       "translation": "(nie)możliwe"
     },
     {
       "text": "die Sekunde, -n",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798118",
+      "last_updated_date": "2024-12-18T16:22:53.798118",
       "translation": null
     },
     {
       "text": "Angst haben",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798122",
+      "last_updated_date": "2024-12-18T16:22:53.798122",
       "translation": "bać się"
     },
     {
       "text": "verlieren",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798127",
+      "last_updated_date": "2024-12-18T16:22:53.798127",
       "translation": "zgubić"
     },
     {
       "text": "auf jeden Fall",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798132",
+      "last_updated_date": "2024-12-18T16:22:53.798132",
       "translation": "w każdy razie"
     },
     {
       "text": "die Gewohnheit, -en",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798136",
+      "last_updated_date": "2024-12-18T16:22:53.798136",
       "translation": "nawyk"
     },
     {
       "text": "Inliner fahren",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798141",
+      "last_updated_date": "2024-12-18T16:22:53.798141",
       "translation": "jeździć na rolkach"
     },
     {
       "text": "ob",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798146",
+      "last_updated_date": "2024-12-18T16:22:53.798146",
       "translation": "czy // Można zacząć od tego pytanie? Ob …, czy po prostu tylko inwersja?"
     },
     {
       "text": "oder",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798150",
+      "last_updated_date": "2024-12-18T16:22:53.798150",
       "translation": "albo"
     },
     {
       "text": "zwischendrin",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798155",
+      "last_updated_date": "2024-12-18T16:22:53.798155",
       "translation": "w między czasie"
     },
     {
       "text": "Ich kann mich nicht genau erinnern.",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798160",
+      "last_updated_date": "2024-12-18T16:22:53.798160",
       "translation": "Nie pamiętam dokładnie."
     },
     {
       "text": "einen Termin vereinbaren",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798165",
+      "last_updated_date": "2024-12-18T16:22:53.798165",
       "translation": "umówić termin"
     },
     {
       "text": "Ich habe nicht genau gehört.",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798170",
+      "last_updated_date": "2024-12-18T16:22:53.798170",
       "translation": "Nie usłyszałem dokładnie."
     },
     {
       "text": "nennen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798175",
+      "last_updated_date": "2024-12-18T16:22:53.798175",
       "translation": "nazywać, wymieniać, podawać"
     },
     {
       "text": "Bis dann!",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798179",
+      "last_updated_date": "2024-12-18T16:22:53.798179",
       "translation": "na razie!"
     },
     {
       "text": "Arbeiten Sie zu dritt",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798184",
+      "last_updated_date": "2024-12-18T16:22:53.798184",
       "translation": "pracujcie w trójkach"
     },
     {
       "text": "das Personalpronomen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798188",
+      "last_updated_date": "2024-12-18T16:22:53.798188",
       "translation": "zaimek osobowy"
     },
     {
       "text": "die Form, Formen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798193",
+      "last_updated_date": "2024-12-18T16:22:53.798193",
       "translation": "forma (np. czasownika, ale chyba też “fizyczna”), kształt"
     },
     {
       "text": "andere",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798200",
+      "last_updated_date": "2024-12-18T16:22:53.798200",
       "translation": "inny, inna, inne"
     },
     {
       "text": "ander",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798204",
+      "last_updated_date": "2024-12-18T16:22:53.798204",
       "translation": "inny, drugi"
     },
     {
       "text": "Ergänzen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798210",
+      "last_updated_date": "2024-12-18T16:22:53.798210",
       "translation": "uzupełniać"
     },
     {
       "text": "die Endung, Endungen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798215",
+      "last_updated_date": "2024-12-18T16:22:53.798215",
       "translation": "końcówka"
     },
     {
       "text": "der Beruf",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798219",
+      "last_updated_date": "2024-12-18T16:22:53.798219",
       "translation": null
     },
     {
       "text": "passen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798224",
+      "last_updated_date": "2024-12-18T16:22:53.798224",
       "translation": "pasować, dobrze, leżeć"
     },
     {
       "text": "passen zu",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798228",
+      "last_updated_date": "2024-12-18T16:22:53.798228",
       "translation": "pasować do"
     },
     {
       "text": "das Geld, Gelder (?)",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798233",
+      "last_updated_date": "2024-12-18T16:22:53.798233",
       "translation": "pieniądze"
     },
     {
       "text": "die Straße",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798238",
+      "last_updated_date": "2024-12-18T16:22:53.798238",
       "translation": "droga, ulica"
     },
     {
       "text": "das Glas",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798243",
+      "last_updated_date": "2024-12-18T16:22:53.798243",
       "translation": "szklanka, słoik, kieliszek,"
     },
     {
       "text": "das Stift, Stifte",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798247",
+      "last_updated_date": "2024-12-18T16:22:53.798247",
       "translation": "ołówek, pisak,"
     },
     {
       "text": "der Computer",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798251",
+      "last_updated_date": "2024-12-18T16:22:53.798251",
       "translation": null
     },
     {
       "text": "das Medikament",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798256",
+      "last_updated_date": "2024-12-18T16:22:53.798256",
       "translation": "lekarstwo, medykament"
     },
     {
       "text": "die Rechnung",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798260",
+      "last_updated_date": "2024-12-18T16:22:53.798260",
       "translation": "rachunek"
     },
     {
       "text": "der Schlüssel, Schlüssel",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798264",
+      "last_updated_date": "2024-12-18T16:22:53.798264",
       "translation": "klucz"
     },
     {
       "text": "die Spritze",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798268",
+      "last_updated_date": "2024-12-18T16:22:53.798268",
       "translation": "strzykawka"
     },
     {
       "text": "die Tablette, -n",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798272",
+      "last_updated_date": "2024-12-18T16:22:53.798272",
       "translation": "tabletka"
     },
     {
       "text": "ordnen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798277",
+      "last_updated_date": "2024-12-18T16:22:53.798277",
       "translation": "porządkować, przyporządkować"
     },
     {
       "text": "die Ärztin",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798282",
+      "last_updated_date": "2024-12-18T16:22:53.798282",
       "translation": "lekarka"
     },
     {
       "text": "die Arzt",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798286",
+      "last_updated_date": "2024-12-18T16:22:53.798286",
       "translation": "lekarz"
     },
     {
       "text": "der Kellner",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798290",
+      "last_updated_date": "2024-12-18T16:22:53.798290",
       "translation": null
     },
     {
       "text": "die Studentin, -tinnen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798294",
+      "last_updated_date": "2024-12-18T16:22:53.798294",
       "translation": "studentka"
     },
     {
       "text": "der Artikel",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798299",
+      "last_updated_date": "2024-12-18T16:22:53.798299",
       "translation": "artykuł (gazeta), artykuł (w sklepie), produkt, rodzajnik"
     },
     {
       "text": "die Möglichket",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798303",
+      "last_updated_date": "2024-12-18T16:22:53.798303",
       "translation": "możliwość"
     },
     {
       "text": "mehrere",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798307",
+      "last_updated_date": "2024-12-18T16:22:53.798307",
       "translation": "kilka, wiele"
     },
     {
       "text": "die Nomen, Nomina",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798313",
+      "last_updated_date": "2024-12-18T16:22:53.798313",
       "translation": "rzeczownik"
     },
     {
       "text": "die Tabelle",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798319",
+      "last_updated_date": "2024-12-18T16:22:53.798319",
       "translation": null
     },
     {
       "text": "der Vergleich, -e",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798324",
+      "last_updated_date": "2024-12-18T16:22:53.798324",
       "translation": "porównanie"
     },
     {
       "text": "von Montag bis Freitag",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798328",
+      "last_updated_date": "2024-12-18T16:22:53.798328",
       "translation": null
     },
     {
       "text": "der Nachmittag",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798332",
+      "last_updated_date": "2024-12-18T16:22:53.798332",
       "translation": null
     },
     {
       "text": "frei haben",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798337",
+      "last_updated_date": "2024-12-18T16:22:53.798337",
       "translation": "mieć wolne"
     },
     {
       "text": "das Netzwerk, Netzwerke",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798342",
+      "last_updated_date": "2024-12-18T16:22:53.798342",
       "translation": "sieć (komputerowa też)"
     },
     {
       "text": "die Leute",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798346",
+      "last_updated_date": "2024-12-18T16:22:53.798346",
       "translation": "ludzie"
     },
     {
       "text": "verbinden",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798351",
+      "last_updated_date": "2024-12-18T16:22:53.798351",
       "translation": "łączyć, połączyć, chyba też opatrywać"
     },
     {
       "text": "richtig",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798356",
+      "last_updated_date": "2024-12-18T16:22:53.798356",
       "translation": "prawdziwy, prawidłowy, poprawny, naprawdę"
     },
     {
       "text": "kreuzen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798361",
+      "last_updated_date": "2024-12-18T16:22:53.798361",
       "translation": "krzyżować, stawiać krzyżyk"
     },
     {
       "text": "das Kreuz, -e",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798366",
+      "last_updated_date": "2024-12-18T16:22:53.798366",
       "translation": "krzyż"
     },
     {
       "text": "Wer",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798370",
+      "last_updated_date": "2024-12-18T16:22:53.798370",
       "translation": "kto"
     },
     {
       "text": "wirklich",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798375",
+      "last_updated_date": "2024-12-18T16:22:53.798375",
       "translation": "naprawdę, rzeczywiście, prawdziwy, rzeczywisty"
     },
     {
       "text": "der Satz, Sätze",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798379",
+      "last_updated_date": "2024-12-18T16:22:53.798379",
       "translation": "zdanie, stopa"
     },
     {
       "text": "das Zimmer",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798383",
+      "last_updated_date": "2024-12-18T16:22:53.798383",
       "translation": null
     },
     {
       "text": "die Zahl, -en",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798387",
+      "last_updated_date": "2024-12-18T16:22:53.798387",
       "translation": "liczba"
     },
     {
       "text": "zahlen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798391",
+      "last_updated_date": "2024-12-18T16:22:53.798391",
       "translation": "płacić"
     },
     {
       "text": "zählen",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798396",
+      "last_updated_date": "2024-12-18T16:22:53.798396",
       "translation": "liczyć, obejmować (grupa), liczyć się"
     },
     {
       "text": "der Würfel, -n,",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798401",
+      "last_updated_date": "2024-12-18T16:22:53.798401",
       "translation": "kostka, sześcian"
     },
     {
       "text": "die Aufgabe",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798406",
+      "last_updated_date": "2024-12-18T16:22:53.798406",
       "translation": "zadanie, funkcja"
     },
     {
       "text": "etwas aufgeben",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798410",
+      "last_updated_date": "2024-12-18T16:22:53.798410",
       "translation": "zrezygnować z czegoś"
     },
     {
       "text": "bedeuten",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798415",
+      "last_updated_date": "2024-12-18T16:22:53.798415",
       "translation": "znaczyć"
     },
     {
       "text": "die Bedeutung",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798419",
+      "last_updated_date": "2024-12-18T16:22:53.798419",
       "translation": "znaczenie"
     },
     {
       "text": "kopieren",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798423",
+      "last_updated_date": "2024-12-18T16:22:53.798423",
       "translation": "kopiować"
     },
     {
       "text": "das Wörterbuch",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798428",
+      "last_updated_date": "2024-12-18T16:22:53.798428",
       "translation": "słownik"
     },
     {
       "text": "das Lexikon",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798433",
+      "last_updated_date": "2024-12-18T16:22:53.798433",
       "translation": "—//—"
     },
     {
       "text": "das Brettspiel",
-      "plural_suffix": null,
+      "created_date": "2024-12-18T16:22:53.798439",
+      "last_updated_date": "2024-12-18T16:22:53.798439",
       "translation": "gra planszowa"
     }
   ],
-  "metadata": {
-    "lesson_date": null,
-    "data_submission_date": "2024-11-17T15:41:15.957812",
-    "description": null
+  "group": {
+    "name": "lesson_2",
+    "description": null,
+    "created_date": "2024-12-18T16:22:53.798440"
   }
 }
