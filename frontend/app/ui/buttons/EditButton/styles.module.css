@@ -1,5 +1,6 @@
 .editButtonBase {
   background-color: var(--color-on-primary);
   border-radius: var(--radius-full);
+  padding: var(--padding-small);
 }
 

@@ -20,3 +20,8 @@
 .gotItButtonColor {
   background-color: var(--success);
 }
+
+.cardButton {
+  font-size: var(--font-size-medium);
+  font-weight: 800;
+}

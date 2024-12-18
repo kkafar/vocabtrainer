@@ -13,28 +13,37 @@ import RotateIcon from "@/app/assets/rotate-ccw-icon.svg";
 import useItemSelector from "@/app/hooks/useItemSelector";
 import VocabCard from "@/app/ui/VocabWrapper/VocabCard";
 import { VocabEntity } from "@/app/lib/definitions";
+import clsx from 'clsx';
+
+function CardButton({ children, className, ...rest }: ButtonProps) {
+  return (
+    <RoundedButton className={clsx(styles.cardButton, className)} {...rest}>
+      {children}
+    </RoundedButton>
+  )
+}
 
 function ReturnButton(props: ButtonProps) {
   return (
-    <RoundedButton {...props} className={styles.returnButtonColor}>
+    <CardButton {...props} className={styles.returnButtonColor}>
       Return <RewindIcon />
-    </RoundedButton>
+    </CardButton>
   );
 }
 
 function RepeatButton(props: ButtonProps) {
   return (
-    <RoundedButton {...props} className={styles.repeatButtonColor}>
+    <CardButton {...props} className={styles.repeatButtonColor}>
       Repeat <RotateIcon />
-    </RoundedButton>
+    </CardButton>
   )
 }
 
 function GotItButton(props: ButtonProps) {
   return (
-    <RoundedButton {...props} className={styles.gotItButtonColor}>
+    <CardButton {...props} className={styles.gotItButtonColor}>
       Got it! <ThumbsUpIcon />
-    </RoundedButton>
+    </CardButton>
   )
 }
 

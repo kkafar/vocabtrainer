@@ -33,10 +33,13 @@ export default async function Home() {
                 'use server';
                 redirect('/cards');
               }}>
-                Card game <BookOpenIcon />
+                Card game <PlayCircleIcon />
               </MenuButton>
-              <MenuButton>
-                Vocabulary <PlayCircleIcon />
+              <MenuButton onClick={async () => {
+                'use server';
+                redirect('/vocabulary');
+              }}>
+                Vocabulary <BookOpenIcon />
               </MenuButton>
             </ButtonPanel>
           </div>

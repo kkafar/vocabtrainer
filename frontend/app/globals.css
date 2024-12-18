@@ -12,6 +12,7 @@
   --color-success: #A3E99D;
   --color-failure: #E9C59D;
   --color-icon-stroke: #1E1E1E;
+  --color-shadow: rgba(0, 0, 0, 0.25);
 
   /* Legacy naming */
   /* TODO: Migrate! */
@@ -58,6 +59,9 @@
   --font-size-3xlarge: 96px;
   --font-size-4xlarge: 128px;
 
+  /* Other styles */
+  --brightness-hover: 96%;
+
   /* Ugly global vars */
   --card-width: 40vw;
   --card-height: 35vh;
@@ -75,6 +79,8 @@
     --color-success: #375234;
     --color-failure: #786C5E;
     --color-icon-stroke: var(--color-text-on-bg);
+
+    --brightness-hover: 110%;
 
     /* Legacy naming, migrate! */
     --background: var(--color-bg-primary);
