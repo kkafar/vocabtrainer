@@ -1,14 +1,14 @@
 'use client';
 
 import React from "react";
-import { VocabEntity } from "@/app/lib/definitions";
+import { VocabularyItem } from "@/app/lib/definitions";
 import EditIcon from '@/app/assets/edit-icon.svg';
 import styles from './styles.module.css';
 import { useRouter } from "next/navigation";
 import RoundedButton from "../RoundedButton";
 
 export type EditButtonProps = {
-  itemId: VocabEntity['id']
+  itemId: VocabularyItem['id']
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export default function EditButton({ itemId, onClick, ...rest }: EditButtonProps): React.ReactNode {

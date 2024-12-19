@@ -12,7 +12,7 @@ import RewindIcon from "@/app/assets/rewind-icon.svg";
 import RotateIcon from "@/app/assets/rotate-ccw-icon.svg";
 import useItemSelector from "@/app/hooks/useItemSelector";
 import VocabCard from "@/app/ui/VocabWrapper/VocabCard";
-import { VocabEntity } from "@/app/lib/definitions";
+import { VocabularyItem } from "@/app/lib/definitions";
 import clsx from 'clsx';
 
 function CardButton({ children, className, ...rest }: ButtonProps) {
@@ -48,7 +48,7 @@ function GotItButton(props: ButtonProps) {
 }
 
 export type VocabItemCardSelectorProps = {
-  vocabularyItems: Array<VocabEntity>;
+  vocabularyItems: Array<VocabularyItem>;
 }
 
 export default function VocabItemCardSelector({ vocabularyItems }: VocabItemCardSelectorProps) {

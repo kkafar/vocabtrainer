@@ -1,6 +1,6 @@
 'use client';
 
-import { VocabEntity } from "@/app/lib/definitions";
+import { VocabularyItem } from "@/app/lib/definitions";
 import styles from "@/app/ui/VocabWrapper/styles.module.css";
 import clsx from "clsx";
 import { MouseEventHandler, useLayoutEffect, useState } from "react";
@@ -9,7 +9,7 @@ import CardToolbar from "@/app/ui/VocabWrapper/CardToolbar";
 import EyeIcon from "@/app/assets/eye-icon.svg"
 
 export type VocabCardProps = {
-  entity: VocabEntity;
+  entity: VocabularyItem;
 }
 
 type TranslationObstructorProps = {

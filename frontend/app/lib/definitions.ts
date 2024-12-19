@@ -1,20 +1,11 @@
-export interface VocabEntity {
-  id: number;
-  text: string;
-  plural_suffix?: string;
-  translation?: string;
-}
+import { z } from "zod";
+import { TableGroupAttributesSchema, TableVocabularyAttributesSchema } from './schemas';
+import { CamelCaseKeys } from "./type-magic";
 
-export interface LessonMetadata {
-  lesson_date?: string;
-  submission_date: string;
-  description?: string;
-}
+export type TableGroupAttributes = z.infer<typeof TableGroupAttributesSchema>;
+export type TableVocabularyAttributes = z.infer<typeof TableVocabularyAttributesSchema>;
 
-export interface LessonData {
-  entities: Array<VocabEntity>;
-  metadata: LessonMetadata;
-}
+export type VocabularyItem = CamelCaseKeys<TableVocabularyAttributes>;
+export type VocabularyItemGroup = CamelCaseKeys<TableGroupAttributes>;
 
-
-export type EmptyObject = Record<never, unknown>;
+export type EmptyObject = Record<never, never>;

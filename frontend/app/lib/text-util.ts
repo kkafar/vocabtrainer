@@ -1,4 +1,4 @@
-export function isStringBlank(str?: string): boolean {
+export function isStringBlank(str?: string | null): boolean {
   if (str == null) {
     return true;
   }
