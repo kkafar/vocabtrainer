@@ -4,6 +4,7 @@ import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
 import VocabItemCard from "@/app/ui/card/VocabItemCard";
 import { Suspense } from "react";
 import { OrbitProgress } from "react-loading-indicators";
+import FullScreenContainer from "../ui/layout/FullScreenContainer";
 
 function LoadingCard() {
   return (
@@ -13,14 +14,16 @@ function LoadingCard() {
 
 export default async function CardPage() {
   return (
-    <CenterYXContainer>
-      <div className={styles.columnFlexContainer}>
-        <div className={globalStyles.cardContainer}>
-          <Suspense fallback={<LoadingCard />}>
-            <VocabItemCard />
-          </Suspense>
+    <FullScreenContainer>
+      <CenterYXContainer>
+        <div className={styles.columnFlexContainer}>
+          <div className={globalStyles.cardContainer}>
+            <Suspense fallback={<LoadingCard />}>
+              <VocabItemCard />
+            </Suspense>
+          </div>
         </div>
-      </div>
-    </CenterYXContainer>
+      </CenterYXContainer>
+    </FullScreenContainer>
   );
 }

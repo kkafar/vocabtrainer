@@ -4,11 +4,11 @@ import { useActionState } from "react";
 import { State, updateVocabItem } from "@/app/lib/actions";
 import FormTextInput from "./FormTextInput";
 import InputList from "./InputList";
-import { VocabEntity } from "@/app/lib/definitions";
+import { VocabularyItem } from "@/app/lib/definitions";
 
 
 export interface VocabEditFormProps {
-  entity: VocabEntity;
+  entity: VocabularyItem;
   formId: string;
 }
 

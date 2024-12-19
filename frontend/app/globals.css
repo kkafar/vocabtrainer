@@ -4,14 +4,26 @@
 
 :root {
   /* Colors */
-  --background: #FCFBF9;
-  --text-on-background: #000000;
-  --text-on-primary: #000000;
-  --primary: #F1EFE0;
-  --on-primary: #D7D4C2;
-  --success: #A3E99D;
-  --failure: #E9C59D;
-  --icon-stroke: #1E1E1E;
+  --color-bg-primary: #FCFBF9;
+  --color-text-on-background: #000000;
+  --color-text-on-primary: #000000;
+  --color-primary: #F1EFE0;
+  --color-on-primary: #D7D4C2;
+  --color-success: #A3E99D;
+  --color-failure: #E9C59D;
+  --color-icon-stroke: #1E1E1E;
+  --color-shadow: rgba(0, 0, 0, 0.25);
+
+  /* Legacy naming */
+  /* TODO: Migrate! */
+  --background: var(--color-bg-primary);
+  --text-on-background: var(--color-text-on-bg);
+  --text-on-primary: var(--color-text-on-primary);
+  --primary: var(--color-primary);
+  --on-primary: var(--color-on-primary);
+  --success: var(--color-success);
+  --failure: var(--color-failure);
+  --icon-stroke: var(--color-icon-stroke);
 
   /* Radius */
   --radius-xsmall: 4px;
@@ -19,6 +31,7 @@
   --radius-medium: 12px;
   --radius-large: 16px;
   --radius-xlarge: 28px;
+  --radius-2xlarge: 48px;
   --radius-full: 1000px;
 
   /* Padding & margin */
@@ -27,12 +40,14 @@
   --padding-medium: 12px;
   --padding-large: 16px;
   --padding-xlarge: 28px;
+  --padding-2xlarge: 48px;
 
   --margin-xsmall: 4px;
   --margin-small: 8px;
   --margin-medium: 12px;
   --margin-large: 16px;
   --margin-xlarge: 28px;
+  --margin-2xlarge: 48px;
 
   /* Text */
   --font-size-xsmall: 12px;
@@ -40,6 +55,19 @@
   --font-size-medium: 24px;
   --font-size-large: 36px;
   --font-size-xlarge: 52px;
+  --font-size-2xlarge: 72px;
+  --font-size-3xlarge: 96px;
+  --font-size-4xlarge: 128px;
+
+  --font-weight-xthin: 300;
+  --font-weight-thin: 400;
+  --font-weight-medium: 500;
+  --font-weight-thick: 600;
+  --font-weight-xthick: 700;
+  --font-weight-2xthick: 800;
+
+  /* Other styles */
+  --brightness-hover: 96%;
 
   /* Ugly global vars */
   --card-width: 40vw;
@@ -47,27 +75,39 @@
 
   /* Global options */
   box-sizing: border-box;
-
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #333125;
-    --text-on-background: #BCB794;
-    --primary: #403C1C;
-    --on-primary: #6D6840;
-    --success: #375234;
-    --failure: #786C5E;
-    --icon-stroke: var(--text-on-background);
+    --color-bg-primary: #333125;
+    --color-text-on-bg: #BCB794;
+    --color-primary: #403C1C;
+    --color-on-primary: #6D6840;
+    --color-success: #375234;
+    --color-failure: #786C5E;
+    --color-icon-stroke: var(--color-text-on-bg);
+
+    --brightness-hover: 110%;
+
+    /* Legacy naming, migrate! */
+    --background: var(--color-bg-primary);
+    --text-on-background: var(--color-text-on-bg);
+    --text-on-primary: var(--color-text-on-primary);
+    --primary: var(--color-primary);
+    --on-primary: var(--color-on-primary);
+    --success: var(--color-success);
+    --failure: var(--color-failure);
+    --icon-stroke: var(--color-icon-stroke);
   }
 }
 
 body {
-  color: var(--text-on-background);
-  background: var(--background);
+  color: var(--color-text-on-bg);
+  background: var(--color-bg-primary);
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: var(--font-inter);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-medium);
 
   /* Global options */
-
 }

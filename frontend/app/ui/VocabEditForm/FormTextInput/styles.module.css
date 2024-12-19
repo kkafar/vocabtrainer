@@ -10,6 +10,7 @@
 }
 
 .textInput {
+  background-color: var(--color-bg-primary);
   margin-top: var(--margin-small);
   width: calc(var(--font-size-medium) * 40);
   font-size: var(--font-size-medium);
