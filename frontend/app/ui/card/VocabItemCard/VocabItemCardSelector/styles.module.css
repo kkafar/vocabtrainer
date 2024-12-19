@@ -23,5 +23,5 @@
 
 .cardButton {
   font-size: var(--font-size-medium);
-  font-weight: 800;
+  font-weight: var(--font-weight-xthick);
 }

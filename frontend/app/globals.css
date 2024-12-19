@@ -63,7 +63,8 @@
   --font-weight-thin: 400;
   --font-weight-medium: 500;
   --font-weight-thick: 600;
-  --font-weight-xthick: 800;
+  --font-weight-xthick: 700;
+  --font-weight-2xthick: 800;
 
   /* Other styles */
   --brightness-hover: 96%;
@@ -105,7 +106,8 @@ body {
   background: var(--color-bg-primary);
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: var(--font-inter);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-medium);
 
   /* Global options */
-
 }
