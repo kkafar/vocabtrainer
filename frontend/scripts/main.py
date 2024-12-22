@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from dataclasses import dataclass, field, asdict
 from typing import Optional, Any
-from datetime import date, datetime, timezone, tzinfo
+from datetime import date, datetime
 
 
 @dataclass
