@@ -1,14 +1,14 @@
 'use client';
 
 import React from "react";
-import { VocabEntity } from "@/app/lib/definitions";
+import { VocabularyItem } from "@/app/lib/definitions";
 
-type ItemId = VocabEntity['id'];
+type ItemId = VocabularyItem['id'];
 
 export interface CardSelectorState {
-  vocabItems: Array<VocabEntity>;
+  vocabItems: Array<VocabularyItem>;
   completed: Set<ItemId>;
-  currentItem: VocabEntity;
+  currentItem: VocabularyItem;
 }
 
 export interface CardSelector {
@@ -21,7 +21,7 @@ export interface CardSelector {
   readonly goBackward: () => void;
   readonly unmarkAndGoForward: () => void;
   readonly unmark: () => void;
-  readonly currentItem: () => VocabEntity;
+  readonly currentItem: () => VocabularyItem;
 }
 
 export type MarkingAction = 'none' | 'mark' | 'unmark';
@@ -64,7 +64,7 @@ function isGoingBackwardPossible(state: CardSelectorState) {
   // return state.completed.size > 0 && state.vocabItems.length > 0;
 }
 
-function isItemCompleted(state: CardSelectorState, item: VocabEntity): boolean {
+function isItemCompleted(state: CardSelectorState, item: VocabularyItem): boolean {
   return state.completed.has(item.id);
 }
 
@@ -182,7 +182,7 @@ function goBackwardBasedOnState(state: CardSelectorState): CardSelectorState {
   return goBackwardImpl(state) ?? state;
 }
 
-function currentItemBasedOnState(state: CardSelectorState): VocabEntity {
+function currentItemBasedOnState(state: CardSelectorState): VocabularyItem {
   if (!state.currentItem) {
     throw new Error("Invalid state! There must be a valid current item.");
   }

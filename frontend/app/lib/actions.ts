@@ -1,12 +1,9 @@
 'use server';
 
-import { z, ZodError } from "zod";
+import { z } from "zod";
 import createDatabaseConnection from "@/app/data/database";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { describe } from "node:test";
-import { parse } from "path";
-import { Newsreader } from "next/font/google";
 
 const VocabItemSchema = z.object({
   text: z.string().min(1),

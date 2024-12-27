@@ -14,6 +14,7 @@ import useItemSelector from "@/app/hooks/useItemSelector";
 import VocabCard from "@/app/ui/VocabWrapper/VocabCard";
 import { VocabularyItem } from "@/app/lib/definitions";
 import clsx from 'clsx';
+import { EmptyVocabularyListError } from '@/app/lib/error';
 
 function CardButton({ children, className, ...rest }: ButtonProps) {
   return (
@@ -53,6 +54,10 @@ export type VocabItemCardSelectorProps = {
 
 export default function VocabItemCardSelector({ vocabularyItems }: VocabItemCardSelectorProps) {
   'use client';
+
+  if (vocabularyItems.length === 0) {
+    throw new EmptyVocabularyListError("The vocabulary list is empty!");
+  }
 
   // This will error, because the components is prerendered on the server. Need to detect whether I'm on client or not
   // and execute this only then.
