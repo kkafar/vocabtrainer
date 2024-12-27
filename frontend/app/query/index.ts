@@ -1,7 +1,11 @@
-import { VocabularyItem } from "@/app/lib/definitions";
+import { VocabularyItem, VocabularyItemGroup } from "@/app/lib/definitions";
 
-export async function fetchWordListQuery(): Promise<VocabularyItem[]> {
-  const endpoint = "http://localhost:3000/api/routes/wordlist";
+export async function fetchWordListQuery(groupId?: VocabularyItemGroup['id']): Promise<VocabularyItem[]> {
+  const endpoint = new URL("http://localhost:3000/api/routes/wordlist");
+  if (groupId != null) {
+    endpoint.searchParams.append('groupId', groupId.toString());
+  }
+
   try {
     const response = await fetch(endpoint, { cache: 'force-cache' });
 
@@ -16,7 +20,7 @@ export async function fetchWordListQuery(): Promise<VocabularyItem[]> {
   }
 }
 
-export async function fetchGroupsQuery(): Promise<void> {
+export async function fetchGroupsQuery(): Promise<VocabularyItemGroup[]> {
   const endpoint = "http://localhost:3000/api/routes/groups";
   try {
     const response = await fetch(endpoint, { cache: 'force-cache' });

@@ -12,14 +12,18 @@ function LoadingCard() {
   );
 }
 
-export default async function CardPage() {
+export default async function CardPage({
+  searchParams,
+}: { searchParams: Promise<{ groupId?: number }> }) {
+  const groupId = (await searchParams).groupId;
+
   return (
     <FullScreenContainer>
       <CenterYXContainer>
         <div className={styles.columnFlexContainer}>
           <div className={globalStyles.cardContainer}>
             <Suspense fallback={<LoadingCard />}>
-              <VocabItemCard />
+              <VocabItemCard groupId={groupId} />
             </Suspense>
           </div>
         </div>

@@ -1,15 +1,25 @@
 import createDatabaseConnection from "@/app/data/database";
 import { EmptyObject, TableGroupAttributes, TableVocabularyAttributes, VocabularyItem, VocabularyItemGroup } from "./definitions";
 
-export async function fetchWordList(limit?: number): Promise<VocabularyItem[]> {
+export async function fetchWordList(limit?: number, groupId?: VocabularyItemGroup['id']): Promise<VocabularyItem[]> {
   try {
     const conn = createDatabaseConnection();
 
-    const query = conn.prepare<EmptyObject, TableVocabularyAttributes>(limit == null ? `
-      SELECT * FROM vocabulary;
-    ` : `
-      SELECT * FROM vocabulary ORDER BY text DESC LIMIT ${limit};
-    `);
+    let query;
+
+    if (groupId == null) {
+      query = conn.prepare<EmptyObject, TableVocabularyAttributes>(limit == null ? `
+        SELECT * FROM vocabulary;
+      ` : `
+        SELECT * FROM vocabulary ORDER BY text DESC LIMIT ${limit};
+      `);
+    } else {
+      query = conn.prepare<EmptyObject, TableVocabularyAttributes>(limit == null ? `
+        SELECT v.* FROM vocabulary as v JOIN vocabulary_grouping as vg ON item_id WHERE vg.group_id = ${groupId} AND vg.item_id = v.id;
+      ` : `
+        SELECT v.* FROM vocabulary as v JOIN vocabulary_grouping as vg ON item_id WHERE vg.group_id = ${groupId} AND vg.item_id = v.id ORDER BY v.text DESC LIMIT ${limit};
+      `);
+    }
 
     const queryResult = query.all({});
     return queryResult.map(row => {

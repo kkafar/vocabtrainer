@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: 1;
+  justify-content: space-between;
+  min-width: 30vw;
+  max-width: 50vw;
+}
+
+.horizontalSpacer {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metadataContainer {
+  display: flex;
+  font-size: var(--font-size-small);
+}
+
+.groupName {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-thick);
+}
+
+.metadataFont {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-thick);
+}
