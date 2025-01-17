@@ -46,7 +46,7 @@ async function Toolbar({ children }: ChildrenProp) {
 async function AddGroup() {
   return (
     <div>
-      <Link href='/vocabulary/add'>
+      <Link href='/vocabulary/add/group'>
         <IconButton Icon={PlusIcon} />
       </Link>
     </div>
