@@ -2,410 +2,410 @@
   "entities": [
     {
       "text": "der Reis",
-      "created_date": "2024-12-18T18:28:04.952714+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952714+01:00",
+      "created_date": "2025-02-01T22:35:44.306114+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306114+01:00",
       "translation": "ryż"
     },
     {
       "text": "die Krankschreibung",
-      "created_date": "2024-12-18T18:28:04.952723+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952723+01:00",
+      "created_date": "2025-02-01T22:35:44.306139+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306139+01:00",
       "translation": "zwolnienie lekarskie"
     },
     {
       "text": "zum Leben zurückkommen",
-      "created_date": "2024-12-18T18:28:04.952731+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952731+01:00",
+      "created_date": "2025-02-01T22:35:44.306161+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306161+01:00",
       "translation": "wrócić do życia"
     },
     {
       "text": "auf dem Laufenden sein",
-      "created_date": "2024-12-18T18:28:04.952738+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952738+01:00",
+      "created_date": "2025-02-01T22:35:44.306180+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306180+01:00",
       "translation": "być na bieżąco"
     },
     {
       "text": "nach dem Unterricht",
-      "created_date": "2024-12-18T18:28:04.952745+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952745+01:00",
+      "created_date": "2025-02-01T22:35:44.306197+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306197+01:00",
       "translation": "po lekcji"
     },
     {
       "text": "ein weich / hart gekochtes Ei",
-      "created_date": "2024-12-18T18:28:04.952752+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952752+01:00",
+      "created_date": "2025-02-01T22:35:44.306215+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306215+01:00",
       "translation": "jajko na twardo / miękko"
     },
     {
       "text": "das Fitnessstudio",
-      "created_date": "2024-12-18T18:28:04.952759+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952759+01:00",
+      "created_date": "2025-02-01T22:35:44.306234+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306234+01:00",
       "translation": "siłownia"
     },
     {
       "text": "entschieden",
-      "created_date": "2024-12-18T18:28:04.952768+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952768+01:00",
+      "created_date": "2025-02-01T22:35:44.306251+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306251+01:00",
       "translation": "zdecydowany"
     },
     {
       "text": "Urlaub machen",
-      "created_date": "2024-12-18T18:28:04.952775+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952775+01:00",
+      "created_date": "2025-02-01T22:35:44.306267+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306267+01:00",
       "translation": null
     },
     {
       "text": "Wen",
-      "created_date": "2024-12-18T18:28:04.952782+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952782+01:00",
+      "created_date": "2025-02-01T22:35:44.306285+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306285+01:00",
       "translation": "kiedy"
     },
     {
       "text": "der Pilz, -e",
-      "created_date": "2024-12-18T18:28:04.952788+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952788+01:00",
+      "created_date": "2025-02-01T22:35:44.306309+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306309+01:00",
       "translation": "grzyb"
     },
     {
       "text": "Pilze sammeln",
-      "created_date": "2024-12-18T18:28:04.952797+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952797+01:00",
+      "created_date": "2025-02-01T22:35:44.306328+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306328+01:00",
       "translation": "zbierać grzyby"
     },
     {
       "text": "der Pilzsammler",
-      "created_date": "2024-12-18T18:28:04.952805+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952805+01:00",
+      "created_date": "2025-02-01T22:35:44.306355+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306355+01:00",
       "translation": "grzybiarz"
     },
     {
       "text": "trocken",
-      "created_date": "2024-12-18T18:28:04.952812+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952812+01:00",
+      "created_date": "2025-02-01T22:35:44.306374+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306374+01:00",
       "translation": "suszyć"
     },
     {
       "text": "das Weihnachten",
-      "created_date": "2024-12-18T18:28:04.952819+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952819+01:00",
+      "created_date": "2025-02-01T22:35:44.306394+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306394+01:00",
       "translation": "Boże Narodzenie"
     },
     {
       "text": "der Heiligabend",
-      "created_date": "2024-12-18T18:28:04.952826+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952826+01:00",
+      "created_date": "2025-02-01T22:35:44.306411+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306411+01:00",
       "translation": "Wigilia"
     },
     {
       "text": "das Eingemachte",
-      "created_date": "2024-12-18T18:28:04.952832+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952832+01:00",
+      "created_date": "2025-02-01T22:35:44.306427+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306427+01:00",
       "translation": "przetwory"
     },
     {
       "text": "die Ernte, -n",
-      "created_date": "2024-12-18T18:28:04.952859+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952859+01:00",
+      "created_date": "2025-02-01T22:35:44.306446+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306446+01:00",
       "translation": "zbiór"
     },
     {
       "text": "abhängen von +Dat.",
-      "created_date": "2024-12-18T18:28:04.952867+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952867+01:00",
+      "created_date": "2025-02-01T22:35:44.306466+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306466+01:00",
       "translation": "zależeć od czegoś/kogoś"
     },
     {
       "text": "das Wetter",
-      "created_date": "2024-12-18T18:28:04.952873+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952873+01:00",
+      "created_date": "2025-02-01T22:35:44.306483+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306483+01:00",
       "translation": "pogoda"
     },
     {
       "text": "erwachsen",
-      "created_date": "2024-12-18T18:28:04.952880+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952880+01:00",
+      "created_date": "2025-02-01T22:35:44.306501+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306501+01:00",
       "translation": "dorosły"
     },
     {
       "text": "finden",
-      "created_date": "2024-12-18T18:28:04.952887+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952887+01:00",
+      "created_date": "2025-02-01T22:35:44.306519+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306519+01:00",
       "translation": "znajdować"
     },
     {
       "text": "langweilig",
-      "created_date": "2024-12-18T18:28:04.952894+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952894+01:00",
+      "created_date": "2025-02-01T22:35:44.306536+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306536+01:00",
       "translation": "nudny"
     },
     {
       "text": "nervig",
-      "created_date": "2024-12-18T18:28:04.952901+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952901+01:00",
+      "created_date": "2025-02-01T22:35:44.306554+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306554+01:00",
       "translation": "irytujący, denerwujący"
     },
     {
       "text": "werden",
-      "created_date": "2024-12-18T18:28:04.952908+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952908+01:00",
+      "created_date": "2025-02-01T22:35:44.306572+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306572+01:00",
       "translation": "stać się"
     },
     {
       "text": "Ich bin dessen nicht sicher.",
-      "created_date": "2024-12-18T18:28:04.952915+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952915+01:00",
+      "created_date": "2025-02-01T22:35:44.306591+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306591+01:00",
       "translation": "Nie jestem tego pewien."
     },
     {
       "text": "besonders",
-      "created_date": "2024-12-18T18:28:04.952921+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952921+01:00",
+      "created_date": "2025-02-01T22:35:44.306613+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306613+01:00",
       "translation": null
     },
     {
       "text": "etwas / nichts Besonderes",
-      "created_date": "2024-12-18T18:28:04.952930+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952930+01:00",
+      "created_date": "2025-02-01T22:35:44.306630+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306630+01:00",
       "translation": null
     },
     {
       "text": "Wen",
-      "created_date": "2024-12-18T18:28:04.952936+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952936+01:00",
+      "created_date": "2025-02-01T22:35:44.306648+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306648+01:00",
       "translation": "kogo"
     },
     {
       "text": "das Abendkleid, -er",
-      "created_date": "2024-12-18T18:28:04.952943+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952943+01:00",
+      "created_date": "2025-02-01T22:35:44.306666+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306666+01:00",
       "translation": "suknia wieczorowa"
     },
     {
       "text": "das Lied, -er",
-      "created_date": "2024-12-18T18:28:04.952950+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952950+01:00",
+      "created_date": "2025-02-01T22:35:44.306682+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306682+01:00",
       "translation": "piosenka"
     },
     {
       "text": "das Schiff, -e",
-      "created_date": "2024-12-18T18:28:04.952959+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952959+01:00",
+      "created_date": "2025-02-01T22:35:44.306707+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306707+01:00",
       "translation": "statek, okręt"
     },
     {
       "text": "der Fluss, Flüsse",
-      "created_date": "2024-12-18T18:28:04.952966+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952966+01:00",
+      "created_date": "2025-02-01T22:35:44.306727+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306727+01:00",
       "translation": "rzeka"
     },
     {
       "text": "der Hafen, Häfen",
-      "created_date": "2024-12-18T18:28:04.952974+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952974+01:00",
+      "created_date": "2025-02-01T22:35:44.306747+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306747+01:00",
       "translation": "port, przystań"
     },
     {
       "text": "die Brücke, -n",
-      "created_date": "2024-12-18T18:28:04.952982+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952982+01:00",
+      "created_date": "2025-02-01T22:35:44.306765+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306765+01:00",
       "translation": "most"
     },
     {
       "text": "farbig",
-      "created_date": "2024-12-18T18:28:04.952988+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952988+01:00",
+      "created_date": "2025-02-01T22:35:44.306782+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306782+01:00",
       "translation": "kolorowy"
     },
     {
       "text": "bestimmt",
-      "created_date": "2024-12-18T18:28:04.952996+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.952996+01:00",
+      "created_date": "2025-02-01T22:35:44.306801+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306801+01:00",
       "translation": "określony, uzgodniony, na pewno, z pewnością"
     },
     {
       "text": "die Bahn",
-      "created_date": "2024-12-18T18:28:04.953002+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953002+01:00",
+      "created_date": "2025-02-01T22:35:44.306819+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306819+01:00",
       "translation": "kolej"
     },
     {
       "text": "das Bett",
-      "created_date": "2024-12-18T18:28:04.953009+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953009+01:00",
+      "created_date": "2025-02-01T22:35:44.306838+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306838+01:00",
       "translation": "łóżko"
     },
     {
       "text": "der Stuhl",
-      "created_date": "2024-12-18T18:28:04.953017+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953017+01:00",
+      "created_date": "2025-02-01T22:35:44.306857+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306857+01:00",
       "translation": "krzesło"
     },
     {
       "text": "der Sessel",
-      "created_date": "2024-12-18T18:28:04.953023+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953023+01:00",
+      "created_date": "2025-02-01T22:35:44.306874+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306874+01:00",
       "translation": "fotel"
     },
     {
       "text": "das Ostern",
-      "created_date": "2024-12-18T18:28:04.953029+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953029+01:00",
+      "created_date": "2025-02-01T22:35:44.306891+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306891+01:00",
       "translation": "Wielkanoc"
     },
     {
       "text": "bereuen",
-      "created_date": "2024-12-18T18:28:04.953036+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953036+01:00",
+      "created_date": "2025-02-01T22:35:44.306917+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306917+01:00",
       "translation": "żałować"
     },
     {
       "text": "normalerweise",
-      "created_date": "2024-12-18T18:28:04.953046+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953046+01:00",
+      "created_date": "2025-02-01T22:35:44.306935+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306935+01:00",
       "translation": "normalnie"
     },
     {
       "text": "in Rente sein",
-      "created_date": "2024-12-18T18:28:04.953053+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953053+01:00",
+      "created_date": "2025-02-01T22:35:44.306954+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306954+01:00",
       "translation": "być na emeryturze"
     },
     {
       "text": "Ich kann es kaum erwarten.",
-      "created_date": "2024-12-18T18:28:04.953061+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953061+01:00",
+      "created_date": "2025-02-01T22:35:44.306973+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306973+01:00",
       "translation": "Nie mogę się doczekać."
     },
     {
       "text": "wahrscheinlich",
-      "created_date": "2024-12-18T18:28:04.953067+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953067+01:00",
+      "created_date": "2025-02-01T22:35:44.306991+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.306991+01:00",
       "translation": "prawdopodobnie"
     },
     {
       "text": "bei Vorbereitungen helfen",
-      "created_date": "2024-12-18T18:28:04.953075+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953075+01:00",
+      "created_date": "2025-02-01T22:35:44.307009+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307009+01:00",
       "translation": "pomagać w przygotowaniach"
     },
     {
       "text": "die Zeitung",
-      "created_date": "2024-12-18T18:28:04.953082+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953082+01:00",
+      "created_date": "2025-02-01T22:35:44.307027+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307027+01:00",
       "translation": "gazeta"
     },
     {
       "text": "je nachdem",
-      "created_date": "2024-12-18T18:28:04.953088+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953088+01:00",
+      "created_date": "2025-02-01T22:35:44.307054+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307054+01:00",
       "translation": "zależy"
     },
     {
       "text": "auf +Akk. ankommen",
-      "created_date": "2024-12-18T18:28:04.953096+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953096+01:00",
+      "created_date": "2025-02-01T22:35:44.307099+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307099+01:00",
       "translation": "zależeć od kogoś/czegoś"
     },
     {
       "text": "spät",
-      "created_date": "2024-12-18T18:28:04.953104+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953104+01:00",
+      "created_date": "2025-02-01T22:35:44.307142+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307142+01:00",
       "translation": "późno"
     },
     {
       "text": "jeder",
-      "created_date": "2024-12-18T18:28:04.953111+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953111+01:00",
+      "created_date": "2025-02-01T22:35:44.307187+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307187+01:00",
       "translation": "każdy"
     },
     {
       "text": "die Pflaume, -n",
-      "created_date": "2024-12-18T18:28:04.953118+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953118+01:00",
+      "created_date": "2025-02-01T22:35:44.307211+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307211+01:00",
       "translation": "śliwka"
     },
     {
       "text": "letztens",
-      "created_date": "2024-12-18T18:28:04.953124+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953124+01:00",
+      "created_date": "2025-02-01T22:35:44.307229+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307229+01:00",
       "translation": "ostatnio"
     },
     {
       "text": "die Kräuter",
-      "created_date": "2024-12-18T18:28:04.953131+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953131+01:00",
+      "created_date": "2025-02-01T22:35:44.307247+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307247+01:00",
       "translation": "zioła"
     },
     {
       "text": "das Getränk, -e",
-      "created_date": "2024-12-18T18:28:04.953139+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953139+01:00",
+      "created_date": "2025-02-01T22:35:44.307267+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307267+01:00",
       "translation": "napój"
     },
     {
       "text": "ein bisschen",
-      "created_date": "2024-12-18T18:28:04.953146+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953146+01:00",
+      "created_date": "2025-02-01T22:35:44.307286+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307286+01:00",
       "translation": "trochę"
     },
     {
       "text": "der Quark",
-      "created_date": "2024-12-18T18:28:04.953153+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953153+01:00",
+      "created_date": "2025-02-01T22:35:44.307312+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307312+01:00",
       "translation": "twaróg"
     },
     {
       "text": "das Spiegelei, -er",
-      "created_date": "2024-12-18T18:28:04.953162+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953162+01:00",
+      "created_date": "2025-02-01T22:35:44.307330+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307330+01:00",
       "translation": "jajko sadzone"
     },
     {
       "text": "ein weich / hart gekochtes Ei",
-      "created_date": "2024-12-18T18:28:04.953170+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953170+01:00",
+      "created_date": "2025-02-01T22:35:44.307350+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307350+01:00",
       "translation": "jajko na miękko / twardo"
     },
     {
       "text": "das Rührei",
-      "created_date": "2024-12-18T18:28:04.953177+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953177+01:00",
+      "created_date": "2025-02-01T22:35:44.307368+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307368+01:00",
       "translation": "jajecznica"
     },
     {
       "text": "die Brust, Brüste",
-      "created_date": "2024-12-18T18:28:04.953184+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953184+01:00",
+      "created_date": "2025-02-01T22:35:44.307387+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307387+01:00",
       "translation": "pierś"
     },
     {
       "text": "gebraten",
-      "created_date": "2024-12-18T18:28:04.953191+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953191+01:00",
+      "created_date": "2025-02-01T22:35:44.307406+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307406+01:00",
       "translation": "smażony"
     },
     {
       "text": "ein paar",
-      "created_date": "2024-12-18T18:28:04.953198+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953198+01:00",
+      "created_date": "2025-02-01T22:35:44.307423+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307423+01:00",
       "translation": "kilka"
     },
     {
       "text": "der Preis, -e",
-      "created_date": "2024-12-18T18:28:04.953204+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953204+01:00",
+      "created_date": "2025-02-01T22:35:44.307442+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307442+01:00",
       "translation": "cena"
     },
     {
       "text": "der Verkäufer",
-      "created_date": "2024-12-18T18:28:04.953213+01:00",
-      "last_updated_date": "2024-12-18T18:28:04.953213+01:00",
+      "created_date": "2025-02-01T22:35:44.307461+01:00",
+      "last_updated_date": "2025-02-01T22:35:44.307461+01:00",
       "translation": "sprzedawca"
     }
   ],
   "group": {
     "name": "lesson_6",
     "description": null,
-    "created_date": "2024-12-18T18:28:04.953223+01:00"
+    "created_date": "2025-02-01T22:35:44.307487+01:00"
   }
 }

@@ -82,3 +82,104 @@ export async function updateVocabItem(itemId: number, state: State, formData: Fo
     redirect(`/cards`);
   }
 }
+
+export type AddGroupFormState = {
+  errors?: {
+    name?: string[],
+    description?: string[],
+  },
+  message?: string | null,
+};
+
+const AddGroupDataSchema = z.object({
+  name: z.string().min(1),
+  description: z.string().optional(),
+})
+
+
+export async function createVocabItemGroup(state: AddGroupFormState, formData: FormData): Promise<AddGroupFormState> {
+  console.log('createVocabItemGroup');
+
+  const parsedData = AddGroupDataSchema.safeParse({
+    name: formData.get('groupName'),
+    description: formData.get('groupDesc'),
+  });
+
+  if (!parsedData.success) {
+    console.error('Error while parsing arguments')
+    return {
+      errors: parsedData.error.flatten().fieldErrors,
+      message: "Failed to parse form data",
+    };
+  }
+
+  const { name, description = null } = parsedData.data;
+
+  try {
+    const conn = createDatabaseConnection();
+    const query = conn.prepare<{ name: string, description: string | null, createdDate: string }>(`
+      INSERT INTO groups (name, description, created_date) VALUES ($name, $description, $createdDate);
+    `);
+
+    const createdDate = new Date().toISOString();
+    const info = query.run({
+      name: name,
+      description: description,
+      createdDate: createdDate,
+    });
+
+    if (info.changes !== 1) {
+      console.error(`Invalid count of affected rows! Expected: 1, got: ${info.changes}`);
+      return {
+        message: `Invalid count of affected rows! Expected: 1, got: ${info.changes}`,
+      };
+    }
+  } catch (error) {
+    console.error('Error thrown while inserting item into db', JSON.stringify(error));
+    return {
+      message: (error as Error).toString(),
+    }
+  } finally {
+    revalidatePath('/vocabulary');
+    redirect('/vocabulary');
+  }
+}
+
+export type AddVocabItemsFromFilesFormState = {
+  errors?: {
+    selectedFiles?: string[],
+  },
+  message?: string | null,
+};
+
+const AddVocabItemsFromFilesDataSchema = z.object({
+  selectedFiles: z.array(z.instanceof(File)),
+})
+
+
+export async function addVocabItemsFromFiles(state: AddVocabItemsFromFilesFormState, formData: FormData): Promise<AddVocabItemsFromFilesFormState> {
+  console.log(addVocabItemsFromFiles.name);
+
+  console.log('Selectedfiles', formData.get('selectedFiles'));
+
+  const parsedData = AddVocabItemsFromFilesDataSchema.safeParse({
+    selectedFiles: formData.get('selectedFiles'),
+  });
+
+  if (!parsedData.success) {
+    console.error('Failed to parse form data');
+    return {
+      errors: parsedData.error.flatten().fieldErrors,
+      message: 'Failed to parse files selected by user. Maybe "selectedFiles" field was missing?',
+    }
+  }
+
+  const { selectedFiles } = parsedData.data;
+
+  console.log('Properly received files to parse');
+
+  return {
+    message: 'success'
+  }
+}
+

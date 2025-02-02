@@ -3,22 +3,11 @@ import { lessonOne, testItemGroup } from '../data/initdata';
 import createDatabaseConnection from '../data/database';
 import featureFlags from '@/app/featureflags';
 import { z } from 'zod';
+import { TableGroupAttributesSchema, TableVocabularyAttributesSchema } from '../lib/schemas';
+import { TableGroupAttributes } from '../lib/definitions';
 
-const TableGroupSchema = z.object({
-  id: z.number().int().min(0),
-  name: z.string().min(1),
-  description: z.string().optional().nullable(),
-  created_date: z.string().datetime({ offset: true }),
-});
-
-const VocabularyItemSeedSchema = z.object({
-  text: z.string().min(1),
-  translation: z.string().optional().nullable(),
-  created_date: z.string().datetime({ offset: true }),
-  last_updated_date: z.string().datetime({ offset: true }),
-});
-
-const VocabularyGroupSeedSchema = TableGroupSchema.omit({ id: true });
+const VocabularyItemSeedSchema = TableVocabularyAttributesSchema.omit({ id: true });
+const VocabularyGroupSeedSchema = TableGroupAttributesSchema.omit({ id: true });
 
 const VocabularySeedSchema = z.object({
   entities: z.array(VocabularyItemSeedSchema),
@@ -26,7 +15,6 @@ const VocabularySeedSchema = z.object({
 });
 
 type VocabularyItemSeed = z.infer<typeof VocabularyItemSeedSchema>;
-type TableGroupAttrs = z.infer<typeof TableGroupSchema>;
 type VocabularyGroupSeed = z.infer<typeof VocabularyGroupSeedSchema>;
 type VocabularySeed = z.infer<typeof VocabularySeedSchema>;
 
@@ -124,7 +112,7 @@ async function seedVocabularyGrouping(db: DatabaseType, data: VocabularySeed) {
 
   // // First we need to have the group id
   const groupQuery = db.prepare(`SELECT id FROM groups WHERE name = ?`);
-  const groupQueryResult = groupQuery.get([data.group.name]) as Pick<TableGroupAttrs, 'id'> | undefined;
+  const groupQueryResult = groupQuery.get([data.group.name]) as Pick<TableGroupAttributes, 'id'> | undefined;
 
   if (groupQueryResult === undefined) {
     throw Error(`Seems that no group with name ${data.group.name} is currently in database`);

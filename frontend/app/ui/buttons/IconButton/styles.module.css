@@ -1,0 +1,5 @@
+.buttonBase {
+  background-color: var(--color-on-primary);
+  border-radius: 1000px;
+  padding: var(--padding-small);
+}

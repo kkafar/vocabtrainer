@@ -21,3 +21,23 @@
   flex-direction: column;
   align-items: center;
 }
+
+.menuItemButton {
+  font-size: var(--font-size-large);
+  font-weight: 800;
+  background-color: var(--color-primary);
+}
+
+.menuItemButtonInnerContainer {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-large);
+}
+
+.separator {
+  margin-top: var(--margin-xlarge);
+}
+

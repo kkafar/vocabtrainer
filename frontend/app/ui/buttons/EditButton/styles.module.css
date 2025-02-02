@@ -1,10 +1,6 @@
 .editButtonBase {
-  background-color: var(--on-primary);
+  background-color: var(--color-on-primary);
   border-radius: var(--radius-full);
-  padding: var(--padding-large);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: var(--padding-small);
 }
 
-.editButtonBase:hover {
-  filter: brightness(96%);
-}

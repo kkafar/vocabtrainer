@@ -1,15 +1,21 @@
+#!/usr/bin/env python3.12
+
 import argparse
-from collections.abc import Mapping
+from collections.abc import Callable, Mapping
 import json
 from pathlib import Path
 from dataclasses import dataclass, field, asdict
+from sys import stdout
 from typing import Optional, Any
-from datetime import date, datetime, timezone, tzinfo
+from datetime import date, datetime
 
 
 @dataclass
 class Args:
     files: list[Path]
+    stdout: bool
+    camel_case: bool
+    pretty: bool
 
 
 @dataclass
@@ -77,6 +83,10 @@ def normalize_to_camel_case(mapping: Mapping[str, Any]) -> Mapping[str, Any]:
     }
 
 
+def normalize_identity(mapping: Mapping[str, Any]) -> Mapping[str, Any]:
+    return mapping
+
+
 def build_cli():
     parser = argparse.ArgumentParser(
         prog='Converter',
@@ -84,6 +94,9 @@ def build_cli():
     )
 
     parser.add_argument('files', nargs='+', help='List of files to convert', type=Path)
+    parser.add_argument('--stdout', action='store_true', default=False, required=False, help="If set, the output will be printed to stdout instead of individual files")
+    parser.add_argument('--camel-case', action='store_true', default=False, required=False, help="The keys in output JSON should be in CamelCase")
+    parser.add_argument('--pretty', default=True, required=False, action=argparse.BooleanOptionalAction, help="Format output JSON")
 
     return parser
 
@@ -108,7 +121,7 @@ def validate_args(args: Optional[argparse.Namespace]) -> ArgsValidationResult:
 def parse_line(raw_entity: str) -> Optional[VocabItem]:
     partitioned = raw_entity.split(' - ')
     partitioned = list(map(str.strip, partitioned))
-    print(partitioned)
+    # print(partitioned)
 
     creation_date = datetime.now().astimezone()
     if len(partitioned) == 2:
@@ -160,28 +173,44 @@ def datetime_serializer(maybe_datetime: Any):
 
 
 def process_filelist(files: list[Path]) -> list[VocabFileModel]:
-    item_group = list(map(process_file, files))
-    for vocab_item in item_group:
-        print(vocab_item)
+    return list(map(process_file, files))
 
-    for (item_group_path, item_group_model) in zip(files, item_group):
+
+def save_to_disk(files: list[Path], item_groups: list[VocabFileModel], conversion_fn: Callable[[Any], Mapping[str, Any]] = asdict):
+    for (item_group_path, item_group_model) in zip(files, item_groups):
         converted_path = item_group_path.with_suffix('.json')
         with open(converted_path, 'w+', encoding='utf-8') as writer:
             # We need to pass `default` to ensure dates are converted properly.
             # Without `ensure_ascii=False` polish / german characters won't be converted correctly.
-            json.dump(asdict(item_group_model), writer, indent=2, default=datetime_serializer, ensure_ascii=False)
+            json.dump(conversion_fn(item_group_model), writer, indent=2, default=datetime_serializer, ensure_ascii=False)
 
-    return item_group
+
+def print_to_stdout(files: list[Path], item_groups: list[VocabFileModel], conversion_fn: Callable[[Any], Mapping[str, Any]] = asdict, pretty_print: bool = True):
+    indentation = 2 if pretty_print else None
+    json.dump(list(map(conversion_fn, item_groups)), stdout, indent=indentation, default=datetime_serializer, ensure_ascii=False)
 
 
 def main():
-    parseResult: ArgsValidationResult = validate_args(build_cli().parse_args())
+    parseResult: ArgsValidationResult[Args] = validate_args(build_cli().parse_args())
 
     if not parseResult.success:
         print(parseResult.errors)
         exit(1)
 
-    _ = process_filelist(parseResult.args.files)
+    args = parseResult.args
+
+    item_groups = process_filelist(args.files)
+
+    normalisation_fn = normalize_to_camel_case if args.camel_case else normalize_identity
+
+    def conversion_fn(obj):
+        return normalisation_fn(asdict(obj))
+
+    if parseResult.args.stdout:
+        print_to_stdout(args.files, item_groups, conversion_fn, args.pretty)
+    else:
+        save_to_disk(args.files, item_groups, conversion_fn)
+
 
 if __name__ == '__main__':
     main()

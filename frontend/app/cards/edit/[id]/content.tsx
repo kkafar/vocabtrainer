@@ -8,6 +8,7 @@ import styles from './styles.module.css';
 import RewindIcon from "@/app/assets/rewind-icon.svg";
 import SubmitButton from "@/app/ui/buttons/SubmitButton";
 import { redirect } from "next/navigation";
+import FullScreenContainer from "@/app/ui/layout/FullScreenContainer";
 
 export type EditPageContentProps = {
   itemId: number;
@@ -23,23 +24,25 @@ export default async function EditPageContent({ itemId }: EditPageContentProps) 
   }
 
   return (
-    <CenterYXContainer>
-      <div className={styles.columnFlexContainer}>
-        <FlexibleCard>
-          <VocabEditForm formId="editForm" entity={entity}/>
-        </FlexibleCard>
-        <div className={styles.panelSpacer}>
-          <ButtonPanel>
-            <RoundedButton onClick={async () => {
-              'use server';
-              redirect('/cards');
-            }}>
-              Cancel <RewindIcon />
-            </RoundedButton>
-            <SubmitButton form="editForm" />
-          </ButtonPanel>
+    <FullScreenContainer>
+      <CenterYXContainer>
+        <div className={styles.columnFlexContainer}>
+          <FlexibleCard>
+            <VocabEditForm formId="editForm" entity={entity}/>
+          </FlexibleCard>
+          <div className={styles.panelSpacer}>
+            <ButtonPanel>
+              <RoundedButton onClick={async () => {
+                'use server';
+                redirect('/cards');
+              }}>
+                Cancel <RewindIcon />
+              </RoundedButton>
+              <SubmitButton form="editForm" />
+            </ButtonPanel>
+          </div>
         </div>
-      </div>
-    </CenterYXContainer>
+      </CenterYXContainer>
+    </FullScreenContainer>
   );
 }

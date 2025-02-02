@@ -12,38 +12,52 @@ import RewindIcon from "@/app/assets/rewind-icon.svg";
 import RotateIcon from "@/app/assets/rotate-ccw-icon.svg";
 import useItemSelector from "@/app/hooks/useItemSelector";
 import VocabCard from "@/app/ui/VocabWrapper/VocabCard";
-import { VocabEntity } from "@/app/lib/definitions";
+import { VocabularyItem } from "@/app/lib/definitions";
+import clsx from 'clsx';
+import { EmptyVocabularyListError } from '@/app/lib/error';
+
+function CardButton({ children, className, ...rest }: ButtonProps) {
+  return (
+    <RoundedButton className={clsx(styles.cardButton, className)} {...rest}>
+      {children}
+    </RoundedButton>
+  )
+}
 
 function ReturnButton(props: ButtonProps) {
   return (
-    <RoundedButton {...props} className={styles.returnButtonColor}>
+    <CardButton {...props} className={styles.returnButtonColor}>
       Return <RewindIcon />
-    </RoundedButton>
+    </CardButton>
   );
 }
 
 function RepeatButton(props: ButtonProps) {
   return (
-    <RoundedButton {...props} className={styles.repeatButtonColor}>
+    <CardButton {...props} className={styles.repeatButtonColor}>
       Repeat <RotateIcon />
-    </RoundedButton>
+    </CardButton>
   )
 }
 
 function GotItButton(props: ButtonProps) {
   return (
-    <RoundedButton {...props} className={styles.gotItButtonColor}>
+    <CardButton {...props} className={styles.gotItButtonColor}>
       Got it! <ThumbsUpIcon />
-    </RoundedButton>
+    </CardButton>
   )
 }
 
 export type VocabItemCardSelectorProps = {
-  vocabularyItems: Array<VocabEntity>;
+  vocabularyItems: Array<VocabularyItem>;
 }
 
 export default function VocabItemCardSelector({ vocabularyItems }: VocabItemCardSelectorProps) {
   'use client';
+
+  if (vocabularyItems.length === 0) {
+    throw new EmptyVocabularyListError("The vocabulary list is empty!");
+  }
 
   // This will error, because the components is prerendered on the server. Need to detect whether I'm on client or not
   // and execute this only then.
