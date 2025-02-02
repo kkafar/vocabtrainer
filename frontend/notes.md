@@ -41,12 +41,12 @@ Gdzie powinny żyć przyciski? Jeszcze nie jestem pewien.
 2. [ ] Chcę móc wybrać jakich słów się uczę - na podstawie grupy np. tylko warzywa i owoce, albo tylko dom, przyimki, itd. 
 3. [ ] Wobec tego każdy item może mieć grupę (np. lekcja, dodatkowe, albo null - może nie być grupy ^)
 4. [ ] każdy item powinien mieć kategorię, bądź być nieskategoryzowany - myślę, że to powinno być coś w stylu słownictwo / gramatyka.
-5. [ ] Każdy item powinien mieć datę dodania,
-6. [ ] Każdy item powinien mieć tłumaczenie,
-7. [ ] Każdy item powinien mieć swój tekst,
+5. [x] Każdy item powinien mieć datę dodania,
+6. [x] Każdy item powinien mieć tłumaczenie,
+7. [x] Każdy item powinien mieć swój tekst,
 8. [ ] Każdy item powinien mieć statystyki - ile razy było "got it", ile razy było "repeat",
 9. [ ] Powinna być możliwość zalogowania się! Statystyki powinny być śledzone dla danego użytkownika,
-10. [ ] Powinna być możliwość przeglądania słów po grupie / kategori,
+10. [ ] Powinna być możliwość przeglądania słów po grupie / kategorii,
 11. [ ] Powinna byc możliwość dodawania / usuwania grup
 12. [ ] Powinna być możliwość dodawania / usuwania słownictwa (vocab item)
 13. [ ] Powinna być możliwość zmieniania grup dla słownictwa

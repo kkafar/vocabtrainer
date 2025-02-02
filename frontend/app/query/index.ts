@@ -35,3 +35,4 @@ export async function fetchGroupsQuery(): Promise<VocabularyItemGroup[]> {
     throw new Error(`Failed to fetch groups information from server with error: ${error}`, { cause: error });
   }
 }
+

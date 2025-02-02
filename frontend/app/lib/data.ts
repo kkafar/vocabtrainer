@@ -59,4 +59,3 @@ export async function fetchGroups(): Promise<VocabularyItemGroup[]> {
     throw Error("Error while fetchin groups", { cause: error });
   }
 }
-
