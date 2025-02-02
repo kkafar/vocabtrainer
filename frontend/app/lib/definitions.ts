@@ -8,4 +8,7 @@ export type TableVocabularyAttributes = z.infer<typeof TableVocabularyAttributes
 export type VocabularyItem = CamelCaseKeys<TableVocabularyAttributes>;
 export type VocabularyItemGroup = CamelCaseKeys<TableGroupAttributes>;
 
+export type VocabularyItemWoId = Omit<VocabularyItem, 'id'>;
+export type VocabularyItemGroupWoId = Omit<VocabularyItemGroup, 'id'>;
+
 export type EmptyObject = Record<never, never>;
