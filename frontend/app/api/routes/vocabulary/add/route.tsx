@@ -4,12 +4,10 @@ import { NextRequest } from "next/server";
 import { nanoid } from "nanoid";
 import { VocabularyItem, VocabularyItemGroup } from "@/app/lib/definitions";
 import createDatabaseConnection from "@/app/data/database";
-import { LegacyRef } from "react";
 
 function parseVocabularyFile(path: string) {
   const stdout_content = execSync(`./scripts/main.py --stdout --camel-case --no-pretty ${path}`);
   const object = JSON.parse(stdout_content.toString());
-  console.log(object);
   return object;
 }
 

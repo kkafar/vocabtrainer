@@ -22,7 +22,7 @@ async function seedVocabulary(db: DatabaseType, data: VocabularySeed) {
   const createTableStmt = db.prepare(`
     CREATE TABLE IF NOT EXISTS vocabulary (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
-      text TEXT NOT NULL CHECK (length(text) > 0),
+      text TEXT NOT NULL UNIQUE CHECK (length(text) > 0),
       translation TEXT,
       created_date TEXT NOT NULL,
       last_updated_date TEXT NOT NULL
