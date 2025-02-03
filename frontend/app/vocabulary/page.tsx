@@ -11,7 +11,7 @@ import PlusIcon from '@/app/assets/plus-icon.svg';
 
 function VocabularyGroupListItem({ group }: { group: VocabularyItemGroup }) {
   return (
-    <Link href={`/cards?groupId=${group.id}`} >
+    <Link href={`/vocabulary/group/${group.id}`} >
       <GroupCard group={group} />
     </Link>
   );
