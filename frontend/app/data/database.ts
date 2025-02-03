@@ -12,6 +12,10 @@ export interface DataRepository {
   insertIntoVocabularyGrouping(grouping: VocabularyGrouping): Database.RunResult;
   insertAllIntoVocabularyGrouping(groupings: Array<VocabularyGrouping>): void;
 
+  // TODO: This MUST also take lastUpdatedDate. I'm not sure whether whether the DataRepository should guard
+  // this field semantics and update this field whenever update is made or require user to pass the value.
+  updateVocabularyByIdWithTextAndTranslation(params: Pick<VocabularyItem, 'id' | 'text' | 'translation'>): Database.RunResult;
+
   findAllVocabularyItems(): Array<VocabularyItem>;
   findAllVocabularyItemsOrderByLimit(column: keyof TableVocabularyAttributes, limit: number): Array<VocabularyItem>;
   findAllVocabItemsGroupIdEquals(groupId: number): Array<VocabularyItem>;
@@ -20,19 +24,8 @@ export interface DataRepository {
   findGroupByName(name: string): VocabularyItemGroup | undefined;
   findAllGroups(): VocabularyItemGroup[];
 
-
   // These should be moved from this interface later (so that these methods are not public)
   createSchema(): void;
-}
-
-export default function createDatabaseConnection(): DatabaseType {
-  const dbPath = process.env.SQLITE_DB_PATH;
-
-  if (dbPath == null || isStringBlank(dbPath)) {
-    throw new Error("Invalid environment setup: missing SQLITE_DB_PATH env variable");
-  }
-
-  return new Database(dbPath);
 }
 
 export function getDataRepository(): DataRepository {
@@ -79,8 +72,11 @@ class SqliteRepository implements DataRepository {
   }
 
   public insertAllIntoVocabularyGrouping(groupings: Array<VocabularyGrouping>): void {
-    console.log(groupings);
     this.insertAllInSingleTransaction(this.prepareInsertIntoVocabularyGroupingStmt(), groupings);
+  }
+
+  public updateVocabularyByIdWithTextAndTranslation(params: Pick<VocabularyItem, 'id' | 'text' | 'translation'>): Database.RunResult {
+    return this.prepareUpdateVocabularyByIdWithTextAndTranslationStmt().run(params);
   }
 
   public findGroupByName(name: string): VocabularyItemGroup | undefined {
@@ -119,6 +115,10 @@ class SqliteRepository implements DataRepository {
     return this.conn.prepare<VocabularyGrouping>(this.insertIntoVocabularyGroupingStmt());
   }
 
+  private prepareUpdateVocabularyByIdWithTextAndTranslationStmt(): StatementType<[Pick<VocabularyItem, 'id' | 'text' | 'translation'>]> {
+    return this.conn.prepare<Pick<VocabularyItem, 'id' | 'text' | 'translation'>>(this.updateVocabularyByIdWithTextAndTranslationStmt());
+  }
+
   private prepareFindGroupByNameStmt(): StatementType<[Pick<VocabularyItemGroup, 'name'>], VocabularyItemGroup | undefined> {
     return this.conn.prepare<Pick<VocabularyItemGroup, 'name'>, VocabularyItemGroup | undefined>(this.findGroupByNameStmt());
   }
@@ -153,6 +153,14 @@ class SqliteRepository implements DataRepository {
 
   private insertIntoVocabularyGroupingStmt(): string {
     return "INSERT INTO vocabulary_grouping (item_id, group_id) VALUES ($itemId, $groupId);";
+  }
+
+  private updateVocabularyByIdWithTextAndTranslationStmt(): string {
+    return `
+      UPDATE vocabulary
+      SET text = $text, translation = $translation
+      WHERE id = $id;
+    `
   }
 
   private findGroupByNameStmt(): string {
