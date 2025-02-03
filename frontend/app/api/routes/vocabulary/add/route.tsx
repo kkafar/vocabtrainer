@@ -2,8 +2,9 @@ import { execSync } from "child_process";
 import fs from "fs/promises";
 import { NextRequest } from "next/server";
 import { nanoid } from "nanoid";
-import { VocabularyItem, VocabularyItemGroup } from "@/app/lib/definitions";
-import createDatabaseConnection from "@/app/data/database";
+import { VocabularyItemGroupWoId, VocabularyItemWoId } from "@/app/lib/definitions";
+import { getDataRepository } from "@/app/data/database";
+import { SqliteError } from 'better-sqlite3';
 
 function parseVocabularyFile(path: string) {
   const stdout_content = execSync(`./scripts/main.py --stdout --camel-case --no-pretty ${path}`);
@@ -29,9 +30,6 @@ async function saveFileToFolder(file: File, folder: string) {
   return path;
 }
 
-type VocabularyItemRecord = Omit<VocabularyItem, 'id'>;
-type VocabularyGroupRecord = Omit<VocabularyItemGroup, 'id'>;
-
 export async function POST(request: NextRequest) {
   const data  = await request.formData();
 
@@ -50,7 +48,7 @@ export async function POST(request: NextRequest) {
   const uid = nanoid();
   const tmpFolder = `/var/tmp/vocabtrainer/session-${uid}`;
 
-  type OutputType = Array<{ entities: Array<VocabularyItemRecord>, group: VocabularyGroupRecord }>;
+  type OutputType = Array<{ entities: Array<VocabularyItemWoId>, group: VocabularyItemGroupWoId }>;
   type LegacyOutputType = Array<OutputType>;
 
   let parsingOutput: LegacyOutputType;
@@ -73,13 +71,12 @@ export async function POST(request: NextRequest) {
         return 'not-a-file';
       }
     });
-
     await rmTmpFolder(tmpFolder);
-
   } catch (error) {
     // Server error
     console.error('Server error', error);
-    return new Response(null, { status: 500 });
+    return new Response(undefined, { status: 500 });
+  } finally {
   }
 
 
@@ -92,24 +89,18 @@ export async function POST(request: NextRequest) {
 
   // save data to db
   try {
-    const conn = createDatabaseConnection();
-
-    const query = conn.prepare<VocabularyItemRecord>(`
-      INSERT INTO vocabulary (text, translation, created_date, last_updated_date) VALUES ($text, $translation, $createdDate, $lastUpdatedDate);
-    `);
-
-    const transaction = conn.transaction((output: OutputType) => {
-      output.forEach((group: OutputType[0]) => {
-        group.entities.forEach(entity => query.run(entity));
-      })
-    });
-
-    transaction(preparedData);
-
+    const repo = getDataRepository();
+    repo.insertAllIntoVocabulary(preparedData.map(data => data.entities).flat(1));
   } catch (error) {
+    const errorAsJson = JSON.stringify(error);
+    if (error instanceof SqliteError) {
+      console.error('DB operation error', errorAsJson);
+      return new Response(errorAsJson, { status: 400 })
+    }
+
     console.error('Server error', error);
-    return new Response(null, { status: 500 });
+    return new Response(errorAsJson, { status: 500 });
   }
 
-  return new Response(null, { status: 200 });
+  return new Response(undefined, { status: 200 });
 }

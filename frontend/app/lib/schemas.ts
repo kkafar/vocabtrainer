@@ -15,3 +15,7 @@ export const TableVocabularyAttributesSchema = z.object({
   last_updated_date: z.string().datetime({ offset: true }),
 });
 
+export const TableVocabularyGroupingSchema = z.object({
+  item_id: z.number().int().min(0),
+  group_id: z.number().int().min(0),
+});

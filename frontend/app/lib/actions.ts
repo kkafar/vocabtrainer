@@ -1,7 +1,7 @@
 'use server';
 
 import { z } from "zod";
-import createDatabaseConnection from "@/app/data/database";
+import { getDataRepository } from "@/app/data/database";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
@@ -42,19 +42,9 @@ export async function updateVocabItem(itemId: number, state: State, formData: Fo
   // const date = new Date().toISOString();
 
   try {
-    const conn = createDatabaseConnection();
+    const repo = getDataRepository();
 
-    const query = conn.prepare<{ text: string, translation: string, id: number }>(`
-      UPDATE vocabulary
-      SET text = $text, translation = $translation
-      WHERE id = $id;
-    `);
-
-    const info = query.run({
-      text,
-      translation,
-      id: itemId,
-    });
+    const info = repo.updateVocabularyByIdWithTextAndTranslation({ id: itemId, text, translation });
 
     if (info.changes !== 1) {
       console.error('Error while inserting items to db');
@@ -116,17 +106,10 @@ export async function createVocabItemGroup(state: AddGroupFormState, formData: F
   const { name, description = null } = parsedData.data;
 
   try {
-    const conn = createDatabaseConnection();
-    const query = conn.prepare<{ name: string, description: string | null, createdDate: string }>(`
-      INSERT INTO groups (name, description, created_date) VALUES ($name, $description, $createdDate);
-    `);
+    const repo = getDataRepository();
 
     const createdDate = new Date().toISOString();
-    const info = query.run({
-      name: name,
-      description: description,
-      createdDate: createdDate,
-    });
+    const info = repo.insertIntoGroups({ name, description, createdDate });
 
     if (info.changes !== 1) {
       console.error(`Invalid count of affected rows! Expected: 1, got: ${info.changes}`);
@@ -174,7 +157,7 @@ export async function addVocabItemsFromFiles(state: AddVocabItemsFromFilesFormSt
     }
   }
 
-  const { selectedFiles } = parsedData.data;
+  // const { selectedFiles } = parsedData.data;
 
   console.log('Properly received files to parse');
 
