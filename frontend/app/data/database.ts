@@ -1,12 +1,17 @@
 import Database, { type Database as DatabaseType, type Statement as StatementType } from "better-sqlite3";
 import { isStringBlank } from "../lib/text-util";
-import { VocabularyItemGroupWoId, VocabularyItemWoId } from "../lib/definitions";
+import { VocabularyGrouping, VocabularyItem, VocabularyItemGroup, VocabularyItemGroupWoId, VocabularyItemWoId } from "../lib/definitions";
 
 export interface DataRepository {
   insertAllIntoVocabulary(items: Array<VocabularyItemWoId>): void;
   insertAllIntoGroups(groups: Array<VocabularyItemGroupWoId>): void;
   insertIntoVocabulary(item: VocabularyItemWoId): void;
   insertIntoGroups(group: VocabularyItemGroupWoId): void;
+  insertIntoVocabularyGrouping(grouping: VocabularyGrouping): void;
+  insertAllIntoVocabularyGrouping(groupings: Array<VocabularyGrouping>): void;
+
+  findGroupByName(name: string): VocabularyItemGroup | undefined;
+  findAllVocabularyItems(): Array<VocabularyItem>;
 
   // These should be moved from this interface later (so that these methods are not public)
   createSchema(): void;
@@ -61,6 +66,23 @@ class SqliteRepository implements DataRepository {
     this.insertAllInSingleTransaction(this.prepareInsertIntoGroupsStmt(), groups);
   }
 
+  public insertIntoVocabularyGrouping(grouping: VocabularyGrouping): void {
+    this.prepareInsertIntoVocabularyGroupingStmt().run(grouping);
+  }
+
+  public insertAllIntoVocabularyGrouping(groupings: Array<VocabularyGrouping>): void {
+    console.log(groupings);
+    this.insertAllInSingleTransaction(this.prepareInsertIntoVocabularyGroupingStmt(), groupings);
+  }
+
+  public findGroupByName(name: string): VocabularyItemGroup | undefined {
+    return this.prepareFindGroupByNameStmt().get({ name });
+  }
+
+  public findAllVocabularyItems(): Array<VocabularyItem> {
+    return this.prepareFindAllVocabularyItemsStmt().all();
+  }
+
   private prepareInsertIntoVocabularyStmt(): StatementType<[VocabularyItemWoId]> {
     return this.conn.prepare<VocabularyItemWoId>(this.insertIntoVocabularyStmt());
   }
@@ -69,12 +91,36 @@ class SqliteRepository implements DataRepository {
     return this.conn.prepare<VocabularyItemGroupWoId>(this.insertIntoGroupsStmt());
   }
 
+  private prepareInsertIntoVocabularyGroupingStmt(): StatementType<[VocabularyGrouping]> {
+    return this.conn.prepare<VocabularyGrouping>(this.insertIntoVocabularyGroupingStmt());
+  }
+
+  private prepareFindGroupByNameStmt(): StatementType<[Pick<VocabularyItemGroup, 'name'>], VocabularyItemGroup | undefined> {
+    return this.conn.prepare<Pick<VocabularyItemGroup, 'name'>, VocabularyItemGroup | undefined>(this.findGroupByNameStmt());
+  }
+
+  private prepareFindAllVocabularyItemsStmt(): StatementType<unknown[], VocabularyItem> {
+    return this.conn.prepare<never, VocabularyItem | undefined>(this.findAllVocabularyItemsStmt());
+  }
+
   private insertIntoVocabularyStmt(): string {
     return "INSERT INTO vocabulary (text, translation, created_date, last_updated_date) VALUES ($text, $translation, $createdDate, $lastUpdatedDate);"
   }
 
   private insertIntoGroupsStmt(): string {
     return "INSERT INTO groups (name, description, created_date) VALUES ($name, $description, $createdDate);";
+  }
+
+  private insertIntoVocabularyGroupingStmt(): string {
+    return "INSERT INTO vocabulary_grouping (item_id, group_id) VALUES ($itemId, $groupId);";
+  }
+
+  private findGroupByNameStmt(): string {
+    return `SELECT id, name, description, created_date as createdDate FROM groups WHERE name = $name;`
+  }
+
+  private findAllVocabularyItemsStmt(): string {
+    return "SELECT id, text, translation, created_date as createdDate, last_updated_date as lastUpdatedDate FROM vocabulary;";
   }
 
   private createDatabaseConnection(): DatabaseType {
@@ -128,8 +174,8 @@ class SqliteRepository implements DataRepository {
   private createVocabularyGroupingTable() {
     const createTableStmt = this.conn.prepare(`
       CREATE TABLE IF NOT EXISTS vocabulary_grouping (
-        item_id INTEGER,
-        group_id INTEGER,
+        item_id INTEGER NOT NULL,
+        group_id INTEGER NOT NULL,
         PRIMARY KEY (item_id, group_id),
         FOREIGN KEY (item_id) REFERENCES vocabulary (id)
           ON UPDATE CASCADE
