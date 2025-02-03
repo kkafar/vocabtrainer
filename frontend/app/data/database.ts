@@ -1,17 +1,25 @@
 import Database, { type Database as DatabaseType, type Statement as StatementType } from "better-sqlite3";
 import { isStringBlank } from "../lib/text-util";
-import { VocabularyGrouping, VocabularyItem, VocabularyItemGroup, VocabularyItemGroupWoId, VocabularyItemWoId } from "../lib/definitions";
+import { TableVocabularyAttributes, TableVocabularyGroupingAttributes, VocabularyGrouping, VocabularyItem, VocabularyItemGroup, VocabularyItemGroupWoId, VocabularyItemWoId } from "../lib/definitions";
 
 export interface DataRepository {
+  insertIntoVocabulary(item: VocabularyItemWoId): Database.RunResult;
   insertAllIntoVocabulary(items: Array<VocabularyItemWoId>): void;
+
+  insertIntoGroups(group: VocabularyItemGroupWoId): Database.RunResult;
   insertAllIntoGroups(groups: Array<VocabularyItemGroupWoId>): void;
-  insertIntoVocabulary(item: VocabularyItemWoId): void;
-  insertIntoGroups(group: VocabularyItemGroupWoId): void;
-  insertIntoVocabularyGrouping(grouping: VocabularyGrouping): void;
+
+  insertIntoVocabularyGrouping(grouping: VocabularyGrouping): Database.RunResult;
   insertAllIntoVocabularyGrouping(groupings: Array<VocabularyGrouping>): void;
 
-  findGroupByName(name: string): VocabularyItemGroup | undefined;
   findAllVocabularyItems(): Array<VocabularyItem>;
+  findAllVocabularyItemsOrderByLimit(column: keyof TableVocabularyAttributes, limit: number): Array<VocabularyItem>;
+  findAllVocabItemsGroupIdEquals(groupId: number): Array<VocabularyItem>;
+  findAllVocabItemsGroupIdEqualsOrderByLimit(groupId: number, column: keyof TableVocabularyAttributes, limit: number): Array<VocabularyItem>;
+
+  findGroupByName(name: string): VocabularyItemGroup | undefined;
+  findAllGroups(): VocabularyItemGroup[];
+
 
   // These should be moved from this interface later (so that these methods are not public)
   createSchema(): void;
@@ -50,24 +58,24 @@ class SqliteRepository implements DataRepository {
     this.conn = this.createDatabaseConnection();
   }
 
-  public insertIntoVocabulary(vocabularyItem: VocabularyItemWoId) {
-    this.prepareInsertIntoVocabularyStmt().run(vocabularyItem);
+  public insertIntoVocabulary(vocabularyItem: VocabularyItemWoId): Database.RunResult {
+    return this.prepareInsertIntoVocabularyStmt().run(vocabularyItem);
   }
 
   public insertAllIntoVocabulary(vocabularyItems: Array<VocabularyItemWoId>) {
     this.insertAllInSingleTransaction(this.prepareInsertIntoVocabularyStmt(), vocabularyItems);
   }
 
-  public insertIntoGroups(group: VocabularyItemGroupWoId) {
-    this.prepareInsertIntoGroupsStmt().run(group);
+  public insertIntoGroups(group: VocabularyItemGroupWoId): Database.RunResult {
+    return this.prepareInsertIntoGroupsStmt().run(group);
   }
 
   public insertAllIntoGroups(groups: Array<VocabularyItemGroupWoId>) {
     this.insertAllInSingleTransaction(this.prepareInsertIntoGroupsStmt(), groups);
   }
 
-  public insertIntoVocabularyGrouping(grouping: VocabularyGrouping): void {
-    this.prepareInsertIntoVocabularyGroupingStmt().run(grouping);
+  public insertIntoVocabularyGrouping(grouping: VocabularyGrouping): Database.RunResult {
+    return this.prepareInsertIntoVocabularyGroupingStmt().run(grouping);
   }
 
   public insertAllIntoVocabularyGrouping(groupings: Array<VocabularyGrouping>): void {
@@ -81,6 +89,22 @@ class SqliteRepository implements DataRepository {
 
   public findAllVocabularyItems(): Array<VocabularyItem> {
     return this.prepareFindAllVocabularyItemsStmt().all();
+  }
+
+  public findAllVocabularyItemsOrderByLimit(column: keyof TableVocabularyAttributes, limit: number): Array<VocabularyItem> {
+    return this.prepareFindAllVocabularyItemsOrderByLimitStmt().all({ column, limit });
+  }
+
+  public findAllVocabItemsGroupIdEquals(groupId: number): Array<VocabularyItem> {
+    return this.prepareFindAllVocabItemsGroupIdEqualsStmt().all({ groupId });
+  }
+
+  public findAllVocabItemsGroupIdEqualsOrderByLimit(groupId: number, column: keyof TableVocabularyAttributes, limit: number): Array<VocabularyItem> {
+    return this.prepareFindAllVocabItemsGroupIdEqualsOrderByLimitStmt().all({ groupId, column, limit });
+  }
+
+  public findAllGroups(): VocabularyItemGroup[] {
+    return this.prepareFindAllGroupsStmt().all();
   }
 
   private prepareInsertIntoVocabularyStmt(): StatementType<[VocabularyItemWoId]> {
@@ -103,6 +127,22 @@ class SqliteRepository implements DataRepository {
     return this.conn.prepare<never, VocabularyItem | undefined>(this.findAllVocabularyItemsStmt());
   }
 
+  private prepareFindAllVocabularyItemsOrderByLimitStmt(): StatementType<[{ column: keyof TableVocabularyAttributes, limit: number }], VocabularyItem> {
+    return this.conn.prepare<{ column: keyof TableVocabularyAttributes, limit: number }, VocabularyItem>(this.findAllVocabularyItemsOrderByLimitStmt());
+  }
+
+  private prepareFindAllVocabItemsGroupIdEqualsStmt(): StatementType<[{ groupId: TableVocabularyGroupingAttributes['group_id'] }], VocabularyItem> {
+    return this.conn.prepare<[{ groupId: TableVocabularyGroupingAttributes['group_id'] }], VocabularyItem>(this.findAllVocabItemsGroupIdEqualsStmt());
+  }
+
+  private prepareFindAllVocabItemsGroupIdEqualsOrderByLimitStmt(): StatementType<[{ groupId: TableVocabularyGroupingAttributes['group_id'], column: keyof TableVocabularyAttributes, limit: number }], VocabularyItem> {
+    return this.conn.prepare<[{ groupId: TableVocabularyGroupingAttributes['group_id'], column: keyof TableVocabularyAttributes, limit: number }], VocabularyItem>(this.findAllVocabItemsGroupIdEqualsOrderByLimitStmt());
+  }
+
+  private prepareFindAllGroupsStmt(): StatementType<unknown[], VocabularyItemGroup> {
+    return this.conn.prepare<never, VocabularyItem | undefined>(this.findAllGroupsStmt());
+  }
+
   private insertIntoVocabularyStmt(): string {
     return "INSERT INTO vocabulary (text, translation, created_date, last_updated_date) VALUES ($text, $translation, $createdDate, $lastUpdatedDate);"
   }
@@ -122,6 +162,37 @@ class SqliteRepository implements DataRepository {
   private findAllVocabularyItemsStmt(): string {
     return "SELECT id, text, translation, created_date as createdDate, last_updated_date as lastUpdatedDate FROM vocabulary;";
   }
+
+  private findAllVocabularyItemsOrderByLimitStmt(): string {
+    return "SELECT id, text, translation, created_date as createdDate, last_updated_date as lastUpdatedDate FROM vocabulary ORDER BY $column DESC LIMIT $limit";
+  }
+
+  private findAllVocabItemsGroupIdEqualsStmt(): string {
+    return `
+      SELECT v.id, v.text, v.translation, v.created_date as createdDate, v.last_updated_date as lastUpdatedDate
+      FROM vocabulary as v
+      JOIN vocabulary_grouping as vg
+      ON v.id = vg.item_id
+      WHERE vg.group_id = $groupId AND vg.item_id = v.id;
+    `;
+  }
+
+  private findAllVocabItemsGroupIdEqualsOrderByLimitStmt(): string {
+    return `
+      SELECT v.id, v.text, v.translation, v.created_date as createdDate, v.last_updated_date as lastUpdatedDate
+      FROM vocabulary as v
+      JOIN vocabulary_grouping as vg
+      ON v.id = vg.item_id
+      WHERE vg.group_id = $groupId AND vg.item_id = v.id
+      ORDER BY $column DESC
+      LIMIT $limit;
+    `;
+  }
+
+  private findAllGroupsStmt(): string {
+    return "SELECT id, name, description, created_date as createdDate FROM groups;";
+  }
+
 
   private createDatabaseConnection(): DatabaseType {
     return new Database(this.path);

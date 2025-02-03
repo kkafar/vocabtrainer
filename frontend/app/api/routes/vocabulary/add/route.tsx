@@ -71,13 +71,12 @@ export async function POST(request: NextRequest) {
         return 'not-a-file';
       }
     });
-
     await rmTmpFolder(tmpFolder);
-
   } catch (error) {
     // Server error
     console.error('Server error', error);
     return new Response(undefined, { status: 500 });
+  } finally {
   }
 
 

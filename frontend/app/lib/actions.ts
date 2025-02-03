@@ -1,7 +1,7 @@
 'use server';
 
 import { z } from "zod";
-import createDatabaseConnection from "@/app/data/database";
+import createDatabaseConnection, { getDataRepository } from "@/app/data/database";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
@@ -116,17 +116,10 @@ export async function createVocabItemGroup(state: AddGroupFormState, formData: F
   const { name, description = null } = parsedData.data;
 
   try {
-    const conn = createDatabaseConnection();
-    const query = conn.prepare<{ name: string, description: string | null, createdDate: string }>(`
-      INSERT INTO groups (name, description, created_date) VALUES ($name, $description, $createdDate);
-    `);
+    const repo = getDataRepository();
 
     const createdDate = new Date().toISOString();
-    const info = query.run({
-      name: name,
-      description: description,
-      createdDate: createdDate,
-    });
+    const info = repo.insertIntoGroups({ name, description, createdDate });
 
     if (info.changes !== 1) {
       console.error(`Invalid count of affected rows! Expected: 1, got: ${info.changes}`);
