@@ -1,8 +1,7 @@
-import { ChildrenProp } from '../types';
 import styles from './styles.module.css';
 
-export default async function MainTitle({ children }: ChildrenProp) {
+export default async function MainTitle() {
   return (
-    <h1 className={styles.mainTitle}>{children}</h1>
+    <h1 className={styles.mainTitle}>VocabTrainer</h1>
   );
 }

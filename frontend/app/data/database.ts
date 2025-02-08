@@ -1,6 +1,6 @@
 import Database, { type Database as DatabaseType, type Statement as StatementType } from "better-sqlite3";
 import { isStringBlank } from "../lib/text-util";
-import { TableVocabularyAttributes, TableVocabularyGroupingAttributes, VocabularyGrouping, VocabularyItem, VocabularyItemGroup, VocabularyItemGroupWoId, VocabularyItemWoId } from "../lib/definitions";
+import { TableVocabularyAttributes, TableVocabularyGroupingAttributes, VocabularyGrouping, VocabularyItem, VocabularyItemGroup, VocabularyItemGroupWoId, VocabularyItemWithGroupId, VocabularyItemWoId } from "../lib/definitions";
 
 export interface DataRepository {
   insertIntoVocabulary(item: VocabularyItemWoId): Database.RunResult;
@@ -20,9 +20,12 @@ export interface DataRepository {
   findAllVocabularyItemsOrderByLimit(column: keyof TableVocabularyAttributes, limit: number): Array<VocabularyItem>;
   findAllVocabItemsGroupIdEquals(groupId: number): Array<VocabularyItem>;
   findAllVocabItemsGroupIdEqualsOrderByLimit(groupId: number, column: keyof TableVocabularyAttributes, limit: number): Array<VocabularyItem>;
+  findAllVocabItemsWithExtraGroupId(): Array<VocabularyItemWithGroupId>;
 
   findGroupByName(name: string): VocabularyItemGroup | undefined;
   findAllGroups(): VocabularyItemGroup[];
+
+  findAllVocabularyGroupings(): VocabularyGrouping[];
 
   // These should be moved from this interface later (so that these methods are not public)
   createSchema(): void;
@@ -99,8 +102,16 @@ class SqliteRepository implements DataRepository {
     return this.prepareFindAllVocabItemsGroupIdEqualsOrderByLimitStmt().all({ groupId, column, limit });
   }
 
+  public findAllVocabItemsWithExtraGroupId(): Array<VocabularyItemWithGroupId> {
+    return this.prepareFindAllVocabItemsWithExtraGroupIdStmt().all();
+  }
+
   public findAllGroups(): VocabularyItemGroup[] {
     return this.prepareFindAllGroupsStmt().all();
+  }
+
+  public findAllVocabularyGroupings(): VocabularyGrouping[] {
+    return this.prepareFindAllVocabularyGroupingsStmt().all();
   }
 
   private prepareInsertIntoVocabularyStmt(): StatementType<[VocabularyItemWoId]> {
@@ -139,8 +150,16 @@ class SqliteRepository implements DataRepository {
     return this.conn.prepare<[{ groupId: TableVocabularyGroupingAttributes['group_id'], column: keyof TableVocabularyAttributes, limit: number }], VocabularyItem>(this.findAllVocabItemsGroupIdEqualsOrderByLimitStmt());
   }
 
+  private prepareFindAllVocabItemsWithExtraGroupIdStmt(): StatementType<unknown[], VocabularyItemWithGroupId> {
+    return this.conn.prepare<never, VocabularyItemWithGroupId>(this.findAllVocabItemsWithExtraGroupIdStmt());
+  }
+
   private prepareFindAllGroupsStmt(): StatementType<unknown[], VocabularyItemGroup> {
     return this.conn.prepare<never, VocabularyItem | undefined>(this.findAllGroupsStmt());
+  }
+
+  private prepareFindAllVocabularyGroupingsStmt(): StatementType<unknown[], VocabularyGrouping> {
+    return this.conn.prepare<never, VocabularyGrouping>(this.findAllVocabularyGroupingsStmt());
   }
 
   private insertIntoVocabularyStmt(): string {
@@ -185,6 +204,15 @@ class SqliteRepository implements DataRepository {
     `;
   }
 
+  private findAllVocabItemsWithExtraGroupIdStmt(): string {
+    return `
+      SELECT v.id, v.text, v.translation, v.created_date as createdDate, v.last_updated_date as lastUpdatedDate, vg.group_id as groupId
+      FROM vocabulary as v
+      JOIN vocabulary_grouping as vg
+      ON v.id = vg.item_id;
+    `;
+  }
+
   private findAllVocabItemsGroupIdEqualsOrderByLimitStmt(): string {
     return `
       SELECT v.id, v.text, v.translation, v.created_date as createdDate, v.last_updated_date as lastUpdatedDate
@@ -199,6 +227,10 @@ class SqliteRepository implements DataRepository {
 
   private findAllGroupsStmt(): string {
     return "SELECT id, name, description, created_date as createdDate FROM groups;";
+  }
+
+  private findAllVocabularyGroupingsStmt(): string {
+    return "SELECT item_id as itemId, group_id as groupId FROM vocabulary_grouping;";
   }
 
 

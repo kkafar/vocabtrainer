@@ -1,5 +1,5 @@
 import { getDataRepository } from "@/app/data/database";
-import { VocabularyItem, VocabularyItemGroup } from "./definitions";
+import { VocabularyGrouping, VocabularyItem, VocabularyItemGroup } from "./definitions";
 
 export async function fetchWordList(limit?: number, groupId?: VocabularyItemGroup['id']): Promise<VocabularyItem[]> {
   try {
@@ -20,7 +20,7 @@ export async function fetchWordList(limit?: number, groupId?: VocabularyItemGrou
     }
   } catch (error) {
     console.log("Error while fetching word list", error);
-    throw Error("Error while fetchin word list");
+    throw new Error("Error while fetchin word list");
   }
 }
 
@@ -29,6 +29,15 @@ export async function fetchGroups(): Promise<VocabularyItemGroup[]> {
     return getDataRepository().findAllGroups();
   } catch (error) {
     console.log("Error while fetching groups", error);
-    throw Error("Error while fetchin groups", { cause: error });
+    throw new Error("Error while fetchin groups", { cause: error });
+  }
+}
+
+export async function fetchVocabularyGroupings(): Promise<VocabularyGrouping[]> {
+  try {
+    return getDataRepository().findAllVocabularyGroupings();
+  } catch (error) {
+    console.error("Error while fetching vocabulary groupings", error);
+    throw new Error("Error while fetching vocabulary groupings", { cause: error });
   }
 }

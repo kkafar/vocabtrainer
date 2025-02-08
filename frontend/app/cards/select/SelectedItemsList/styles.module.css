@@ -1,0 +1,23 @@
+.headContainer {
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.listContainer {
+  width: 36vw;
+  flex: 1;
+  padding: 0px;
+  flex-direction: column;
+}
+
+.emptyListMessageContainer {
+  flex: 1;
+  justify-content: center;
+}
+
+.listBodyContainer {
+  flex: 1;
+  max-height: 75vh;
+  overflow-y: scroll;
+}

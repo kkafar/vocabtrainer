@@ -13,5 +13,7 @@ export type VocabularyGrouping = CamelCaseKeys<TableVocabularyGroupingAttributes
 export type VocabularyItemWoId = Omit<VocabularyItem, 'id'>;
 export type VocabularyItemGroupWoId = Omit<VocabularyItemGroup, 'id'>;
 
+export type VocabularyItemWithGroupId = VocabularyItem & { groupId: VocabularyItemGroup['id'] };
+
 export type EmptyObject = Record<never, never>;
 

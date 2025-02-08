@@ -111,3 +111,7 @@ body {
 
   /* Global options */
 }
+
+div {
+  display: flex;
+}
