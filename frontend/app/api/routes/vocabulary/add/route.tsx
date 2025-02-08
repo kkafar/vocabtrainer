@@ -31,7 +31,7 @@ async function saveFileToFolder(file: File, folder: string) {
 }
 
 export async function POST(request: NextRequest) {
-  const data  = await request.formData();
+  const data = await request.formData();
 
   if (!data.has('selectedFiles')) {
     // Bad request
