@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+// Database
+
 export const TableGroupAttributesSchema = z.object({
   id: z.number().int().min(0),
   name: z.string().min(1),
@@ -19,3 +21,9 @@ export const TableVocabularyGroupingSchema = z.object({
   item_id: z.number().int().min(0),
   group_id: z.number().int().min(0),
 });
+
+
+// Local storage
+
+export const SelectedItemsSchema = z.array(z.string());
+

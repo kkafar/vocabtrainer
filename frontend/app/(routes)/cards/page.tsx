@@ -4,7 +4,7 @@ import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
 import VocabItemCard from "@/app/ui/card/VocabItemCard";
 import { Suspense } from "react";
 import { OrbitProgress } from "react-loading-indicators";
-import FullScreenContainer from "../ui/layout/FullScreenContainer";
+import FullScreenContainer from "@/app/ui/layout/FullScreenContainer";
 
 function LoadingCard() {
   return (

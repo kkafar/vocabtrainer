@@ -8,8 +8,7 @@ import FlexibleCard from '@/app/ui/FlexibleCard';
 import { ChildrenProp } from '@/app/ui/types';
 import RoundedButton from '@/app/ui/buttons/RoundedButton';
 import Link from 'next/link';
-
-type BodyProps = ChildrenProp;
+import { SelectedItemsSchema } from '@/app/lib/schemas';
 
 export type SelectedItemsListProps = {
   items: VocabularyItem[];
@@ -17,24 +16,35 @@ export type SelectedItemsListProps = {
   groupings: VocabularyGrouping[];
 }
 
-function useSelectedItems(): [VocabularyItem[], boolean] {
+function useSelectedItems(items: VocabularyItem[]): [VocabularyItem[], boolean] {
   const [selectedItems, setSelectedItems] = React.useState<VocabularyItem[]>([]);
   const [isFetching, setFetching] = React.useState<boolean>(true);
 
   React.useEffect(() => {
     async function retrieveSelectedItems() {
-      const rawSelectedItems = sessionStorage.getItem('selectedItems');
+      const selectedItemsEntry = sessionStorage.getItem('selectedItems');
 
-      if (rawSelectedItems) {
-        const selectedItemsObject = JSON.parse(rawSelectedItems);
+      if (selectedItemsEntry) {
+        const rawSelectedItems = JSON.parse(selectedItemsEntry);
+
+        console.log(rawSelectedItems);
+
+        const selectedItemsIds = SelectedItemsSchema.parse(rawSelectedItems).map(stringId => parseInt(stringId));
+
+        const selectedItems = selectedItemsIds.map(itemId => {
+          const item = items.find(item => item.id === itemId);
+          if (!item) throw new Error(`Failed to find item with id ${itemId}`);
+          return item;
+        });
+
         // Potentially parse it with zod... (and extract this fetching and parsing to separate method / hook)
-        setSelectedItems(selectedItemsObject);
+        setSelectedItems(selectedItems);
       }
 
       setFetching(false);
     }
     retrieveSelectedItems();
-  }, []);
+  }, [items]);
 
   return [selectedItems, isFetching]
 }
@@ -86,7 +96,7 @@ function Body({ children }: ChildrenProp): React.ReactNode {
 
 
 export default function SelectedItemsList({ items, groups, groupings }: SelectedItemsListProps): React.ReactNode {
-  const [selectedItems,] = useSelectedItems();
+  const [selectedItems,] = useSelectedItems(items);
 
   return (
     <div>
