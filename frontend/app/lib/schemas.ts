@@ -25,5 +25,11 @@ export const TableVocabularyGroupingSchema = z.object({
 
 // Local storage
 
-export const SelectedItemsSchema = z.array(z.string());
+export const SelectedItemsSchema = z.array(z.object({
+  id: TableVocabularyAttributesSchema.shape.id,
+  text: TableVocabularyAttributesSchema.shape.text,
+  translation: TableVocabularyAttributesSchema.shape.translation,
+  createdDate: TableVocabularyAttributesSchema.shape.created_date,
+  lastUpdatedDate: TableVocabularyAttributesSchema.shape.last_updated_date,
+}));
 

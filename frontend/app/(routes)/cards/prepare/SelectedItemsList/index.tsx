@@ -26,18 +26,8 @@ function useSelectedItems(items: VocabularyItem[]): [VocabularyItem[], boolean] 
 
       if (selectedItemsEntry) {
         const rawSelectedItems = JSON.parse(selectedItemsEntry);
+        const selectedItems = SelectedItemsSchema.parse(rawSelectedItems);
 
-        console.log(rawSelectedItems);
-
-        const selectedItemsIds = SelectedItemsSchema.parse(rawSelectedItems).map(stringId => parseInt(stringId));
-
-        const selectedItems = selectedItemsIds.map(itemId => {
-          const item = items.find(item => item.id === itemId);
-          if (!item) throw new Error(`Failed to find item with id ${itemId}`);
-          return item;
-        });
-
-        // Potentially parse it with zod... (and extract this fetching and parsing to separate method / hook)
         setSelectedItems(selectedItems);
       }
 
@@ -95,7 +85,7 @@ function Body({ children }: ChildrenProp): React.ReactNode {
 }
 
 
-export default function SelectedItemsList({ items, groups, groupings }: SelectedItemsListProps): React.ReactNode {
+export default function SelectedItemsList({ items }: SelectedItemsListProps): React.ReactNode {
   const [selectedItems,] = useSelectedItems(items);
 
   return (

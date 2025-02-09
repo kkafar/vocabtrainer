@@ -24,9 +24,17 @@ export default function SelectVocabularyItemForm({ items, groups, grouping: grou
     const formData = new FormData(event.currentTarget);
     const itemIds = formData.keys().toArray();
 
-    sessionStorage.setItem("selectedItems", JSON.stringify(itemIds));
+    const selectedItems = itemIds.map(itemId => {
+      const itemInstance = items.find(item => item.id === parseInt(itemId));
+      if (!itemInstance) {
+        throw new Error(`Failed to find item with id ${itemId}`);
+      }
+      return itemInstance;
+    });
+
+    sessionStorage.setItem("selectedItems", JSON.stringify(selectedItems));
     router.push('/cards/prepare');
-  }, [router]);
+  }, [router, items]);
 
   return (
     <form id={id} {...rest} onSubmit={handleSubmit}>

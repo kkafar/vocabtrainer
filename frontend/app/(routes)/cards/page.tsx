@@ -1,10 +1,8 @@
 import globalStyles from "@/app/styles.module.css";
 import styles from './styles.module.css';
-import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
 import VocabItemCard from "@/app/ui/card/VocabItemCard";
 import { Suspense } from "react";
 import { OrbitProgress } from "react-loading-indicators";
-import FullScreenContainer from "@/app/ui/layout/FullScreenContainer";
 
 function LoadingCard() {
   return (
@@ -18,16 +16,12 @@ export default async function CardPage({
   const groupId = (await searchParams).groupId;
 
   return (
-    <FullScreenContainer>
-      <CenterYXContainer>
-        <div className={styles.columnFlexContainer}>
-          <div className={globalStyles.cardContainer}>
-            <Suspense fallback={<LoadingCard />}>
-              <VocabItemCard groupId={groupId} />
-            </Suspense>
-          </div>
-        </div>
-      </CenterYXContainer>
-    </FullScreenContainer>
+    <div className={styles.columnFlexContainer}>
+      <div className={globalStyles.cardContainer}>
+        <Suspense fallback={<LoadingCard />}>
+          <VocabItemCard groupId={groupId} />
+        </Suspense>
+      </div>
+    </div>
   );
 }
