@@ -1,17 +1,17 @@
 import { fetchGroupsQuery } from "@/app/query";
 import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
 import FullScreenContainer from "@/app/ui/layout/FullScreenContainer";
-import { VocabularyItemGroup } from "../lib/definitions";
+import { VocabularyItemGroup } from "@/app/lib/definitions";
 import GroupCard from "@/app/ui/GroupCard";
 import styles from './styles.module.css';
 import Link from "next/link";
-import IconButton from "../ui/buttons/IconButton";
-import { ChildrenProp } from "../ui/types";
+import IconButton from "@/app/ui/buttons/IconButton";
+import { ChildrenProp } from "@/app/ui/types";
 import PlusIcon from '@/app/assets/plus-icon.svg';
 
 function VocabularyGroupListItem({ group }: { group: VocabularyItemGroup }) {
   return (
-    <Link href={`/cards?groupId=${group.id}`} >
+    <Link href={`/vocabulary/group/${group.id}`} >
       <GroupCard group={group} />
     </Link>
   );

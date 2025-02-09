@@ -7,7 +7,7 @@ export type FlexibleCardProps = ChildrenProp & HTMLAttributes<HTMLDivElement>;
 
 export default function FlexibleCard({ children, className, ...rest }: FlexibleCardProps) {
   return (
-    <div className={clsx(st.cardBackground, className)} {...rest} >
+    <div className={clsx(className, st.cardBackground)} {...rest} >
       {children}
     </div>
   );

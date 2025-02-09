@@ -19,3 +19,15 @@ export default async function VocabList() {
     </div>
   );
 }
+
+async function VocabListItem() {
+  return (
+    null
+  );
+
+
+async function VocabListItem2() {
+  return (
+    null
+  );
+}

@@ -1,28 +1,52 @@
-import Database, { type Database as DatabaseType, type Statement as StatementType } from "better-sqlite3";
+import Database, {
+  type Database as DatabaseType,
+  type Statement as StatementType,
+} from "better-sqlite3";
 import { isStringBlank } from "../lib/text-util";
-import { TableVocabularyAttributes, TableVocabularyGroupingAttributes, VocabularyGrouping, VocabularyItem, VocabularyItemGroup, VocabularyItemGroupWoId, VocabularyItemWoId } from "../lib/definitions";
+import {
+  TableVocabularyAttributes,
+  TableVocabularyGroupingAttributes,
+  VocabularyGrouping,
+  VocabularyItem,
+  VocabularyItemGroup,
+  VocabularyItemGroupWoId,
+  VocabularyItemWithGroupId,
+  VocabularyItemWoId,
+} from "../lib/definitions";
 
 export interface DataRepository {
   insertIntoVocabulary(item: VocabularyItemWoId): Database.RunResult;
-  insertAllIntoVocabulary(items: Array<VocabularyItemWoId>): void;
+  insertAllIntoVocabulary(items: VocabularyItemWoId[]): void;
 
   insertIntoGroups(group: VocabularyItemGroupWoId): Database.RunResult;
-  insertAllIntoGroups(groups: Array<VocabularyItemGroupWoId>): void;
+  insertAllIntoGroups(groups: VocabularyItemGroupWoId[]): void;
 
   insertIntoVocabularyGrouping(grouping: VocabularyGrouping): Database.RunResult;
-  insertAllIntoVocabularyGrouping(groupings: Array<VocabularyGrouping>): void;
+  insertAllIntoVocabularyGrouping(groupings: VocabularyGrouping[]): void;
 
   // TODO: This MUST also take lastUpdatedDate. I'm not sure whether whether the DataRepository should guard
   // this field semantics and update this field whenever update is made or require user to pass the value.
-  updateVocabularyByIdWithTextAndTranslation(params: Pick<VocabularyItem, 'id' | 'text' | 'translation'>): Database.RunResult;
+  updateVocabularyByIdWithTextAndTranslation(
+    params: Pick<VocabularyItem, "id" | "text" | "translation">,
+  ): Database.RunResult;
 
-  findAllVocabularyItems(): Array<VocabularyItem>;
-  findAllVocabularyItemsOrderByLimit(column: keyof TableVocabularyAttributes, limit: number): Array<VocabularyItem>;
-  findAllVocabItemsGroupIdEquals(groupId: number): Array<VocabularyItem>;
-  findAllVocabItemsGroupIdEqualsOrderByLimit(groupId: number, column: keyof TableVocabularyAttributes, limit: number): Array<VocabularyItem>;
+  findAllVocabularyItems(): VocabularyItem[];
+  findAllVocabularyItemsOrderByLimit(
+    column: keyof TableVocabularyAttributes,
+    limit: number,
+  ): VocabularyItem[];
+  findAllVocabItemsGroupIdEquals(groupId: number): VocabularyItem[];
+  findAllVocabItemsGroupIdEqualsOrderByLimit(
+    groupId: number,
+    column: keyof TableVocabularyAttributes,
+    limit: number,
+  ): VocabularyItem[];
+  findAllVocabItemsWithExtraGroupId(): VocabularyItemWithGroupId[];
 
   findGroupByName(name: string): VocabularyItemGroup | undefined;
   findAllGroups(): VocabularyItemGroup[];
+
+  findAllVocabularyGroupings(): VocabularyGrouping[];
 
   // These should be moved from this interface later (so that these methods are not public)
   createSchema(): void;
@@ -39,8 +63,8 @@ export function getDataRepository(): DataRepository {
 }
 
 class SqliteRepository implements DataRepository {
-  private path: string
-  private conn: DatabaseType
+  private path: string;
+  private conn: DatabaseType;
 
   constructor(path: string) {
     if (path == null || isStringBlank(path)) {
@@ -75,7 +99,9 @@ class SqliteRepository implements DataRepository {
     this.insertAllInSingleTransaction(this.prepareInsertIntoVocabularyGroupingStmt(), groupings);
   }
 
-  public updateVocabularyByIdWithTextAndTranslation(params: Pick<VocabularyItem, 'id' | 'text' | 'translation'>): Database.RunResult {
+  public updateVocabularyByIdWithTextAndTranslation(
+    params: Pick<VocabularyItem, "id" | "text" | "translation">,
+  ): Database.RunResult {
     return this.prepareUpdateVocabularyByIdWithTextAndTranslationStmt().run(params);
   }
 
@@ -87,7 +113,10 @@ class SqliteRepository implements DataRepository {
     return this.prepareFindAllVocabularyItemsStmt().all();
   }
 
-  public findAllVocabularyItemsOrderByLimit(column: keyof TableVocabularyAttributes, limit: number): Array<VocabularyItem> {
+  public findAllVocabularyItemsOrderByLimit(
+    column: keyof TableVocabularyAttributes,
+    limit: number,
+  ): Array<VocabularyItem> {
     return this.prepareFindAllVocabularyItemsOrderByLimitStmt().all({ column, limit });
   }
 
@@ -95,12 +124,28 @@ class SqliteRepository implements DataRepository {
     return this.prepareFindAllVocabItemsGroupIdEqualsStmt().all({ groupId });
   }
 
-  public findAllVocabItemsGroupIdEqualsOrderByLimit(groupId: number, column: keyof TableVocabularyAttributes, limit: number): Array<VocabularyItem> {
-    return this.prepareFindAllVocabItemsGroupIdEqualsOrderByLimitStmt().all({ groupId, column, limit });
+  public findAllVocabItemsGroupIdEqualsOrderByLimit(
+    groupId: number,
+    column: keyof TableVocabularyAttributes,
+    limit: number,
+  ): Array<VocabularyItem> {
+    return this.prepareFindAllVocabItemsGroupIdEqualsOrderByLimitStmt().all({
+      groupId,
+      column,
+      limit,
+    });
+  }
+
+  public findAllVocabItemsWithExtraGroupId(): Array<VocabularyItemWithGroupId> {
+    return this.prepareFindAllVocabItemsWithExtraGroupIdStmt().all();
   }
 
   public findAllGroups(): VocabularyItemGroup[] {
     return this.prepareFindAllGroupsStmt().all();
+  }
+
+  public findAllVocabularyGroupings(): VocabularyGrouping[] {
+    return this.prepareFindAllVocabularyGroupingsStmt().all();
   }
 
   private prepareInsertIntoVocabularyStmt(): StatementType<[VocabularyItemWoId]> {
@@ -115,36 +160,88 @@ class SqliteRepository implements DataRepository {
     return this.conn.prepare<VocabularyGrouping>(this.insertIntoVocabularyGroupingStmt());
   }
 
-  private prepareUpdateVocabularyByIdWithTextAndTranslationStmt(): StatementType<[Pick<VocabularyItem, 'id' | 'text' | 'translation'>]> {
-    return this.conn.prepare<Pick<VocabularyItem, 'id' | 'text' | 'translation'>>(this.updateVocabularyByIdWithTextAndTranslationStmt());
+  private prepareUpdateVocabularyByIdWithTextAndTranslationStmt(): StatementType<
+    [Pick<VocabularyItem, "id" | "text" | "translation">]
+  > {
+    return this.conn.prepare<Pick<VocabularyItem, "id" | "text" | "translation">>(
+      this.updateVocabularyByIdWithTextAndTranslationStmt(),
+    );
   }
 
-  private prepareFindGroupByNameStmt(): StatementType<[Pick<VocabularyItemGroup, 'name'>], VocabularyItemGroup | undefined> {
-    return this.conn.prepare<Pick<VocabularyItemGroup, 'name'>, VocabularyItemGroup | undefined>(this.findGroupByNameStmt());
+  private prepareFindGroupByNameStmt(): StatementType<
+    [Pick<VocabularyItemGroup, "name">],
+    VocabularyItemGroup | undefined
+  > {
+    return this.conn.prepare<Pick<VocabularyItemGroup, "name">, VocabularyItemGroup | undefined>(
+      this.findGroupByNameStmt(),
+    );
   }
 
   private prepareFindAllVocabularyItemsStmt(): StatementType<unknown[], VocabularyItem> {
     return this.conn.prepare<never, VocabularyItem | undefined>(this.findAllVocabularyItemsStmt());
   }
 
-  private prepareFindAllVocabularyItemsOrderByLimitStmt(): StatementType<[{ column: keyof TableVocabularyAttributes, limit: number }], VocabularyItem> {
-    return this.conn.prepare<{ column: keyof TableVocabularyAttributes, limit: number }, VocabularyItem>(this.findAllVocabularyItemsOrderByLimitStmt());
+  private prepareFindAllVocabularyItemsOrderByLimitStmt(): StatementType<
+    [{ column: keyof TableVocabularyAttributes; limit: number }],
+    VocabularyItem
+  > {
+    return this.conn.prepare<
+      { column: keyof TableVocabularyAttributes; limit: number },
+      VocabularyItem
+    >(this.findAllVocabularyItemsOrderByLimitStmt());
   }
 
-  private prepareFindAllVocabItemsGroupIdEqualsStmt(): StatementType<[{ groupId: TableVocabularyGroupingAttributes['group_id'] }], VocabularyItem> {
-    return this.conn.prepare<[{ groupId: TableVocabularyGroupingAttributes['group_id'] }], VocabularyItem>(this.findAllVocabItemsGroupIdEqualsStmt());
+  private prepareFindAllVocabItemsGroupIdEqualsStmt(): StatementType<
+    [{ groupId: TableVocabularyGroupingAttributes["group_id"] }],
+    VocabularyItem
+  > {
+    return this.conn.prepare<
+      [{ groupId: TableVocabularyGroupingAttributes["group_id"] }],
+      VocabularyItem
+    >(this.findAllVocabItemsGroupIdEqualsStmt());
   }
 
-  private prepareFindAllVocabItemsGroupIdEqualsOrderByLimitStmt(): StatementType<[{ groupId: TableVocabularyGroupingAttributes['group_id'], column: keyof TableVocabularyAttributes, limit: number }], VocabularyItem> {
-    return this.conn.prepare<[{ groupId: TableVocabularyGroupingAttributes['group_id'], column: keyof TableVocabularyAttributes, limit: number }], VocabularyItem>(this.findAllVocabItemsGroupIdEqualsOrderByLimitStmt());
+  private prepareFindAllVocabItemsGroupIdEqualsOrderByLimitStmt(): StatementType<
+    [
+      {
+        groupId: TableVocabularyGroupingAttributes["group_id"];
+        column: keyof TableVocabularyAttributes;
+        limit: number;
+      },
+    ],
+    VocabularyItem
+  > {
+    return this.conn.prepare<
+      [
+        {
+          groupId: TableVocabularyGroupingAttributes["group_id"];
+          column: keyof TableVocabularyAttributes;
+          limit: number;
+        },
+      ],
+      VocabularyItem
+    >(this.findAllVocabItemsGroupIdEqualsOrderByLimitStmt());
+  }
+
+  private prepareFindAllVocabItemsWithExtraGroupIdStmt(): StatementType<
+    unknown[],
+    VocabularyItemWithGroupId
+  > {
+    return this.conn.prepare<never, VocabularyItemWithGroupId>(
+      this.findAllVocabItemsWithExtraGroupIdStmt(),
+    );
   }
 
   private prepareFindAllGroupsStmt(): StatementType<unknown[], VocabularyItemGroup> {
     return this.conn.prepare<never, VocabularyItem | undefined>(this.findAllGroupsStmt());
   }
 
+  private prepareFindAllVocabularyGroupingsStmt(): StatementType<unknown[], VocabularyGrouping> {
+    return this.conn.prepare<never, VocabularyGrouping>(this.findAllVocabularyGroupingsStmt());
+  }
+
   private insertIntoVocabularyStmt(): string {
-    return "INSERT INTO vocabulary (text, translation, created_date, last_updated_date) VALUES ($text, $translation, $createdDate, $lastUpdatedDate);"
+    return "INSERT INTO vocabulary (text, translation, created_date, last_updated_date) VALUES ($text, $translation, $createdDate, $lastUpdatedDate);";
   }
 
   private insertIntoGroupsStmt(): string {
@@ -160,11 +257,11 @@ class SqliteRepository implements DataRepository {
       UPDATE vocabulary
       SET text = $text, translation = $translation
       WHERE id = $id;
-    `
+    `;
   }
 
   private findGroupByNameStmt(): string {
-    return `SELECT id, name, description, created_date as createdDate FROM groups WHERE name = $name;`
+    return `SELECT id, name, description, created_date as createdDate FROM groups WHERE name = $name;`;
   }
 
   private findAllVocabularyItemsStmt(): string {
@@ -185,6 +282,15 @@ class SqliteRepository implements DataRepository {
     `;
   }
 
+  private findAllVocabItemsWithExtraGroupIdStmt(): string {
+    return `
+      SELECT v.id, v.text, v.translation, v.created_date as createdDate, v.last_updated_date as lastUpdatedDate, vg.group_id as groupId
+      FROM vocabulary as v
+      JOIN vocabulary_grouping as vg
+      ON v.id = vg.item_id;
+    `;
+  }
+
   private findAllVocabItemsGroupIdEqualsOrderByLimitStmt(): string {
     return `
       SELECT v.id, v.text, v.translation, v.created_date as createdDate, v.last_updated_date as lastUpdatedDate
@@ -201,14 +307,20 @@ class SqliteRepository implements DataRepository {
     return "SELECT id, name, description, created_date as createdDate FROM groups;";
   }
 
+  private findAllVocabularyGroupingsStmt(): string {
+    return "SELECT item_id as itemId, group_id as groupId FROM vocabulary_grouping;";
+  }
 
   private createDatabaseConnection(): DatabaseType {
     return new Database(this.path);
   }
 
-  private insertAllInSingleTransaction<RowT>(statement: StatementType<[RowT], unknown>, rows: RowT[]) {
+  private insertAllInSingleTransaction<RowT>(
+    statement: StatementType<[RowT], unknown>,
+    rows: RowT[],
+  ) {
     this.conn.transaction((items: typeof rows) => {
-      items.forEach(item => statement.run(item));
+      items.forEach((item) => statement.run(item));
     })(rows);
   }
 
@@ -223,8 +335,8 @@ class SqliteRepository implements DataRepository {
   }
 
   /**
-  * Throws on failure
-  */
+   * Throws on failure
+   */
   private createVocabularyTable() {
     const createTableStmt = this.conn.prepare(`
       CREATE TABLE IF NOT EXISTS vocabulary (
