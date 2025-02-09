@@ -1,7 +1,7 @@
 import { VocabularyItem, VocabularyItemGroup } from "@/app/lib/definitions";
 
 export async function fetchWordListQuery(groupId?: VocabularyItemGroup['id']): Promise<VocabularyItem[]> {
-  const endpoint = new URL("http://localhost:3000/api/routes/wordlist");
+  const endpoint = new URL("http://localhost:3000/wordlist");
   if (groupId != null) {
     endpoint.searchParams.append('groupId', groupId.toString());
   }
@@ -21,7 +21,7 @@ export async function fetchWordListQuery(groupId?: VocabularyItemGroup['id']): P
 }
 
 export async function fetchGroupsQuery(): Promise<VocabularyItemGroup[]> {
-  const endpoint = "http://localhost:3000/api/routes/groups";
+  const endpoint = "http://localhost:3000/groups";
   try {
     const response = await fetch(endpoint, { cache: 'force-cache' });
 
