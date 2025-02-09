@@ -1,8 +1,8 @@
-import { lessonOne, testItemGroup } from '../data/initdata';
-import { getDataRepository } from '../data/database';
+import { lessonOne, testItemGroup } from '@/app/data/initdata';
+import { getDataRepository } from '@/app/data/database';
 import { z } from 'zod';
-import { TableGroupAttributesSchema, TableVocabularyAttributesSchema } from '../lib/schemas';
-import { adaptKeysToCamelCase } from '../lib/object-util';
+import { TableGroupAttributesSchema, TableVocabularyAttributesSchema } from '@/app/lib/schemas';
+import { adaptKeysToCamelCase } from '@/app/lib/object-util';
 
 const VocabularyItemSeedSchema = TableVocabularyAttributesSchema.omit({ id: true });
 const VocabularyGroupSeedSchema = TableGroupAttributesSchema.omit({ id: true });
