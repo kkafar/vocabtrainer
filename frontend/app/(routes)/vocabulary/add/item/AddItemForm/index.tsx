@@ -5,7 +5,6 @@ import React from "react";
 import FormFileInput from "@/app/ui/form/FormFileInput";
 import InputList from "@/app/ui/form/InputList";
 import styles from './styles.module.css';
-import { addVocabItemsFromFiles, AddVocabItemsFromFilesFormState } from "@/app/lib/actions";
 
 export type AddItemFormProps = {
   formId: string;
@@ -18,7 +17,7 @@ function convertFileListIntoArray(files: FileList | null): File[] {
   return Array.from(files);
 }
 
-function SelectedFilesListItem({ file, index }: { file: File, index: number }) {
+function SelectedFilesListItem({ file }: { file: File, index: number }) {
   const sizeinKiB = file.size / 1024;
 
   return (

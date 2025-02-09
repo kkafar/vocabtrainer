@@ -17,3 +17,7 @@ export type VocabularyItemWithGroupId = VocabularyItem & { groupId: VocabularyIt
 
 export type EmptyObject = Record<never, never>;
 
+export type VocabularyItemsWithGroup = {
+  group: VocabularyItemGroup,
+  items: VocabularyItem[],
+};
