@@ -7,14 +7,45 @@ import clsx from 'clsx';
 import FlexibleCard from '@/app/ui/FlexibleCard';
 import { ChildrenProp } from '@/app/ui/types';
 import RoundedButton from '@/app/ui/buttons/RoundedButton';
+import Link from 'next/link';
 
 type BodyProps = ChildrenProp;
 
+export type SelectedItemsListProps = {
+  items: VocabularyItem[];
+  groups: VocabularyItemGroup[];
+  groupings: VocabularyGrouping[];
+}
+
+function useSelectedItems(): [VocabularyItem[], boolean] {
+  const [selectedItems, setSelectedItems] = React.useState<VocabularyItem[]>([]);
+  const [isFetching, setFetching] = React.useState<boolean>(true);
+
+  React.useEffect(() => {
+    async function retrieveSelectedItems() {
+      const rawSelectedItems = sessionStorage.getItem('selectedItems');
+
+      if (rawSelectedItems) {
+        const selectedItemsObject = JSON.parse(rawSelectedItems);
+        // Potentially parse it with zod... (and extract this fetching and parsing to separate method / hook)
+        setSelectedItems(selectedItemsObject);
+      }
+
+      setFetching(false);
+    }
+    retrieveSelectedItems();
+  }, []);
+
+  return [selectedItems, isFetching]
+}
+
 function AddButton(): React.ReactNode {
   return (
-    <RoundedButton>
-      Add +
-    </RoundedButton>
+    <Link href={"/cards/select"}>
+      <RoundedButton>
+        Add +
+      </RoundedButton>
+    </Link>
   );
 }
 
@@ -53,14 +84,9 @@ function Body({ children }: ChildrenProp): React.ReactNode {
   );
 }
 
-export type SelectedItemsListProps = {
-  items: VocabularyItem[];
-  groups: VocabularyItemGroup[];
-  groupings: VocabularyGrouping[];
-}
 
 export default function SelectedItemsList({ items, groups, groupings }: SelectedItemsListProps): React.ReactNode {
-  const [selectedItems, setSelectedItems] = React.useState<VocabularyItem[]>([]);
+  const [selectedItems,] = useSelectedItems();
 
   return (
     <div>

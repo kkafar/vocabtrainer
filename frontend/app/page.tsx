@@ -28,7 +28,7 @@ export default async function Home() {
               <MenuButton
                 onClick={async () => {
                   "use server";
-                  redirect("/cards/select");
+                  redirect("/cards/prepare");
                 }}
               >
                 Card game <PlayCircleIcon />
