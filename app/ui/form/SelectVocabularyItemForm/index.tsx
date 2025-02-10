@@ -41,7 +41,7 @@ export default function SelectVocabularyItemForm({ items, groups, grouping: grou
       <div className={styles.itemFormInnerContainer}>
         {Object.values(itemsByGroup).map(sectionProps => <Section key={sectionProps.group.id} group={sectionProps.group} items={sectionProps.items} />)}
       </div>
-      <RoundedButton>Submit</RoundedButton>
+      <RoundedButton type="submit">Submit</RoundedButton>
     </form>
   );
 }
