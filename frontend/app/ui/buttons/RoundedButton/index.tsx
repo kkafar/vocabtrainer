@@ -10,7 +10,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export default function RoundedButton({ children, className, ...rest }: ButtonProps) {
   return (
-    <button className={clsx(styles.buttonOuter, className)} {...rest}>
+    <button type='button' className={clsx(styles.buttonOuter, className)} {...rest}>
       <div className={styles.buttonInner}>
         {children}
       </div>

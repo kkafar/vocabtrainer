@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from './styles.module.css';
-import RoundedButton from "../../buttons/RoundedButton";
+import RoundedButton from "@/app/ui/buttons/RoundedButton";
 
 
 export interface FormFileInputProps extends React.ComponentPropsWithoutRef<'input'> {
