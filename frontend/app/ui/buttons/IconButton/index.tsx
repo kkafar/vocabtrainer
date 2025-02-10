@@ -6,7 +6,6 @@ export type IconButtonProps = {
   Icon: FC<SVGProps<SVGElement>>
 }
 
-
 export default function IconButton({ Icon }: IconButtonProps) {
   return (
     <RoundedButton className={styles.buttonBase}>

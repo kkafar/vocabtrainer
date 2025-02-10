@@ -1,6 +1,6 @@
 'use client';
 
-import { ChildrenProp } from "../../types";
+import { ChildrenProp } from "@/app/ui/types";
 import styles from './styles.module.css';
 
 export default function InputList({ children }: ChildrenProp): React.ReactNode {
