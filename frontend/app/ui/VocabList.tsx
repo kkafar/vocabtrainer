@@ -20,14 +20,3 @@ export default async function VocabList() {
   );
 }
 
-async function VocabListItem() {
-  return (
-    null
-  );
-
-
-async function VocabListItem2() {
-  return (
-    null
-  );
-}
