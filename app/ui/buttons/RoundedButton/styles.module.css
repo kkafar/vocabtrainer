@@ -1,8 +1,8 @@
 .buttonOuter {
   display: flex;
   justify-content: center;
-  border-radius: var(--radius-xlarge);
-  box-shadow: 0px 4px 4px var(--color-shadow);
+  border-radius: var(--rv-radius-xlarge);
+  box-shadow: 0px 4px 4px var(--rv-color-shadow);
   border-color: green;
   overflow: hidden;
 }
@@ -11,15 +11,15 @@
   display: flex;
   flex: 1;
   align-items: center;
-  column-gap: var(--padding-large);
-  padding: var(--padding-small) var(--padding-medium);
+  column-gap: var(--rv-padding-large);
+  padding: var(--rv-padding-small) var(--rv-padding-medium);
 }
 
 .buttonOuter:hover {
-  filter: brightness(var(--brightness-hover));
+  filter: brightness(var(--rv-brightness-hover));
 }
 
 .buttonOuter:active {
-  box-shadow: 0px 2px 2px var(--color-shadow);
+  box-shadow: 0px 2px 2px var(--rv-color-shadow);
 }
 

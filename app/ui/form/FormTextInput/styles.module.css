@@ -1,20 +1,20 @@
 .inputContainer {
   display: flex;
   flex-direction: column;
-  border-radius: var(--border);
+  border-radius: var(--spacing-large);
 }
 
 .labelText {
-  font-size: var(--font-size-large);
+  font-size: var(--rv-font-size-large);
   font-weight: 700;
 }
 
 .textInput {
-  background-color: var(--color-bg-primary);
-  margin-top: var(--margin-small);
-  width: calc(var(--font-size-medium) * 40);
-  font-size: var(--font-size-medium);
-  padding: var(--padding-small) var(--padding-large);
-  border-radius: var(--radius-xlarge);
+  background-color: var(--rv-color-bg-primary);
+  margin-top: var(--rv-margin-small);
+  width: calc(var(--rv-font-size-medium) * 40);
+  font-size: var(--rv-font-size-medium);
+  padding: var(--rv-padding-small) var(--rv-padding-large);
+  border-radius: var(--rv-radius-xlarge);
   /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25); */
 }

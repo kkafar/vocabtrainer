@@ -6,22 +6,22 @@
 .panelSpacer {
   display: flex;
   flex: 1;
-  margin-top: var(--margin-xlarge);
+  margin-top: var(--rv-margin-xlarge);
 }
 
 .returnButtonColor {
-  background-color: var(--on-primary);
+  background-color: var(--rv-color-on-primary);
 }
 
 .repeatButtonColor {
-  background-color: var(--failure);
+  background-color: var(--rv-color-failure);
 }
 
 .gotItButtonColor {
-  background-color: var(--success);
+  background-color: var(--rv-color-success);
 }
 
 .cardButton {
-  font-size: var(--font-size-medium);
-  font-weight: var(--font-weight-xthick);
+  font-size: var(--rv-font-size-medium);
+  font-weight: var(--rv-font-weight-xthick);
 }

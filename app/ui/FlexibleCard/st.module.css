@@ -1,10 +1,10 @@
 .cardBackground {
-  background-color: var(--color-primary);
-  border-radius: var(--radius-xlarge);
-  padding: var(--padding-xlarge);
+  background-color: var(--rv-color-primary);
+  border-radius: var(--rv-radius-xlarge);
+  padding: var(--rv-padding-xlarge);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .cardBackground:hover {
-  filter: brightness(var(--brightness-hover));
+  filter: brightness(var(--rv-brightness-hover));
 }

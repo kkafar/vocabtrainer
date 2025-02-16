@@ -2,5 +2,5 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: var(--padding-xlarge);
+  gap: var(--rv-padding-xlarge);
 }

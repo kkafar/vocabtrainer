@@ -1,6 +1,6 @@
 'use server';
 
-import { getDataRepository } from "@/app/data/database";
+import { getDataRepository } from "@/app/data";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";

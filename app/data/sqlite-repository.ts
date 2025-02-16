@@ -1,68 +1,9 @@
-import Database, {
-  type Database as DatabaseType,
-  type Statement as StatementType,
-} from "better-sqlite3";
-import { isStringBlank } from "../lib/text-util";
-import {
-  TableVocabularyAttributes,
-  TableVocabularyGroupingAttributes,
-  VocabularyGrouping,
-  VocabularyItem,
-  VocabularyItemGroup,
-  VocabularyItemGroupWoId,
-  VocabularyItemWithGroupId,
-  VocabularyItemWoId,
-} from "../lib/definitions";
+import { isStringBlank } from "@/app/lib/text-util";
+import { DataRepository } from "./DataRepository";
+import Database, { type Database as DatabaseType, type Statement as StatementType } from "better-sqlite3";
+import { TableVocabularyAttributes, TableVocabularyGroupingAttributes, VocabularyGrouping, VocabularyItem, VocabularyItemGroup, VocabularyItemGroupWoId, VocabularyItemWithGroupId, VocabularyItemWoId } from "../lib/definitions";
 
-export interface DataRepository {
-  insertIntoVocabulary(item: VocabularyItemWoId): Database.RunResult;
-  insertAllIntoVocabulary(items: VocabularyItemWoId[]): void;
-
-  insertIntoGroups(group: VocabularyItemGroupWoId): Database.RunResult;
-  insertAllIntoGroups(groups: VocabularyItemGroupWoId[]): void;
-
-  insertIntoVocabularyGrouping(grouping: VocabularyGrouping): Database.RunResult;
-  insertAllIntoVocabularyGrouping(groupings: VocabularyGrouping[]): void;
-
-  // TODO: This MUST also take lastUpdatedDate. I'm not sure whether whether the DataRepository should guard
-  // this field semantics and update this field whenever update is made or require user to pass the value.
-  updateVocabularyByIdWithTextAndTranslation(
-    params: Pick<VocabularyItem, "id" | "text" | "translation">,
-  ): Database.RunResult;
-
-  findAllVocabularyItems(): VocabularyItem[];
-  findAllVocabularyItemsOrderByLimit(
-    column: keyof TableVocabularyAttributes,
-    limit: number,
-  ): VocabularyItem[];
-  findAllVocabItemsGroupIdEquals(groupId: number): VocabularyItem[];
-  findAllVocabItemsGroupIdEqualsOrderByLimit(
-    groupId: number,
-    column: keyof TableVocabularyAttributes,
-    limit: number,
-  ): VocabularyItem[];
-  findAllVocabItemsWithExtraGroupId(): VocabularyItemWithGroupId[];
-
-  findGroupByName(name: string): VocabularyItemGroup | undefined;
-  findAllGroups(): VocabularyItemGroup[];
-
-  findAllVocabularyGroupings(): VocabularyGrouping[];
-
-  // These should be moved from this interface later (so that these methods are not public)
-  createSchema(): void;
-}
-
-export function getDataRepository(): DataRepository {
-  const dbPath = process.env.SQLITE_DB_PATH;
-
-  if (dbPath == null || isStringBlank(dbPath)) {
-    throw new Error("Invalid environment setup: missing SQLITE_DB_PATH env variable");
-  }
-
-  return new SqliteRepository(dbPath);
-}
-
-class SqliteRepository implements DataRepository {
+export class SqliteRepository implements DataRepository {
   private path: string;
   private conn: DatabaseType;
 
@@ -443,3 +384,4 @@ class SqliteRepository implements DataRepository {
     createTableStmt.run();
   }
 }
+

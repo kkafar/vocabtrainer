@@ -1,5 +1,5 @@
 import { lessonOne, testItemGroup } from '@/app/data/initdata';
-import { getDataRepository } from '@/app/data/database';
+import { getDataRepository } from '@/app/data';
 import { z } from 'zod';
 import { TableGroupAttributesSchema, TableVocabularyAttributesSchema } from '@/app/lib/schemas';
 import { adaptKeysToCamelCase } from '@/app/lib/object-util';
