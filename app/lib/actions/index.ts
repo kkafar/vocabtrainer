@@ -1,4 +1,4 @@
 export { updateVocabItem, type State } from './updateVocabularyItem';
-export { createVocabItemGroup } from './createVocabItemGroup';
-export { addVocabItemsFromFiles } from './addVocabItemsFromFiles';
+export { createVocabItemGroup, type AddGroupFormState } from './createVocabItemGroup';
+export { addVocabItemsFromFiles, type AddVocabItemsFromFilesFormState } from './addVocabItemsFromFiles';
 
