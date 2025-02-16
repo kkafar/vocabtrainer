@@ -4,7 +4,7 @@
   /* background-color: rgba(255, 0, 0, 0.5); */
   flex-direction: row;
   justify-content: center;
-  column-gap: var(--padding-xlarge);
+  column-gap: var(--rv-padding-xlarge);
 }
 
 .verticalContainer {
@@ -12,5 +12,5 @@
   flex: 1;
   flex-direction: column;
   justify-content: center;
-  row-gap: var(--padding-xlarge);
+  row-gap: var(--rv-padding-xlarge);
 }

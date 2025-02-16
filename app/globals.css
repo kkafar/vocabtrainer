@@ -36,29 +36,30 @@
 
   /* Padding & margin */
   /* Should be provided by tailwindcss */
-  /* --padding-xsmall: 0.25rem; */
-  /* --padding-small: 0.5rem; */
-  /* --padding-medium: 0.75rem; */
-  /* --padding-large: 1rem; */
-  /* --padding-xlarge: 1.75rem; */
-  /* --padding-2xlarge: 3rem; */
+  /* Remove these when all styles are migrated to tailwind */
+  --rv-padding-xsmall: 0.25rem;
+  --rv-padding-small: 0.5rem;
+  --rv-padding-medium: 0.75rem;
+  --rv-padding-large: 1rem;
+  --rv-padding-xlarge: 1.75rem;
+  --rv-padding-2xlarge: 3rem;
 
-  /* --margin-xsmall: 0.25rem; */
-  /* --margin-small: 0.5rem; */
-  /* --margin-medium: 0.75rem; */
-  /* --margin-large: 1rem; */
-  /* --margin-xlarge: 1.75rem; */
-  /* --margin-2xlarge: 3rem; */
+  --rv-margin-xsmall: 0.25rem;
+  --rv-margin-small: 0.5rem;
+  --rv-margin-medium: 0.75rem;
+  --rv-margin-large: 1rem;
+  --rv-margin-xlarge: 1.75rem;
+  --rv-margin-2xlarge: 3rem;
 
   /* Text */
-  --font-size-xsmall: 0.75rem;
-  --font-size-small: 1rem;
-  --font-size-medium: 1.5rem;
-  --font-size-large: 2.25rem;
-  --font-size-xlarge: 3.25rem;
-  --font-size-2xlarge: 4.5rem;
-  --font-size-3xlarge: 6rem;
-  --font-size-4xlarge: 8rem;
+  --rv-font-size-xsmall: 0.75rem;
+  --rv-font-size-small: 1rem;
+  --rv-font-size-medium: 1.5rem;
+  --rv-font-size-large: 2.25rem;
+  --rv-font-size-xlarge: 3.25rem;
+  --rv-font-size-2xlarge: 4.5rem;
+  --rv-font-size-3xlarge: 6rem;
+  --rv-font-size-4xlarge: 8rem;
 
   --rv-font-weight-xthin: 300;
   --rv-font-weight-thin: 400;
@@ -71,8 +72,8 @@
   --brightness-hover: 96%;
 
   /* Ugly global vars */
-  --card-width: 40vw;
-  --card-height: 35vh;
+  --rv-card-width: 40vw;
+  --rv-card-height: 35vh;
 
   /* Global options */
   box-sizing: border-box;
@@ -80,57 +81,56 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg-primary: #333125;
-    --color-text-on-bg: #BCB794;
-    --color-primary: #403C1C;
-    --color-on-primary: #6D6840;
-    --color-success: #375234;
-    --color-failure: #786C5E;
-    --color-icon-stroke: var(--color-text-on-bg);
+    --rv-color-bg-primary: #333125;
+    --rv-color-text-on-bg: #BCB794;
+    --rv-color-primary: #403C1C;
+    --rv-color-on-primary: #6D6840;
+    --rv-color-success: #375234;
+    --rv-color-failure: #786C5E;
+    --rv-color-icon-stroke: var(--color-text-on-bg);
 
-    --brightness-hover: 110%;
+    --rv-brightness-hover: 110%;
 
     /* Legacy naming, migrate! */
-    --background: var(--color-bg-primary);
-    --text-on-background: var(--color-text-on-bg);
-    --text-on-primary: var(--color-text-on-primary);
-    --primary: var(--color-primary);
-    --on-primary: var(--color-on-primary);
-    --success: var(--color-success);
-    --failure: var(--color-failure);
-    --icon-stroke: var(--color-icon-stroke);
+    --background: var(--rv-color-bg-primary);
+    --text-on-background: var(--rv-color-text-on-bg);
+    --text-on-primary: var(--rv-color-text-on-primary);
+    --primary: var(--rv-color-primary);
+    --on-primary: var(--rv-color-on-primary);
+    --success: var(--rv-color-success);
+    --failure: var(--rv-color-failure);
+    --icon-stroke: var(--rv-color-icon-stroke);
   }
 }
 
 body {
-  color: var(--color-text-on-bg);
-  background: var(--color-bg-primary);
+  color: var(--rv-color-text-on-bg);
+  background: var(--rv-color-bg-primary);
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: var(--font-inter);
-  font-size: var(--font-size-medium);
-  font-weight: var(--font-weight-medium);
+  font-size: var(--rv-font-size-medium);
+  font-weight: var(--rv-font-weight-medium);
 
   /* Global options */
 }
 
 @theme {
-  --color-primary: var(--rv-color-primary);
-  --color-bgprimary: var(--rv-color-bg-primary);
-  --color-text-on-bg: #000000;
-  --color-text-on-primary: #000000;
-  --color-primary: #F1EFE0;
-  --color-on-primary: #D7D4C2;
-  --color-success: #A3E99D;
-  --color-failure: #E9C59D;
-  --color-icon-stroke: #1E1E1E;
-  --color-shadow: rgba(0, 0, 0, 0.25);
+  --color-primary:          var(--rv-color-primary);
+  --color-bgprimary:        var(--rv-color-bg-primary);
+  --color-text-on-bg:       var(--rv-color-text-on-background);
+  --color-text-on-primary:  var(--rv-color-text-on-primary);
+  --color-on-primary:       var(--rv-color-on-primary);
+  --color-success:          var(--rv-color-success);
+  --color-failure:          var(--rv-color-failure);
+  --color-icon-stroke:      var(--rv-color-icon-stroke);
+  --color-shadow:           var(--rv-color-shadow);
 
-  --font-weight-xthin: var(--rv-font-weight-xthin);
-  --font-weight-thin: var(--rv-font-weight-thin);
-  --font-weight-medium: var(--rv-font-weight-medium);
-  --font-weight-thick: var(--rv-font-weight-thick);
-  --font-weight-xthick: var(--rv-font-weight-xthick);
-  --font-weight-2xthick: var(--rv-font-weight-2xthick);
+  --font-weight-xthin:    var(--rv-font-weight-xthin);
+  --font-weight-thin:     var(--rv-font-weight-thin);
+  --font-weight-medium:   var(--rv-font-weight-medium);
+  --font-weight-thick:    var(--rv-font-weight-thick);
+  --font-weight-xthick:   var(--rv-font-weight-xthick);
+  --font-weight-2xthick:  var(--rv-font-weight-2xthick);
 
   --spacing-xsmall: 0.25rem;
   --spacing-small: 0.5rem;
@@ -139,4 +139,13 @@ body {
   --spacing-xlarge: 1.75rem;
   --spacing-2xlarge: 3rem;
   --spacing-full: 64rem;
+
+  --text-xsmall:  var(--rv-font-size-xsmall);
+  --text-small:   var(--rv-font-size-small);
+  --text-medium:  var(--rv-font-size-medium);
+  --text-large:   var(--rv-font-size-large);
+  --text-xlarge:  var(--rv-font-size-xlarge);
+  --text-2xlarge: var(--rv-font-size-2xlarge);
+  --text-3xlarge: var(--rv-font-size-3xlarge);
+  --text-4xlarge: var(--rv-font-size-4xlarge);
 }

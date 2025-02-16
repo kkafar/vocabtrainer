@@ -17,15 +17,15 @@
 
 .metadataContainer {
   display: flex;
-  font-size: var(--font-size-small);
+  font-size: var(--rv-font-size-small);
 }
 
 .groupName {
-  font-size: var(--font-size-medium);
-  font-weight: var(--font-weight-thick);
+  font-size: var(--rv-font-size-medium);
+  font-weight: var(--rv-font-weight-thick);
 }
 
 .metadataFont {
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-thick);
+  font-size: var(--rv-font-size-small);
+  font-weight: var(--rv-font-weight-thick);
 }
