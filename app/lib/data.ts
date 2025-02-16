@@ -1,4 +1,4 @@
-import { getDataRepository } from "@/app/data/database";
+import { getDataRepository } from "@/app/data";
 import { VocabularyGrouping, VocabularyItem, VocabularyItemGroup } from "./definitions";
 
 export async function fetchWordList(limit?: number, groupId?: VocabularyItemGroup['id']): Promise<VocabularyItem[]> {
