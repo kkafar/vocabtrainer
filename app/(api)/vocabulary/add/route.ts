@@ -3,7 +3,7 @@ import fs from "fs/promises";
 import { NextRequest } from "next/server";
 import { nanoid } from "nanoid";
 import { VocabularyItemGroupWoId, VocabularyItemWoId } from "@/app/lib/definitions";
-import { getDataRepository } from "@/app/data/database";
+import { getDataRepository } from "@/app/data";
 import { SqliteError } from 'better-sqlite3';
 
 function parseVocabularyFile(path: string) {
