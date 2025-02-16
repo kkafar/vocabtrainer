@@ -1,14 +1,71 @@
 import { fetchWordList } from "@/app/lib/data";
 import { VocabularyItem } from "@/app/lib/definitions";
-import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
+import IconButton from "@/app/ui/buttons/IconButton";
+import FitContentCard from "@/app/ui/card/FitContentCard";
 import FullScreenContainer from "@/app/ui/layout/FullScreenContainer";
+import SpacerY from "@/app/ui/layout/Spacer";
+import PlusIcon from '@/app/assets/plus-icon.svg';
+import Link from "next/link";
 
-function VocabularyItemsList({ items }: { items: VocabularyItem[] }) {
+function EmptyList() {
+  return (
+    <div className="flex flex-1 justify-center">
+      Whoops... Looks like there are no items added to this group yet. Add some now!
+    </div>
+  )
+}
+
+function VocabularyItemsTableRow({ item }: { item: VocabularyItem }) {
+  const translation = item.translation ?? '-';
+  const date = new Date(item.createdDate)
+  return (
+    <tr className="hover:bg-on-primary">
+      <td>{item.text}</td>
+      <td>{translation}</td>
+      <td>{date.toLocaleString()}</td>
+    </tr>
+  );
+}
+
+function VocablaryItemsTableHeadRow() {
+  return (
+    <thead>
+      <tr>
+        <th scope="col">Text</th>
+        <th scope="col">Translation</th>
+        <th scope="col">Created date</th>
+      </tr>
+    </thead>
+  );
+}
+
+function VocabularyItemsTableInner({ items }: { items: VocabularyItem[] }) {
+  return (
+    <table>
+      <VocablaryItemsTableHeadRow />
+      <tbody>
+        {items.map(item => <VocabularyItemsTableRow key={item.id.toString()} item={item} />)}
+      </tbody>
+    </table>
+  );
+}
+
+function VocabularyItemsTable({ items }: { items: VocabularyItem[] }) {
+  return (
+    <FitContentCard>
+      <div className="flex max-h-[80vh] overflow-y-scroll">
+        <VocabularyItemsTableInner items={items} />
+      </div>
+    </FitContentCard>
+  );
+}
+
+function AddItemsLink() {
   return (
     <div>
-      <ul>
-        {items.map((item) => <li key={item.id}>{item.text} -  {item.translation}</li>)}
-      </ul>
+      <Link href={'/vocabulary/add/item'}>
+        <IconButton Icon={PlusIcon} className="bg-primary" />
+      </Link>
     </div>
   );
 }
@@ -19,9 +76,12 @@ export default async function VocabularyGroupPage({ params }: { params: Promise<
 
   return (
     <FullScreenContainer>
-      <CenterYXContainer>
-        {vocabularyItems.length > 0 && <VocabularyItemsList items={vocabularyItems} />}
-      </CenterYXContainer>
+      <div className="flex flex-1 flex-col items-center py-2xlarge">
+        {vocabularyItems.length === 0 && <EmptyList />}
+        {vocabularyItems.length > 0 && <VocabularyItemsTable items={vocabularyItems} />}
+        <SpacerY className="h-large" />
+        <AddItemsLink />
+      </div>
     </FullScreenContainer>
   );
 }

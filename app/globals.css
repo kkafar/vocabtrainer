@@ -148,4 +148,12 @@ body {
   --text-2xlarge: var(--rv-font-size-2xlarge);
   --text-3xlarge: var(--rv-font-size-3xlarge);
   --text-4xlarge: var(--rv-font-size-4xlarge);
+
+  --radius-xsmall: var(--rv-radius-xsmall);
+  --radius-small: var(--rv-radius-small);
+  --radius-medium: var(--rv-radius-medium);
+  --radius-large: var(--rv-radius-large);
+  --radius-xlarge: var(--rv-radius-xlarge);
+  --radius-2xlarge: var(--rv-radius-2xlarge);
+  --radius-full: var(--rv-radius-full);
 }

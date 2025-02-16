@@ -13,7 +13,7 @@ export async function CenterYContainer({ children }: Props) {
 
 export async function CenterXContainer({ children }: Props) {
   return (
-    <div className={styles.centerXContainer}>
+    <div className="flex-1 flex-col justify-center">
       {children}
     </div>
   )
@@ -22,9 +22,9 @@ export async function CenterXContainer({ children }: Props) {
 export default async function CenterYXContainer({ children }: Props) {
   return (
     <CenterYContainer>
-      <CenterXContainer>
+      <div className={styles.centerXContainer}>
         {children}
-      </CenterXContainer>
+      </div>
     </CenterYContainer>
   );
 }
