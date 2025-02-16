@@ -26,28 +26,29 @@
   --icon-stroke: var(--rv-color-icon-stroke);
 
   /* Radius */
-  --radius-xsmall: 0.25rem;
-  --radius-small: 0.5rem;
-  --radius-medium: 0.75rem;
-  --radius-large: 1rem;
-  --radius-xlarge: 1.75rem;
-  --radius-2xlarge: 3rem;
-  --radius-full: 64rem;
+  --rv-radius-xsmall: 0.25rem;
+  --rv-radius-small: 0.5rem;
+  --rv-radius-medium: 0.75rem;
+  --rv-radius-large: 1rem;
+  --rv-radius-xlarge: 1.75rem;
+  --rv-radius-2xlarge: 3rem;
+  --rv-radius-full: 64rem;
 
   /* Padding & margin */
-  --padding-xsmall: 0.25rem;
-  --padding-small: 0.5rem;
-  --padding-medium: 0.75rem;
-  --padding-large: 1rem;
-  --padding-xlarge: 1.75rem;
-  --padding-2xlarge: 3rem;
+  /* Should be provided by tailwindcss */
+  /* --padding-xsmall: 0.25rem; */
+  /* --padding-small: 0.5rem; */
+  /* --padding-medium: 0.75rem; */
+  /* --padding-large: 1rem; */
+  /* --padding-xlarge: 1.75rem; */
+  /* --padding-2xlarge: 3rem; */
 
-  --margin-xsmall: 0.25rem;
-  --margin-small: 0.5rem;
-  --margin-medium: 0.75rem;
-  --margin-large: 1rem;
-  --margin-xlarge: 1.75rem;
-  --margin-2xlarge: 3rem;
+  /* --margin-xsmall: 0.25rem; */
+  /* --margin-small: 0.5rem; */
+  /* --margin-medium: 0.75rem; */
+  /* --margin-large: 1rem; */
+  /* --margin-xlarge: 1.75rem; */
+  /* --margin-2xlarge: 3rem; */
 
   /* Text */
   --font-size-xsmall: 0.75rem;
@@ -130,4 +131,12 @@ body {
   --font-weight-thick: var(--rv-font-weight-thick);
   --font-weight-xthick: var(--rv-font-weight-xthick);
   --font-weight-2xthick: var(--rv-font-weight-2xthick);
+
+  --spacing-xsmall: 0.25rem;
+  --spacing-small: 0.5rem;
+  --spacing-medium: 0.75rem;
+  --spacing-large: 1rem;
+  --spacing-xlarge: 1.75rem;
+  --spacing-2xlarge: 3rem;
+  --spacing-full: 64rem;
 }
