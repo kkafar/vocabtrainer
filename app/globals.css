@@ -87,7 +87,7 @@
     --rv-color-on-primary: #6D6840;
     --rv-color-success: #375234;
     --rv-color-failure: #786C5E;
-    --rv-color-icon-stroke: var(--color-text-on-bg);
+    --rv-color-icon-stroke: var(--rv-color-text-on-bg);
 
     --rv-brightness-hover: 110%;
 
@@ -116,7 +116,7 @@ body {
 
 @theme {
   --color-primary:          var(--rv-color-primary);
-  --color-bgprimary:        var(--rv-color-bg-primary);
+  --color-primary-bg:       var(--rv-color-bg-primary);
   --color-text-on-bg:       var(--rv-color-text-on-background);
   --color-text-on-primary:  var(--rv-color-text-on-primary);
   --color-on-primary:       var(--rv-color-on-primary);
