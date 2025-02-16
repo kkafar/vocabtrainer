@@ -1,68 +1,70 @@
 @import "tailwindcss";
 
 :root {
+  /* Utility variables, source of truth. "Clean variables" are produced mostly by tailwind's @theme down below. */
+
   /* Colors */
-  --color-bg-primary: #FCFBF9;
-  --color-text-on-background: #000000;
-  --color-text-on-primary: #000000;
-  --color-primary: #F1EFE0;
-  --color-on-primary: #D7D4C2;
-  --color-success: #A3E99D;
-  --color-failure: #E9C59D;
-  --color-icon-stroke: #1E1E1E;
-  --color-shadow: rgba(0, 0, 0, 0.25);
+  --rv-color-bg-primary: #FCFBF9;
+  --rv-color-text-on-background: #000000;
+  --rv-color-text-on-primary: #000000;
+  --rv-color-primary: #F1EFE0;
+  --rv-color-on-primary: #D7D4C2;
+  --rv-color-success: #A3E99D;
+  --rv-color-failure: #E9C59D;
+  --rv-color-icon-stroke: #1E1E1E;
+  --rv-color-shadow: rgba(0, 0, 0, 0.25);
 
   /* Legacy naming */
   /* TODO: Migrate! */
-  --background: var(--color-bg-primary);
-  --text-on-background: var(--color-text-on-bg);
-  --text-on-primary: var(--color-text-on-primary);
-  --primary: var(--color-primary);
-  --on-primary: var(--color-on-primary);
-  --success: var(--color-success);
-  --failure: var(--color-failure);
-  --icon-stroke: var(--color-icon-stroke);
+  --background: var(--rv-color-bg-primary);
+  --text-on-background: var(--rv-color-text-on-bg);
+  --text-on-primary: var(--rv-color-text-on-primary);
+  --primary: var(--rv-color-primary);
+  --on-primary: var(--rv-color-on-primary);
+  --success: var(--rv-color-success);
+  --failure: var(--rv-color-failure);
+  --icon-stroke: var(--rv-color-icon-stroke);
 
   /* Radius */
-  --radius-xsmall: 4px;
-  --radius-small: 8px;
-  --radius-medium: 12px;
-  --radius-large: 16px;
-  --radius-xlarge: 28px;
-  --radius-2xlarge: 48px;
-  --radius-full: 1000px;
+  --radius-xsmall: 0.25rem;
+  --radius-small: 0.5rem;
+  --radius-medium: 0.75rem;
+  --radius-large: 1rem;
+  --radius-xlarge: 1.75rem;
+  --radius-2xlarge: 3rem;
+  --radius-full: 64rem;
 
   /* Padding & margin */
-  --padding-xsmall: 4px;
-  --padding-small: 8px;
-  --padding-medium: 12px;
-  --padding-large: 16px;
-  --padding-xlarge: 28px;
-  --padding-2xlarge: 48px;
+  --padding-xsmall: 0.25rem;
+  --padding-small: 0.5rem;
+  --padding-medium: 0.75rem;
+  --padding-large: 1rem;
+  --padding-xlarge: 1.75rem;
+  --padding-2xlarge: 3rem;
 
-  --margin-xsmall: 4px;
-  --margin-small: 8px;
-  --margin-medium: 12px;
-  --margin-large: 16px;
-  --margin-xlarge: 28px;
-  --margin-2xlarge: 48px;
+  --margin-xsmall: 0.25rem;
+  --margin-small: 0.5rem;
+  --margin-medium: 0.75rem;
+  --margin-large: 1rem;
+  --margin-xlarge: 1.75rem;
+  --margin-2xlarge: 3rem;
 
   /* Text */
-  --font-size-xsmall: 12px;
-  --font-size-small: 16px;
-  --font-size-medium: 24px;
-  --font-size-large: 36px;
-  --font-size-xlarge: 52px;
-  --font-size-2xlarge: 72px;
-  --font-size-3xlarge: 96px;
-  --font-size-4xlarge: 128px;
+  --font-size-xsmall: 0.75rem;
+  --font-size-small: 1rem;
+  --font-size-medium: 1.5rem;
+  --font-size-large: 2.25rem;
+  --font-size-xlarge: 3.25rem;
+  --font-size-2xlarge: 4.5rem;
+  --font-size-3xlarge: 6rem;
+  --font-size-4xlarge: 8rem;
 
-  --font-weight-xthin: 300;
-  --font-weight-thin: 400;
-  --font-weight-medium: 500;
-  --font-weight-thick: 600;
-  --font-weight-xthick: 700;
-  --font-weight-2xthick: 800;
+  --rv-font-weight-xthin: 300;
+  --rv-font-weight-thin: 400;
+  --rv-font-weight-medium: 500;
+  --rv-font-weight-thick: 600;
+  --rv-font-weight-xthick: 700;
+  --rv-font-weight-2xthick: 800;
 
   /* Other styles */
   --brightness-hover: 96%;
@@ -110,3 +112,22 @@ body {
   /* Global options */
 }
 
+@theme {
+  --color-primary: var(--rv-color-primary);
+  --color-bgprimary: var(--rv-color-bg-primary);
+  --color-text-on-bg: #000000;
+  --color-text-on-primary: #000000;
+  --color-primary: #F1EFE0;
+  --color-on-primary: #D7D4C2;
+  --color-success: #A3E99D;
+  --color-failure: #E9C59D;
+  --color-icon-stroke: #1E1E1E;
+  --color-shadow: rgba(0, 0, 0, 0.25);
+
+  --font-weight-xthin: var(--rv-font-weight-xthin);
+  --font-weight-thin: var(--rv-font-weight-thin);
+  --font-weight-medium: var(--rv-font-weight-medium);
+  --font-weight-thick: var(--rv-font-weight-thick);
+  --font-weight-xthick: var(--rv-font-weight-xthick);
+  --font-weight-2xthick: var(--rv-font-weight-2xthick);
+}
