@@ -9,7 +9,8 @@
       "**/coverage/*",
       "**/*.d.ts",
       "**/*.astro",
-      "**/node_modules/*"
+      "**/node_modules/*",
+      "apps/next-app/**"
     ]
   },
   "linter": {
