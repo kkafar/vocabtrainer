@@ -1,0 +1,10 @@
+.columnFlexContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.panelSpacer {
+  display: flex;
+  flex: 1;
+  margin-top: var(--spacing-xlarge);
+}

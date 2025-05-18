@@ -1,0 +1,17 @@
+.vocabList {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.toolbar {
+  display: flex;
+  flex: 1;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  justify-content: flex-end;
+  padding: var(--spacing-xlarge);
+  pointer-events: none;
+}
