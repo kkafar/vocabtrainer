@@ -1,0 +1,9 @@
+{
+  "name": "vocabtrainer-monorepo",
+  "scripts": {
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "husky": "^9.1.7"
+  }
+}
