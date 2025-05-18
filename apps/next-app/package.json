@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "next-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,8 +15,8 @@
     "clsx": "^2.1.1",
     "nanoid": "^5.0.9",
     "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-loading-indicators": "^1.0.0",
     "server-only": "^0.0.1",
     "zod": "^3.23.8"
