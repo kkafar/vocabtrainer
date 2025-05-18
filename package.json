@@ -1,6 +1,9 @@
 {
   "name": "vocabtrainer-monorepo",
   "scripts": {
+    "prepare": "husky",
+    "lint": "biome check --fix apps/",
+    "lint:staged": "biome check --staged --no-errors-on-unmatched --fix apps/"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
