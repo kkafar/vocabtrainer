@@ -12,5 +12,6 @@
   width: 100%;
   position: fixed;
   justify-content: flex-end;
-  padding: var(--spacing-xlarge)
+  padding: var(--spacing-xlarge);
+  pointer-events: none;
 }

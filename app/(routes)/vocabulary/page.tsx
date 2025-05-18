@@ -1,6 +1,5 @@
 import { fetchGroupsQuery } from "@/app/query";
 import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
-import FullScreenContainer from "@/app/ui/layout/FullScreenContainer";
 import { VocabularyItemGroup } from "@/app/lib/definitions";
 import GroupCard from "@/app/ui/GroupCard";
 import styles from './styles.module.css';
@@ -38,7 +37,9 @@ async function VocabularyGroupList() {
 async function Toolbar({ children }: ChildrenProp) {
   return (
     <div className={styles.toolbar}>
-      {children}
+      <div className="pointer-events-auto">
+        {children}
+      </div>
     </div>
   )
 }
@@ -55,13 +56,13 @@ async function AddGroup() {
 
 export default async function VocabularyPage() {
   return (
-    <FullScreenContainer>
+    <>
       <Toolbar>
         <AddGroup />
       </Toolbar>
       <CenterYXContainer>
         <VocabularyGroupList />
       </CenterYXContainer>
-    </FullScreenContainer>
+    </>
   )
 }

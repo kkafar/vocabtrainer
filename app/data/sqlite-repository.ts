@@ -1,7 +1,12 @@
 import { isStringBlank } from "@/app/lib/text-util";
-import { DataRepository } from "./DataRepository";
+import { DataRepository } from "./repository";
 import Database, { type Database as DatabaseType, type Statement as StatementType } from "better-sqlite3";
 import { TableVocabularyAttributes, TableVocabularyGroupingAttributes, VocabularyGrouping, VocabularyItem, VocabularyItemGroup, VocabularyItemGroupWoId, VocabularyItemWithGroupId, VocabularyItemWoId } from "../lib/definitions";
+import { sql } from "../lib/sql-util";
+
+export type InsertOptions = {
+  conflictResolutionAction: 'rolback' | 'abort' | 'fail' | 'ignore' | 'replace';
+}
 
 export class SqliteRepository implements DataRepository {
   private path: string;
@@ -38,6 +43,20 @@ export class SqliteRepository implements DataRepository {
 
   public insertAllIntoVocabularyGrouping(groupings: Array<VocabularyGrouping>): void {
     this.insertAllInSingleTransaction(this.prepareInsertIntoVocabularyGroupingStmt(), groupings);
+  }
+
+  public insertVocabularyItemsWithGroupId(items: VocabularyItemWoId[], groupId: VocabularyItemGroup['id']): void {
+    const vocabularyInsertStmt = this.prepareInsertIntoVocabularyStmt();
+    const groupingInsertStmt = this.prepareInsertIntoVocabularyGroupingByItemTextStmt();
+
+    const transaction = this.conn.transaction((items: VocabularyItemWoId[], groupId: VocabularyItemGroup['id']) => {
+      items.forEach((item) => {
+        vocabularyInsertStmt.run(item);
+        groupingInsertStmt.run({ groupId, text: item.text });
+      });
+    });
+
+    transaction(items, groupId);
   }
 
   public updateVocabularyByIdWithTextAndTranslation(
@@ -99,6 +118,10 @@ export class SqliteRepository implements DataRepository {
 
   private prepareInsertIntoVocabularyGroupingStmt(): StatementType<[VocabularyGrouping]> {
     return this.conn.prepare<VocabularyGrouping>(this.insertIntoVocabularyGroupingStmt());
+  }
+
+  private prepareInsertIntoVocabularyGroupingByItemTextStmt(): StatementType<[{ groupId: VocabularyItemGroup['id'], text: VocabularyItem['text'] }]> {
+    return this.conn.prepare<{ groupId: VocabularyItemGroup['id'], text: VocabularyItem['text'] }>(this.insertIntoVocabularyGroupingByItemTextStmt());
   }
 
   private prepareUpdateVocabularyByIdWithTextAndTranslationStmt(): StatementType<
@@ -182,7 +205,9 @@ export class SqliteRepository implements DataRepository {
   }
 
   private insertIntoVocabularyStmt(): string {
-    return "INSERT INTO vocabulary (text, translation, created_date, last_updated_date) VALUES ($text, $translation, $createdDate, $lastUpdatedDate);";
+    return sql`
+      INSERT INTO vocabulary (text, translation, created_date, last_updated_date)
+      VALUES ($text, $translation, $createdDate, $lastUpdatedDate);`;
   }
 
   private insertIntoGroupsStmt(): string {
@@ -191,6 +216,14 @@ export class SqliteRepository implements DataRepository {
 
   private insertIntoVocabularyGroupingStmt(): string {
     return "INSERT INTO vocabulary_grouping (item_id, group_id) VALUES ($itemId, $groupId);";
+  }
+
+  private insertIntoVocabularyGroupingByItemTextStmt(): string {
+    return sql`
+      INSERT INTO vocabulary_grouping (item_id, group_id)
+      SELECT v.id, $groupId
+      FROM vocabulary as v
+      WHERE v.text = $text;`
   }
 
   private updateVocabularyByIdWithTextAndTranslationStmt(): string {

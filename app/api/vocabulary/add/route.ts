@@ -5,6 +5,7 @@ import { nanoid } from "nanoid";
 import { VocabularyItemGroupWoId, VocabularyItemWoId } from "@/app/lib/definitions";
 import { getDataRepository } from "@/app/data";
 import { SqliteError } from 'better-sqlite3';
+import { revalidatePath } from "next/cache";
 
 function parseVocabularyFile(path: string) {
   const stdout_content = execSync(`./scripts/main.py --stdout --camel-case --no-pretty ${path}`);
@@ -28,6 +29,30 @@ async function saveFileToFolder(file: File, folder: string) {
   const path = folder + `/${file.name}`
   await fs.writeFile(path, await file.text(), { flag: 'a', flush: true });
   return path;
+}
+
+function resolveGroupId(data: FormData): number | null {
+  if (!data.has('groupId')) {
+    return null;
+  }
+
+  const unknownId = data.get('groupId');
+
+  if (!unknownId || !(typeof unknownId === 'string')) {
+    console.log(`Invalid type of groupId! Expected: "string", got "${typeof unknownId}"`);
+    return null;
+  }
+
+  const stringId = unknownId as string;
+
+  let numberId: number | null = null;
+  try {
+    numberId = parseInt(stringId);
+  } catch (error) {
+    console.warn(`Failed to parse groupId: ${stringId} with error: ${error}`);
+  }
+
+  return numberId;
 }
 
 export async function POST(request: NextRequest) {
@@ -87,10 +112,20 @@ export async function POST(request: NextRequest) {
 
   const preparedData: OutputType = parsingOutput.flat(1);
 
+  const groupId = resolveGroupId(data);
+
   // save data to db
   try {
     const repo = getDataRepository();
-    repo.insertAllIntoVocabulary(preparedData.map(data => data.entities).flat(1));
+    const items = preparedData.map(data => data.entities).flat(1);
+
+    if (groupId) {
+      repo.insertVocabularyItemsWithGroupId(items, groupId);
+    } else {
+      repo.insertAllIntoVocabulary(items);
+    }
+
+    revalidatePath('/vocabulary/');
   } catch (error) {
     const errorAsJson = JSON.stringify(error);
     if (error instanceof SqliteError) {
@@ -104,3 +139,4 @@ export async function POST(request: NextRequest) {
 
   return new Response(undefined, { status: 200 });
 }
+

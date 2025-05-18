@@ -6,5 +6,5 @@
 .panelSpacer {
   display: flex;
   flex: 1;
-  margin-top: var(--margin-xlarge);
+  margin-top: var(--spacing-xlarge);
 }

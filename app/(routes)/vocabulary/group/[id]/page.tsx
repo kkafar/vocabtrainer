@@ -2,7 +2,6 @@ import { fetchWordList } from "@/app/lib/data";
 import { VocabularyItem } from "@/app/lib/definitions";
 import IconButton from "@/app/ui/buttons/IconButton";
 import FitContentCard from "@/app/ui/card/FitContentCard";
-import FullScreenContainer from "@/app/ui/layout/FullScreenContainer";
 import SpacerY from "@/app/ui/layout/Spacer";
 import PlusIcon from '@/app/assets/plus-icon.svg';
 import Link from "next/link";
@@ -60,10 +59,12 @@ function VocabularyItemsTable({ items }: { items: VocabularyItem[] }) {
   );
 }
 
-function AddItemsLink() {
+function AddItemsLink({ groupId }: { groupId?: number }) {
+  const targetPath = groupId != null ? `/vocabulary/add/item?groupId=${encodeURIComponent(groupId)}` : '/vocabulary/add/item';
+
   return (
     <div>
-      <Link href={'/vocabulary/add/item'}>
+      <Link href={targetPath}>
         <IconButton Icon={PlusIcon} className="bg-primary" />
       </Link>
     </div>
@@ -75,13 +76,11 @@ export default async function VocabularyGroupPage({ params }: { params: Promise<
   const vocabularyItems = await fetchWordList(undefined, id);
 
   return (
-    <FullScreenContainer>
-      <div className="flex flex-1 flex-col items-center py-2xlarge">
-        {vocabularyItems.length === 0 && <EmptyList />}
-        {vocabularyItems.length > 0 && <VocabularyItemsTable items={vocabularyItems} />}
-        <SpacerY className="h-large" />
-        <AddItemsLink />
-      </div>
-    </FullScreenContainer>
+    <div className="flex flex-1 flex-col items-center py-xlarge">
+      {vocabularyItems.length === 0 && <EmptyList />}
+      {vocabularyItems.length > 0 && <VocabularyItemsTable items={vocabularyItems} />}
+      <SpacerY className="h-large" />
+      <AddItemsLink groupId={id} />
+    </div>
   );
 }

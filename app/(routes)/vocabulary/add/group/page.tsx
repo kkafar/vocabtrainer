@@ -1,5 +1,4 @@
 import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
-import FullScreenContainer from "@/app/ui/layout/FullScreenContainer";
 import AddGroupForm from "./AddGroupForm";
 import styles from './styles.module.css';
 import ButtonPanel from "@/app/ui/ButtonPanel";
@@ -12,23 +11,21 @@ export default async function AddPage() {
   const formId = "addGroupForm";
 
   return (
-    <FullScreenContainer>
-      <CenterYXContainer>
-        <div className={styles.columnFlexContainer}>
-          <AddGroupForm formId={formId} />
-          <div className={styles.panelSpacer}>
-            <ButtonPanel>
-              <RoundedButton onClick={async () => {
-                'use server';
-                redirect('/vocabulary');
-              }}>
-                Cancel <RoundedIcon />
-              </RoundedButton>
-              <SubmitButton form={formId} />
-            </ButtonPanel>
-          </div>
+    <CenterYXContainer>
+      <div className={styles.columnFlexContainer}>
+        <AddGroupForm formId={formId} />
+        <div className={styles.panelSpacer}>
+          <ButtonPanel>
+            <RoundedButton onClick={async () => {
+              'use server';
+              redirect('/vocabulary');
+            }}>
+              Cancel <RoundedIcon />
+            </RoundedButton>
+            <SubmitButton form={formId} />
+          </ButtonPanel>
         </div>
-      </CenterYXContainer>
-    </FullScreenContainer>
+      </div>
+    </CenterYXContainer>
   );
 }

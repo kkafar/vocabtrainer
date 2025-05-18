@@ -1,13 +1,13 @@
 import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
-import FullScreenContainer from "@/app/ui/layout/FullScreenContainer";
+import LogoLayout from "@/app/ui/layout/LogoLayout";
 import { type ChildrenProp } from "@/app/ui/types";
 
 export default async function Layout({ children }: ChildrenProp) {
   return (
-    <FullScreenContainer>
+    <LogoLayout>
       <CenterYXContainer>
         {children}
       </CenterYXContainer>
-    </FullScreenContainer>
+    </LogoLayout>
   );
 }

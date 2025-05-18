@@ -5,9 +5,11 @@ import React from "react";
 import FormFileInput from "@/app/ui/form/FormFileInput";
 import InputList from "@/app/ui/form/InputList";
 import styles from './styles.module.css';
+import { VocabularyItemGroup } from "@/app/lib/definitions";
 
 export type AddItemFormProps = {
   formId: string;
+  groupId?: VocabularyItemGroup['id'];
 }
 
 function convertFileListIntoArray(files: FileList | null): File[] {
@@ -56,7 +58,7 @@ function SelectFilesMessage() {
   );
 }
 
-export default function AddItemForm({ formId }: AddItemFormProps) {
+export default function AddItemForm({ formId, groupId }: AddItemFormProps) {
   const [inputFiles, setInputFiles] = React.useState<FileList | null>(null);
 
   const handleFileListChange = React.useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
@@ -84,7 +86,11 @@ export default function AddItemForm({ formId }: AddItemFormProps) {
       formData.append('selectedFiles', file);
     });
 
-    fetch("/api/routes/vocabulary/add", {
+    if (groupId != null) {
+      formData.set('groupId', groupId.toString());
+    }
+
+    fetch("/api/vocabulary/add", {
       method: 'POST',
       body: formData,
     })
@@ -98,7 +104,7 @@ export default function AddItemForm({ formId }: AddItemFormProps) {
         console.error(err);
       });
 
-  }, [inputFiles]);
+  }, [inputFiles, groupId]);
 
   return (
     <div>

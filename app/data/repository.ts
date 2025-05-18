@@ -14,6 +14,8 @@ export interface DataRepository {
   insertIntoVocabularyGrouping(grouping: VocabularyGrouping): Database.RunResult;
   insertAllIntoVocabularyGrouping(groupings: VocabularyGrouping[]): void;
 
+  insertVocabularyItemsWithGroupId(items: VocabularyItemWoId[], groupId: VocabularyItemGroup['id']): void;
+
   // TODO: This MUST also take lastUpdatedDate. I'm not sure whether whether the DataRepository should guard
   // this field semantics and update this field whenever update is made or require user to pass the value.
   updateVocabularyByIdWithTextAndTranslation(
