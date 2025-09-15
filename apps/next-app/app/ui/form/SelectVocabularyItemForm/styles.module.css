@@ -1,17 +1,10 @@
-.selectItemListItem {
-
-}
+.selectItemListItem {}
 
 .itemInner {
   display: flex;
   flex-direction: row;
   min-width: 20vw;
   justify-content: space-between;
-}
-
-.itemFormInnerContainer {
-  display: flex;
-  flex-direction: column;
 }
 
 .sectionContainer {
@@ -22,6 +15,4 @@
 .sectionItemsContainer {
   display: flex;
   flex-direction: column;
-  max-height: 35vh;
-  overflow-y: scroll;
 }

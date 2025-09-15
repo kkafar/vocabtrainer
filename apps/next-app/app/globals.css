@@ -4,15 +4,25 @@
   /* Utility variables, source of truth. "Clean variables" are produced mostly by tailwind's @theme down below. */
 
   /* Colors */
-  --rv-color-bg-primary: #FCFBF9;
-  --rv-color-text-on-background: #000000;
-  --rv-color-text-on-primary: #000000;
-  --rv-color-primary: #F1EFE0;
-  --rv-color-on-primary: #D7D4C2;
-  --rv-color-success: #A3E99D;
-  --rv-color-failure: #E9C59D;
-  --rv-color-icon-stroke: #1E1E1E;
-  --rv-color-shadow: rgba(0, 0, 0, 0.25);
+  /* --rv-color-primary: #F1EFE0; */
+  /* --rv-color-bg-primary: #FCFBF9; */
+  /* --rv-color-text-on-background: #000000; */
+  /* --rv-color-text-on-primary: #000000; */
+  /* --rv-color-on-primary: #D7D4C2; */
+  /* --rv-color-success: #A3E99D; */
+  /* --rv-color-failure: #E9C59D; */
+  /* --rv-color-icon-stroke: #1E1E1E; */
+  /* --rv-color-shadow: rgba(0, 0, 0, 0.25); */
+
+  --rv-color-primary: var(--rv-color-navylight-100);
+  --rv-color-bg-primary: var(--rv-color-white);
+  --rv-color-text-on-background: var(--rv-color-navy);
+  --rv-color-text-on-primary: var(--rv-color-navy);
+  --rv-color-on-primary: var(--rv-color-navylight-10);
+  --rv-color-success: var(--rv-color-greenlight-100);
+  --rv-color-failure: var(--rv-color-redlight-100);
+  --rv-color-icon-stroke: var(--rv-color-navylight-100);
+  --rv-color-shadow: var(--rv-color-navylight-transparent);
 
   /* Legacy naming */
   /* TODO: Migrate! */
@@ -55,6 +65,7 @@
   --rv-font-size-xsmall: 0.75rem;
   --rv-font-size-small: 1rem;
   --rv-font-size-medium: 1.5rem;
+  --rv-font-size-xmedium: 1.75rem;
   --rv-font-size-large: 2.25rem;
   --rv-font-size-xlarge: 3.25rem;
   --rv-font-size-2xlarge: 4.5rem;
@@ -77,16 +88,120 @@
 
   /* Global options */
   box-sizing: border-box;
+
+  /* Color v2 */
+  --rv-color-navylight-100: #001a72;
+  --rv-color-navylight-80: #33488e;
+  --rv-color-navylight-60: #6676aa;
+  --rv-color-navylight-40: #919fcf;
+  --rv-color-navylight-20: #c1c6e5;
+  --rv-color-navylight-10: #eef0ff;
+  --rv-color-navylight-transparent: #33488e40;
+
+  --rv-color-navydark-140: #1b2445;
+  --rv-color-navydark-120: #122154;
+  --rv-color-navydark-100: #001a72;
+  --rv-color-navydark-80: #0a2688;
+  --rv-color-navydark-70: #33488e;
+  --rv-color-navydark-60: #7485bd;
+  --rv-color-navydark-40: #abbcf5;
+  --rv-color-navydark-20: #c1c6e5;
+
+  --rv-color-purplelight-100: #782aeb;
+  --rv-color-purplelight-80: #b58df1;
+  --rv-color-purplelight-60: #d1bbf3;
+  --rv-color-purplelight-40: #e8dafc;
+  --rv-color-purplelight-20: #f5eeff;
+  --rv-color-purplelight-transparent: #f5eeff40;
+
+  --rv-color-purpledark-140: #473d68;
+  --rv-color-purpledark-120: #6a539a;
+  --rv-color-purpledark-100: #b07eff;
+  --rv-color-purpledark-80: #c49ffe;
+  --rv-color-purpledark-60: #d0b2ff;
+  --rv-color-purpledark-40: #e9dbff;
+  --rv-color-purpledark-transparent: #473d6840;
+
+  --rv-color-bluelight-100: #38acdd;
+  --rv-color-bluelight-80: #5bb9e0;
+  --rv-color-bluelight-60: #87cce8;
+  --rv-color-bluelight-40: #b5e1f1;
+  --rv-color-bluelight-20: #e1f3fa;
+
+  --rv-color-bluedark-140: #1b4865;
+  --rv-color-bluedark-120: #126893;
+  --rv-color-bluedark-100: #00a9f0;
+  --rv-color-bluedark-80: #6fcef5;
+  --rv-color-bluedark-60: #a8dbf0;
+  --rv-color-bluedark-40: #d7f0fa;
+
+  --rv-color-greenlight-100: #57b495;
+  --rv-color-greenlight-80: #82cab2;
+  --rv-color-greenlight-60: #b1dfd0;
+  --rv-color-greenlight-40: #dff2ec;
+  --rv-color-greenlight-20: #ebfcf7;
+
+  --rv-color-greendark-140: #2a4f4a;
+  --rv-color-greendark-120: #31775d;
+  --rv-color-greendark-100: #3fc684;
+  --rv-color-greendark-80: #7adead;
+  --rv-color-greendark-60: #a0dfc0;
+  --rv-color-greendark-40: #d3f5e4;
+
+  --rv-color-redlight-100: #ff6259;
+  --rv-color-redlight-80: #fa7f7c;
+  --rv-color-redlight-60: #ffa3a1;
+  --rv-color-redlight-40: #ffd2d7;
+  --rv-color-redlight-20: #ffedf0;
+
+  --rv-color-reddark-140: #5a3b46;
+  --rv-color-reddark-120: #914f55;
+  --rv-color-reddark-110: #c86364;
+  --rv-color-reddark-100: #ff7774;
+  --rv-color-reddark-80: #ff8b88;
+  --rv-color-reddark-60: #ffb4b2;
+  --rv-color-reddark-40: #ffdcdb;
+
+  --rv-color-yellowlight-100: #ffd61e;
+  --rv-color-yellowlight-80: #ffe04b;
+  --rv-color-yellowlight-60: #ffe780;
+  --rv-color-yellowlight-40: #fff1b2;
+  --rv-color-yellowlight-20: #fffae1;
+
+  --rv-color-yellowdark-140: #5a553a;
+  --rv-color-yellowdark-120: #91823d;
+  --rv-color-yellowdark-100: #ffdd44;
+  --rv-color-yellowdark-80: #ffe678;
+  --rv-color-yellowdark-60: #fff1b2;
+  --rv-color-yellowdark-40: #fff9db;
+
+  --rv-color-offwhite: #f8f9ff;
+  --rv-color-white: #fcfcff;
+  --rv-color-white-transparentlight: #fcfcff40;
+  --rv-color-white-transparentdark: #fcfcff80;
+
+  --rv-color-lightoffnavy: #30354a;
+  --rv-color-offnavy: #272b3c;
+  --rv-color-navy: #232736;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --rv-color-bg-primary: #333125;
-    --rv-color-text-on-bg: #BCB794;
-    --rv-color-primary: #403C1C;
-    --rv-color-on-primary: #6D6840;
-    --rv-color-success: #375234;
-    --rv-color-failure: #786C5E;
+    /* --rv-color-primary: #403C1C; */
+    /* --rv-color-bg-primary: #333125; */
+    /* --rv-color-text-on-bg: #BCB794; */
+    /* --rv-color-on-primary: #6D6840; */
+    /* --rv-color-success: #375234; */
+    /* --rv-color-failure: #786C5E; */
+    /* --rv-color-icon-stroke: var(--rv-color-text-on-bg); */
+
+    --rv-color-primary: var(--rv-color-offwhite);
+    --rv-color-bg-primary: var(--rv-color-navydark-120);
+    --rv-color-text-on-primary: var(--rv-color-navy);
+    --rv-color-text-on-background: var(--rv-color-offwhite);
+    --rv-color-on-primary: var(--rv-color-navydark-120);
+    --rv-color-success: var(--rv-color-greendark-120);
+    --rv-color-failure: var(--rv-color-reddark-120);
     --rv-color-icon-stroke: var(--rv-color-text-on-bg);
 
     --rv-brightness-hover: 110%;
@@ -104,7 +219,7 @@
 }
 
 body {
-  color: var(--rv-color-text-on-bg);
+  color: var(--rv-color-text-on-primary);
   background: var(--rv-color-bg-primary);
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: var(--font-inter);
@@ -115,22 +230,116 @@ body {
 }
 
 @theme {
-  --color-primary:          var(--rv-color-primary);
-  --color-primary-bg:       var(--rv-color-bg-primary);
-  --color-text-on-bg:       var(--rv-color-text-on-background);
-  --color-text-on-primary:  var(--rv-color-text-on-primary);
-  --color-on-primary:       var(--rv-color-on-primary);
-  --color-success:          var(--rv-color-success);
-  --color-failure:          var(--rv-color-failure);
-  --color-icon-stroke:      var(--rv-color-icon-stroke);
-  --color-shadow:           var(--rv-color-shadow);
+  --color-primary: var(--rv-color-primary);
+  --color-primary-bg: var(--rv-color-bg-primary);
+  --color-text-on-bg: var(--rv-color-text-on-background);
+  --color-text-on-primary: var(--rv-color-text-on-primary);
+  --color-on-primary: var(--rv-color-on-primary);
+  --color-success: var(--rv-color-success);
+  --color-failure: var(--rv-color-failure);
+  --color-icon-stroke: var(--rv-color-icon-stroke);
+  --color-shadow: var(--rv-color-shadow);
 
-  --font-weight-xthin:    var(--rv-font-weight-xthin);
-  --font-weight-thin:     var(--rv-font-weight-thin);
-  --font-weight-medium:   var(--rv-font-weight-medium);
-  --font-weight-thick:    var(--rv-font-weight-thick);
-  --font-weight-xthick:   var(--rv-font-weight-xthick);
-  --font-weight-2xthick:  var(--rv-font-weight-2xthick);
+  --color-navylight-100: var(--rv-color-navylight-100);
+  --color-navylight-80: var(--rv-color-navylight-80);
+  --color-navylight-60: var(--rv-color-navylight-60);
+  --color-navylight-40: var(--rv-color-navylight-40);
+  --color-navylight-20: var(--rv-color-navylight-20);
+  --color-navylight-10: var(--rv-color-navylight-10);
+  --color-navylight-transparent: var(--rv-color-navylight-transparent);
+
+  --color-navydark-140: var(--rv-color-navydark-140);
+  --color-navydark-120: var(--rv-color-navydark-120);
+  --color-navydark-100: var(--rv-color-navydark-100);
+  --color-navydark-80: var(--rv-color-navydark-80);
+  --color-navydark-70: var(--rv-color-navydark-70);
+  --color-navydark-60: var(--rv-color-navydark-60);
+  --color-navydark-40: var(--rv-color-navydark-40);
+  --color-navydark-20: var(--rv-color-navydark-20);
+
+  --color-purplelight-100: var(--rv-color-purplelight-100);
+  --color-purplelight-80: var(--rv-color-purplelight-80);
+  --color-purplelight-60: var(--rv-color-purplelight-60);
+  --color-purplelight-40: var(--rv-color-purplelight-40);
+  --color-purplelight-20: var(--rv-color-purplelight-20);
+  --color-purplelight-transparent: var(--rv-color-purplelight-transparent);
+
+  --color-purpledark-140: var(--rv-color-purpledark-140);
+  --color-purpledark-120: var(--rv-color-purpledark-120);
+  --color-purpledark-100: var(--rv-color-purpledark-100);
+  --color-purpledark-80: var(--rv-color-purpledark-80);
+  --color-purpledark-60: var(--rv-color-purpledark-60);
+  --color-purpledark-40: var(--rv-color-purpledark-40);
+  --color-purpledark-transparent: var(--rv-color-purpledark-transparent);
+
+  --color-bluelight-100: var(--rv-color-bluelight-100);
+  --color-bluelight-80: var(--rv-color-bluelight-80);
+  --color-bluelight-60: var(--rv-color-bluelight-60);
+  --color-bluelight-40: var(--rv-color-bluelight-40);
+  --color-bluelight-20: var(--rv-color-bluelight-20);
+
+  --color-bluedark-140: var(--rv-color-bluedark-140);
+  --color-bluedark-120: var(--rv-color-bluedark-120);
+  --color-bluedark-100: var(--rv-color-bluedark-100);
+  --color-bluedark-80: var(--rv-color-bluedark-80);
+  --color-bluedark-60: var(--rv-color-bluedark-60);
+  --color-bluedark-40: var(--rv-color-bluedark-40);
+
+  --color-greenlight-100: var(--rv-color-greenlight-100);
+  --color-greenlight-80: var(--rv-color-greenlight-80);
+  --color-greenlight-60: var(--rv-color-greenlight-60);
+  --color-greenlight-40: var(--rv-color-greenlight-40);
+  --color-greenlight-20: var(--rv-color-greenlight-20);
+
+  --color-greendark-140: var(--rv-color-greendark-140);
+  --color-greendark-120: var(--rv-color-greendark-120);
+  --color-greendark-100: var(--rv-color-greendark-100);
+  --color-greendark-80: var(--rv-color-greendark-80);
+  --color-greendark-60: var(--rv-color-greendark-60);
+  --color-greendark-40: var(--rv-color-greendark-40);
+
+  --color-redlight-100: var(--rv-color-redlight-100);
+  --color-redlight-80: var(--rv-color-redlight-80);
+  --color-redlight-60: var(--rv-color-redlight-60);
+  --color-redlight-40: var(--rv-color-redlight-40);
+  --color-redlight-20: var(--rv-color-redlight-20);
+
+  --color-reddark-140: var(--rv-color-reddark-140);
+  --color-reddark-120: var(--rv-color-reddark-120);
+  --color-reddark-110: var(--rv-color-reddark-110);
+  --color-reddark-100: var(--rv-color-reddark-100);
+  --color-reddark-80: var(--rv-color-reddark-80);
+  --color-reddark-60: var(--rv-color-reddark-60);
+  --color-reddark-40: var(--rv-color-reddark-40);
+
+  --color-yellowlight-100: var(--rv-color-yellowlight-100);
+  --color-yellowlight-80: var(--rv-color-yellowlight-80);
+  --color-yellowlight-60: var(--rv-color-yellowlight-60);
+  --color-yellowlight-40: var(--rv-color-yellowlight-40);
+  --color-yellowlight-20: var(--rv-color-yellowlight-20);
+
+  --color-yellowdark-140: var(--rv-color-yellowdark-140);
+  --color-yellowdark-120: var(--rv-color-yellowdark-120);
+  --color-yellowdark-100: var(--rv-color-yellowdark-100);
+  --color-yellowdark-80: var(--rv-color-yellowdark-80);
+  --color-yellowdark-60: var(--rv-color-yellowdark-60);
+  --color-yellowdark-40: var(--rv-color-yellowdark-40);
+
+  --color-offwhite: var(--rv-color-offwhite);
+  --color-white: var(--rv-color-white);
+  --color-white-transparentlight: var(--rv-color-white-transparentlight);
+  --color-white-transparentdark: var(--rv-color-white-transparentdark);
+
+  --color-lightoffnavy: var(--rv-color-lightoffnavy);
+  --color-offnavy: var(--rv-color-offnavy);
+  --color-navy: var(--rv-color-navy);
+
+  --font-weight-xthin: var(--rv-font-weight-xthin);
+  --font-weight-thin: var(--rv-font-weight-thin);
+  --font-weight-medium: var(--rv-font-weight-medium);
+  --font-weight-thick: var(--rv-font-weight-thick);
+  --font-weight-xthick: var(--rv-font-weight-xthick);
+  --font-weight-2xthick: var(--rv-font-weight-2xthick);
 
   --spacing-xsmall: 0.25rem;
   --spacing-small: 0.5rem;
@@ -140,11 +349,12 @@ body {
   --spacing-2xlarge: 3rem;
   --spacing-full: 64rem;
 
-  --text-xsmall:  var(--rv-font-size-xsmall);
-  --text-small:   var(--rv-font-size-small);
-  --text-medium:  var(--rv-font-size-medium);
-  --text-large:   var(--rv-font-size-large);
-  --text-xlarge:  var(--rv-font-size-xlarge);
+  --text-xsmall: var(--rv-font-size-xsmall);
+  --text-small: var(--rv-font-size-small);
+  --text-medium: var(--rv-font-size-medium);
+  --text-xmedium: var(--rv-font-size-xmedium);
+  --text-large: var(--rv-font-size-large);
+  --text-xlarge: var(--rv-font-size-xlarge);
   --text-2xlarge: var(--rv-font-size-2xlarge);
   --text-3xlarge: var(--rv-font-size-3xlarge);
   --text-4xlarge: var(--rv-font-size-4xlarge);

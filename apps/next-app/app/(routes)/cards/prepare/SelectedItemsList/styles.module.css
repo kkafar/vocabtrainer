@@ -18,6 +18,5 @@
 
 .listBodyContainer {
   flex: 1;
-  max-height: 75vh;
   overflow-y: scroll;
 }

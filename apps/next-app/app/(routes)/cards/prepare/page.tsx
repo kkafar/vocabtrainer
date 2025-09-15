@@ -14,7 +14,7 @@ export default async function SelectVocabularyPage() {
       <div className="flex flex-col items-center gap-8">
         <SelectedItemsList items={vocabularyItems} groups={vocabularyItemGroups} groupings={vocabularyItemGroupings} />
         <Link href="/cards">
-          <RoundedButton>
+          <RoundedButton className="bg-success">
             Proceed
           </RoundedButton>
         </Link>

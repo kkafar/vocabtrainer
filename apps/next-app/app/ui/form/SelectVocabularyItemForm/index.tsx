@@ -2,7 +2,6 @@
 
 import React from "react";
 import { VocabularyGrouping, VocabularyItem, VocabularyItemGroup } from "@/app/lib/definitions";
-import styles from './styles.module.css';
 import Section from "./Section";
 import useGrouppedItems from "@/app/hooks/useGrouppedItems";
 import RoundedButton from "../../buttons/RoundedButton";
@@ -38,10 +37,20 @@ export default function SelectVocabularyItemForm({ items, groups, grouping: grou
 
   return (
     <form id={id} {...rest} onSubmit={handleSubmit}>
-      <div className={styles.itemFormInnerContainer}>
-        {Object.values(itemsByGroup).map(sectionProps => <Section key={sectionProps.group.id} group={sectionProps.group} items={sectionProps.items} />)}
+      <div className="bg-red flex flex-col">
+        <div className="flex flex-col bg-primary p-2xlarge rounded-2xl">
+          <div className="flex bg-primary w-[120dvh] h-[64dvh] overflow-y-scroll border-1 border-purple-300 rounded-2xl px-large">
+            <div className="flex flex-1 flex-col">
+              {Object.values(itemsByGroup).map(sectionProps => <Section key={sectionProps.group.id} group={sectionProps.group} items={sectionProps.items} />)}
+            </div>
+          </div>
+          <div className="flex flex-row justify-center">
+            <div className="flex flex-row py-8">
+              <RoundedButton type="submit" className="bg-success text-offwhite">Submit</RoundedButton>
+            </div>
+          </div>
+        </div>
       </div>
-      <RoundedButton type="submit">Submit</RoundedButton>
     </form>
   );
 }

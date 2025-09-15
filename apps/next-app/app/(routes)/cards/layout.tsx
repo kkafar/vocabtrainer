@@ -5,9 +5,9 @@ import { type ChildrenProp } from "@/app/ui/types";
 export default async function Layout({ children }: ChildrenProp) {
   return (
     <LogoLayout>
-      <CenterYXContainer>
+      <div className="flex flex-1">
         {children}
-      </CenterYXContainer>
+      </div>
     </LogoLayout>
   );
 }

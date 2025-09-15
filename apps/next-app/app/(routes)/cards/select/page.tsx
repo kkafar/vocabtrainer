@@ -9,8 +9,8 @@ export default async function SelectVocabularyPage() {
   ]);
 
   return (
-    <div>
-      <SelectVocabularyItemForm id="selectItemsForm" items={vocabularyItems} groups={vocabularyGroups} grouping={vocabularyGrouping} />
+    <div className="flex flex-1">
+      <SelectVocabularyItemForm id="selectItemsForm" items={vocabularyItems} groups={vocabularyGroups} grouping={vocabularyGrouping} className="flex flex-1" />
     </div>
   );
 }
