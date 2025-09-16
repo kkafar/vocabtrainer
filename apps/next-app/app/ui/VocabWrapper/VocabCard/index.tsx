@@ -20,7 +20,7 @@ type TranslationObstructorProps = {
 function TranslationObstructor(props: TranslationObstructorProps): React.JSX.Element {
   const { hidden = false, onClick } = props;
   return (
-    <div className={clsx(styles.obstructorOuter, hidden && styles.displayNone)} onClick={onClick}>
+    <div className={clsx(styles.obstructorOuter, hidden && styles.displayNone, "bg:navylight-60 dark:bg-navydark-60")} onClick={onClick}>
       <EyeIcon />
     </div>
   );

@@ -3,6 +3,7 @@ import styles from './styles.module.css';
 import VocabItemCard from "@/app/ui/card/VocabItemCard";
 import { Suspense } from "react";
 import { OrbitProgress } from "react-loading-indicators";
+import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
 
 function LoadingCard() {
   return (
@@ -16,12 +17,14 @@ export default async function CardPage({
   const groupId = (await searchParams).groupId;
 
   return (
-    <div className={styles.columnFlexContainer}>
-      <div className={globalStyles.cardContainer}>
-        <Suspense fallback={<LoadingCard />}>
-          <VocabItemCard groupId={groupId} />
-        </Suspense>
+    <CenterYXContainer>
+      <div className={styles.columnFlexContainer}>
+        <div className={globalStyles.cardContainer}>
+          <Suspense fallback={<LoadingCard />}>
+            <VocabItemCard groupId={groupId} />
+          </Suspense>
+        </div>
       </div>
-    </div>
+    </CenterYXContainer>
   );
 }

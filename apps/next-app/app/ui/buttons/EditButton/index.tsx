@@ -6,6 +6,7 @@ import EditIcon from '@/app/assets/edit-icon.svg';
 import styles from './styles.module.css';
 import { useRouter } from "next/navigation";
 import RoundedButton from "../RoundedButton";
+import clsx from "clsx";
 
 export type EditButtonProps = {
   itemId: VocabularyItem['id']
@@ -20,7 +21,7 @@ export default function EditButton({ itemId, onClick, ...rest }: EditButtonProps
   }, [onClick, itemId, router]);
 
   return (
-    <RoundedButton className={styles.editButtonBase} onClick={onClickWrapper} {...rest} >
+    <RoundedButton className={clsx(styles.editButtonBase, "bg-navylight-60 dark:bg-navydark-60")} onClick={onClickWrapper} {...rest} >
       <EditIcon />
     </RoundedButton>
   );
