@@ -9,6 +9,7 @@ import { ChildrenProp } from '@/app/ui/types';
 import RoundedButton from '@/app/ui/buttons/RoundedButton';
 import Link from 'next/link';
 import { SelectedItemsSchema } from '@/app/lib/schemas';
+import ItemSeparator from '@/app/ui/form/SelectVocabularyItemForm/ItemSeparator';
 
 export type SelectedItemsListProps = {
   items: VocabularyItem[];
@@ -42,7 +43,7 @@ function useSelectedItems(items: VocabularyItem[]): [VocabularyItem[], boolean] 
 function AddButton(): React.ReactNode {
   return (
     <Link href={"/cards/select"}>
-      <RoundedButton>
+      <RoundedButton className='bg-purple-400'>
         Add +
       </RoundedButton>
     </Link>
@@ -51,7 +52,7 @@ function AddButton(): React.ReactNode {
 
 function EmptyListMessage() {
   return (
-    <div className={styles.emptyListMessageContainer}>
+    <div className={clsx(styles.emptyListMessageContainer, "text-text-on-primary")}>
       Whoops! Seems like there are no items added yet. Let&apos;s change that!
     </div>
   )
@@ -59,9 +60,16 @@ function EmptyListMessage() {
 
 function ListBody({ items }: { items: VocabularyItem[] }) {
   return (
-    <div className={styles.listBodyContainer}>
-      <ul>
-        {items.map(item => <li key={item.id}>{item.text}</li>)}
+    <div className={clsx(styles.listBodyContainer, "text-text-on-primary text-large")}>
+      <ul className='overflow-y-scroll'>
+        {items.map(item => {
+          return (
+            <div key={item.id}>
+              <li key={item.id}>{item.text}</li>
+              <ItemSeparator />
+            </div>
+          )
+        })}
       </ul>
     </div>
   )
@@ -78,7 +86,7 @@ function Head(): React.ReactNode {
 
 function Body({ children }: ChildrenProp): React.ReactNode {
   return (
-    <div>
+    <div className='overflow-y-scroll'>
       {children}
     </div>
   );
@@ -91,12 +99,16 @@ export default function SelectedItemsList({ items }: SelectedItemsListProps): Re
   return (
     <div>
       <FlexibleCard className={styles.listContainer}>
-        <Head></Head>
-        <Body>
-          {selectedItems.length === 0 && (<EmptyListMessage />)}
-          {selectedItems.length > 0 && (<ListBody items={selectedItems} />)}
-        </Body>
+        <Head />
+        <div className='pt-large text-text-on-primary'>
+          <h1 className='text-xlarge'>Selected items</h1>
+          <Body>
+            {selectedItems.length === 0 && (<EmptyListMessage />)}
+            {selectedItems.length > 0 && (<ListBody items={selectedItems} />)}
+          </Body>
+        </div>
       </FlexibleCard>
     </div>
   );
 }
+

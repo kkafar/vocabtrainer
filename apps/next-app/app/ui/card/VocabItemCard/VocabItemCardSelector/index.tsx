@@ -26,7 +26,7 @@ function CardButton({ children, className, ...rest }: ButtonProps) {
 
 function ReturnButton(props: ButtonProps) {
   return (
-    <CardButton {...props} className={styles.returnButtonColor}>
+    <CardButton {...props} className="bg-purple-400 not-dark:bg-purple-500">
       Return <RewindIcon />
     </CardButton>
   );
@@ -34,7 +34,7 @@ function ReturnButton(props: ButtonProps) {
 
 function RepeatButton(props: ButtonProps) {
   return (
-    <CardButton {...props} className={styles.repeatButtonColor}>
+    <CardButton {...props} className="bg-yellowdark-80 not-dark:bg-yellowlight-80">
       Repeat <RotateIcon />
     </CardButton>
   )
@@ -42,7 +42,7 @@ function RepeatButton(props: ButtonProps) {
 
 function GotItButton(props: ButtonProps) {
   return (
-    <CardButton {...props} className={styles.gotItButtonColor}>
+    <CardButton {...props} className="bg-greendark-80 not-dark:bg-greenlight-80">
       Got it! <ThumbsUpIcon />
     </CardButton>
   )

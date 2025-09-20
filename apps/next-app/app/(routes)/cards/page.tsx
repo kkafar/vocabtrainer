@@ -1,27 +1,37 @@
 import globalStyles from "@/app/styles.module.css";
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 import VocabItemCard from "@/app/ui/card/VocabItemCard";
 import { Suspense } from "react";
 import { OrbitProgress } from "react-loading-indicators";
+import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
 
 function LoadingCard() {
   return (
-    <OrbitProgress color="var(--primary)" size="large" text="Fetching data from server..." textColor="var(--on-primary)" />
+    <OrbitProgress
+      color="var(--primary)"
+      size="large"
+      text="Fetching data from server..."
+      textColor="var(--on-primary)"
+    />
   );
 }
 
 export default async function CardPage({
   searchParams,
-}: { searchParams: Promise<{ groupId?: number }> }) {
+}: {
+  searchParams: Promise<{ groupId?: number }>;
+}) {
   const groupId = (await searchParams).groupId;
 
   return (
-    <div className={styles.columnFlexContainer}>
-      <div className={globalStyles.cardContainer}>
-        <Suspense fallback={<LoadingCard />}>
-          <VocabItemCard groupId={groupId} />
-        </Suspense>
+    <CenterYXContainer>
+      <div className={styles.columnFlexContainer}>
+        <div className={globalStyles.cardContainer}>
+          <Suspense fallback={<LoadingCard />}>
+            <VocabItemCard groupId={groupId} />
+          </Suspense>
+        </div>
       </div>
-    </div>
+    </CenterYXContainer>
   );
 }

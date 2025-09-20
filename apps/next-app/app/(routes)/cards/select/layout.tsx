@@ -1,9 +1,12 @@
+import CenterYXContainer from "@/app/ui/layout/CenterYXContainer";
 import { type ChildrenProp } from "@/app/ui/types";
 
 export default async function Layout({ children }: ChildrenProp) {
   return (
-    <div>
-      {children}
-    </div>
+    <CenterYXContainer>
+      <div className="flex flex-1">
+        {children}
+      </div>
+    </CenterYXContainer>
   )
 }
