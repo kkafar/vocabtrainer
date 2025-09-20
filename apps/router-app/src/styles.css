@@ -218,17 +218,6 @@
   }
 }
 
-body {
-  color: var(--rv-color-text-on-primary);
-  background: var(--rv-color-bg-primary);
-  /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: var(--font-inter);
-  font-size: var(--rv-font-size-medium);
-  font-weight: var(--rv-font-weight-medium);
-
-  /* Global options */
-}
-
 @theme {
   --color-primary: var(--rv-color-primary);
   --color-primary-bg: var(--rv-color-bg-primary);
@@ -463,11 +452,22 @@ body {
 }
 
 body {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: var(--font-inter);
+  font-size: var(--rv-font-size-medium);
+  font-weight: var(--rv-font-weight-medium);
+
+  /* Global options */
+}
+
+body {
+  background-color: var(--rv-color-bg-primary);
   margin: 0;
   color: var(--rv-color-text-on-background);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

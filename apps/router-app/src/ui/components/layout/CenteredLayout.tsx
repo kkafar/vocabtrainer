@@ -1,6 +1,7 @@
 import React from "react";
 
-export interface CenteredLayoutProps extends React.ComponentPropsWithoutRef<'div'> {
+export interface CenteredLayoutProps {
+  children: React.ReactNode
 }
 
 export default function CenteredLayout(props: CenteredLayoutProps) {

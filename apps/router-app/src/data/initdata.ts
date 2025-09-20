@@ -5,7 +5,7 @@ const lessonOne =
       "text": "Wie heißt du?",
       "created_date": "2024-12-18T18:28:04.949748+01:00",
       "last_updated_date": "2024-12-18T18:28:04.949748+01:00",
-      "translation": null
+      "translation": "Jak się nazywasz?"
     },
     {
       "text": "Wie alt bist du?",
