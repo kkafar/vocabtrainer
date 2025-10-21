@@ -12,6 +12,7 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
+import { Route as VocabExploreIndexImport } from './routes/vocab/explore/index'
 import { Route as CardsGameIndexImport } from './routes/cards/game/index'
 
 // Create/Update Routes
@@ -19,6 +20,12 @@ import { Route as CardsGameIndexImport } from './routes/cards/game/index'
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const VocabExploreIndexRoute = VocabExploreIndexImport.update({
+  id: '/vocab/explore/',
+  path: '/vocab/explore/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -46,6 +53,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CardsGameIndexImport
       parentRoute: typeof rootRoute
     }
+    '/vocab/explore/': {
+      id: '/vocab/explore/'
+      path: '/vocab/explore'
+      fullPath: '/vocab/explore'
+      preLoaderRoute: typeof VocabExploreIndexImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -54,36 +68,41 @@ declare module '@tanstack/react-router' {
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cards/game': typeof CardsGameIndexRoute
+  '/vocab/explore': typeof VocabExploreIndexRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cards/game': typeof CardsGameIndexRoute
+  '/vocab/explore': typeof VocabExploreIndexRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
   '/cards/game/': typeof CardsGameIndexRoute
+  '/vocab/explore/': typeof VocabExploreIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/cards/game'
+  fullPaths: '/' | '/cards/game' | '/vocab/explore'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cards/game'
-  id: '__root__' | '/' | '/cards/game/'
+  to: '/' | '/cards/game' | '/vocab/explore'
+  id: '__root__' | '/' | '/cards/game/' | '/vocab/explore/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CardsGameIndexRoute: typeof CardsGameIndexRoute
+  VocabExploreIndexRoute: typeof VocabExploreIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CardsGameIndexRoute: CardsGameIndexRoute,
+  VocabExploreIndexRoute: VocabExploreIndexRoute,
 }
 
 export const routeTree = rootRoute
@@ -97,7 +116,8 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/cards/game/"
+        "/cards/game/",
+        "/vocab/explore/"
       ]
     },
     "/": {
@@ -105,6 +125,9 @@ export const routeTree = rootRoute
     },
     "/cards/game/": {
       "filePath": "cards/game/index.tsx"
+    },
+    "/vocab/explore/": {
+      "filePath": "vocab/explore/index.tsx"
     }
   }
 }

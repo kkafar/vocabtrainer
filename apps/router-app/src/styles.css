@@ -15,7 +15,7 @@
   /* --rv-color-shadow: rgba(0, 0, 0, 0.25); */
 
   --rv-color-primary: var(--rv-color-navylight-100);
-  --rv-color-bg-primary: var(--rv-color-white);
+  --rv-color-bg-primary: var(--rv-color-offwhite);
   --rv-color-text-on-background: var(--rv-color-navy);
   --rv-color-text-on-primary: var(--rv-color-navy);
   --rv-color-on-primary: var(--rv-color-navylight-10);
@@ -195,8 +195,8 @@
     /* --rv-color-failure: #786C5E; */
     /* --rv-color-icon-stroke: var(--rv-color-text-on-bg); */
 
-    --rv-color-primary: var(--rv-color-offwhite);
-    --rv-color-bg-primary: var(--rv-color-navydark-120);
+    --rv-color-primary: var(--rv-color-navylight-10);
+    --rv-color-bg-primary: var(--rv-color-offnavy);
     --rv-color-text-on-primary: var(--rv-color-navy);
     --rv-color-text-on-background: var(--rv-color-offwhite);
     --rv-color-on-primary: var(--rv-color-navydark-120);

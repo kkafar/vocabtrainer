@@ -15,6 +15,10 @@ const MENU_ITEMS: MenuItemData[] = [
   {
     text: 'Explore Vocabulary',
     href: '/vocab/explore',
+  },
+  {
+    text: 'Grammar articles',
+    href: '/articles/'
   }
 ];
 
